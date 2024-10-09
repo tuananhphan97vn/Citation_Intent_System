@@ -70,26 +70,6 @@ def get_parent_parent(soup):
 #     print(i , sentence)
 #     print('------------')
 
-def has_desired_a_tag(tag):
-    # Tìm thẻ <a> con thỏa mãn các điều kiện
-    a_tag = tag.find('a', attrs={'href': lambda href: href and href.startswith('#b'),
-                                 'name': lambda name: name and name.startswith('bb')})
-    return a_tag is not None
-
-def find_all_a_child(soup):
-    # tags_with_anchor = soup.find_all(lambda tag: tag.find('a') is not None)
-    tags_with_anchor = soup.find_all('a', attrs={'href': lambda href: href and href.startswith('#b'),
-                                             'name': lambda name: name and name.startswith('bb')})
-
-
-# Lưu nội dung vào file
-    # Extract all of the content and save it to a file
-    with open('tags_with_anchor.html', 'w', encoding='utf-8') as file:
-        for parent_tag in tags_with_anchor:
-            # Write each tag with the <a> tag to the file, including prettifying the content
-            file.write(parent_tag.prettify())
-            file.write("\n") 
-
 if __name__ == '__main__':
     file_path = 'soup_output_1.html'
 
@@ -99,54 +79,4 @@ if __name__ == '__main__':
 
     # Phân tích nội dung HTML
     soup = BeautifulSoup(html_content, 'html.parser')
-
-    for script in soup.find_all('script'):
-        script.decompose()  # Xóa thẻ <script> khỏi cây DOM
-    for script in soup.find_all('button'):
-        script.decompose()  # Xóa thẻ <script> khỏi cây DOM
-    for script in soup.find_all('svg'):
-        script.decompose()  # Xóa thẻ <script> khỏi cây DOM
-    for script in soup.find_all('path'):
-        script.decompose()  # Xóa thẻ <script> khỏi cây DOM
-    for script in soup.find_all('style'):
-        script.decompose()  # Xóa thẻ <script> khỏi cây DOM
-    # Loại bỏ tất cả các thuộc tính sự kiện JavaScript (onclick, onmouseover, etc.)
-    for tag in soup.find_all(True):  # Duyệt qua tất cả các thẻ trong tài liệu
-        # Tìm tất cả các thuộc tính bắt đầu với "on", thường là các sự kiện JS
-        js_attributes = [attr for attr in tag.attrs if attr.startswith('on')]
-        for attr in js_attributes:
-            del tag[attr]
-
-    # output_file_path = 'output_file.html'
-
-    # # Giả sử bạn đã có đối tượng soup (sau khi đã thực hiện các thao tác trên nó)
-    # # Ví dụ: soup = BeautifulSoup(html_content, 'html.parser')
-
-    # # Lưu đối tượng BeautifulSoup vào tệp HTML
-    # with open(output_file_path, 'w', encoding='utf-8') as file:
-    #     file.write(str(soup))  # Chuyển đối tượng soup thành chuỗi HTML 
-    # find_all_a_child(soup)
-    # parent_tags = soup.find_all(has_desired_a_tag)
-    # with open('parent_tags_with_a.html', 'w', encoding='utf-8') as file:
-    #     for parent_tag in parent_tags:
-    #         # Ghi thẻ cha vào file với định dạng đẹp
-    #         file.write(parent_tag.prettify())
-    #         file.write("\n\n")
-# Tìm tất cả các thẻ cha chứa thẻ con <a> thỏa mãn điều kiện
-    def has_desired_a_tag(tag):
-        # Tìm thẻ <a> con thỏa mãn các điều kiện
-        a_tag = tag.find('a', attrs={'href': lambda href: href and href.startswith('#b'),
-                                    'name': lambda name: name and name.startswith('bb')})
-        return a_tag is not None   
-    parent_tags = soup.find_all(has_desired_a_tag)
-
-    # Xuất ra nội dung của các thẻ cha
-    for parent_tag in parent_tags:
-        print(parent_tag.prettify())
-        print("\n----------------------------\n")
-
-    # Lưu nội dung vào file nếu cần
-    with open('parent_tags_with_a_content.html', 'w', encoding='utf-8') as file:
-        for parent_tag in parent_tags:
-            file.write(parent_tag.prettify())
-            file.write("\n\n")
+    get_parent_parent(soup)
