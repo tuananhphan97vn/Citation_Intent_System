@@ -47,6 +47,7 @@ def search_paper_by_title_wos( title):
         # Đóng trình duyệt sau khi hoàn thành tác vụ
         driver.quit()
 
+
     return current_url 
 
 def get_paper_infor( url):
@@ -81,15 +82,63 @@ def get_paper_soure_html(paper_url):
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
 
-    links = soup.find_all('a', attrs={'data-ta': "stat-number-citation-related-count"})
+    print(soup)
 
+    links = soup.find_all('a', attrs={'data-ta': "stat-number-citation-related-count"})
     # In ra các thẻ <a> tìm được
+    result = [] 
     for link in links:
-        print(link.get('href'))
-    # Close the browser
+        href = link.get('href')
+        if href.startswith("https://www.webofscience.com") == False  :
+            href = "https://www.webofscience.com" + href 
+            result.append(href)
+    # Close the brower 
+    return result[0]
+
+def get_links_citing_papers(url):
+    options = webdriver.ChromeOptions()
+    # options.add_argument('--headless')  # Optional, run in headless mode if you don't need a UI
+    # options.add_argument('--disable-gpu')  # Disable GPU acceleration (optional)
+    # options.add_argument('--no-sandbox')  # Added for certain environments
+
+    # Automatically download and set up ChromeDriver
+    # service = Service(ChromeDriverManager().install())
+    service = Service(chrome_driver_path)
+    driver = webdriver.Chrome(service=service, options=options)
+
+    # Navigate to the page
+    driver.get(url)
+
+    # Wait for the page to load (you might need to adjust this depending on the page's load time)
+    time.sleep(10)
+
+    # Get the page source and convert it to a BeautifulSoup object
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    # print('soup ', soup)
+
+    html_content = soup.prettify()
+
+    # Save the HTML content to a file
+    with open("output.html", "w", encoding="utf-8") as file:
+        file.write(html_content)
+
+    gs_rt_links = soup.select('.gs_rt a')
+
+    # Print all the found <a> tags
+    result = [] 
+    for link in gs_rt_links:
+        result.append(link.get('href') + "\t" + link.get_text())
+
     driver.quit()
+    return result
 
 if __name__ == '__main__':
-    title = """Dynamic Traffic Light Control System Based on Process Synchronization Among Connected Vehicles"""
-    cited_paper_url = search_paper_by_title_wos( title)
-    get_paper_soure_html(cited_paper_url)
+    # title = """Dynamic Traffic Light Control System Based on Process Synchronization Among Connected Vehicles"""
+    # cited_paper_url = search_paper_by_title_wos( title)
+    # citing_paper_url = get_paper_soure_html(cited_paper_url)
+    #access citting paper url and load the html content from this link 
+    url = """https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7228556788885243036"""
+    citing_paper_link = get_links_citing_papers(url)
+    for link in citing_paper_link:
+        print(link)

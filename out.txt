@@ -1,0 +1,1483 @@
+<a class="c-breadcrumbs__link" data-track="click_breadcrumb" data-track-action="breadcrumbs" data-track-category="article" data-track-context="article page" data-track-label="breadcrumb1" href="/" itemprop="item">
+ Home
+</a>
+<a class="c-breadcrumbs__link" data-track="click_breadcrumb" data-track-action="breadcrumbs" data-track-category="article" data-track-context="article page" data-track-label="breadcrumb2" href="/journal/10844" itemprop="item">
+ Journal of Intelligent Information Systems
+</a>
+Article
+Heterogeneous graphormer for extractive multimodal summarization
+Research
+Published:
+30 September 2024
+(
+2024
+)
+<a data-track="click" data-track-action="cite this article" data-track-category="article body" data-track-label="link" href="#citeas">
+ Cite this article
+</a>
+<a class="u-button u-button--full-width u-button--primary u-justify-content-space-between c-pdf-download__link" data-article-pdf="true" data-draft-ignore="true" data-readcube-pdf-url="true" data-test="pdf-link" data-track="content_download" data-track-action="download pdf" data-track-external="" data-track-label="button" data-track-type="article pdf download" download="" href="/content/pdf/10.1007/s10844-024-00886-5.pdf">
+ Download PDF
+</a>
+Access provided by Chung Ang University
+<a class="app-article-masthead__journal-link" data-track="click_journal_home" data-track-action="journal homepage" data-track-context="article page" data-track-label="link" href="/journal/10844">
+ Journal of Intelligent Information Systems
+</a>
+<a class="app-article-masthead__submission-link" data-track="click_aims_and_scope" data-track-action="aims and scope" data-track-context="article page" data-track-label="link" href="https://link.springer.com/journal/10844/aims-and-scope">
+ Aims and scope
+</a>
+<a class="app-article-masthead__submission-link" data-track="click_submit_manuscript" data-track-action="submit manuscript" data-track-context="article masthead on springerlink article page" data-track-label="link" href="https://submission.nature.com/new-submission/10844/3">
+ Submit manuscript
+</a>
+Abstract
+Multimodal summarization with multimodal output (MSMO) aims to generate summaries that incorporate both text and images. Existing methods have not effectively leveraged intermodal relationships, such as sentence-image relationships, which are crucial for generating high-quality multimodal summaries. In this paper, we propose a heterogeneous graph-based model for multimodal summarization (HGMS) designed to efficiently leverage intermodal relationships within multimodal data. The model constructs a heterogeneous graph based on the relationships between modalities, containing nodes for words, sentences and images. An enhanced Graphormer is then proposed to update node representations, aiming to more effectively model intricate relationships between multiple modalities. To the best of our knowledge, we are the first to apply Graphormer in the field of graph-based summarization. Experimental results on a large-scale benchmark dataset demonstrate that HGMS achieves state-of-the-art performance in terms of automatic metrics and human evaluations.
+Similar content being viewed by others
+<a class="c-article-recommendations-card__link" data-track="select_recommendations_1" data-track-action="click recommendations inline - 1" data-track-context="inline recommendations" data-track-label="10.1007/s10844-022-00757-x" href="https://link.springer.com/10.1007/s10844-022-00757-x?fromPaywallRec=false" itemprop="url">
+ Extractive text-image summarization with relation-enhanced graph attention network
+</a>
+Article
+28 October 2022
+<a class="c-article-recommendations-card__link" data-track="select_recommendations_2" data-track-action="click recommendations inline - 2" data-track-context="inline recommendations" data-track-label="10.1007/978-981-99-6207-5_17" href="https://link.springer.com/10.1007/978-981-99-6207-5_17?fromPaywallRec=false" itemprop="url">
+ MCLS: A Large-Scale Multimodal Cross-Lingual Summarization Dataset
+</a>
+Chapter
+© 2023
+<a class="c-article-recommendations-card__link" data-track="select_recommendations_3" data-track-action="click recommendations inline - 3" data-track-context="inline recommendations" data-track-label="10.1007/s00521-023-08821-5" href="https://link.springer.com/10.1007/s00521-023-08821-5?fromPaywallRec=false" itemprop="url">
+ Topic-guided abstractive multimodal summarization with multimodal output
+</a>
+Article
+24 August 2023
+Explore related subjects
+Discover the latest articles, news and stories from top researchers in related subjects.
+<a data-track="select_related_subject_1" data-track-context="related subjects from content page" data-track-label="Artificial Intelligence" href="/subject/artificial-intelligence">
+ Artificial Intelligence
+</a>
+1
+Introduction
+With the rapid development of multimedia data on the Internet, multimodal summarization has attracted widespread attention from researchers. Recently proposed Multimodal Summarization with Multimodal Output (Zhu et al.,
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e305" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+) (MSMO) that condenses long multimodal news to a short pictorial version, as shown in Fig.
+<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig1">
+ 1
+</a>
+. This innovative approach has been substantiated to significantly enhance users’ ability to swiftly grasp key news points, thereby elevating user satisfaction (Zhu et al.,
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e311" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+).
+While several methods have been proposed to tackle the MSMO task (Zhu et al.,
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e317" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR46" id="ref-link-section-d120190458e320" title="Zhu, J., Zhou, Y., Zhang, J., et al. (2020). Multimodal summarization with guidance of multimodal reference. Proceedings of the AAAI Conference on Artificial Intelligence, 34(05), 9749–975. 
+                https://doi.org/10.1609/aaai.v34i05.6525
+                
+              ">
+ 2020
+</a>
+; Jiang et al.,
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR8" id="ref-link-section-d120190458e323" title="Jiang, C., Xie, R., Ye, W., et al. (2023). Exploiting pseudo image captions for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023. Association for Computational Linguistics, Toronto, Canada, pp 161–175. 
+                https://doi.org/10.18653/v1/2023.findings-acl.12
+                
+              ">
+ 2023
+</a>
+), effectively handling the relationship between the image and text modalities remains a challenging problem. Zhang et al. (
+<a aria-label="Reference 2022c" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR43" id="ref-link-section-d120190458e326" title="Zhang, Z., Meng, X., Wang, Y., et al. (2022c). Unims: A unified framework for multimodal summarization with knowledge distillation. Proceedings of the AAAI Conference on Artificial Intelligence 36(10) 11757–11764. 
+                https://doi.org/10.1609/aaai.v36i10.21431
+                
+              ">
+ 2022c
+</a>
+) extends the text encoder to a multimodal encoder, which takes the concatenation of textual and visual embeddings as input to obtain their contextualized joint representations. However, experimental results indicate that merely concatenating textual and visual embeddings cannot well capture the intricate relationships between modalities, such as sentence-image relationships. Jiang et al. (
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR8" id="ref-link-section-d120190458e329" title="Jiang, C., Xie, R., Ye, W., et al. (2023). Exploiting pseudo image captions for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023. Association for Computational Linguistics, Toronto, Canada, pp 161–175. 
+                https://doi.org/10.18653/v1/2023.findings-acl.12
+                
+              ">
+ 2023
+</a>
+) takes sentences related to images as additional input rather than relying directly on image information. Although a image-text alignment mechanism was introduced in the sentence selection stage to leverage the relationships between images and sentences, this valuable relationship was not considered in the summarization stage.
+Fig. 1
+<a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-action="view figure" data-track-label="image" href="/article/10.1007/s10844-024-00886-5/figures/1" rel="nofollow">
+</a>
+An example of multimodal summarization with multimodal output task
+<a aria-label="Full size image figure 1" class="c-article__pill-button" data-test="article-link" data-track="click" data-track-action="view figure" data-track-dest="link:Figure1 Full size image" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/figures/1" rel="nofollow">
+ Full size image
+</a>
+We believe that there are extensive many-to-many relationships between images and sentences. By effectively leveraging both the relevance and irrelevance between sentences and images, we can more accurately extract salient sentences and critical images. Taking Fig.
+<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig1">
+ 1
+</a>
+as an example, the first sentence succinctly summarizes the main points of the news article: “Eating fruits and vegetables could cut the risk of heart attacks and strokes.” This guides our selection of the vegetable image which is relevant to it. Compared to the third sentence, which is only related to the BMI image, the second sentence mentions both vegetables and BMI. In this case, further selecting the second sentence, which covers different aspects of the topic, can provide a more comprehensive summary.
+To effectively leverage the many-to-many relationships between sentences and images for multimodal summarization, an intuitive approach is to employ graph structures for modeling these relationships. In recent years, numerous studies (Jia et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR7" id="ref-link-section-d120190458e359" title="Jia, R., Cao, Y., Tang, H., et al. (2020). Neural extractive summarization with hierarchical attentive heterogeneous graph network. In: Webber B, Cohn T, He Y, et al (Eds.), Proceedings of the 2020 conference on Empirical Methods in Natural Language Processing (EMNLP). Association for Computational Linguistics, Online, pp 3622–363. 
+                https://doi.org/10.18653/v1/2020.emnlp-main.295
+                
+              ">
+ 2020
+</a>
+; Song &amp; King,
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR30" id="ref-link-section-d120190458e362" title="Song, Z., &amp; King, I. (2022). Hierarchical heterogeneous graph attention network for syntax-aware summarization. Proceedings of the AAAI Conference on Artificial Intelligence, 36(10), 11340–1134. 
+                https://doi.org/10.1609/aaai.v36i10.21385
+                
+              ">
+ 2022
+</a>
+) have been dedicated to exploring the application of Graph Neural Networks (GNNs) in the realm of text summarization with impressive results. Specifically, GNNs are able to model complex relationships between semantic units. By building graphs on semantic units, such as sentences, words (Wang et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR35" id="ref-link-section-d120190458e365" title="Wang, D., Liu, P., Zheng, Y., et al. (2020). Heterogeneous graph neural networks for extractive document summarization. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics. Association for Computational Linguistics, Online, pp 6209–6219. 
+                https://doi.org/10.18653/v1/2020.acl-main.553
+                
+              ">
+ 2020
+</a>
+), latent topics (Cui et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR5" id="ref-link-section-d120190458e368" title="Cui, P., Hu, L., &amp; Liu, Y. (2020). Enhancing extractive text summarization with topic-aware graph neural networks. In: Scott D, Bel N, Zong C (Eds.), Proceedings of the 28th international conference on computational linguistics. International Committee on Computational Linguistics, Barcelona, Spain (Online), pp 5360–537. 
+                https://doi.org/10.18653/v1/2020.coling-main.468
+                
+              ">
+ 2020
+</a>
+), or passages (Phan et al.,
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR27" id="ref-link-section-d120190458e371" title="Phan TA, Nguyen NDN, &amp; Bui KHN. (2022). HeterGraphLongSum: Heterogeneous graph neural network with passage aggregation for extractive long document summarization. In: Calzolari N, Huang CR, Kim H, et al (Eds.), Proceedings of the 29th international conference on computational linguistics. International Committee on Computational Linguistics, Gyeongju, Republic of Korea, pp 6248–6258. 
+                https://aclanthology.org/2022.coling-1.545
+                
+              ">
+ 2022
+</a>
+), GNNs can enhance representations of semantic units for text summarization. Different from these works, we propose a novel heterogeneous graph for multimodal summarization. This graph includes nodes representing words, sentences, and images, with edges connecting sentences to both images and words. In this graph, images and sentences can serve as intermediaries for each other, thus enhancing their representations for multimodal summarization.
+To compute node representations of this graph, we propose the heterogeneous Graphormer (HeterGraphormer for short) by enhancing Graphormer (Ying et al.,
+<a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR39" id="ref-link-section-d120190458e378" title="Ying, C., Cai, T., Luo, S., et al. (2021). Do transformers really perform badly for graph representation? In: Ranzato M, Beygelzimer A, Dauphin YN, et al (Eds.), Advances in Neural Information Processing Systems, pp 28877–28888. 
+                https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html
+                
+              ">
+ 2021
+</a>
+) to effectively model intricate relationships between multiple modalities. Graphormer leverages self-attention to enable attention to all nodes when updating nodes, thereby alleviating the over-smoothing issue caused by traditional GNNs. We enhance Graphormer in the follow three aspect. First, we introduce type embedding and apply distinct spatial and edge embeddings for different heterogeneous edges to more effectively handle the heterogeneity of nodes and edges. Second, the centrality embedding was removed to optimize its performance for document graphs. Third, unconnected nodes are considered during node updates, as unrelated relationships are also valuable.
+Overall, we propose a heterogeneous graph-based model for multimodal summarization (HGMS). The model first constructs a heterogeneous graph containing nodes for words, sentences and images. Subsequently, HeterGraphormer is employed to iteratively update the representations of nodes in the heterogeneous graph, aiming to more effectively model intricate relationships between nodes. Experimental results show that our model significantly enhances the performance of multimodal summarization. The contributions of our paper are as follows:
+1.
+We propose a heterogeneous graph-based model for multimodal summarization to efficiently leverage intermodal relationships through the multimodal graph we constructed.
+2.
+We propose HeterGraphormer to effectively model intricate relationships between multiple modalities. To the best of our knowledge, we are the first to apply Graphormer in the field of graph-based summarization.
+3.
+Our proposed model has achieved state-of-the-art (SOTA) performance on the MSMO dataset. Extensive experiments demonstrate the effectiveness of our proposed HeterGraphormer.
+2
+Related work
+2.1
+Extractive summarization
+Text summarization is the task of generating concise summaries for original long documents. Existing text summarization methods can be categorized into extractive and abstractive approaches. Abstractive summarization (Sutskever et al.,
+<a aria-label="Reference 2014" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR31" id="ref-link-section-d120190458e431" title="Sutskever, I., Vinyals, O., &amp; Le, Q.V. (2014). Sequence to sequence learning with neural networks. In: Ghahramani Z, Welling M, Cortes C, et al (Eds.), Advances in Neural Information Processing Systems,[SPACE]
+                https://proceedings.neurips.cc/paper/2014/hash/a14ac55a4f27472c5d894ec1c3c743d2-Abstract.html
+                
+              ">
+ 2014
+</a>
+; See et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR29" id="ref-link-section-d120190458e434" title="See, A., Liu, P.J., Manning, C.D. (2017). Get to the point: Summarization with pointer-generator networks. In: Barzilay R, Kan MY (Eds.), Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Vancouver, Canada, pp 1073–1083. 
+                https://doi.org/10.18653/v1/P17-1099
+                
+              ">
+ 2017
+</a>
+; Paulus et al.,
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR25" id="ref-link-section-d120190458e437" title="Paulus, R., Xiong, C., &amp; Socher, R. (2018). A deep reinforced model for abstractive summarization. In: International conference on learning representations, 
+                https://openreview.net/forum?id=HkAClQgA-
+                
+              ">
+ 2018
+</a>
+; Zhang et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR40" id="ref-link-section-d120190458e440" title="Zhang, J., Zhao, Y., Saleh, M., et al. (2020). PEGASUS: pre-training with extracted gap-sentences for abstractive summarization. In: Proceedings of the 37th International Conference on Machine Learning, ICML 2020, 13-18 July 2020, Virtual Event, pp 11328–11339. 
+                http://proceedings.mlr.press/v119/zhang20ae.html
+                
+              ">
+ 2020
+</a>
+; Liu et al.,
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR19" id="ref-link-section-d120190458e443" title="Liu, Y., Liu, P., Radev, D., et al. (2022). BRIO: Bringing order to abstractive summarization. In: Muresan S, Nakov P, Villavicencio A (Eds.), Proceedings of the 60th annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Dublin, Ireland, pp 2890–2903. 
+                https://doi.org/10.18653/v1/2022.acl-long.207
+                
+              ">
+ 2022
+</a>
+) generate a summary from scratch, typically with lower redundancy. Extractive summarization (Cheng &amp; Lapata,
+<a aria-label="Reference 2016" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR3" id="ref-link-section-d120190458e447" title="Cheng, J., &amp; Lapata, M. (2016). Neural summarization by extracting sentences and words. In: Erk K, Smith NA (Eds.), Proceedings of the 54th annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Berlin, Germany, pp 484–494. 
+                https://doi.org/10.18653/v1/P16-1046
+                
+              ">
+ 2016
+</a>
+; An et al.,
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR1" id="ref-link-section-d120190458e450" title="An, C., Zhong, M., Wu, Z., et al. (2022). CoLo: A contrastive learning based re-ranking framework for one-stage summarization. In: Calzolari N, Huang CR, Kim H, et al (Eds.), Proceedings of the 29th international conference on computational linguistics. International Committee on Computational Linguistics, Gyeongju, Republic of Korea, pp 5783–5793. 
+                https://aclanthology.org/2022.coling-1.508
+                
+              ">
+ 2022
+</a>
+; Cheng et al.,
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR4" id="ref-link-section-d120190458e453" title="Cheng, X., Shen, Y., &amp; Lu, W. (2023). A set prediction network for extractive summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023. Association for Computational Linguistics, Toronto, Canada, pp 4766–4777. 
+                https://doi.org/10.18653/v1/2023.findings-acl.293
+                
+              ">
+ 2023
+</a>
+) aims to select salient sentences from original documents.
+Recent research work on extractive summarization covers a variety of methods. SummaRuNNer (Nallapati et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR22" id="ref-link-section-d120190458e459" title="Nallapati R, Zhai F, &amp; Zhou B. (2017) .Summarunner: A recurrent neural network based sequence model for extractive summarization of documents. Proceedings of the AAAI Conference on Artificial Intelligence 31(1). 
+                https://doi.org/10.1609/aaai.v31i1.10958
+                
+              ">
+ 2017
+</a>
+) is one of the earliest models to employ an encoder based on Recurrent Neural Networks (RNNs). Narayan et al. (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR23" id="ref-link-section-d120190458e462" title="Narayan S, Cohen SB, &amp; Lapata M. (2018). Ranking sentences for extractive summarization with reinforcement learning. In: Walker M, Ji H, Stent A (Eds.) Proceedings of the 2018 conference of the North American chapter of the association for computational linguistics: Human language technologies, Volume 1 (Long Papers). Association for Computational Linguistics, New Orleans, Louisiana, pp 1747–1759. 
+                https://doi.org/10.18653/v1/N18-1158
+                
+              ">
+ 2018
+</a>
+) proposed a reinforcement learning-based system trained by globally optimizing the ROUGE metric. Liu and Lapata (
+<a aria-label="Reference 2019" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR17" id="ref-link-section-d120190458e465" title="Liu Y, &amp; Lapata M. (2019). Text summarization with pretrained encoders. In: Inui K, Jiang J, Ng V, et al (Eds.), Proceedings of the 2019 conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). Association for Computational Linguistics, Hong Kong, China, pp 3730–3740. 
+                https://doi.org/10.18653/v1/D19-1387
+                
+              ">
+ 2019
+</a>
+) leverages the capability of pre-trained language models to effectively capture contextual features, thereby significantly enhancing the performance of summarization. Zhong et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR44" id="ref-link-section-d120190458e468" title="Zhong, M., Liu, P., Chen, Y., et al. (2020). Extractive summarization as text matching. In: Jurafsky D, Chai J, Schluter N, et al (Eds.) Proceedings of the 58th annual meeting of the association for computational linguistics. Association for Computational Linguistics, Online, pp 6197–6208. 
+                https://doi.org/10.18653/v1/2020.acl-main.552
+                
+              ">
+ 2020
+</a>
+) formulates the extractive summarization task as a semantic text matching problem, selecting the set of sentences that most closely match the source document in the semantic space as the summary. Tang et al. (
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR32" id="ref-link-section-d120190458e471" title="Tang, P., Hu, K., Yan, R., et al. (2022). OTExtSum: Extractive text summarisation with optimal transport. In: Carpuat M, de Marneffe MC, Meza Ruiz IV (eds) Findings of the association for computational linguistics: NAACL 2022. Association for Computational Linguistics, Seattle, United States, pp 1128–1141. 
+                https://doi.org/10.18653/v1/2022.findings-naacl.85
+                
+              ">
+ 2022
+</a>
+) formulates the extractive summarization task as an Optimal Transport (OT) problem from document to summary.
+2.2
+Multimodal summarization
+Multimodal summarization takes multiple modalities of data as input, and outputs either text-only (Li et al.,
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR13" id="ref-link-section-d120190458e482" title="Li, H., Zhu, J., Liu, T., et al. (2018). Multi-modal sentence summarization with modality attention and image filtering. In: Lang J (Ed.), Proceedings of the twenty-seventh international joint conference on artificial intelligence, IJCAI 2018, July 13-19, 2018, Stockholm, Sweden. ijcai.org, Stockholm, Sweden, pp 4152–4158. 
+                https://doi.org/10.24963/ijcai.2018/577
+                
+              ">
+ 2018
+</a>
+; Overbay et al.,
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR24" id="ref-link-section-d120190458e485" title="Overbay, K., Ahn, J., Pesaran zadeh, F., et al. (2023). mRedditSum: A multimodal abstractive summarization dataset of Reddit threads with images. In: Bouamor H, Pino J, Bali K (Eds.), Proceedings of the 2023 conference on empirical methods in natural language processing. Association for Computational Linguistics, Singapore, pp 4117–4132. 
+                https://doi.org/10.18653/v1/2023.emnlp-main.251
+                
+              ">
+ 2023
+</a>
+; Liang et al.,
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR16" id="ref-link-section-d120190458e488" title="Liang, Y., Meng, F., Xu, J., et al. (2023). Summary-oriented vision modeling for multimodal abstractive summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Proceedings of the 61st annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Toronto, Canada, pp 2934–2951. 
+                https://doi.org/10.18653/v1/2023.acl-long.165
+                
+              ">
+ 2023
+</a>
+) or multimodal (Li et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR15" id="ref-link-section-d120190458e491" title="Li, M., Chen, X., Gao, S., et al (2020) VMSMO: Learning to generate multimodal summary for video-based news articles. In: Webber B, Cohn T, He Y, et al (Eds.), Proceedings of the 2020 conference on Empirical Methods in Natural Language Processing (EMNLP). Association for Computational Linguistics, Online, pp 9360–9369. 
+                https://doi.org/10.18653/v1/2020.emnlp-main.752
+                
+              ">
+ 2020
+</a>
+; Zhang et al.,
+<a aria-label="Reference 2022a" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR41" id="ref-link-section-d120190458e494" title="Zhang, L., Zhang, X., &amp; Pan, J. (2022a). Hierarchical cross-modality semantic correlation learning model for multimodal summarization. Proceedings of the AAAI Conference on Artificial Intelligence 36(10) 11676–11684. 
+                https://doi.org/10.1609/aaai.v36i10.21422
+                
+              ">
+ 2022a
+</a>
+) summary.
+For multimodal summarization with text-only output, Chen and Zhuge (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR2" id="ref-link-section-d120190458e500" title="Chen, J., &amp; Zhuge, H. (2018). Abstractive text-image summarization using multi-modal attentional hierarchical RNN. In: Riloff E, Chiang D, Hockenmaier J, et al (Eds.), Proceedings of the 2018 conference on empirical methods in natural language processing. Association for Computational Linguistics, Brussels, Belgium, pp 4046–4056. 
+                https://doi.org/10.18653/v1/D18-1438
+                
+              ">
+ 2018
+</a>
+) proposed an abstractive text-image summarization method using a multi-modal attentional hierarchical RNN, which integrates textual and visual information to produce a textual summary. Zhang et al. (
+<a aria-label="Reference 2022b" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR42" id="ref-link-section-d120190458e503" title="Zhang, M., Zhou, G., Yu, W., et al. (2022b). MAA-PTG: multimodal aspect-aware product title generation. J Intell Inf Syst 59(1) 213–235. 
+                https://doi.org/10.1007/S10844-022-00695-8
+                
+              ">
+ 2022b
+</a>
+) introduces an aspect precision score function to assess summary relevance and incorporates it using reinforcement learning. Xiao et al. (
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR37" id="ref-link-section-d120190458e506" title="Xiao M, Zhu J, Lin H, et al. (2023). CFSum coarse-to-fine contribution network for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Proceedings of the 61st annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Toronto, Canada, pp 8538–8553. 
+                https://doi.org/10.18653/v1/2023.acl-long.476
+                
+              ">
+ 2023
+</a>
+) proposed a coarse-to-fine contribution network to model different contributions of images for summarization. Jin and Chen (
+<a aria-label="Reference 2024" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR9" id="ref-link-section-d120190458e509" title="Jin, L., &amp; Chen, J. (2024). Self-supervised opinion summarization with multi-modal knowledge graph. J Intell Inf Syst, 62(1), 191–208. 
+                https://doi.org/10.1007/S10844-023-00812-1
+                
+              ">
+ 2024
+</a>
+) proposes a multimodal knowledge graph constructed from entities in text and images, using structural knowledge in a self-supervised manner.
+For multimodal summarization with multimodal output, the task generates summaries that include multiple modalities, such as text and images, to provide richer and more comprehensive information. Zhu et al. (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e515" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+) first proposed generating a pictorial summary given a document and a collection of images. Zhu et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR46" id="ref-link-section-d120190458e518" title="Zhu, J., Zhou, Y., Zhang, J., et al. (2020). Multimodal summarization with guidance of multimodal reference. Proceedings of the AAAI Conference on Artificial Intelligence, 34(05), 9749–975. 
+                https://doi.org/10.1609/aaai.v34i05.6525
+                
+              ">
+ 2020
+</a>
+) further introduced a extra cross-entropy loss for image selection. Zhang et al. (
+<a aria-label="Reference 2022c" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR43" id="ref-link-section-d120190458e521" title="Zhang, Z., Meng, X., Wang, Y., et al. (2022c). Unims: A unified framework for multimodal summarization with knowledge distillation. Proceedings of the AAAI Conference on Artificial Intelligence 36(10) 11757–11764. 
+                https://doi.org/10.1609/aaai.v36i10.21431
+                
+              ">
+ 2022c
+</a>
+) utilizes knowledge distillation with a vision-language pre-trained model to help image selection. Xie et al. (
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR38" id="ref-link-section-d120190458e524" title="Xie, F., Chen, J., &amp; Chen, K. (2023). Extractive text-image summarization with relation-enhanced graph attention network. J Intell Inf Syst, 61(2), 325–341. 
+                https://doi.org/10.1007/S10844-022-00757-X
+                
+              ">
+ 2023
+</a>
+) introduces a graph structure, leveraging image captions to establish indirect connections between images and sentences via word nodes, thereby enhancing the association between images and text. Jiang et al. (
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR8" id="ref-link-section-d120190458e527" title="Jiang, C., Xie, R., Ye, W., et al. (2023). Exploiting pseudo image captions for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023. Association for Computational Linguistics, Toronto, Canada, pp 161–175. 
+                https://doi.org/10.18653/v1/2023.findings-acl.12
+                
+              ">
+ 2023
+</a>
+) introduced an image-text alignment mechanism to convert input images into the most relevant sentences to better capture visual knowledge. However, previous studies have not adequately considered the many-to-many relationships between sentences and images. In this study, we model these relationships using a graph structure to more effectively utilize this crucial information.
+2.3
+Graph-based summarization
+Early work focused on utilizing content similarity between sentences to construct document graphs and extracting sentences in an unsupervised manner such as TextRank (Mihalcea &amp; Tarau,
+<a aria-label="Reference 2004" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR21" id="ref-link-section-d120190458e538" title="Mihalcea, R., Tarau, P (2004) TextRank: Bringing order into text. In: Lin D, Wu D (Eds.), Proceedings of the 2004 conference on empirical methods in natural language processing. Association for Computational Linguistics, Barcelona, Spain, pp 404–411. 
+                https://aclanthology.org/W04-3252
+                
+              ">
+ 2004
+</a>
+) and LexRank (Erkan &amp; Radev,
+<a aria-label="Reference 2004" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR6" id="ref-link-section-d120190458e541" title="Erkan, G., &amp; Radev, D. R. (2004). Lexrank: Graph-based lexical centrality as salience in text summarization. J Artif Intell Res, 22, 457–47. 
+                https://doi.org/10.1613/JAIR.1523
+                
+              ">
+ 2004
+</a>
+). Recently, the application of GNNs in text summarization task has attracted widespread attention. Wang et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR35" id="ref-link-section-d120190458e544" title="Wang, D., Liu, P., Zheng, Y., et al. (2020). Heterogeneous graph neural networks for extractive document summarization. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics. Association for Computational Linguistics, Online, pp 6209–6219. 
+                https://doi.org/10.18653/v1/2020.acl-main.553
+                
+              ">
+ 2020
+</a>
+) constructed a heterogeneous graph, enriching the cross-sentence relations through the word nodes between sentences. Jia et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR7" id="ref-link-section-d120190458e547" title="Jia, R., Cao, Y., Tang, H., et al. (2020). Neural extractive summarization with hierarchical attentive heterogeneous graph network. In: Webber B, Cohn T, He Y, et al (Eds.), Proceedings of the 2020 conference on Empirical Methods in Natural Language Processing (EMNLP). Association for Computational Linguistics, Online, pp 3622–363. 
+                https://doi.org/10.18653/v1/2020.emnlp-main.295
+                
+              ">
+ 2020
+</a>
+) proposed a hierarchical heterogeneous graph to extract sentences by simultaneously balancing salience and redundancy. Cui et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR5" id="ref-link-section-d120190458e550" title="Cui, P., Hu, L., &amp; Liu, Y. (2020). Enhancing extractive text summarization with topic-aware graph neural networks. In: Scott D, Bel N, Zong C (Eds.), Proceedings of the 28th international conference on computational linguistics. International Committee on Computational Linguistics, Barcelona, Spain (Online), pp 5360–537. 
+                https://doi.org/10.18653/v1/2020.coling-main.468
+                
+              ">
+ 2020
+</a>
+) incorporates latent topics into graph propagation via a joint neural topic model, facilitating the extraction of crucial information from documents. Jing et al. (
+<a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR10" id="ref-link-section-d120190458e554" title="Jing, B., You, Z., Yang, T., et al. (2021). Multiplex graph neural network for extractive text summarization. In: Moens MF, Huang X, Specia L, et al. (Eds.), Proceedings of the 2021 conference on empirical methods in natural language processing. Association for Computational Linguistics, Online and Punta Cana, Dominican Republic, pp 133–139. 
+                https://doi.org/10.18653/v1/2021.emnlp-main.11
+                
+              ">
+ 2021
+</a>
+) proposed to use multiplex graph to model different types of relationships among sentences and words. Song and King (
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR30" id="ref-link-section-d120190458e557" title="Song, Z., &amp; King, I. (2022). Hierarchical heterogeneous graph attention network for syntax-aware summarization. Proceedings of the AAAI Conference on Artificial Intelligence, 36(10), 11340–1134. 
+                https://doi.org/10.1609/aaai.v36i10.21385
+                
+              ">
+ 2022
+</a>
+) obtains sentence representations based on constituency trees to leverage syntactic information. Phan et al. (
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR27" id="ref-link-section-d120190458e560" title="Phan TA, Nguyen NDN, &amp; Bui KHN. (2022). HeterGraphLongSum: Heterogeneous graph neural network with passage aggregation for extractive long document summarization. In: Calzolari N, Huang CR, Kim H, et al (Eds.), Proceedings of the 29th international conference on computational linguistics. International Committee on Computational Linguistics, Gyeongju, Republic of Korea, pp 6248–6258. 
+                https://aclanthology.org/2022.coling-1.545
+                
+              ">
+ 2022
+</a>
+) introduce passage nodes into the sentence-word graph to enrich the representation of sentences in long documents. In this study, we construct a novel heterogeneous graph for multimodal summarization based on the interrelations between different modalities. Additionally, we propose HeterGraphormer to more effectively model the intricate relationships within the graph.
+Fig. 2
+<a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-action="view figure" data-track-label="image" href="/article/10.1007/s10844-024-00886-5/figures/2" rel="nofollow">
+</a>
+Overview of our proposed HGMS
+<a aria-label="Full size image figure 2" class="c-article__pill-button" data-test="article-link" data-track="click" data-track-action="view figure" data-track-dest="link:Figure2 Full size image" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/figures/2" rel="nofollow">
+ Full size image
+</a>
+3
+Method
+3.1
+Problem formulation
+Given a multimodal document
+\(\{T, P\}\)
+, where
+\(T=\{s_1,s_2,\cdots ,s_m\}\)
+is a text document consisting of
+m
+sentences and
+\(P=\{p_1,p_2,\cdots ,p_k\}\)
+is a collection of
+k
+images, the model summarizes multimodal document into a multimodal summary
+\(\mathcal {S}=\{\mathcal {S}_t,\mathcal {S}_p\}\)
+, where
+\(\mathcal {S}_t\)
+denotes the textual summary extracted from
+T
+and
+\(\mathcal {S}_p\)
+is a subset of images selected from the image collection
+P
+.
+3.2
+Graph construction
+In order to model the relationship between sentences and images, we construct a heterogeneous graph, as shown in the Fig.
+<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig2">
+ 2
+</a>
+. In this graph, there are three types of nodes: word, sentence, and image. Each word node corresponds to the identical word appearing multiple times in the document. Each sentence and image node corresponds to the sentences and images in the document.
+For the connection between nodes, we first connect words and sentences through inclusion relationships. To enhance model efficiency, we retained only those word nodes connected to two or more sentences. Furthermore, we connect all sentence and image pairs, rather than limiting connections to relevant pairs. In order to accurately discern the significance of connections, we introduce TF-IDF and Image-Text Match (ITM) scores as the weights of these two edges respectively.
+Given a undirected graph
+\(G = \{V, E\}\)
+,where
+V
+denotes the set of nodes and
+E
+represents edge weights between nodes. Our heterogeneous graph can be formally defined as
+\( V=V_w \cup V_s \cup V_p \)
+and
+\(E=E_{sw} \cup E_{sp} \)
+, where
+\(V_w\)
+,
+\(V_s\)
+, and
+\(V_p\)
+denote the sets of word, sentence, and image nodes, respectively.
+\(E_{sw}=\{e^{sw}_{11}, \cdots , e^{sw}_{mu}\}\)
+and
+\(E_{sp}=\{e^{sp}_{11}, \cdots , e^{sp}_{mk}\}\)
+represent sentence-word and sentence-image edge weights respectively. Here
+\(e^{sw}_{ij} \in [0, 1]\)
+denotes the TF-IDF score between sentence
+\(s_i\)
+and word
+\(w_j\)
+, while
+\(e^{sp}_{ij} \in [0, 1]\)
+represents the ITM score between sentence
+\(s_i\)
+and image
+\(p_j\)
+, computed via the BLIP (Li et al.,
+<a aria-label="Reference 2022" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR14" id="ref-link-section-d120190458e1412" title="Li, J., Li, D., Xiong, C., et al. (2022). BLIP: Bootstrapping language-image pre-training for unified vision-language understanding and generation. In: Chaudhuri K, Jegelka S, Song L, et al (Eds.), International conference on machine learning, ICML 2022, 17-23 July 2022, PMLR, Baltimore, Maryland, USA, Proceedings of Machine Learning Research, 162 pp 12888–12900">
+ 2022
+</a>
+).
+For node features, we use GloVe (Pennington et al.,
+<a aria-label="Reference 2014" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR26" id="ref-link-section-d120190458e1418" title="Pennington, J., Socher, R., &amp; Manning, C. (2014). GloVe: Global vectors for word representation. In: Moschitti A, Pang B, Daelemans W (Eds.) Proceedings of the 2014 conference on Empirical Methods in Natural Language Processing (EMNLP). Association for Computational Linguistics, Doha, Qatar, pp 1532–1543. 
+                https://doi.org/10.3115/v1/D14-1162
+                
+              ">
+ 2014
+</a>
+), RoBERTa (Liu et al.,
+<a aria-label="Reference 2019" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR18" id="ref-link-section-d120190458e1421" title="Liu, Y., Ott, M., Goyal, N., et al. (2019). Roberta: A robustly optimized BERT pretraining approach. 
+                arXiv:1907.11692
+                
+              
+                https://arxiv.org/abs/1907.11692
+                
+              ">
+ 2019
+</a>
+), and BLIP to obtain node representations of words, sentences, and images, respectively.
+$$\begin{aligned} x^w_i&amp;= \text {GloVe}(w_i),\end{aligned}$$
+(1)
+$$\begin{aligned} x^s_i&amp;= \text {RoBERTa}(s_i)W_s + \text {PE}(i),\end{aligned}$$
+(2)
+$$\begin{aligned} x^p_i&amp;= \text {BLIP}(p_i)W_p, \end{aligned}$$
+(3)
+where
+\( x^w_i \in \mathbb {R}^d \)
+,
+\( W_s \in \mathbb {R}^{d_s \times d} \)
+,
+\( W_p \in \mathbb {R}^{d_p \times d} \)
+are projection matrices and
+\(\text {PE}(i)\)
+denotes the Position Encoding proposed by Vaswani et al. (
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR33" id="ref-link-section-d120190458e1817" title="Vaswani A, Shazeer N, Parmar N, et al. (2017). Attention is all you need. In: Guyon I, Luxburg UV, Bengio S, et al (Eds.), Advances in Neural Information Processing Systems,[SPACE]
+                https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+                
+              ">
+ 2017
+</a>
+).
+3.3
+Graph encoder
+Graphormer integrates graph structural information into the Transformer (Vaswani et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR33" id="ref-link-section-d120190458e1828" title="Vaswani A, Shazeer N, Parmar N, et al. (2017). Attention is all you need. In: Guyon I, Luxburg UV, Bengio S, et al (Eds.), Advances in Neural Information Processing Systems,[SPACE]
+                https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+                
+              ">
+ 2017
+</a>
+) architecture using centrality embedding, spatial embedding, and edge embedding to effectively learn node representations. To better apply it to our constructed heterogeneous graph, we propose HeterGraphormer, which introduces several enhancements designed to better model the relationships between heterogeneous nodes.
+Before input, we add type embedding to each node to distinguish different node types. Let
+h
+denote the node’s hidden state, and the initial hidden state can be defined as
+$$\begin{aligned} h^{\tau }_i = x^{\tau }_i + z_{\tau }, \end{aligned}$$
+(4)
+where
+\(z \in \mathbb {R}^d\)
+are learnable embedding vectors specified by the node type
+\(\tau \in \{w,s,i\}\)
+.
+It is noteworthy that we did not use centrality embedding, which adds embeddings to node representations based on the degrees of nodes to differentiate their importance, as the degree of nodes in document graphs does not accurately reflect their significance. We prove this assumption via the ablation study in the experiment section.
+3.3.1
+Attention with spatial embedding
+Due to the global receptive field characteristic of the Transformer, it can effectively attend to information from any position when updating node representations. To differentiate nodes at different distances, Graphormer introduces spatial embedding, which assigns a unique embedding for each distance as a weight in the self-attention module. This enables the model to accurately distinguish distance variances between nodes in the graph while maintaining its capacity for global information processing. Following  Ying et al. (
+<a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR39" id="ref-link-section-d120190458e1983" title="Ying, C., Cai, T., Luo, S., et al. (2021). Do transformers really perform badly for graph representation? In: Ranzato M, Beygelzimer A, Dauphin YN, et al (Eds.), Advances in Neural Information Processing Systems, pp 28877–28888. 
+                https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html
+                
+              ">
+ 2021
+</a>
+), we adopt the shortest path distance as the distance metric between nodes, as it is the most direct and widely used approach.
+Concretely, let
+\(\phi (i,j)\)
+denote the distance between nodes
+\(v_i\)
+and
+\(v_j\)
+. If a path exists between the nodes,
+\(\phi \)
+outputs the shortest path distance between them; if not, it outputs a special value, i.e., -1. In this paper, we consider both the relevance and irrelevance between different modalities. For each feasible value and the -1 value corresponding to unconnected heterogeneous nodes, we assign a learnable scalar that serves as a weight in the self-attention module. Denote
+\(A_{ij}\)
+as the (
+i
+,
+j
+)-element of the attention matrix
+A
+, we have:
+$$\begin{aligned} A_{ij}=\frac{(h_iW_{Q})(h_jW_{K})^T}{\sqrt{d_k}} \cdot b_{\phi (i,j)}, \end{aligned}$$
+(5)
+where
+\(b_{\phi (i,j)}\)
+is a learnable scalar indexed by
+\(\phi (i,j)\)
+, and shared across all layers.
+\(W_{Q}\)
+and
+\(W_{K}\)
+are learnable weight matrices used to transform
+\(h_i\)
+and
+\(h_j\)
+into query and key vectors, respectively.
+\(d_k\)
+denotes the dimensionality of the key vectors.
+3.3.2
+Edge embedding
+Edge embedding is proposed to encode edge features, allowing the model to incorporate edge information when updating node representations.
+We use the product of weights along the shortest path as the weight between two nodes, rather than averaging, because the product more accurately reflects the connectivity of the path. For example, when the shortest path
+\(\text {SP}_{ij} = \{1, 0\}\)
+, the product is 0, which more accurately represents the connection strength compared to the average value of 0.5. Concretely, let
+\(\omega (i,j)\)
+denotes the product of weights along one of the shortest paths
+\(\text {SP}_{ij}=(e_1,e_2,\cdots ,e_N)\)
+from
+\(v_i\)
+to
+\(v_j\)
+, expressed as follows:
+$$\begin{aligned} \omega (i,j)&amp;= \prod _{n=1}^{N} e_n. \end{aligned}$$
+(6)
+For each discretized value of
+\(\omega (i,j)\)
+, we assign a learnable scalar that serves as a weight in the self-attention module. Equation (
+<a data-track="click" data-track-action="equation anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Equ5">
+ 5
+</a>
+) is further modified as follows:
+$$\begin{aligned} A_{ij}=\frac{(h_iW_{Q})(h_jW_{K})^T}{\sqrt{d_k}} \cdot (b_{\phi (i,j)} + c_{\lfloor \omega (i,j) \cdot a\rfloor }), \end{aligned}$$
+(7)
+where
+\(c_{\lfloor \omega (i,j) \cdot a\rfloor }\)
+is a learnable scalar indexed by the floor value of the product of
+\(\omega (i,j)\)
+and the hyperparameter
+a
+.
+Moreover, given the varying significance of heterogeneous connections between nodes, such as sentences to images and sentences to sentences, we employ distinct spatial and edge embeddings for diverse heterogeneous connections.
+3.3.3
+Heter graphormer layer
+The HeterGraphormer layer can be formally characterized as follows:
+$$\begin{aligned} {\begin{matrix} H^{'(l)} &amp; = \text {MHA}(\text {LN}(H^{(l-1)}), E) + H^{(l-1)},\\ H^{(l)} &amp; = \text {FFN}(\text {LN}(H^{'(l)})) + H^{'(l)}, \end{matrix}} \end{aligned}$$
+(8)
+where
+\(H^{'(l)}\)
+denotes the node representations output from layer
+l
+,
+\(\text {LN}\)
+signifies layer normalization and
+\(\text {FFN}\)
+refers to feed-forward network.
+\(\text {MHA}\)
+represents multi-head self-attention, represented as
+$$\begin{aligned} \begin{aligned} \text {MHA}(H, E) = \text {Concat}(\text {head}_1, \ldots , \text {head}_N) W^O,\\ \text {head}_i = \text {Attention}_i(H, E)=\text {softmax}(A)HW^V_i, \end{aligned} \end{aligned}$$
+(9)
+where
+\(W^O\)
+is a learnable weight matrix used to linearly combine the outputs of all attention heads,
+\(W^V\)
+is a learnable weight matrix used to transform
+H
+into value vectors.
+Given the existence of two types of edges on the graph, we sequentially update the sentence-word subgraph and the sentence-image subgraph, formulated as follows:
+$$\begin{aligned} {\begin{matrix} [H^{'(l)}_s, H^{(l)}_w] &amp; = \text {layer}([H^{(l-1)}_s, H^{(l-1)}_w], E_{sw}),\\ [H^{(l)}_s, H^{(l)}_p] &amp; = \text {layer}([H^{'(l)}_s, H^{(l-1)}_p], E_{sp}).\\ \end{matrix}} \end{aligned}$$
+(10)
+3.4
+Multimodal summarizer
+After passing
+L
+HeterGraphormer layers, we obtain the final sentence node representations
+\(H^{L}_s = \{h^s_1, h^s_2, \cdots , h^s_m \}\)
+and image node representations
+\(H^{L}_p = \{h^p_1, h^p_2, \cdots , h^p_k \}\)
+. Subsequently, these representations are fed into a single feed-forward layer for label prediction:
+$$\begin{aligned} \begin{aligned} \hat{y}^s_i&amp;= \text {sigmoid}(W_{s1}h^s_i),\\ \hat{y}^p_i&amp;= \text {sigmoid}(W_{p1}h^p_i),\\ \end{aligned} \end{aligned}$$
+(11)
+where
+\(W_{s1}\)
+,
+\(W_{p1} \)
+are trainable parameters.
+For sentence extraction, our objective is to learn a binary label
+\(y^s_i \in \{0, 1\}\)
+for each sentence
+\(s_i\)
+, where
+\(y^s_i = 1\)
+means that the sentence
+\(s_i\)
+should be included in the textual summary
+\(\mathcal {S}_t\)
+, and
+\(y^s_i = 0\)
+means that the sentence
+\(s_i\)
+should be excluded from the summary. The ground truth labels, referred to as ORACLE, is extracted using the greedy algorithm introduced by Nallapati et al. (
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR22" id="ref-link-section-d120190458e4570" title="Nallapati R, Zhai F, &amp; Zhou B. (2017) .Summarunner: A recurrent neural network based sequence model for extractive summarization of documents. Proceedings of the AAAI Conference on Artificial Intelligence 31(1). 
+                https://doi.org/10.1609/aaai.v31i1.10958
+                
+              ">
+ 2017
+</a>
+). In detail, the algorithm generates a summary consisting of multiple sentences, which are selected greedily to maximize the ROUGE score against the gold summary
+<a href="#Fn1">
+ Footnote
+ 1
+</a>
+.
+The binary cross-entropy loss of the sentence classifier is expressed as
+$$\begin{aligned} \mathcal {L}_s = -\frac{1}{m}\sum _{i=1}^{m} \left( y^s_i \log (\hat{y}^s_i) + (1 - y^s_i) \log (1 - \hat{y}^s_i)\right) \end{aligned}$$
+(12)
+Following Zhang et al. (
+<a aria-label="Reference 2022c" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR43" id="ref-link-section-d120190458e4743" title="Zhang, Z., Meng, X., Wang, Y., et al. (2022c). Unims: A unified framework for multimodal summarization with knowledge distillation. Proceedings of the AAAI Conference on Artificial Intelligence 36(10) 11757–11764. 
+                https://doi.org/10.1609/aaai.v36i10.21431
+                
+              ">
+ 2022c
+</a>
+), we use BLIP as the teacher model to compute the ITM score between the gold summary
+\(\mathcal {T}\)
+and each image
+\(p_i\)
+. The mean squared error (MSE) loss is formulated as follows:
+$$\begin{aligned} \mathcal {L}_p = \frac{1}{k} \sum _{i=1}^{k} (\hat{y}^p_i - \text {match}(\mathcal {T},p_i))^2. \end{aligned}$$
+(13)
+The final loss of our model is the linear combination of two parts of loss with hyperparameter
+\(\lambda \)
+to balance their weights:
+$$\begin{aligned} \mathcal {L} = \lambda \mathcal {L}_s + (1-\lambda )\mathcal {L}_p. \end{aligned}$$
+(14)
+4
+Experiments setting
+4.1
+Dataset
+Table 1 MSMO dataset statistics
+<a aria-label="Full size table 1" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/1" rel="nofollow">
+ Full size table
+</a>
+We use the MSMO dataset build by Zhu et al. (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e5158" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+) for multimodal summarization. It contains news articles from the
+Daily Mail
+website
+<a href="#Fn2">
+ Footnote
+ 2
+</a>
+, each paired with corresponding images and a text summary. The dataset includes 293,965 articles for training, 10,355 articles for validation, and 10,261 articles for testing. In the test set, at most three images are annotated as reference images. Image captions are excluded from the dataset for generalization. More details are illustrated in Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab1">
+ 1
+</a>
+.
+4.2
+Implementation details
+We use the roberta-base
+<a href="#Fn3">
+ Footnote
+ 3
+</a>
+version of RoBERTa and the blip-itm-base-coco
+<a href="#Fn4">
+ Footnote
+ 4
+</a>
+version of BLIP to implement our models in all experiments. We conducted fine-tuning on the last 4 layers of RoBERTa while keeping BLIP frozen during the training process. We trained the model on an NVIDIA GeForce RTX 3090, setting the learning rate for BERT at 5e-6 and for other parameters at 5e-5. The batch size was set to 24, and we utilized the Adam optimizer (Kingma &amp; Ba,
+<a aria-label="Reference 2015" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR11" id="ref-link-section-d120190458e5208" title="Kingma, D.P., &amp; Ba, J (2015). Adam: A method for stochastic optimization. In: Bengio Y, LeCun Y (Eds.), 3rd International conference on learning representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings,[SPACE]
+                http://arxiv.org/abs/1412.6980
+                
+              ">
+ 2015
+</a>
+). The hidden state dimension
+d
+of the nodes was set to 256. We constrain the number of sentences and images to 50 and 16, respectively. There are 6 layers of HeterGraphormer, each layer has 32 attention heads, and the dimension of FFN is set to 512. The hyperparameter
+a
+is set to 10 for discretizing edge weights and
+\(\lambda \)
+is set to 0.8 to balance the loss of sentence and image selection. We select the best checkpoint according to the validation loss and report the results on the test set. For sentence extraction, we rank sentences in descending order based on their scores, selecting the top-3 while filtering out those with scores below 0.185.
+4.3
+Baselines
+We compare our model with existing text and multimodal summarization methods:
+ORACLE
+generates a summary consisting of multiple sentences, which are selected by a greedy algorithm (Nallapati et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR22" id="ref-link-section-d120190458e5248" title="Nallapati R, Zhai F, &amp; Zhou B. (2017) .Summarunner: A recurrent neural network based sequence model for extractive summarization of documents. Proceedings of the AAAI Conference on Artificial Intelligence 31(1). 
+                https://doi.org/10.1609/aaai.v31i1.10958
+                
+              ">
+ 2017
+</a>
+) to maximize the ROUGE score against the gold summary.
+LEAD-3
+selects the first three sentences of the document as the text summary.
+ATG
+/
+ATL
+/
+HAN
+are proposed by Zhu et al. (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e5267" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+), incorporating visual information into the pointer generator network (See et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR29" id="ref-link-section-d120190458e5270" title="See, A., Liu, P.J., Manning, C.D. (2017). Get to the point: Summarization with pointer-generator networks. In: Barzilay R, Kan MY (Eds.), Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1: Long Papers). Association for Computational Linguistics, Vancouver, Canada, pp 1073–1083. 
+                https://doi.org/10.18653/v1/P17-1099
+                
+              ">
+ 2017
+</a>
+) through visual attention on global features, local features, and hierarchical local features of the images, respectively. The visual attention distributions are then utilized to select images.
+MOF
+(Zhu et al.,
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR46" id="ref-link-section-d120190458e5279" title="Zhu, J., Zhou, Y., Zhang, J., et al. (2020). Multimodal summarization with guidance of multimodal reference. Proceedings of the AAAI Conference on Artificial Intelligence, 34(05), 9749–975. 
+                https://doi.org/10.1609/aaai.v34i05.6525
+                
+              ">
+ 2020
+</a>
+) introduces a multimodal objective function into ATG. Among the four MOF variants, we chose the one with the best overall performance.
+UniMS
+(Zhang et al.,
+<a aria-label="Reference 2022c" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR43" id="ref-link-section-d120190458e5287" title="Zhang, Z., Meng, X., Wang, Y., et al. (2022c). Unims: A unified framework for multimodal summarization with knowledge distillation. Proceedings of the AAAI Conference on Artificial Intelligence 36(10) 11757–11764. 
+                https://doi.org/10.1609/aaai.v36i10.21431
+                
+              ">
+ 2022c
+</a>
+) extends the text encoder of BART Lewis et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR12" id="ref-link-section-d120190458e5290" title="Lewis, M., Liu, Y., Goyal, N., et al. (2020). BART: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics. Association for Computational Linguistics, Online, pp 7871–7880. 
+                https://doi.org/10.18653/v1/2020.acl-main.703
+                
+              ">
+ 2020
+</a>
+) to a multimodal encoder and utilizes knowledge distillation to help image selection.
+SITA
+(Jiang et al.,
+<a aria-label="Reference 2023" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR8" id="ref-link-section-d120190458e5298" title="Jiang, C., Xie, R., Ye, W., et al. (2023). Exploiting pseudo image captions for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023. Association for Computational Linguistics, Toronto, Canada, pp 161–175. 
+                https://doi.org/10.18653/v1/2023.findings-acl.12
+                
+              ">
+ 2023
+</a>
+) selects sentences most relevant to the images, using them as additional input instead of utilizing image information directly. The selection of images is based on the ROUGE-L of these sentences.
+HGMS(GAT)
+: To compare the performance gap between HeterGraphormer and GAT (Velickovic et al.,
+<a aria-label="Reference 2017" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR34" id="ref-link-section-d120190458e5306" title="Velickovic, P., Cucurull, G., Casanova, A., et al. (2017). Graph attention networks. stat, 1050(20), 10–48550.">
+ 2017
+</a>
+), we implemented a GAT-based HGMS. Following the method proposed by Wang et al. (
+<a aria-label="Reference 2020" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR35" id="ref-link-section-d120190458e5309" title="Wang, D., Liu, P., Zheng, Y., et al. (2020). Heterogeneous graph neural networks for extractive document summarization. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics. Association for Computational Linguistics, Online, pp 6209–6219. 
+                https://doi.org/10.18653/v1/2020.acl-main.553
+                
+              ">
+ 2020
+</a>
+), the GAT incorporates considerations for both neighboring nodes and edge weights in updating nodes, and the number of layers is 2.
+4.4
+Evaluation metrics
+The quality of generated textual summary is evaluated by
+ROUGE
+. For image selection, image precision(
+IP
+) indicates whether the chosen image is present in the image references.
+\({\textbf {M}}_{\text {sim}}\)
+is an image-text relevance metric which calculates the maximum similarity between the image and each selected sentence by cross-modal retrieval model. For details regarding IP and
+\(\text {M}_{\text {sim}}\)
+, please refer to the work of Zhu et al. (
+<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d120190458e5371" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+                https://doi.org/10.18653/v1/D18-1448
+                
+              ">
+ 2018
+</a>
+).
+5
+Results and analysis
+5.1
+Automatic evaluation
+Table 2 Automatic evaluation on MSMO
+<a aria-label="Full size table 2" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/2" rel="nofollow">
+ Full size table
+</a>
+The performance of baseline methods and our models is shown in Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab2">
+ 2
+</a>
+. The first block contains the ORACLE upper bound and LEAD-3 baseline, and the second block includes the multimodal summarization models. We present our models in the third block.
+Compared to the baseline methods, our HGMS model has demonstrated significant improvements across all metrics, including text summarization quality, image selection precision, image-text relevance, and the overall quality of multimodal summary.
+Regarding the image selection precision metric (IP), UniMS achieves a noteworthy advantage over its predecessor baselines by distilling knowledge within a vision-language pre-trained model. SITA achieves further improvements by leveraging sentences most relevant to images in the text as cues for image selection. By leveraging the inherent many-to-many relationships between sentences and images, our model achieves a significant performance boost compared to SITA (e.g., 79.72 vs. 76.41 in the IP metric).
+In terms of the
+\(\text {M}_{\text {sim}}\)
+metric for evaluating the relevance between sentences and images, our model achieved a performance improvement of over 40% compared to SITA (e.g., 46.56 vs. 33.47 of
+\(\text {M}_{\text {sim}}\)
+). This is mainly attributed to the introduction of ITM scores as weights for the edges between sentences and images, making the model more inclined to select relevant sentence-image pairs.
+Concerning text summarization quality metrics, our model exhibits notable improvements in both Rouge1 and Rouge2 (e.g., an increase of 1.32 and 1.05, respectively, compared to SITA). However, Rouge-L shows a marginal improvement of only 0.05. This indicates that the introduction of word nodes makes the model focus more on word-level semantic information.
+For different graph encoders, HGMS based on HeterGraphormer outperforms HGMS im-plemented with GAT across all metrics. This suggests that HeterGraphormer has a significant advantage in more effectively modeling intricate relationships between nodes.
+Table 3 Ablation studies on the test set
+<a aria-label="Full size table 3" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/3" rel="nofollow">
+ Full size table
+</a>
+5.2
+Ablation study
+We perform the ablation study to investigate the potential influence of different components. As shown in Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab3">
+ 3
+</a>
+, we design the following experimental settings:
+(1)
+We retain the centrality embedding used to represent node degree information in Graphormer.
+(2)
+The type embedding used to differentiate between different node types was removed.
+(3)
+We employ identical spatial and edge embeddings for each heterogeneous connection.
+(4)
+During the update of node features, we no longer consider heterogeneous nodes without connections. Sentence-image pairs are only connected when the ITM score is greater than 0.5.
+(5)
+We changed the method of calculating the weights between nodes from a product approach to averaging.
+(6)
+We removed the TF-IDF and ITM weights on the edges used to distinguish the importance of connections.
+(7)
+We replaced the BLIP weights used in the model with CLIP(Radford et al.,
+<a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR28" id="ref-link-section-d120190458e6275" title="Radford A, Kim JW, Hallacy C, et al (2021) Learning transferable visual models from natural language supervision. In: Meila M, Zhang T (Eds.), Proceedings of the 38th International Conference on Machine Learning, ICML 2021, 18-24 July 2021, Virtual Event, pp 8748–8763. 
+                http://proceedings.mlr.press/v139/radford21a.html
+                
+              ">
+ 2021
+</a>
+).
+(8)
+The pre-trained RoBERTa was replaced with a bidirectional LSTM.
+After the removal of edge weights, there is a notable decrease in the IP metric, indicating that the ITM scores on the edges between sentences and images play a crucial role in image selection. Regarding the enhancements made to Graphormer (from 1 to 3), the experimental results substantiate the effectiveness of these enhancements.
+Table 4 Experimental results with different methods of building image references
+<a aria-label="Full size table 4" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/4" rel="nofollow">
+ Full size table
+</a>
+5.3
+Image reference
+To investigate the impact of employing diverse image reference strategies during model training, we additionally incorporated a strategy named ROUGE-Top. This method selects an image with a caption that has the highest ROUGE score for each article as the reference image. As shown in Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab4">
+ 4
+</a>
+, compared to the knowledge distillation method, the IP score of the ROUGE-Top strategy has significantly increased by 3.69, indicating the effectiveness of this strategy. It is noteworthy that the IP score achieved through the ROUGE-Top strategy significantly surpassed its label upper bound (79.89), indicating the model’s success in leveraging the intricate relationships between sentences and images to enhance its capability in selecting critical images. However, as the ROUGE-Top strategy heavily relies on the quality of image captions, for the sake of model generalization, we choose to employ knowledge distillation.
+5.4
+Layer number analysis
+In order to further analyze the advantages of HeterGraphormer over GAT, we conducted a study on the performance of the models at different numbers of layers. As illustrated in Fig.
+<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig3">
+ 3
+</a>
+, we compare the Rouge scores of HGMS using HeterGraphormer and GAT as encoders across different layer depths. We observed that with an increase in the number of layers, the performance gap between HeterGraphormer and GAT gradually widened. hough we introduced residual connections between layers in GAT to alleviate the issue of over-smoothing, the optimal number of layers for GAT was only 2, beyond which the performance started to decline. In contrast, HeterGraphormer, with its ability to attend to all nodes during node updates, remained unaffected by over-smoothing issue. With increasing layer depth, its performance also improves, stabilizing after 6 layers. This suggests that HeterGraphormer can enhance its ability to model intricate relationships by increasing the number of layers.
+Fig. 3
+<a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-action="view figure" data-track-label="image" href="/article/10.1007/s10844-024-00886-5/figures/3" rel="nofollow">
+</a>
+The ROUGE scores on validation set when the number of layers increases.
+\(\hat{R}\)
+is the mean of R-1, R-2 and R-L
+<a aria-label="Full size image figure 3" class="c-article__pill-button" data-test="article-link" data-track="click" data-track-action="view figure" data-track-dest="link:Figure3 Full size image" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/figures/3" rel="nofollow">
+ Full size image
+</a>
+Fig. 4
+<a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-action="view figure" data-track-label="image" href="/article/10.1007/s10844-024-00886-5/figures/4" rel="nofollow">
+</a>
+Visualization of sentence and image embeddings for 100 documents in the test set
+<a aria-label="Full size image figure 4" class="c-article__pill-button" data-test="article-link" data-track="click" data-track-action="view figure" data-track-dest="link:Figure4 Full size image" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/figures/4" rel="nofollow">
+ Full size image
+</a>
+5.5
+Embedding analysis
+To explore the sentence and image embeddings generated by HGMS, we employ the t-SNE (van der Maaten &amp; Hinton,
+<a aria-label="Reference 2008" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR20" id="ref-link-section-d120190458e6502" title="van der Maaten L, &amp; Hinton G (2008) Visualizing data using t-sne. Journal of Machine Learning Research 9(86), 2579–2605. 
+                http://jmlr.org/papers/v9/vandermaaten08a.html
+                
+              ">
+ 2008
+</a>
+) algorithm to map the embeddings of the final layer outputs from HeterGraphormer to a two-dimensional space for visualization. We randomly selected 100 documents from the test set, comprising approximately 2500 sentences and 600 images. As illustrated in Fig.
+<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig4">
+ 4
+</a>
+, we use blue and gray points to represent ground truth and non-ground truth sentences, respectively, while yellow and black points denote reference and non-reference images, respectively.
+It can be observed that ground truth sentences exhibit a clustering tendency in the bottom-right area, indicating the model’s effectiveness in distinguishing salient sentences. Notably, compared to reference images, non-reference images show a higher degree of clustering, indicating that the model has better recognition ability for irrelevant images.
+5.6
+Human evaluation
+In addition to the automatic evaluations, we conducted human evaluations to assess the performance of models. Following Wu et al. (
+<a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR36" id="ref-link-section-d120190458e6519" title="Wu W, Li W, Xiao X, et al. (2021). BASS: Boosting abstractive summarization with unified semantic graph. In: Proceedings of the 59th annual meeting of the association for computational linguistics and the 11th international joint conference on natural language processing (Volume 1: Long Papers). Association for Computational Linguistics, Online, pp 6052–6067.
+                https://doi.org/10.18653/v1/2021.acl-long.472
+                
+              ">
+ 2021
+</a>
+), we randomly select 50 samples from the test set of MSMO dataset. Each sample is independently annotated by three different participants, and the rating is the average of their evaluations. Annotators evaluate the overall quality of summaries by ranking them based on the following three criteria simultaneously: (1)
+Informativeness
+: Does the summary effectively convey the crucial information from the source document? (2)
+Succinctness
+: Is the summary succinct, avoiding unnecessary details? (3)
+Relevance
+: Does the selected image match the textual summary? To further distinguish the differences between models, especially when their average rankings are similar, we quantified the rankings. Rankings range from 1 to 4, allowing ties, with scores corresponding to 2, 1, -1, -2, respectively. The final rating for each model is determined by averaging the scores across all test samples.
+Table 5 Ranking results of system summaries by human evaluation
+<a aria-label="Full size table 5" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/5" rel="nofollow">
+ Full size table
+</a>
+Table 6 An example of multimodal summarization generation
+<a aria-label="Full size table 6" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/6" rel="nofollow">
+ Full size table
+</a>
+Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab5">
+ 5
+</a>
+presents the human evaluation results on three strong baseline models and our proposed HGMS. The agreement between the annotators was calculated using Fleiss’ Kappa, with a value of 0.538. The results show that HGMS is able to generate higher quality multi-modal summaries compared to other models. Additionally, the human evaluation results further validate the effectiveness of our proposed HeterGraphormer.
+5.7
+Case study
+Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab6">
+ 6
+</a>
+presents a typical example selected from test set consisting of the input article, the gold summary, the summary generated by the strong baseline SITA, and the summary produced by our proposed HGMS model. The highlighted text corresponds to entities present in the image. As BLIP does not have the ability to detect entities, these entities were manually annotated. Notably, the summary output by our model shows high similarity to the gold summary, effectively summarizing key information related to ”islands” and ”cruise ships”, while accurately selecting the image most relevant to these themes. Compared to the SITA model, which uses Rouge scores between pseudo image captions and textual summary for image selection, our model can select critical images more accurately.
+Additionally, Table
+<a data-track="click" data-track-action="table anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Tab7">
+ 7
+</a>
+present the ITM scores calculated using BLIP between sentences (S1, S2, S3, S4) and images (IMG1, IMG2). It is evident that the many-to-many relationships between sentences and images play an important role in accurately extracting salient sentences and critical images. This further validates the effectiveness of the proposed graph structure.
+Table 7 The matching scores between the images and the sentences
+<a aria-label="Full size table 7" class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" href="/article/10.1007/s10844-024-00886-5/tables/7" rel="nofollow">
+ Full size table
+</a>
+6
+Conclusion
+This paper presents HGMS for multimodal summarization. HGMS constructs a multimodal heterogeneous graph by considering both related and unrelated relationships between modalities, and applies HeterGraphormer on the graph to effectively model intermodal relationships. Experimental results show HGMS outperforms the current state-of-the-art model on MSMO datasets, which demonstrates the effectiveness of our method. Furthermore, our proposed HeterGraphormer can be extended to other NLP tasks, offering potential performance improvements for such tasks.
+7
+Limitations
+Due to the utilization of Byte Pair Encoding (BPE) tokenization in the pre-trained language model, we opt to employ it only as a sentence encoder, without leveraging its word-level features. This decision stems from the inherent characteristics of BPE tokenization, which may result in the establishment of connections between originally unrelated sentence nodes after tokenization.
+Another limitation of this study is the lack of diverse datasets. Currently, only one publicly available dataset is accessible for use. Thus, the analysis and conclusions of our study may be influenced by the limitations of the dataset. Future research could address this limitation by gathering additional datasets to enhance the reliability and generalizability of the study findings.
+Data Availability
+No datasets were generated or analysed during the current study.
+Code Availability
+Code is available at
+<a href="https://github.com/anonymous272218/HGMS">
+ https://github.com/anonymous272218/HGMS
+</a>
+Notes
+Gold summary refers to the ideal, human-generated summary that serves as a standard for evaluating the quality of automated text summarization systems.
+<a href="http://www.dailymail.co.uk">
+ http://www.dailymail.co.uk
+</a>
+<a href="https://huggingface.co/FacebookAI">
+ https://huggingface.co/FacebookAI
+</a>
+<a href="https://huggingface.co/Salesforce">
+ https://huggingface.co/Salesforce
+</a>
+References
+An, C., Zhong, M., Wu, Z., et al. (2022). CoLo: A contrastive learning based re-ranking framework for one-stage summarization. In: Calzolari N, Huang CR, Kim H, et al (Eds.), Proceedings of the 29th international conference on computational linguistics.
+International Committee on Computational Linguistics
+, Gyeongju, Republic of Korea, pp 5783–5793.
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://aclanthology.org/2022.coling-1.508" data-track-value="external reference" href="https://aclanthology.org/2022.coling-1.508">
+ https://aclanthology.org/2022.coling-1.508
+</a>
+Chen, J., &amp; Zhuge, H. (2018). Abstractive text-image summarization using multi-modal attentional hierarchical RNN. In: Riloff E, Chiang D, Hockenmaier J, et al (Eds.), Proceedings of the 2018 conference on empirical methods in natural language processing.
+Association for Computational Linguistics,
+Brussels, Belgium, pp 4046–4056.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/D18-1438" data-track-value="external reference" href="https://doi.org/10.18653/v1/D18-1438">
+ https://doi.org/10.18653/v1/D18-1438
+</a>
+Cheng, J., &amp; Lapata, M. (2016). Neural summarization by extracting sentences and words. In: Erk K, Smith NA (Eds.), Proceedings of the 54th annual meeting of the association for computational linguistics (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Berlin, Germany, pp 484–494.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/P16-1046" data-track-value="external reference" href="https://doi.org/10.18653/v1/P16-1046">
+ https://doi.org/10.18653/v1/P16-1046
+</a>
+Cheng, X., Shen, Y., &amp; Lu, W. (2023). A set prediction network for extractive summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023.
+Association for Computational Linguistics,
+Toronto, Canada, pp 4766–4777.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2023.findings-acl.293" data-track-value="external reference" href="https://doi.org/10.18653/v1/2023.findings-acl.293">
+ https://doi.org/10.18653/v1/2023.findings-acl.293
+</a>
+Cui, P., Hu, L., &amp; Liu, Y. (2020). Enhancing extractive text summarization with topic-aware graph neural networks. In: Scott D, Bel N, Zong C (Eds.), Proceedings of the 28th international conference on computational linguistics.
+International Committee on Computational Linguistics,
+Barcelona, Spain (Online), pp 5360–537.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.coling-main.468" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.coling-main.468">
+ https://doi.org/10.18653/v1/2020.coling-main.468
+</a>
+Erkan, G., &amp; Radev, D. R. (2004). Lexrank: Graph-based lexical centrality as salience in text summarization.
+J Artif Intell Res,
+22
+, 457–47.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1613/JAIR.1523" data-track-value="external reference" href="https://doi.org/10.1613/JAIR.1523">
+ https://doi.org/10.1613/JAIR.1523
+</a>
+<a aria-label="Article reference 6" data-doi="10.1613/JAIR.1523" data-track="click_references" data-track-action="article reference" data-track-item_id="10.1613/JAIR.1523" data-track-label="10.1613/JAIR.1523" data-track-value="article reference" href="https://doi.org/10.1613%2FJAIR.1523" rel="nofollow noopener">
+ Article
+</a>
+<a aria-label="Google Scholar reference 6" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=Lexrank%3A%20Graph-based%20lexical%20centrality%20as%20salience%20in%20text%20summarization&amp;journal=J%20Artif%20Intell%20Res&amp;doi=10.1613%2FJAIR.1523&amp;volume=22&amp;pages=457-47&amp;publication_year=2004&amp;author=Erkan%2CG&amp;author=Radev%2CDR" rel="nofollow noopener">
+ Google Scholar
+</a>
+Jia, R., Cao, Y., Tang, H., et al. (2020). Neural extractive summarization with hierarchical attentive heterogeneous graph network. In: Webber B, Cohn T, He Y, et al (Eds.), Proceedings of the 2020 conference on Empirical Methods in Natural Language Processing (EMNLP).
+Association for Computational Linguistics,
+Online, pp 3622–363.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.emnlp-main.295" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.emnlp-main.295">
+ https://doi.org/10.18653/v1/2020.emnlp-main.295
+</a>
+Jiang, C., Xie, R., Ye, W., et al. (2023). Exploiting pseudo image captions for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Findings of the association for computational linguistics: ACL 2023.
+Association for Computational Linguistics,
+Toronto, Canada, pp 161–175.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2023.findings-acl.12" data-track-value="external reference" href="https://doi.org/10.18653/v1/2023.findings-acl.12">
+ https://doi.org/10.18653/v1/2023.findings-acl.12
+</a>
+Jin, L., &amp; Chen, J. (2024). Self-supervised opinion summarization with multi-modal knowledge graph.
+J Intell Inf Syst,
+62
+(1), 191–208.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1007/S10844-023-00812-1" data-track-value="external reference" href="https://doi.org/10.1007/S10844-023-00812-1">
+ https://doi.org/10.1007/S10844-023-00812-1
+</a>
+<a aria-label="Article reference 9" data-doi="10.1007/S10844-023-00812-1" data-track="click_references" data-track-action="article reference" data-track-item_id="10.1007/S10844-023-00812-1" data-track-label="10.1007/S10844-023-00812-1" data-track-value="article reference" href="https://link.springer.com/doi/10.1007/S10844-023-00812-1" rel="noopener">
+ Article
+</a>
+<a aria-label="MathSciNet reference 9" data-track="click_references" data-track-action="mathscinet reference" data-track-item_id="link" data-track-label="link" data-track-value="mathscinet reference" href="http://www.ams.org/mathscinet-getitem?mr=4702630" rel="nofollow noopener">
+ MathSciNet
+</a>
+<a aria-label="Google Scholar reference 9" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=Self-supervised%20opinion%20summarization%20with%20multi-modal%20knowledge%20graph&amp;journal=J%20Intell%20Inf%20Syst&amp;doi=10.1007%2FS10844-023-00812-1&amp;volume=62&amp;issue=1&amp;pages=191-208&amp;publication_year=2024&amp;author=Jin%2CL&amp;author=Chen%2CJ" rel="nofollow noopener">
+ Google Scholar
+</a>
+Jing, B., You, Z., Yang, T., et al. (2021). Multiplex graph neural network for extractive text summarization. In: Moens MF, Huang X, Specia L, et al. (Eds.), Proceedings of the 2021 conference on empirical methods in natural language processing.
+Association for Computational Linguistics,
+Online and Punta Cana, Dominican Republic, pp 133–139.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2021.emnlp-main.11" data-track-value="external reference" href="https://doi.org/10.18653/v1/2021.emnlp-main.11">
+ https://doi.org/10.18653/v1/2021.emnlp-main.11
+</a>
+Kingma, D.P., &amp; Ba, J (2015). Adam: A method for stochastic optimization. In: Bengio Y, LeCun Y (Eds.), 3rd International conference on learning representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015,
+Conference Track Proceedings,
+[SPACE]
+<a data-track="click_references" data-track-action="external reference" data-track-label="http://arxiv.org/abs/1412.6980" data-track-value="external reference" href="http://arxiv.org/abs/1412.6980">
+ http://arxiv.org/abs/1412.6980
+</a>
+Lewis, M., Liu, Y., Goyal, N., et al. (2020). BART: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics.
+Association for Computational Linguistics,
+Online, pp 7871–7880.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.acl-main.703" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.acl-main.703">
+ https://doi.org/10.18653/v1/2020.acl-main.703
+</a>
+Li, H., Zhu, J., Liu, T., et al. (2018). Multi-modal sentence summarization with modality attention and image filtering. In: Lang J (Ed.), Proceedings of the twenty-seventh international joint conference on artificial intelligence, IJCAI 2018, July 13-19, 2018, Stockholm, Sweden. ijcai.org, Stockholm, Sweden, pp 4152–4158.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.24963/ijcai.2018/577" data-track-value="external reference" href="https://doi.org/10.24963/ijcai.2018/577">
+ https://doi.org/10.24963/ijcai.2018/577
+</a>
+Li, J., Li, D., Xiong, C., et al. (2022). BLIP: Bootstrapping language-image pre-training for unified vision-language understanding and generation. In: Chaudhuri K, Jegelka S, Song L, et al (Eds.), International conference on machine learning, ICML 2022, 17-23 July 2022, PMLR, Baltimore, Maryland, USA,
+Proceedings of Machine Learning Research,
+162
+pp 12888–12900
+Li, M., Chen, X., Gao, S., et al (2020) VMSMO: Learning to generate multimodal summary for video-based news articles. In: Webber B, Cohn T, He Y, et al (Eds.), Proceedings of the 2020 conference on Empirical Methods in Natural Language Processing (EMNLP).
+Association for Computational Linguistics,
+Online, pp 9360–9369.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.emnlp-main.752" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.emnlp-main.752">
+ https://doi.org/10.18653/v1/2020.emnlp-main.752
+</a>
+Liang, Y., Meng, F., Xu, J., et al. (2023). Summary-oriented vision modeling for multimodal abstractive summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Proceedings of the 61st annual meeting of the association for computational linguistics (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Toronto, Canada, pp 2934–2951.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2023.acl-long.165" data-track-value="external reference" href="https://doi.org/10.18653/v1/2023.acl-long.165">
+ https://doi.org/10.18653/v1/2023.acl-long.165
+</a>
+Liu Y, &amp; Lapata M. (2019). Text summarization with pretrained encoders. In: Inui K, Jiang J, Ng V, et al (Eds.), Proceedings of the 2019 conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP).
+Association for Computational Linguistics,
+Hong Kong, China, pp 3730–3740.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/D19-1387" data-track-value="external reference" href="https://doi.org/10.18653/v1/D19-1387">
+ https://doi.org/10.18653/v1/D19-1387
+</a>
+Liu, Y., Ott, M., Goyal, N., et al. (2019). Roberta: A robustly optimized BERT pretraining approach.
+<a data-track="click_references" data-track-action="external reference" data-track-label="http://arxiv.org/abs/1907.11692" data-track-value="external reference" href="http://arxiv.org/abs/1907.11692">
+ arXiv:1907.11692
+</a>
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://arxiv.org/abs/1907.11692" data-track-value="external reference" href="https://arxiv.org/abs/1907.11692">
+ https://arxiv.org/abs/1907.11692
+</a>
+Liu, Y., Liu, P., Radev, D., et al. (2022). BRIO: Bringing order to abstractive summarization. In: Muresan S, Nakov P, Villavicencio A (Eds.), Proceedings of the 60th annual meeting of the association for computational linguistics (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Dublin, Ireland, pp 2890–2903.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2022.acl-long.207" data-track-value="external reference" href="https://doi.org/10.18653/v1/2022.acl-long.207">
+ https://doi.org/10.18653/v1/2022.acl-long.207
+</a>
+van der Maaten L, &amp; Hinton G (2008) Visualizing data using t-sne.
+Journal of Machine Learning Research
+9
+(86), 2579–2605.
+<a data-track="click_references" data-track-action="external reference" data-track-label="http://jmlr.org/papers/v9/vandermaaten08a.html" data-track-value="external reference" href="http://jmlr.org/papers/v9/vandermaaten08a.html">
+ http://jmlr.org/papers/v9/vandermaaten08a.html
+</a>
+Mihalcea, R., Tarau, P (2004) TextRank: Bringing order into text. In: Lin D, Wu D (Eds.), Proceedings of the 2004 conference on empirical methods in natural language processing.
+Association for Computational Linguistics,
+Barcelona, Spain, pp 404–411.
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://aclanthology.org/W04-3252" data-track-value="external reference" href="https://aclanthology.org/W04-3252">
+ https://aclanthology.org/W04-3252
+</a>
+Nallapati R, Zhai F, &amp; Zhou B. (2017) .Summarunner: A recurrent neural network based sequence model for extractive summarization of documents.
+Proceedings of the AAAI Conference on Artificial Intelligence
+31
+(1).
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1609/aaai.v31i1.10958" data-track-value="external reference" href="https://doi.org/10.1609/aaai.v31i1.10958">
+ https://doi.org/10.1609/aaai.v31i1.10958
+</a>
+Narayan S, Cohen SB, &amp; Lapata M. (2018). Ranking sentences for extractive summarization with reinforcement learning. In: Walker M, Ji H, Stent A (Eds.) Proceedings of the 2018 conference of the North American chapter of the association for computational linguistics: Human language technologies, Volume 1 (Long Papers).
+Association for Computational Linguistics,
+New Orleans, Louisiana, pp 1747–1759.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/N18-1158" data-track-value="external reference" href="https://doi.org/10.18653/v1/N18-1158">
+ https://doi.org/10.18653/v1/N18-1158
+</a>
+Overbay, K., Ahn, J., Pesaran zadeh, F., et al. (2023). mRedditSum: A multimodal abstractive summarization dataset of Reddit threads with images. In: Bouamor H, Pino J, Bali K (Eds.), Proceedings of the 2023 conference on empirical methods in natural language processing.
+Association for Computational Linguistics,
+Singapore, pp 4117–4132.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2023.emnlp-main.251" data-track-value="external reference" href="https://doi.org/10.18653/v1/2023.emnlp-main.251">
+ https://doi.org/10.18653/v1/2023.emnlp-main.251
+</a>
+Paulus, R., Xiong, C., &amp; Socher, R. (2018). A deep reinforced model for abstractive summarization. In: International conference on learning representations,
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://openreview.net/forum?id=HkAClQgA-" data-track-value="external reference" href="https://openreview.net/forum?id=HkAClQgA-">
+ https://openreview.net/forum?id=HkAClQgA-
+</a>
+Pennington, J., Socher, R., &amp; Manning, C. (2014). GloVe: Global vectors for word representation. In: Moschitti A, Pang B, Daelemans W (Eds.) Proceedings of the 2014 conference on Empirical Methods in Natural Language Processing (EMNLP).
+Association for Computational Linguistics,
+Doha, Qatar, pp 1532–1543.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.3115/v1/D14-1162" data-track-value="external reference" href="https://doi.org/10.3115/v1/D14-1162">
+ https://doi.org/10.3115/v1/D14-1162
+</a>
+Phan TA, Nguyen NDN, &amp; Bui KHN. (2022). HeterGraphLongSum: Heterogeneous graph neural network with passage aggregation for extractive long document summarization. In: Calzolari N, Huang CR, Kim H, et al (Eds.), Proceedings of the 29th international conference on computational linguistics.
+International Committee on Computational Linguistics,
+Gyeongju, Republic of Korea, pp 6248–6258.
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://aclanthology.org/2022.coling-1.545" data-track-value="external reference" href="https://aclanthology.org/2022.coling-1.545">
+ https://aclanthology.org/2022.coling-1.545
+</a>
+Radford A, Kim JW, Hallacy C, et al (2021) Learning transferable visual models from natural language supervision. In: Meila M, Zhang T (Eds.),
+Proceedings of the 38th International Conference on Machine Learning,
+ICML 2021, 18-24 July 2021, Virtual Event, pp 8748–8763.
+<a data-track="click_references" data-track-action="external reference" data-track-label="http://proceedings.mlr.press/v139/radford21a.html" data-track-value="external reference" href="http://proceedings.mlr.press/v139/radford21a.html">
+ http://proceedings.mlr.press/v139/radford21a.html
+</a>
+See, A., Liu, P.J., Manning, C.D. (2017). Get to the point: Summarization with pointer-generator networks. In: Barzilay R, Kan MY (Eds.), Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Vancouver, Canada, pp 1073–1083.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/P17-1099" data-track-value="external reference" href="https://doi.org/10.18653/v1/P17-1099">
+ https://doi.org/10.18653/v1/P17-1099
+</a>
+Song, Z., &amp; King, I. (2022). Hierarchical heterogeneous graph attention network for syntax-aware summarization.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+36
+(10), 11340–1134.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1609/aaai.v36i10.21385" data-track-value="external reference" href="https://doi.org/10.1609/aaai.v36i10.21385">
+ https://doi.org/10.1609/aaai.v36i10.21385
+</a>
+<a aria-label="Article reference 30" data-doi="10.1609/aaai.v36i10.21385" data-track="click_references" data-track-action="article reference" data-track-item_id="10.1609/aaai.v36i10.21385" data-track-label="10.1609/aaai.v36i10.21385" data-track-value="article reference" href="https://doi.org/10.1609%2Faaai.v36i10.21385" rel="nofollow noopener">
+ Article
+</a>
+<a aria-label="Google Scholar reference 30" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=Hierarchical%20heterogeneous%20graph%20attention%20network%20for%20syntax-aware%20summarization&amp;journal=Proceedings%20of%20the%20AAAI%20Conference%20on%20Artificial%20Intelligence&amp;doi=10.1609%2Faaai.v36i10.21385&amp;volume=36&amp;issue=10&amp;pages=11340-1134&amp;publication_year=2022&amp;author=Song%2CZ&amp;author=King%2CI" rel="nofollow noopener">
+ Google Scholar
+</a>
+Sutskever, I., Vinyals, O., &amp; Le, Q.V. (2014). Sequence to sequence learning with neural networks. In: Ghahramani Z, Welling M, Cortes C, et al (Eds.),
+Advances in Neural Information Processing Systems,
+[SPACE]
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://proceedings.neurips.cc/paper/2014/hash/a14ac55a4f27472c5d894ec1c3c743d2-Abstract.html" data-track-value="external reference" href="https://proceedings.neurips.cc/paper/2014/hash/a14ac55a4f27472c5d894ec1c3c743d2-Abstract.html">
+ https://proceedings.neurips.cc/paper/2014/hash/a14ac55a4f27472c5d894ec1c3c743d2-Abstract.html
+</a>
+Tang, P., Hu, K., Yan, R., et al. (2022). OTExtSum: Extractive text summarisation with optimal transport. In: Carpuat M, de Marneffe MC, Meza Ruiz IV (eds) Findings of the association for computational linguistics: NAACL 2022.
+Association for Computational Linguistics,
+Seattle, United States, pp 1128–1141.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2022.findings-naacl.85" data-track-value="external reference" href="https://doi.org/10.18653/v1/2022.findings-naacl.85">
+ https://doi.org/10.18653/v1/2022.findings-naacl.85
+</a>
+Vaswani A, Shazeer N, Parmar N, et al. (2017). Attention is all you need. In: Guyon I, Luxburg UV, Bengio S, et al (Eds.),
+Advances in Neural Information Processing Systems,
+[SPACE]
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" data-track-value="external reference" href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">
+ https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+</a>
+Velickovic, P., Cucurull, G., Casanova, A., et al. (2017).
+Graph attention networks. stat,
+1050
+(20), 10–48550.
+<a aria-label="Google Scholar reference 34" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Graph%20attention%20networks.%20stat&amp;volume=1050&amp;issue=20&amp;pages=10-48550&amp;publication_year=2017&amp;author=Velickovic%2CP&amp;author=Cucurull%2CG&amp;author=Casanova%2CA" rel="nofollow noopener">
+ Google Scholar
+</a>
+Wang, D., Liu, P., Zheng, Y., et al. (2020). Heterogeneous graph neural networks for extractive document summarization. In: Jurafsky D, Chai J, Schluter N, et al (Eds.), Proceedings of the 58th annual meeting of the association for computational linguistics.
+Association for Computational Linguistics,
+Online, pp 6209–6219.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.acl-main.553" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.acl-main.553">
+ https://doi.org/10.18653/v1/2020.acl-main.553
+</a>
+Wu W, Li W, Xiao X, et al. (2021). BASS: Boosting abstractive summarization with unified semantic graph. In: Proceedings of the 59th annual meeting of the association for computational linguistics and the 11th international joint conference on natural language processing (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Online, pp 6052–6067.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2021.acl-long.472" data-track-value="external reference" href="https://doi.org/10.18653/v1/2021.acl-long.472">
+ https://doi.org/10.18653/v1/2021.acl-long.472
+</a>
+Xiao M, Zhu J, Lin H, et al. (2023). CFSum coarse-to-fine contribution network for multimodal summarization. In: Rogers A, Boyd-Graber J, Okazaki N (Eds.), Proceedings of the 61st annual meeting of the association for computational linguistics (Volume 1: Long Papers).
+Association for Computational Linguistics,
+Toronto, Canada, pp 8538–8553.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2023.acl-long.476" data-track-value="external reference" href="https://doi.org/10.18653/v1/2023.acl-long.476">
+ https://doi.org/10.18653/v1/2023.acl-long.476
+</a>
+Xie, F., Chen, J., &amp; Chen, K. (2023). Extractive text-image summarization with relation-enhanced graph attention network.
+J Intell Inf Syst,
+61
+(2), 325–341.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1007/S10844-022-00757-X" data-track-value="external reference" href="https://doi.org/10.1007/S10844-022-00757-X">
+ https://doi.org/10.1007/S10844-022-00757-X
+</a>
+<a aria-label="Article reference 38" data-doi="10.1007/S10844-022-00757-X" data-track="click_references" data-track-action="article reference" data-track-item_id="10.1007/S10844-022-00757-X" data-track-label="10.1007/S10844-022-00757-X" data-track-value="article reference" href="https://link.springer.com/doi/10.1007/S10844-022-00757-X" rel="noopener">
+ Article
+</a>
+<a aria-label="Google Scholar reference 38" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=Extractive%20text-image%20summarization%20with%20relation-enhanced%20graph%20attention%20network&amp;journal=J%20Intell%20Inf%20Syst&amp;doi=10.1007%2FS10844-022-00757-X&amp;volume=61&amp;issue=2&amp;pages=325-341&amp;publication_year=2023&amp;author=Xie%2CF&amp;author=Chen%2CJ&amp;author=Chen%2CK" rel="nofollow noopener">
+ Google Scholar
+</a>
+Ying, C., Cai, T., Luo, S., et al. (2021). Do transformers really perform badly for graph representation? In: Ranzato M, Beygelzimer A, Dauphin YN, et al (Eds.),
+Advances in Neural Information Processing Systems,
+pp 28877–28888.
+<a data-track="click_references" data-track-action="external reference" data-track-label="https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html" data-track-value="external reference" href="https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html">
+ https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html
+</a>
+Zhang, J., Zhao, Y., Saleh, M., et al. (2020). PEGASUS: pre-training with extracted gap-sentences for abstractive summarization. In: Proceedings of the 37th International Conference on Machine Learning, ICML 2020, 13-18 July 2020, Virtual Event, pp 11328–11339.
+<a data-track="click_references" data-track-action="external reference" data-track-label="http://proceedings.mlr.press/v119/zhang20ae.html" data-track-value="external reference" href="http://proceedings.mlr.press/v119/zhang20ae.html">
+ http://proceedings.mlr.press/v119/zhang20ae.html
+</a>
+Zhang, L., Zhang, X., &amp; Pan, J. (2022a). Hierarchical cross-modality semantic correlation learning model for multimodal summarization.
+Proceedings of the AAAI Conference on Artificial Intelligence
+36
+(10) 11676–11684.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1609/aaai.v36i10.21422" data-track-value="external reference" href="https://doi.org/10.1609/aaai.v36i10.21422">
+ https://doi.org/10.1609/aaai.v36i10.21422
+</a>
+Zhang, M., Zhou, G., Yu, W., et al. (2022b). MAA-PTG: multimodal aspect-aware product title generation.
+J Intell Inf Syst
+59
+(1) 213–235.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1007/S10844-022-00695-8" data-track-value="external reference" href="https://doi.org/10.1007/S10844-022-00695-8">
+ https://doi.org/10.1007/S10844-022-00695-8
+</a>
+Zhang, Z., Meng, X., Wang, Y., et al. (2022c). Unims: A unified framework for multimodal summarization with knowledge distillation.
+Proceedings of the AAAI Conference on Artificial Intelligence
+36
+(10) 11757–11764.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1609/aaai.v36i10.21431" data-track-value="external reference" href="https://doi.org/10.1609/aaai.v36i10.21431">
+ https://doi.org/10.1609/aaai.v36i10.21431
+</a>
+Zhong, M., Liu, P., Chen, Y., et al. (2020). Extractive summarization as text matching. In: Jurafsky D, Chai J, Schluter N, et al (Eds.) Proceedings of the 58th annual meeting of the association for computational linguistics.
+Association for Computational Linguistics,
+Online, pp 6197–6208.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/2020.acl-main.552" data-track-value="external reference" href="https://doi.org/10.18653/v1/2020.acl-main.552">
+ https://doi.org/10.18653/v1/2020.acl-main.552
+</a>
+Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing.
+Association for Computational Linguistics,
+Brussels, Belgium, pp 4154–4164.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.18653/v1/D18-1448" data-track-value="external reference" href="https://doi.org/10.18653/v1/D18-1448">
+ https://doi.org/10.18653/v1/D18-1448
+</a>
+Zhu, J., Zhou, Y., Zhang, J., et al. (2020). Multimodal summarization with guidance of multimodal reference.
+Proceedings of the AAAI Conference on Artificial Intelligence,
+34
+(05), 9749–975.
+<a data-track="click_references" data-track-action="external reference" data-track-label="10.1609/aaai.v34i05.6525" data-track-value="external reference" href="https://doi.org/10.1609/aaai.v34i05.6525">
+ https://doi.org/10.1609/aaai.v34i05.6525
+</a>
+<a aria-label="Article reference 46" data-doi="10.1609/aaai.v34i05.6525" data-track="click_references" data-track-action="article reference" data-track-item_id="10.1609/aaai.v34i05.6525" data-track-label="10.1609/aaai.v34i05.6525" data-track-value="article reference" href="https://doi.org/10.1609%2Faaai.v34i05.6525" rel="nofollow noopener">
+ Article
+</a>
+<a aria-label="Google Scholar reference 46" data-track="click_references" data-track-action="google scholar reference" data-track-item_id="link" data-track-label="link" data-track-value="google scholar reference" href="http://scholar.google.com/scholar_lookup?&amp;title=Multimodal%20summarization%20with%20guidance%20of%20multimodal%20reference&amp;journal=Proceedings%20of%20the%20AAAI%20Conference%20on%20Artificial%20Intelligence&amp;doi=10.1609%2Faaai.v34i05.6525&amp;volume=34&amp;issue=05&amp;pages=9749-975&amp;publication_year=2020&amp;author=Zhu%2CJ&amp;author=Zhou%2CY&amp;author=Zhang%2CJ" rel="nofollow noopener">
+ Google Scholar
+</a>
+<a data-track="click" data-track-action="download citation references" data-track-label="link" href="https://citation-needed.springer.com/v2/references/10.1007/s10844-024-00886-5?format=refman&amp;flavour=references" rel="nofollow">
+ Download references
+</a>
+Funding
+This research was sponsored by the National Natural Science Foundation of China (No.61806101).
+Author information
+Author notes
+Xiankai Jiang and Jingqiang Chen are both equally contributed.
+Authors and Affiliations
+School of Computer Science, Nanjing University of Posts and Telecommunications, Nanjing, 210049, Jiangsu, China
+Xiankai Jiang &amp; Jingqiang Chen
+Authors
+Xiankai Jiang
+<a class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link" href="/search?dc.creator=Xiankai%20Jiang" rel="nofollow">
+ View author publications
+</a>
+You can also search for this author in
+<a class="c-article-identifiers__item" data-track="click" data-track-action="author link - pubmed" data-track-label="link" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Xiankai%20Jiang" rel="nofollow">
+ PubMed
+</a>
+<a class="c-article-identifiers__item" data-track="click" data-track-action="author link - scholar" data-track-label="link" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Xiankai%20Jiang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" rel="nofollow">
+ Google Scholar
+</a>
+Jingqiang Chen
+<a class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link" href="/search?dc.creator=Jingqiang%20Chen" rel="nofollow">
+ View author publications
+</a>
+You can also search for this author in
+<a class="c-article-identifiers__item" data-track="click" data-track-action="author link - pubmed" data-track-label="link" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Jingqiang%20Chen" rel="nofollow">
+ PubMed
+</a>
+<a class="c-article-identifiers__item" data-track="click" data-track-action="author link - scholar" data-track-label="link" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Jingqiang%20Chen%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" rel="nofollow">
+ Google Scholar
+</a>
+Contributions
+X.J. and J.C. wrote the manuscript . All authors reviewed the manuscript.
+Corresponding author
+Correspondence to
+<a href="mailto:cjq@njupt.edu.cn" id="corresp-c1">
+ Jingqiang Chen
+</a>
+.
+Ethics declarations
+Competing Interests
+The authors declare no competing interests.
+Ethics Approval and Consent to Participate
+Not Applicable.
+Consent for Publication
+The authors declare that they consent for publication.
+Additional information
+Publisher's Note
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.
+<a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Heterogeneous%20graphormer%20for%20extractive%20multimodal%20summarization&amp;author=Xiankai%20Jiang%20et%20al&amp;contentID=10.1007%2Fs10844-024-00886-5&amp;copyright=The%20Author%28s%29%2C%20under%20exclusive%20licence%20to%20Springer%20Science%2BBusiness%20Media%2C%20LLC%2C%20part%20of%20Springer%20Nature&amp;publication=0925-9902&amp;publicationDate=2024-09-30&amp;publisherName=SpringerNature&amp;orderBeanReset=true">
+ Reprints and permissions
+</a>
+About this article
+<a data-crossmark="10.1007/s10844-024-00886-5" data-test="crossmark" data-track="click" data-track-action="Click Crossmark" data-track-label="link" href="https://crossmark.crossref.org/dialog/?doi=10.1007/s10844-024-00886-5" rel="noopener" target="_blank">
+</a>
+Cite this article
+Jiang, X., Chen, J. Heterogeneous graphormer for extractive multimodal summarization.
+J Intell Inf Syst
+(2024). https://doi.org/10.1007/s10844-024-00886-5
+<a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-external="" data-track-label="link" href="https://citation-needed.springer.com/v2/references/10.1007/s10844-024-00886-5?format=refman&amp;flavour=citation" rel="nofollow">
+ Download citation
+</a>
+Received
+:
+14 April 2024
+Revised
+:
+04 September 2024
+Accepted
+:
+05 September 2024
+Published
+:
+30 September 2024
+DOI
+:
+https://doi.org/10.1007/s10844-024-00886-5
+Share this article
+Anyone you share the following link with will be able to read this content:
+Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Keywords
+<a data-track="click" data-track-action="view keyword" data-track-label="link" href='/search?query=Summarization&amp;facet-discipline="Computer%20Science"'>
+ Summarization
+</a>
+<a data-track="click" data-track-action="view keyword" data-track-label="link" href='/search?query=Extractive%20summarization&amp;facet-discipline="Computer%20Science"'>
+ Extractive summarization
+</a>
+<a data-track="click" data-track-action="view keyword" data-track-label="link" href='/search?query=Multi-modal%20summarization&amp;facet-discipline="Computer%20Science"'>
+ Multi-modal summarization
+</a>
+<a data-track="click" data-track-action="view keyword" data-track-label="link" href='/search?query=Graph%20neural%20networks&amp;facet-discipline="Computer%20Science"'>
+ Graph neural networks
+</a>
