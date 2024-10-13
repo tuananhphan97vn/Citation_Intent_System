@@ -20,30 +20,14 @@ chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến Chro
 # Khởi tạo trình duyệt
 
 def clean_new_line_inside_tag(soup):
-    for a_tag in soup.find_all('a'):
-        # Lấy thẻ cha của thẻ <a>
-        parent_tag = a_tag.parent
-        
-        if parent_tag:
-            # Lấy toàn bộ văn bản trong thẻ cha, loại bỏ '\n'
-            parent_text = parent_tag.get_text(separator="", strip=True).replace('\n', '')
-            
-            # Cập nhật lại nội dung của thẻ cha
-            parent_tag.clear()  # Xóa toàn bộ nội dung của thẻ cha
-            parent_tag.append(parent_text)  # Thêm lại nội dung đã làm sạch
 
-            # Đặt lại thẻ <a> vào thẻ cha
-            parent_tag.append(a_tag)
-
-        # Loại bỏ '\n' trong tất cả các thuộc tính của thẻ <a>
-        for attr, value in a_tag.attrs.items():
-            if isinstance(value, list):
-                # Nếu giá trị là danh sách, loại bỏ '\n' trong từng phần tử
-                cleaned_values = [v.replace('\n', '') for v in value]
-                a_tag[attr] = cleaned_values  # Cập nhật thuộc tính
-            else:
-                a_tag[attr] = value.replace('\n', '')  # Loại bỏ '\n'
-                
+    all_a_tags = soup.find_all('a')
+    # Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
+    for tag in all_a_tags:
+        for attr, value in tag.attrs.items():
+            if isinstance(value, str):
+                tag[attr] = value.replace('\n', '')
+                    
     return soup 
 
 def get_paper_soure_html(paper_url):

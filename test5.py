@@ -5,7 +5,12 @@ def remove_redun_space(text):
 	text = re.sub(r'\s+', ' ', text).strip()
 	return text
 
-def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab."]):
+def norm_text(text):
+	text = remove_redun_space(text)
+	text.replace("\n<a>","<a>").replace("\n <a>"," <a>")
+	return text 
+
+def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab.","al."]):
 	# Join the keywords into a regex pattern for matching
 	keywords_pattern = r'|'.join(re.escape(keyword) for keyword in keywords)
 	
@@ -72,86 +77,96 @@ def clean_new_line_inside_tag(soup):
 
 if __name__ == '__main__':
 
-# 	text = """To compute node representations of this graph, we propose the heterogeneous Graphormer (HeterGraphormer for short) by enhancing Graphormer (Ying et al.,
-# <a aria-label="Reference 2021" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR39" id="ref-link-section-d120190458e378" title="Ying, C., Cai, T., Luo, S., et al. (2021). Do transformers really perform badly for graph representation? In: Ranzato M, Beygelzimer A, Dauphin YN, et al (Eds.), Advances in Neural Information Processing Systems, pp 28877–28888.                 https://proceedings.neurips.cc/paper/2021/hash/f1c1592588411002af340cbaedd6fc33-Abstract.html                              ">
-#  2021
-# </a>
-# ) to effectively model intricate relationships between multiple modalities. Graphormer leverages self-attention to enable attention to all nodes when updating nodes, thereby alleviating the over-smoothing issue caused by traditional GNNs. We enhance Graphormer in the follow three aspect. First, we introduce type embedding and apply distinct spatial and edge embeddings for different heterogeneous edges to more effectively handle the heterogeneity of nodes and edges. Second, the centrality embedding was removed to optimize its performance for document graphs. Third, unconnected nodes are considered during node updates, as unrelated relationships are also valuable.
-# """
-# 	sentences = sentence_split(text )
-# 	for i , sent in enumerate(sentences):
-# 		print( i , sent)
-# 		print('================================')
-	from bs4 import BeautifulSoup
+	text = """    With the rapid development of multimedia data on the Internet, multimodal summarization has attracted widespread attention from researchers. Recently proposed Multimodal Summarization with Multimodal Output (Zhu et al.,
+    <a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d206753678e305" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164.                 https://doi.org/10.18653/v1/D18-1448                              ">
+     2018
+    </a>
+    ) (MSMO) that condenses long multimodal news to a short pictorial version, as shown in Fig.
+    <a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig1">
+     1
+    </a>
+    . This innovative approach has been substantiated to significantly enhance users’ ability to swiftly grasp key news points, thereby elevating user satisfaction (Zhu et al.,
+    <a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d206753678e311" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164.                 https://doi.org/10.18653/v1/D18-1448                              ">
+     2018
+    </a>
+    ).
+"""
+	text = norm_text(text)
+	print(text )
+	sentences = sentence_split(text )
+	for i , sent in enumerate(sentences):
+		print( i , sent)
+		print('================================')
+# 	from bs4 import BeautifulSoup
 
-	# Example HTML content
-	html_content = '''
-   <p>
-	With the rapid development of multimedia data on the Internet, multimodal summarization has attracted widespread attention from researchers. Recently proposed Multimodal Summarization with Multimodal Output (Zhu et al.,
-	<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d129259303e305" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
-				https://doi.org/10.18653/v1/D18-1448
+# 	# Example HTML content
+# 	html_content = '''
+#    <p>
+# 	With the rapid development of multimedia data on the Internet, multimodal summarization has attracted widespread attention from researchers. Recently proposed Multimodal Summarization with Multimodal Output (Zhu et al.,
+# 	<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d129259303e305" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+# 				https://doi.org/10.18653/v1/D18-1448
 				
-			  ">
-	 2018
-	</a>
-	) (MSMO) that condenses long multimodal news to a short pictorial version, as shown in Fig.
-	<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig1">
-	 1
-	</a>
-	. This innovative approach has been substantiated to significantly enhance users’ ability to swiftly grasp key news points, thereby elevating user satisfaction (Zhu et al.,
-	<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d129259303e311" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
-				https://doi.org/10.18653/v1/D18-1448
+# 			  ">
+# 	 2018
+# 	</a>
+# 	) (MSMO) that condenses long multimodal news to a short pictorial version, as shown in Fig.
+# 	<a data-track="click" data-track-action="figure anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#Fig1">
+# 	 1
+# 	</a>
+# 	. This innovative approach has been substantiated to significantly enhance users’ ability to swiftly grasp key news points, thereby elevating user satisfaction (Zhu et al.,
+# 	<a aria-label="Reference 2018" data-test="citation-ref" data-track="click" data-track-action="reference anchor" data-track-label="link" href="/article/10.1007/s10844-024-00886-5#ref-CR45" id="ref-link-section-d129259303e311" title="Zhu, J., Li, H., Liu, T., et al. (2018). MSMO: Multimodal summarization with multimodal output. In: Riloff E, Chiang D, Hockenmaier J, et al (eds) Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Brussels, Belgium, pp 4154–4164. 
+# 				https://doi.org/10.18653/v1/D18-1448
 				
-			  ">
-	 2018
-	</a>
-	).
-   </p>
-	'''
+# 			  ">
+# 	 2018
+# 	</a>
+# 	).
+#    </p>
+# 	'''
 
-	html_content = """
-<html>
-  <body>
-	<div>
-		<p>Some text here\nwith newline
-		<a href="https://example.com \n \n hello" >Link to example</a>
-		</p>
-	</div>
-	<div>
-		<a href="https://example2.com">Example 2 Link</a> 
+# 	html_content = """
+# <html>
+#   <body>
+# 	<div>
+# 		<p>Some text here\nwith newline
+# 		<a href="https://example.com \n \n hello" >Link to example</a>
+# 		</p>
+# 	</div>
+# 	<div>
+# 		<a href="https://example2.com">Example 2 Link</a> 
 
-		bo lo ba la
-	</div>
-  </body>
-</html>"""
-	# Create a BeautifulSoup object
-	def clean_tag(soup):
+# 		bo lo ba la
+# 	</div>
+#   </body>
+# </html>"""
+# 	# Create a BeautifulSoup object
+# 	def clean_tag(soup):
 
-		for p_tag in soup.find_all('p'):
-			# Lấy toàn bộ văn bản trong thẻ <p>, loại bỏ '\n'
-			cleaned_text = p_tag.get_text(separator="", strip=True).replace('\n', '')
+# 		for p_tag in soup.find_all('p'):
+# 			# Lấy toàn bộ văn bản trong thẻ <p>, loại bỏ '\n'
+# 			cleaned_text = p_tag.get_text(separator="", strip=True).replace('\n', '')
 			
-			# Xóa toàn bộ nội dung hiện tại của thẻ <p>
-			p_tag.clear()
+# 			# Xóa toàn bộ nội dung hiện tại của thẻ <p>
+# 			p_tag.clear()
 			
-			# Thêm lại văn bản đã làm sạch vào thẻ <p>
-			p_tag.append(cleaned_text)
+# 			# Thêm lại văn bản đã làm sạch vào thẻ <p>
+# 			p_tag.append(cleaned_text)
 			
-			# Thêm lại tất cả các thẻ con vào thẻ <p>
-			for child in p_tag.find_all(True):  # Tìm tất cả các thẻ con
-				if child.name == 'a':  # Chỉ thêm lại thẻ <a>
-					p_tag.append(child)
+# 			# Thêm lại tất cả các thẻ con vào thẻ <p>
+# 			for child in p_tag.find_all(True):  # Tìm tất cả các thẻ con
+# 				if child.name == 'a':  # Chỉ thêm lại thẻ <a>
+# 					p_tag.append(child)
 
-		return soup 
+# 		return soup 
 
-	# Print the modified HTML
-	soup = BeautifulSoup(html_content, 'html.parser')
-	print('before cleaning ......... ')
-	print(soup)
-	soup = clean_tag(soup)
-	print('after cleaning................')
-	print(soup)
-	# divs = soup.find_all('div')
-	# for div in divs:
-	# 	print('-------')
-	# 	print(div)
+# 	# Print the modified HTML
+# 	soup = BeautifulSoup(html_content, 'html.parser')
+# 	print('before cleaning ......... ')
+# 	print(soup)
+# 	soup = clean_tag(soup)
+# 	print('after cleaning................')
+# 	print(soup)
+# 	# divs = soup.find_all('div')
+# 	# for div in divs:
+# 	# 	print('-------')
+# 	# 	print(div)
