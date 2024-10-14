@@ -42,7 +42,7 @@ def find_all_parent_tag_a(soup):
 def replace_tag_a(soup):
 	#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
 	links = soup.find_all('a')
-
+	all_tag_a = links
 	# Loop through each <a> tag and replace it with {hrefi}
 	for i, link in enumerate(links, 1):
 		# Create the replacement string
@@ -50,7 +50,7 @@ def replace_tag_a(soup):
 		
 		# Replace the <a> tag with the replacement string
 		link.replace_with(replacement)
-	return soup 
+	return soup , all_tag_a
 
 def get_paper_soure_html(paper_url):
 
@@ -75,20 +75,28 @@ def get_paper_soure_html(paper_url):
 	soup1 = BeautifulSoup(html, 'html.parser')
 	soup2 = BeautifulSoup(html, 'html.parser')
 
-	# print(soup2)
-
 	soup2 = clean_new_line_inside_tag(soup2) 
-	soup2 = replace_tag_a(soup2)
+	soup2 , all_tag_a= replace_tag_a(soup2)
 
-	#get all the tag , which is the parent of at least tag <a> in the html object 
+	#all tag a indicate the list of tag a 
+	for tag_a in all_tag_a:
+		print(tag_a)
 
 	with open('output_test1.html', 'w', encoding='utf-8') as file:
 		file.write(str(soup1))
 
-
 	with open('output_test2.html', 'w', encoding='utf-8') as file:
 		file.write(str(soup2))
 
+	with open('html_text1.txt' , 'w') as f:
+		f.write(soup1.get_text())
+
+	with open('html_text2.txt' , 'w') as f:
+		f.write(soup2.get_text())
+
+	with open('all_tag_a.html' ,'w') as f:
+		for tag_a in all_tag_a:
+			
 
 if __name__ == '__main__':
 	# title = """Dynamic Traffic Light Control System Based on Process Synchronization Among Connected Vehicles"""

@@ -148,21 +148,27 @@ if __name__ =='__main__':
 	"""
 
 	# Initialize BeautifulSoup
-	soup = BeautifulSoup(html, 'html.parser')
+	# soup = BeautifulSoup(html, 'html.parser')
 
-	# Find all <a> tags
-	links = soup.find_all('a')
+	# # Find all <a> tags
+	# links = soup.find_all('a')
 
-	# Loop through each <a> tag and replace it with {hrefi}
-	for i, link in enumerate(links, 1):
-		# Create the replacement string
-		replacement = f"href{i}"
+	# # Loop through each <a> tag and replace it with {hrefi}
+	# for i, link in enumerate(links, 1):
+	# 	# Create the replacement string
+	# 	replacement = f"href{i}"
 		
-		# Replace the <a> tag with the replacement string
-		link.replace_with(replacement)
+	# 	# Replace the <a> tag with the replacement string
+	# 	link.replace_with(replacement)
 
-	# Output the modified HTML
-	print(soup.prettify())
+	# # Output the modified HTML
+	# print(soup.prettify())
 
-	print("\n")
-	print(soup.get_text())
+	# print("\n")
+	# print(soup.get_text())
+	text = """
+1 IntroductionWith the rapid development of multimedia data on the Internet, multimodal summarization has attracted widespread attention from researchers. Recently proposed Multimodal Summarization with Multimodal Output (Zhu et al., href33) (MSMO) that condenses long multimodal news to a short pictorial version, as shown in Fig. href34. This innovative approach has been substantiated to significantly enhance users’ ability to swiftly grasp key news points, thereby elevating user satisfaction (Zhu et al., href35).While several methods have been proposed to tackle the MSMO task (Zhu et al., href36, href37; Jiang et al., href38), effectively handling the relationship between the image and text modalities remains a challenging problem. Zhang et al. (href39) extends the text encoder to a multimodal encoder, which takes the concatenation of textual and visual embeddings as input to obtain their contextualized joint representations. However, experimental results indicate that merely concatenating textual and visual embeddings cannot well capture the intricate relationships between modalities, such as sentence-image relationships. Jiang et al. (href40) takes sentences related to images as additional input rather than relying directly on image information. Although a image-text alignment mechanism was introduced in the sentence selection stage to leverage the relationships between images and sentences, this valuable relationship was not considered in the summarization stage.Fig. 1href41An example of multimodal summarization with multimodal output taskhref42We believe that there are extensive many-to-many relationships between images and sentences. By effectively leveraging both the relevance and irrelevance between sentences and images, we can more accurately extract salient sentences and critical images. Taking Fig. href43 as an example, the first sentence succinctly summarizes the main points of the news article: “Eating fruits and vegetables could cut the risk of heart attacks and strokes.” This guides our selection of the vegetable image which is relevant to it. Compared to the third sentence, which is only related to the BMI image, the second sentence mentions both vegetables and BMI. In this case, further selecting the second sentence, which covers different aspects of the topic, can provide a more comprehensive summary.To effectively leverage the many-to-many relationships between sentences and images for multimodal summarization, an intuitive approach is to employ graph structures for modeling these relationships. In recent years, numerous studies (Jia et al., href44; Song & King, href45) have been dedicated to exploring the application of Graph Neural Networks (GNNs) in the realm of text summarization with impressive results. Specifically, GNNs are able to model complex relationships between semantic units. By building graphs on semantic units, such as sentences, words (Wang et al., href46), latent topics (Cui et al., href47), or passages (Phan et al., href48), GNNs can enhance representations of semantic units for text summarization. Different from these works, we propose a novel heterogeneous graph for multimodal summarization. This graph includes nodes representing words, sentences, and images, with edges connecting sentences to both images and words. In this graph, images and sentences can serve as intermediaries for each other, thus enhancing their representations for multimodal summarization.To compute node representations of this graph, we propose the heterogeneous Graphormer (HeterGraphormer for short) by enhancing Graphormer (Ying et al., href49) to effectively model intricate relationships between multiple modalities. Graphormer leverages self-attention to enable attention to all nodes when updating nodes, thereby alleviating the over-smoothing issue caused by traditional GNNs. We enhance Graphormer in the follow three aspect. First, we introduce type embedding and apply distinct spatial and edge embeddings for different heterogeneous edges to more effectively handle the heterogeneity of nodes and edges. Second, the centrality embedding was removed to optimize its performance for document graphs. Third, unconnected nodes are considered during node updates, as unrelated relationships are also valuable.Overall, we propose a heterogeneous graph-based model for multimodal summarization (HGMS). The model first constructs a heterogeneous graph containing nodes for words, sentences and images. Subsequently, HeterGraphormer is employed to iteratively update the representations of nodes in the heterogeneous graph, aiming to more effectively model intricate relationships between nodes. Experimental results show that our model significantly enhances the performance of multimodal summarization. The contributions of our paper are as follows: 
+"""
+	sents = sentence_split(text)
+	for sent in sents : 
+		print( sent + "\n")
