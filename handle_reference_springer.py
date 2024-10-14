@@ -42,12 +42,13 @@ def find_all_parent_tag_a(soup):
 def replace_tag_a(soup):
 	#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
 	links = soup.find_all('a')
+	# print(len(links))
+	links = list(set(links))
 	all_tag_a = links
 	# Loop through each <a> tag and replace it with {hrefi}
 	for i, link in enumerate(links):
 		# Create the replacement string
 		replacement = f"href{i}"
-		
 		# Replace the <a> tag with the replacement string
 		link.replace_with(replacement)
 	return soup , all_tag_a

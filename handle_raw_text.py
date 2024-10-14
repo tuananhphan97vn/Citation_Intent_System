@@ -30,11 +30,43 @@ def handle_raw_text(text):
 			list_sent.append(sent.strip())
 	return list_sent
 		
+def read_all_tag_a():
+	delimiter = "<<<<<<<<<<<>>>>>>>>>>>>"
+	with open('all_tag_a.html','r',encoding='utf-8') as f:
+		data   = f.read()
+		all_tag_a = data.split('<<<<<<<<<<<>>>>>>>>>>>>')
+		all_tag_a = [BeautifulSoup(line, 'html.parser') for line in all_tag_a]
+		return all_tag_a
+	
+def match_sent_ref(text , all_tag_a):
 
+	def map_sent_to_refer(sent, a_tags):
+		#a_tags is the list of tag <a> inside the referecence 
+		N = len(a_tags)
+		result = [] 
+		for i in range(N):
+			if 'href' + str(i) in sent:
+				result.append(a_tags[i])
+				sent = sent.replace('href' + str(i), " " + a_tags[i].get_text() + " ")
+		return sent, result
+	
+	sents = handle_raw_text(text)
+
+	sent_matches = []
+	for sent in sents: 
+		sent_match = map_sent_to_refer(sent,  all_tag_a)
+		sent_matches.append(sent_match)
+	
+	return sent_matches
 
 if __name__ == '__main__':
 	with open('html_text2.txt' , 'r', encoding='utf-8') as f:
 		text = f.read()
-	list_sent = handle_raw_text(text)
-	for i , sent in enumerate(list_sent) :
-		print(i , ' -------- ' , sent)
+	all_tag_a = read_all_tag_a()
+	print(len(all_tag_a))
+	sent_matches = match_sent_ref(text , all_tag_a)
+	# for i, sent_match in enumerate(sent_matches):
+	# 	print(i , sent_match)
+	print(len(set(all_tag_a)))
+
+
