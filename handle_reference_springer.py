@@ -44,7 +44,7 @@ def replace_tag_a(soup):
 	links = soup.find_all('a')
 	all_tag_a = links
 	# Loop through each <a> tag and replace it with {hrefi}
-	for i, link in enumerate(links, 1):
+	for i, link in enumerate(links):
 		# Create the replacement string
 		replacement = f"href{i}"
 		
@@ -96,7 +96,7 @@ def get_paper_soure_html(paper_url):
 
 	with open('all_tag_a.html' ,'w') as f:
 		for tag_a in all_tag_a:
-			
+			f.write(str(tag_a) + "<<<<<<<<<<<>>>>>>>>>>>>")
 
 if __name__ == '__main__':
 	# title = """Dynamic Traffic Light Control System Based on Process Synchronization Among Connected Vehicles"""
