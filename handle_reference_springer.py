@@ -43,7 +43,7 @@ def replace_tag_a(soup):
 	#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
 	links = soup.find_all('a')
 	# print(len(links))
-	links = list(set(links))
+	links = list(set(links)) #get all unique tag a from the html soup object 
 	all_tag_a = links
 	# Loop through each <a> tag and replace it with {hrefi}
 	for i, link in enumerate(links):
@@ -77,7 +77,7 @@ def get_paper_soure_html(paper_url):
 	soup2 = BeautifulSoup(html, 'html.parser')
 
 	soup2 = clean_new_line_inside_tag(soup2) 
-	soup2 , all_tag_a= replace_tag_a(soup2)
+	soup2 , all_tag_a= replace_tag_a(soup2) 
 
 	#all tag a indicate the list of tag a 
 	for tag_a in all_tag_a:

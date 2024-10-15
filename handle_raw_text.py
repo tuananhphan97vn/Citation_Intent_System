@@ -44,7 +44,7 @@ def match_sent_ref(text , all_tag_a):
 		#a_tags is the list of tag <a> inside the referecence 
 		N = len(a_tags)
 		result = [] 
-		for i in range(N):
+		for i in range( N-1 , -1 , -1):
 			if 'href' + str(i) in sent:
 				result.append(a_tags[i])
 				sent = sent.replace('href' + str(i), " " + a_tags[i].get_text() + " ")
@@ -65,8 +65,6 @@ if __name__ == '__main__':
 	all_tag_a = read_all_tag_a()
 	print(len(all_tag_a))
 	sent_matches = match_sent_ref(text , all_tag_a)
-	# for i, sent_match in enumerate(sent_matches):
-	# 	print(i , sent_match)
-	print(len(set(all_tag_a)))
-
+	for i, sent_match in enumerate(sent_matches):
+		print(i , sent_match)
 
