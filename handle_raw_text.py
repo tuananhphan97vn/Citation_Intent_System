@@ -2,23 +2,55 @@ from bs4 import BeautifulSoup
 import re 
 import nltk 
 
+# def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab.","al.","al. (", "al. ["]):
+# 	sentences = nltk.sent_tokenize(text)
+# 	fixed_sentences = []
+# 	buffer = ""
+	
+# 	for sentence in sentences:
+# 		# Check if the sentence ends with "et al." or contains parentheses split
+# 		if re.search(r'et al\.$', sentence) or re.match(r'^\(\w+', sentence):
+# 			buffer += sentence + " "
+# 		else:
+# 			if buffer:
+# 				fixed_sentences.append(buffer + sentence)
+# 				buffer = ""
+# 			else:
+# 				fixed_sentences.append(sentence)
+# 	return fixed_sentences
+
 def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab.","al.","al. (", "al. ["]):
+
+	def check_end_string (string, keywords):
+		for kw in keywords:
+			if string.endswith(kw) == True:
+				return True 
+		return False 
+
 	sentences = nltk.sent_tokenize(text)
-	fixed_sentences = []
-	buffer = ""
-	
-	for sentence in sentences:
-		# Check if the sentence ends with "et al." or contains parentheses split
-		if re.search(r'et al\.$', sentence) or re.match(r'^\(\w+', sentence):
-			buffer += sentence + " "
-		else:
-			if buffer:
-				fixed_sentences.append(buffer + sentence)
-				buffer = ""
+	result = [] 
+	N = len(sentences)
+	list_index = []
+	for i in range(N - 1):
+		if check_end_string(sentences[i] , keywords) == True :
+			list_index.append(i)
+	buffer = []
+	for i in range(N):
+		if i not in list_index:
+			if len(buffer) == 0 :
+				#buffer is empty 
+				result.append(sentences[i])
 			else:
-				fixed_sentences.append(sentence)
-	
-	return fixed_sentences
+				#buffer is not empty, there are at least one sent is added to buffer 
+				buffer.append(sentences[i])
+				result.append(" ".join(buffer))
+				#reset buffer 
+				buffer = [] 
+		else:
+			buffer.append(sentences[i])
+	# print('\n list sent using buffer ' , result)
+	# print(len(" ".join(sentences).split()) , len(" ".join(result).split())) 
+	return result
 
 def handle_raw_text(text):
 	lines = text.split('\n')
@@ -88,11 +120,18 @@ if __name__ == '__main__':
 	with open('html_text2.txt' , 'r', encoding='utf-8') as f:
 		text = f.read()
 	all_tag_a = read_all_tag_a()
-	print(len(all_tag_a))
+	# print(len(all_tag_a))
 	sent_matches = match_sent_ref(text , all_tag_a)
-	# # for i, sent_match in enumerate(sent_matches):
-	# # 	print(i , sent_match)
-	title_cited_paper ="""Heterogeneous graph neural networks for extractive document summarization."""
+	# for i, sent_match in enumerate(sent_matches):
+	# 	if len(sent_match[1]) > 0 :
+	# 	# 	if 'constructed a heterogeneous graph' in sent_match[0]:
+	# 		print(i , sent_match)
+	title_cited_paper ="""Unims: A unified framework for multimodal summarization with knowledge distillation."""
 	citation_sents = find_citation_sentence(title_cited_paper , sent_matches)
 	for cit_sent in citation_sents:
 		print(cit_sent)
+# 	text = """Wang et Table. (href67)  Jia et al. (href99) constructed a heterogeneous graph, enriching the cross-sentence relations through the word nodes between sentences. Jia et al. (href99) proposed a hierarchical heterogeneous graph to extract sentences by simultaneously balancing salience and redundancy. Cui et al. (href24) incorporates latent topics into graph propagation via a joint neural topic model, facilitating the extraction of crucial information from documents. Jing et al. (href219) proposed to use multiplex graph to model different types of relationships among sentences and words. Song and King (href107) obtains sentence representations based on constituency trees to leverage syntactic information.
+# # """
+	# print(handle_raw_text(text))
+	# sentence_split(text)
+	# print(sentence_split(text))
