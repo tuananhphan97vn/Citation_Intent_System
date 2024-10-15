@@ -40,6 +40,7 @@ def read_all_tag_a():
 	
 def match_sent_ref(text , all_tag_a):
 
+	#sent matches return each of sentence with corresponding reference, from the content of reference, we can retrieve and check the reference with original title or doi of cited paper 
 	def map_sent_to_refer(sent, a_tags):
 		#a_tags is the list of tag <a> inside the referecence 
 		N = len(a_tags)
@@ -58,6 +59,16 @@ def match_sent_ref(text , all_tag_a):
 		sent_matches.append(sent_match)
 	
 	return sent_matches
+
+def check_cited_paper_reference(title_cited_paper  , tag_a):
+	title_reference  = tag_a.get('title')
+	if title_reference == title_cited_paper:
+		return True 
+	else:
+		return False  
+	
+def find_citation_sentence(title_cited_paper , sent_matches):
+	#sent matches is the list. each element of list is the tuple = (sent , list of tag_a)
 
 if __name__ == '__main__':
 	with open('html_text2.txt' , 'r', encoding='utf-8') as f:
