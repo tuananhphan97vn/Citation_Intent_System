@@ -61,14 +61,28 @@ def match_sent_ref(text , all_tag_a):
 	return sent_matches
 
 def check_cited_paper_reference(title_cited_paper  , tag_a):
-	title_reference  = tag_a.get('title')
-	if title_reference == title_cited_paper:
-		return True 
-	else:
-		return False  
+	title_reference  = tag_a.a.get('title')
+	# print('title reference ' , title_reference)
+	if title_reference is not None:
+		if title_cited_paper in title_reference:
+			return True 
+		else:
+			return False  
+	else: 
+		return False 
 	
 def find_citation_sentence(title_cited_paper , sent_matches):
 	#sent matches is the list. each element of list is the tuple = (sent , list of tag_a)
+	result = [] 
+	for sent_match in sent_matches:
+		flag = False 
+		citation_sent = sent_match[0]
+		all_tag_a = sent_match[1]
+		for tag_a in all_tag_a:
+			if check_cited_paper_reference(title_cited_paper , tag_a) == True :
+				result.append(citation_sent)
+				break 
+	return result
 
 if __name__ == '__main__':
 	with open('html_text2.txt' , 'r', encoding='utf-8') as f:
@@ -76,6 +90,9 @@ if __name__ == '__main__':
 	all_tag_a = read_all_tag_a()
 	print(len(all_tag_a))
 	sent_matches = match_sent_ref(text , all_tag_a)
-	for i, sent_match in enumerate(sent_matches):
-		print(i , sent_match)
-
+	# # for i, sent_match in enumerate(sent_matches):
+	# # 	print(i , sent_match)
+	title_cited_paper ="""Heterogeneous graph neural networks for extractive document summarization."""
+	citation_sents = find_citation_sentence(title_cited_paper , sent_matches)
+	for cit_sent in citation_sents:
+		print(cit_sent)
