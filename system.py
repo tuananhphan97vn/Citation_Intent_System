@@ -24,103 +24,147 @@ def read_all_tag_a(file_name):
 		all_tag_a = [BeautifulSoup(line, 'html.parser') for line in all_tag_a]
 		return all_tag_a
 
+def find_citation_sentence(title_cited_paper , sent_matches):
+#sent matches is the list. each element of list is the tuple = (sent , list of tag_a)
+	result = [] 
+	for sent_match in sent_matches:
+		flag = False 
+		citation_sent = sent_match[0]
+		all_tag_a = sent_match[1]
+		for tag_a in all_tag_a:
+			if check_cited_paper_reference(title_cited_paper , tag_a) == True :
+				result.append(citation_sent)
+				break 
+	return result
+
+def check_cited_paper_reference(title_cited_paper  , tag_a):
+	title_reference  = tag_a.get('title')
+	if title_reference is not None:
+		# print('title reference ' , title_reference)
+		if title_cited_paper.lower() in title_reference.lower():
+			return True 
+		else:
+			return False  
+	else: 
+		return False 
+
+def map_sent_to_refer(sent, a_tags):
+	#a_tags is the list of tag <a> inside the referecence 
+	N = len(a_tags)
+	result = [] 
+	for i in range( N-1 , -1 , -1):
+		if 'href' + str(i) in sent:
+			result.append(a_tags[i])
+			sent = sent.replace('href' + str(i), " " + a_tags[i].get_text() + " ")
+	return sent, result
+
+def handle_raw_text(text):
+	lines = text.split('\n')
+	lines = [   t for t in lines if t.strip() != '']
+	list_sent = [] 
+	for line in lines: 
+		sents = sentence_split(line)
+		for sent in sents :
+			list_sent.append(sent.strip())
+	return list_sent
+
+
+def match_sent_ref(text , all_tag_a):
+
+	#sent matches return each of sentence with corresponding reference, from the content of reference, we can retrieve and check the reference with original title or doi of cited paper 
+	
+	sents = handle_raw_text(text)
+
+	sent_matches = []
+	for sent in sents: 
+		sent_match = map_sent_to_refer(sent,  all_tag_a)
+		sent_matches.append(sent_match)
+	
+	return sent_matches
+
+
+def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab.","al.","al. (", "al. ["]):
+
+	def check_end_string (string, keywords):
+		for kw in keywords:
+			if string.endswith(kw) == True:
+				return True 
+		return False 
+
+	sentences = nltk.sent_tokenize(text)
+	result = [] 
+	N = len(sentences)
+	list_index = []
+	for i in range(N - 1):
+		if check_end_string(sentences[i] , keywords) == True :
+			list_index.append(i)
+	buffer = []
+	for i in range(N):
+		if i not in list_index:
+			if len(buffer) == 0 :
+				#buffer is empty 
+				result.append(sentences[i])
+			else:
+				#buffer is not empty, there are at least one sent is added to buffer 
+				buffer.append(sentences[i])
+				result.append(" ".join(buffer))
+				#reset buffer 
+				buffer = [] 
+		else:
+			buffer.append(sentences[i])
+	# print('\n list sent using buffer ' , result)
+	# print(len(" ".join(sentences).split()) , len(" ".join(result).split())) 
+	return result
+
+
 def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 	#given the title of the paper, and the full text of citing paper, the list of all tag a in the html file, return all the citaton sentence that mention current paper
 	#the full text of citing paper is the result of html.get_text() with all the tag a are replaced with the 'href'+order of tag a, Note: the tag a is unique because there are some duplicate link
-	
-	def find_citation_sentence(title_cited_paper , sent_matches):
-	#sent matches is the list. each element of list is the tuple = (sent , list of tag_a)
-		result = [] 
-		for sent_match in sent_matches:
-			flag = False 
-			citation_sent = sent_match[0]
-			all_tag_a = sent_match[1]
-			for tag_a in all_tag_a:
-				if check_cited_paper_reference(title_cited_paper , tag_a) == True :
-					result.append(citation_sent)
-					break 
-		return result
-	
-	def check_cited_paper_reference(title_cited_paper  , tag_a):
-		title_reference  = tag_a.get('title')
-		if title_reference is not None:
-			# print('title reference ' , title_reference)
-			if title_cited_paper.lower() in title_reference.lower():
-				return True 
-			else:
-				return False  
-		else: 
-			return False 
-		
-	def match_sent_ref(text , all_tag_a):
-
-		#sent matches return each of sentence with corresponding reference, from the content of reference, we can retrieve and check the reference with original title or doi of cited paper 
-		def map_sent_to_refer(sent, a_tags):
-			#a_tags is the list of tag <a> inside the referecence 
-			N = len(a_tags)
-			result = [] 
-			for i in range( N-1 , -1 , -1):
-				if 'href' + str(i) in sent:
-					result.append(a_tags[i])
-					sent = sent.replace('href' + str(i), " " + a_tags[i].get_text() + " ")
-			return sent, result
-		
-		sents = handle_raw_text(text)
-
-		sent_matches = []
-		for sent in sents: 
-			sent_match = map_sent_to_refer(sent,  all_tag_a)
-			sent_matches.append(sent_match)
-		
-		return sent_matches
-	
-	def handle_raw_text(text):
-		lines = text.split('\n')
-		lines = [   t for t in lines if t.strip() != '']
-		list_sent = [] 
-		for line in lines: 
-			sents = sentence_split(line)
-			for sent in sents :
-				list_sent.append(sent.strip())
-		return list_sent
-	
-	def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "eq.","tab.","al.","al. (", "al. ["]):
-
-		def check_end_string (string, keywords):
-			for kw in keywords:
-				if string.endswith(kw) == True:
-					return True 
-			return False 
-
-		sentences = nltk.sent_tokenize(text)
-		result = [] 
-		N = len(sentences)
-		list_index = []
-		for i in range(N - 1):
-			if check_end_string(sentences[i] , keywords) == True :
-				list_index.append(i)
-		buffer = []
-		for i in range(N):
-			if i not in list_index:
-				if len(buffer) == 0 :
-					#buffer is empty 
-					result.append(sentences[i])
-				else:
-					#buffer is not empty, there are at least one sent is added to buffer 
-					buffer.append(sentences[i])
-					result.append(" ".join(buffer))
-					#reset buffer 
-					buffer = [] 
-			else:
-				buffer.append(sentences[i])
-		# print('\n list sent using buffer ' , result)
-		# print(len(" ".join(sentences).split()) , len(" ".join(result).split())) 
-		return result
 
 	sent_matches = match_sent_ref(full_text_citing_paper , list_tag_a)
+	for s in sent_matches:
+		print(s)
+		print('\n')
 	citation_sents = find_citation_sentence(title , sent_matches)
 	return citation_sents
 
+def get_citing_paper_soure_html(title_cited_paper , paper_url):
+
+	def clean_new_line_inside_tag(soup):
+		all_a_tags = soup.find_all('a')
+		# Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
+		for tag in all_a_tags:
+			for attr, value in tag.attrs.items():
+				if isinstance(value, str):
+					tag[attr] = value.replace('\n', '')	
+		return soup 
+
+	def replace_tag_a(soup):
+		#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
+		links = soup.find_all('a')
+		# print(len(links))
+		links = list(set(links)) #get all unique tag a from the html soup object 
+		all_tag_a = links
+		# Loop through each <a> tag and replace it with {hrefi}
+		for i, link in enumerate(links):
+			# Create the replacement string
+			replacement = f"href{i}"
+			# Replace the <a> tag with the replacement string
+			link.replace_with(replacement)
+		return soup , all_tag_a
+
+	options = webdriver.ChromeOptions()
+	service = Service(chrome_driver_path)
+	driver = webdriver.Chrome(service=service, options=options)
+	# driver = webdriver.Chrome(ChromeDriverManager().install())
+	driver.get(paper_url)
+	time.sleep(5)
+	soup = BeautifulSoup(driver.page_source , 'html.parser')
+	soup = clean_new_line_inside_tag(soup) 
+	soup , all_tag_a= replace_tag_a(soup) 
+	replaced_text = soup.get_text()
+	list_citation_context = extract_citation_sent(title_cited_paper , replaced_text , all_tag_a)
+	return list_citation_context
 
 def run(title):
 	#input: the title of considered paper
@@ -217,45 +261,6 @@ def run(title):
 				result.append((link.get_text(), link.get('href')))
 		driver.quit()
 		return result
-	
-	def get_citing_paper_soure_html(title_cited_paper , paper_url):
-
-		def clean_new_line_inside_tag(soup):
-			all_a_tags = soup.find_all('a')
-			# Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
-			for tag in all_a_tags:
-				for attr, value in tag.attrs.items():
-					if isinstance(value, str):
-						tag[attr] = value.replace('\n', '')			
-			return soup 
-
-		def replace_tag_a(soup):
-			#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
-			links = soup.find_all('a')
-			# print(len(links))
-			links = list(set(links)) #get all unique tag a from the html soup object 
-			all_tag_a = links
-			# Loop through each <a> tag and replace it with {hrefi}
-			for i, link in enumerate(links):
-				# Create the replacement string
-				replacement = f"href{i}"
-				# Replace the <a> tag with the replacement string
-				link.replace_with(replacement)
-			return soup , all_tag_a
-
-		options = webdriver.ChromeOptions()
-		service = Service(chrome_driver_path)
-		driver = webdriver.Chrome(service=service, options=options)
-		# driver = webdriver.Chrome(ChromeDriverManager().install())
-		driver.get(paper_url)
-		time.sleep(5)
-		soup = BeautifulSoup(driver.page_source , 'html.parser')
-		soup = clean_new_line_inside_tag(soup) 
-		soup , all_tag_a= replace_tag_a(soup) 
-		replaced_text = soup.get_text()
-		list_citation_context = extract_citation_sent(title_cited_paper , replaced_text , all_tag_a)
-		return list_citation_context
-
 		#all tag a indicate the list of tag a 
 
 	cited_paper_link = get_cited_paper_link(title)
@@ -283,13 +288,15 @@ if __name__ == '__main__':
 
 	# with open('html_text2.txt' , 'r', encoding='utf-8') as f:
 	# 	text = f.read()
-	title_cited_paper ="""HeterGraphLongSum: Heterogeneous Graph Neural Network with Passage Aggregation for Extractive Long Document Summarization"""
+	title_cited_paper ="""Reducing catastrophic forgetting in neural networks via gaussian mixture approximation"""
+	citing_url = """https://www.sciencedirect.com/science/article/pii/S0925231222008785"""
+	list_citation_context = get_citing_paper_soure_html(title_cited_paper , citing_url)
 
 	# all_tag_a = read_all_tag_a('all_tag_a.html')
 	# result = extract_citation_sent(title_cited_paper , text , all_tag_a)
 	# for sent in result : 
 	# 	print(sent)
-	run(title_cited_paper)
+	# run(title_cited_paper)
 
 
 	
