@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 html_content = '''
 <html>
 <body>
-    <a href="link1.html">Some Link</a>
-    <a href="link2.html">Cited by 10</a>
-    <a href="link3.html">Another Link</a>
-    <a href="link4.html">Cited by 15</a>
+    <a href="link3.html">Third Link</a>
+    <a href="link2.html">Second Link</a>
+    <a href="link3.html">Third Link</a>
+    <a href="link4.html">Fourth Link</a>
 </body>
 </html>
 '''
@@ -15,12 +15,13 @@ html_content = '''
 # Parse the HTML content
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# Find the first <a> tag that contains the text 'Cited by'
-first_cited_by_link = soup.find('a', string=lambda text: text and 'Cited by' in text)
+# Find all <a> tags
+a_tags = soup.find_all('a')
 
-# Output the found link and its text
-if first_cited_by_link:
-    print("Found:", first_cited_by_link['href'])
-    print("Text:", first_cited_by_link.text)
-else:
-    print("No 'Cited by' link found")
+# Iterate through <a> tags and replace them with 'href{i}'
+for i, tag in enumerate(a_tags, start=1):
+    # Replace the whole tag with 'href{i}'
+    tag.replace_with(f'href{i}')
+
+# Print the modified HTML
+print(soup.prettify())
