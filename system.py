@@ -160,9 +160,15 @@ def get_citing_paper_soure_html(title_cited_paper , paper_url):
 	driver.get(paper_url)
 	time.sleep(5)
 	soup = BeautifulSoup(driver.page_source , 'html.parser')
+	with open('soup.html' ,'w') as f:
+		f.write(str(soup))
 	soup = clean_new_line_inside_tag(soup) 
 	soup , all_tag_a= replace_tag_a(soup) 
 	replaced_text = soup.get_text()
+	with open('temp.txt','w') as f:
+		f.write(replaced_text)
+	with open('all_tag_a.txt','w') as f:
+		f.write("\n".join([str(tag_a) for tag_a in all_tag_a]))
 	list_citation_context = extract_citation_sent(title_cited_paper , replaced_text , all_tag_a)
 	return list_citation_context
 
