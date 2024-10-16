@@ -11,11 +11,11 @@ from bs4 import BeautifulSoup
 import time
 
 # Thiết lập Chrome options (nếu cần)
-chrome_options = Options()
-chrome_options.add_argument("--start-maximized")  # Mở trình duyệt ở chế độ toàn màn hình
+# chrome_options = Options()
+# chrome_options.add_argument("--start-maximized")  # Mở trình duyệt ở chế độ toàn màn hình
 
 # Đường dẫn đến ChromeDriver
-chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến ChromeDriver của bạn
+# chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến ChromeDriver của bạn
 
 # Khởi tạo trình duyệt
 
@@ -62,7 +62,7 @@ def get_paper_soure_html(paper_url):
 
 	# Automatically download and set up ChromeDriver
 	# service = Service(ChromeDriverManager().install())
-	service = Service(chrome_driver_path)
+	service = Service('./chromedriver')
 	driver = webdriver.Chrome(service=service, options=options)
 
 	# Navigate to the page

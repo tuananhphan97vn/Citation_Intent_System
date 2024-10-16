@@ -15,6 +15,7 @@ import re
 import nltk 
 import time 
 
+chrome_driver_path = './chromedriver'
 def read_all_tag_a(file_name):
 	delimiter = "<<<<<<<<<<<>>>>>>>>>>>>"
 	with open(file_name,'r',encoding='utf-8') as f:
@@ -41,10 +42,10 @@ def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 		return result
 	
 	def check_cited_paper_reference(title_cited_paper  , tag_a):
-		title_reference  = tag_a.a.get('title')
-		# print('title reference ' , title_reference)
+		title_reference  = tag_a.get('title')
 		if title_reference is not None:
-			if title_cited_paper in title_reference:
+			# print('title reference ' , title_reference)
+			if title_cited_paper.lower() in title_reference.lower():
 				return True 
 			else:
 				return False  
@@ -121,7 +122,7 @@ def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 	return citation_sents
 
 
-def access_citing_paper_link(title):
+def run(title):
 	#input: the title of considered paper
 	#output: all the link to acess the citing paper, which cite the input paper 
 
@@ -154,6 +155,8 @@ def access_citing_paper_link(title):
 			# Lấy địa chỉ URL của trang kết quả sau khi chuyển hướng
 			current_url = driver.current_url
 			print(current_url)
+			driver.quit()
+
 		finally:
 			# Đóng trình duyệt sau khi hoàn thành tác vụ
 			driver.quit()
@@ -177,6 +180,7 @@ def access_citing_paper_link(title):
 		first_cited_by_link = soup.find('a', string=lambda text: text and 'Cited by' in text)
 
 		href = ""
+		driver.quit()
 		# Output the found link and its text
 		if first_cited_by_link:
 			href = first_cited_by_link['href']
@@ -202,13 +206,10 @@ def access_citing_paper_link(title):
 		soup = BeautifulSoup(driver.page_source , 'html.parser')
 
 		html_content = soup.prettify()
-
 		# Save the HTML content to a file
 		with open("output.html", "w", encoding="utf-8") as file:
 			file.write(html_content)
-
 		gs_rt_links = soup.select('.gs_rt a')
-
 		# Print all the found <a> tags
 		result = [] 
 		for link in gs_rt_links:
@@ -216,13 +217,67 @@ def access_citing_paper_link(title):
 				result.append((link.get_text(), link.get('href')))
 		driver.quit()
 		return result
+	
+	def get_citing_paper_soure_html(title_cited_paper , paper_url):
+
+		def clean_new_line_inside_tag(soup):
+			all_a_tags = soup.find_all('a')
+			# Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
+			for tag in all_a_tags:
+				for attr, value in tag.attrs.items():
+					if isinstance(value, str):
+						tag[attr] = value.replace('\n', '')			
+			return soup 
+
+		def replace_tag_a(soup):
+			#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
+			links = soup.find_all('a')
+			# print(len(links))
+			links = list(set(links)) #get all unique tag a from the html soup object 
+			all_tag_a = links
+			# Loop through each <a> tag and replace it with {hrefi}
+			for i, link in enumerate(links):
+				# Create the replacement string
+				replacement = f"href{i}"
+				# Replace the <a> tag with the replacement string
+				link.replace_with(replacement)
+			return soup , all_tag_a
+
+		options = webdriver.ChromeOptions()
+		service = Service(chrome_driver_path)
+		driver = webdriver.Chrome(service=service, options=options)
+		# driver = webdriver.Chrome(ChromeDriverManager().install())
+		driver.get(paper_url)
+		time.sleep(5)
+		soup = BeautifulSoup(driver.page_source , 'html.parser')
+		soup = clean_new_line_inside_tag(soup) 
+		soup , all_tag_a= replace_tag_a(soup) 
+		replaced_text = soup.get_text()
+		list_citation_context = extract_citation_sent(title_cited_paper , replaced_text , all_tag_a)
+		return list_citation_context
+
+		#all tag a indicate the list of tag a 
 
 	cited_paper_link = get_cited_paper_link(title)
 	citing_link = access_citing_paper_link(cited_paper_link)
 	list_citing_paper_info = get_all_citing_paper_link(citing_link)
-	for paper in list_citing_paper_info:
-		print(paper)
 
+	# #after getting the citing paper links, craw the full text of the paper and filter the citation
+	list_citation_context = [] 
+	for citing_paper_link in list_citing_paper_info:
+		if citing_paper_link[1].startswith('https://link.springer.com/'):
+			print('----------------------------')
+			print('Citing paper is :' , citing_paper_link[0], 'link to citing paper :', citing_paper_link[1])
+			citing_url = citing_paper_link[1]
+			list_citation_context = get_citing_paper_soure_html(title , citing_url)
+			print('list citation context: ')
+			for citation_context in list_citation_context:
+				print(citation_context)
+
+
+	# list_citation_context = get_citing_paper_soure_html(title , 'https://link.springer.com/article/10.1007/s10844-024-00886-5')
+	# for citation_context in list_citation_context:
+	# 	print(citation_context)
 if __name__ == '__main__':
 
 
@@ -234,7 +289,7 @@ if __name__ == '__main__':
 	# result = extract_citation_sent(title_cited_paper , text , all_tag_a)
 	# for sent in result : 
 	# 	print(sent)
-	access_citing_paper_link(title_cited_paper)
+	run(title_cited_paper)
 
 
 	
