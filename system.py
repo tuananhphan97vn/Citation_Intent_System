@@ -2,10 +2,18 @@
 #full system, the system receive the title or DOI of the paper and return
 # 
 # output : all of the journal citing paper that cite considered paper (cited paper) along with all of the citation sentences in the citing paper.  
-
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import re 
 import nltk 
+import time 
 
 def read_all_tag_a(file_name):
 	delimiter = "<<<<<<<<<<<>>>>>>>>>>>>"
@@ -112,12 +120,121 @@ def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 	citation_sents = find_citation_sentence(title , sent_matches)
 	return citation_sents
 
-if __name__ == '__main__':
-	with open('html_text2.txt' , 'r', encoding='utf-8') as f:
-		text = f.read()
-	title_cited_paper ="""Unims: A unified framework for multimodal summarization with knowledge distillation."""
 
-	all_tag_a = read_all_tag_a('all_tag_a.html')
-	result = extract_citation_sent(title_cited_paper , text , all_tag_a)
-	for sent in result : 
-		print(sent)
+def access_citing_paper_link(title):
+	#input: the title of considered paper
+	#output: all the link to acess the citing paper, which cite the input paper 
+
+	def get_cited_paper_link(title):
+		chrome_options = Options()
+		chrome_options.add_argument("--start-maximized")  # Mở trình duyệt ở chế độ toàn màn hình
+
+		# Đường dẫn đến ChromeDriver
+		chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến ChromeDriver
+		#access the google scholar link, and get the page of cited paper 
+		google_scholar_link = "https://scholar.google.com/schhp?hl=en&as_sdt=0,5"
+		service = Service(chrome_driver_path)
+		driver = webdriver.Chrome(service=service, options=chrome_options)
+		driver.get(google_scholar_link)
+		current_url = ""
+		try:
+			search_box = WebDriverWait(driver, 10).until(
+				EC.presence_of_element_located((By.NAME, 'q'))
+			)
+
+			# Nhập tiêu đề của bài báo
+			search_box.send_keys(title)
+
+			# Nhấn Enter để tìm kiếm
+			search_box.send_keys(Keys.ENTER)
+
+			# Chờ một khoảng thời gian để trang kết quả tải
+			time.sleep(5)
+
+			# Lấy địa chỉ URL của trang kết quả sau khi chuyển hướng
+			current_url = driver.current_url
+			print(current_url)
+		finally:
+			# Đóng trình duyệt sau khi hoàn thành tác vụ
+			driver.quit()
+
+		return current_url 
+	
+	def access_citing_paper_link(url):
+		chrome_options = Options()
+		chrome_options.add_argument("--start-maximized")  # Mở trình duyệt ở chế độ toàn màn hình
+
+		# Đường dẫn đến ChromeDriver
+		chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến ChromeDriver
+		#access the google scholar link, and get the page of cited paper 
+		service = Service(chrome_driver_path)
+		driver = webdriver.Chrome(service=service, options=chrome_options)
+		driver.get(url)
+		time.sleep(5)
+		soup = BeautifulSoup(driver.page_source , 'html.parser')
+		#find the first tag a that consist of 'Cited by'
+		
+		first_cited_by_link = soup.find('a', string=lambda text: text and 'Cited by' in text)
+
+		href = ""
+		# Output the found link and its text
+		if first_cited_by_link:
+			href = first_cited_by_link['href']
+			if 'https://scholar.google.com' not in href:
+				href = 'https://scholar.google.com'+href
+			return href 
+		else:
+			pass 
+
+		return href
+	
+	def get_all_citing_paper_link(url):
+		chrome_options = Options()
+		chrome_options.add_argument("--start-maximized")  # Mở trình duyệt ở chế độ toàn màn hình
+
+		# Đường dẫn đến ChromeDriver
+		chrome_driver_path = './chromedriver'  # Thay bằng đường dẫn đến ChromeDriver
+		#access the google scholar link, and get the page of cited paper 
+		service = Service(chrome_driver_path)
+		driver = webdriver.Chrome(service=service, options=chrome_options)
+		driver.get(url)
+		time.sleep(5)
+		soup = BeautifulSoup(driver.page_source , 'html.parser')
+
+		html_content = soup.prettify()
+
+		# Save the HTML content to a file
+		with open("output.html", "w", encoding="utf-8") as file:
+			file.write(html_content)
+
+		gs_rt_links = soup.select('.gs_rt a')
+
+		# Print all the found <a> tags
+		result = [] 
+		for link in gs_rt_links:
+			if 'http' in link.get('href'):
+				result.append((link.get_text(), link.get('href')))
+		driver.quit()
+		return result
+
+	cited_paper_link = get_cited_paper_link(title)
+	citing_link = access_citing_paper_link(cited_paper_link)
+	list_citing_paper_info = get_all_citing_paper_link(citing_link)
+	for paper in list_citing_paper_info:
+		print(paper)
+
+if __name__ == '__main__':
+
+
+	# with open('html_text2.txt' , 'r', encoding='utf-8') as f:
+	# 	text = f.read()
+	title_cited_paper ="""HeterGraphLongSum: Heterogeneous Graph Neural Network with Passage Aggregation for Extractive Long Document Summarization"""
+
+	# all_tag_a = read_all_tag_a('all_tag_a.html')
+	# result = extract_citation_sent(title_cited_paper , text , all_tag_a)
+	# for sent in result : 
+	# 	print(sent)
+	access_citing_paper_link(title_cited_paper)
+
+
+	
