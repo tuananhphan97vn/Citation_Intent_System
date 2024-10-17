@@ -122,9 +122,6 @@ def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 	#the full text of citing paper is the result of html.get_text() with all the tag a are replaced with the 'href'+order of tag a, Note: the tag a is unique because there are some duplicate link
 
 	sent_matches = match_sent_ref(full_text_citing_paper , list_tag_a)
-	for s in sent_matches:
-		print(s)
-		print('\n')
 	citation_sents = find_citation_sentence(title , sent_matches)
 	return citation_sents
 
@@ -273,18 +270,23 @@ def run(title):
 	cited_paper_link = get_cited_paper_link(title)
 	citing_link = access_citing_paper_link(cited_paper_link)
 	list_citing_paper_info = get_all_citing_paper_link(citing_link)
+	
+	print('List of citing paper ')
+	for i, citing_paper in enumerate(list_citing_paper_info , 1):
+		print( i , 'Title of citing paper: ' , citing_paper[0] , '|||    Link to citing paper: ' , citing_paper[1])
 
 	# #after getting the citing paper links, craw the full text of the paper and filter the citation
 	list_citation_context = [] 
 	for citing_paper_link in list_citing_paper_info:
 		if citing_paper_link[1].startswith('https://link.springer.com/'):
-			print('----------------------------')
-			print('Citing paper is :' , citing_paper_link[0], 'link to citing paper :', citing_paper_link[1])
+			print('---------------------------------------------------------')
+			print('Detail citation sentence information ........................')
+			print('Citing paper is :' , citing_paper_link[0], '|||   Link to citing paper :', citing_paper_link[1])
 			citing_url = citing_paper_link[1]
 			list_citation_context = get_citing_paper_soure_html(title , citing_url)
 			print('list citation context: ')
-			for citation_context in list_citation_context:
-				print(citation_context)
+			for i, citation_context in enumerate(list_citation_context):
+				print(i , '--------' , citation_context)
 
 
 	# list_citation_context = get_citing_paper_soure_html(title , 'https://link.springer.com/article/10.1007/s10844-024-00886-5')
@@ -292,18 +294,8 @@ def run(title):
 	# 	print(citation_context)
 if __name__ == '__main__':
 
-
-	# with open('html_text2.txt' , 'r', encoding='utf-8') as f:
-	# 	text = f.read()
-	title_cited_paper ="""Reducing catastrophic forgetting in neural networks via gaussian mixture approximation"""
-	citing_url = """https://www.sciencedirect.com/science/article/pii/S0925231222008785"""
-	list_citation_context = get_citing_paper_soure_html(title_cited_paper , citing_url)
-
-	# all_tag_a = read_all_tag_a('all_tag_a.html')
-	# result = extract_citation_sent(title_cited_paper , text , all_tag_a)
-	# for sent in result : 
-	# 	print(sent)
-	# run(title_cited_paper)
+	import sys 
+	title_cited_paper = """HeterGraphLongSum: Heterogeneous Graph Neural Network with Passage Aggregation for Extractive Long Document Summarization"""
 	run(title=title_cited_paper)
 
 	

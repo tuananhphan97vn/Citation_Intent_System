@@ -6,7 +6,6 @@
 
 
 
-Continual variational dropout: a view of auxiliary local variables in continual learning | Machine Learning
 
 
 
@@ -62,88 +61,7 @@ Continual variational dropout: a view of auxiliary local variables in continual 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+FHSI-GNN: Fusion Hierarchical Structure Information Graph Neural Network for Extractive Long Documents Summarization | SpringerLink
 
 
 
@@ -193,14 +111,15 @@ Accept all cookies
 
 
 
-
-
-
-
-
-
-
 href1
+
+
+
+Advertisement
+
+
+
+
 
 
 
@@ -269,6 +188,7 @@ href12
 
 
 
+
 href13
 
 
@@ -281,20 +201,19 @@ href14
 
 
 
-Article
+Conference paper
 
 
 
-Continual variational dropout: a view of auxiliary local variables in continual learning
+FHSI-GNN: Fusion Hierarchical Structure Information Graph Neural Network for Extractive Long Documents Summarization
+
+Conference paper
+First Online: 26 November 2023
 
 
-                            Published: 07 December 2023
 
+ pp 136–149
 
-
-
-Volume 113, pages 281–323, (2024)
-                        
 
 href15
 
@@ -302,18 +221,9 @@ href15
 
 
 
+
 href16
-
-
-
-
-                                Access provided by Chung Ang University
-
-
-
-href17
-href18
-href19
+(ICONIP 2023) 
 
 
 
@@ -323,38 +233,63 @@ href19
 
 
 
-                                Continual variational dropout: a view of auxiliary local variables in continual learning
+
+
+href17href18, href19href20, href21href22, href23href24, href25href26, href27href28 & …href29href30,href31 Show authors
+
+
+
+
+
+
+
+Part of the book series:
+href32 ((CCIS,volume 1963))
+                    
+
+
+
+
+
+
+
+
+Included in the following conference series:
+
+href33
+
+
+
+
+
+
+
+
+
+565 Accesses
+
+
+
+
+
+
+
+
+ AbstractExtractive text summarization aims to select salient sentences from documents. However, most existing extractive methods struggle to capture inter-sentence relations in long documents. In addition, the hierarchical structure information of the document is ignored. For example, some scientific documents have fixed chapters, and sentences in the same chapter have the same theme. To solve these problems, this paper proposes a Fusion Hierarchical Structure Information Graph Neural Network for Extractive Long Documents Summarization. The model constructs a section node containing sentence nodes and global information according to the document structure. It integrates the hierarchical structure information of the text and uses position information to identify sentences. The section node acts as an intermediary node for information interaction between sentences, which better enriches the relationships between sentences and has higher computational efficiency. Our model has achieved excellent results on two datasets, PubMed and arXiv. Further analysis shows that the hierarchical structure information of documents helps the model select salient content better.
+
+
+
+
+
+                                
+                                    This is a preview of subscription content, href34
+
+
+ to check access.
                             
 
 
-
-href20
-
-
-
-
-
-
-
-href21href22,href23 href24, href25href26 href27, href28 
-            href29href30, href31href32 & …href33href34 Show authors
-
-
-
-
-
-367 Accesses
-
-
-
-
-2 Citations
-
-
-
-
-1 Altmetric
-
+Access this chapter
 
 href35
 
@@ -362,10 +297,116 @@ href35
 
 
 
+Subscribe and save
 
 
 
-AbstractRegularization/prior-based approach appears to be one of the critical strategies in continual learning, considering its mechanism for preserving and preventing forgetting the learned knowledge. Without any retraining on previous data or extending the network architecture, the mechanism works by setting a constraint on the important weights of previous tasks when learning the current task. Regularization/prior approach, on the other hand, suffers the challenge of weights being moved intensely to the parameter region, in which the model achieves good performance for the latest task but poor ones for earlier tasks. To that end, we suggest a novel solution to this problem by continually applying variational dropout (CVD), thereby generating task-specific local variables that work as modifying factors for the global variables to fit the task. In particular, as we impose a variational distribution on the auxiliary local variables employed as multiplicative noise to the layers’ input, the model enables the global variables to be retained in a good region for all tasks and reduces the forgetting phenomenon. Furthermore, we obtained theoretical properties that are currently unavailable in existing methods: (1) uncorrelated likelihoods between different data instances reduce the high variance of stochastic gradient variational Bayes; (2) correlated pre-activation improves the representation ability for each task; and (3) data-dependent regularization assures the global variables to be preserved in a good region for all tasks. Throughout our extensive results, adding the local variables shows its significant advantage in enhancing the performance of regularization/prior-based methods by considerable magnitudes on numerous datasets. Specifically, it brings several standard baselines closer to state-of-the-art results.
+
+
+Springer+ Basic
+
+
+      €32.70 /Month
+     
+
+
+Get 10 units per month
+Download Article/Chapter or eBook
+1 Unit = 1 Article or 1 Chapter
+Cancel anytime
+href36
+
+Buy Now
+
+
+
+
+
+
+
+ Chapter
+      
+
+
+        EUR 29.95
+       
+
+
+       Price includes VAT (Korea(Rep.))
+      
+
+        
+
+Available as PDF
+Read on any device
+Instant download
+Own it forever
+Buy Chapter 
+       
+
+
+
+
+
+
+
+ eBook
+      
+
+       EUR 74.89
+      
+
+       Price includes VAT (Korea(Rep.))
+      
+
+    
+
+Available as EPUB and PDF
+Read on any device
+Instant download
+Own it forever
+Buy eBook 
+       
+
+
+
+
+
+
+
+ Softcover Book
+      
+
+       EUR 89.99
+      
+
+       Price excludes VAT (Korea(Rep.))
+      
+
+    
+
+Compact, lightweight edition
+Dispatched in 3 to 5 business days
+Free shipping worldwide - href37
+Buy Softcover Book 
+       
+
+
+
+
+
+
+Tax calculation will be finalised at checkout
+Purchases are for personal use only
+
+
+
+
+
+
+
+
+href38
 
 
 
@@ -378,358 +419,207 @@ Similar content being viewed by others
 
 
 
-href36
-
-
-Chapter
-© 2022
-
-
-
-
-
-
-
-
-
-href37
-
-
-Chapter
-© 2021
-
-
-
-
-
-
-
-
-
-href38
-
-
-Article
-20 January 2021
-
-
-
-
-
-
-
-
-Explore related subjects
-Discover the latest articles, news and stories from top researchers in related subjects.
-
-
 href39
+
+
+Chapter
+© 2018
+
+
+
+
 
 
 
 
 
 href40
-Avoid common mistakes on your manuscript.
 
 
+Article
+02 January 2020
 
 
 
 
 
 
-1 IntroductionContinual learning, which involves learning a series of consecutive tasks, has become a hot subject among researchers. The trend of continual learning is due to the significant gap in learning ability between artificial neural networks (ANN) and humans. When working on a sequence of tasks, ANN is prone to losing knowledge gained from previous tasks if it cannot review earlier data, while humans can not only preserve acquired knowledge but also actively adjust it to the new tasks. As a result, researchers have focused on bringing the learning ability of methods closer to that of humans.In this paper, we concentrate on task incremental learning scenario (Van de Ven & Tolias, href41) where task identity is provided at both training and testing phases. Regularization/prior approach (Kirkpatrick et al., href42; Nguyen et al., href43; Farquhar & Gal, href44; Loo et al., href45; Jung et al., href46; Yin et al., href47; Phan et al., href48) emerges as an effective solution that can preserve and prevent forgetting the learned knowledge without any retraining on previous data or extending the network architecture. This approach provides a mechanism in which the learning of the model’ parameters for the current task is controlled by a regularization term added to the objective function. This additional constraint penalizes the deviation of parameters based on their importance. Therefore, it effectively solves the problem of forgetting knowledge and allows the model to work well on all preceding tasks. Consequently, the key factor in this approach is to find an appropriate evaluation to identify the weights’ importance. Nevertheless, this approach might find the optimal solution in regions that deliver good performance for the current task but degrade performance on preceding ones. Though strict constraints are already put on important weights, unimportant ones might be updated intensively in the current task, negatively affecting the performance of earlier tasks. This work aims to tackle this issue to improve the regularization/prior approach.Dropout (Srivastava et al., href49), on the other hand, is a well-known regularization strategy for a deterministic neural network (DNN) with deterministic weights. It creates auxiliary random variables following Bernoulli or Gaussian distributions and then multiplies them with the deterministic weights to increase stochasticity in the learning process. The dropout rate is originally fixed and chosen manually; later, it is estimated based on variational inference in several mechanisms (Kingma et al., href50; Gal et al., href51; Liu et al., href52; Nguyen et al., href53; Boluki et al., href54; Nguyen et al., href55). Recent research (Goodfellow et al., href56; De Lange et al., href57; Mirzadeh et al., href58) has focused on the effectiveness of dropout in the context of continual learning. It has been discovered that dropout can significantly help prevent the catastrophic forgetting problem. However, there are still several concerns that should be resolved. Firstly, no findings show that the concept of dropout has been considered in a Bayesian neural network (BNN) (Graves, href59; Blundell et al., href60; Oh et al., href61; Swiatkowski et al., href62) whose weights are represented by a distribution. As a result, it has not been compatible with current prior-based methods. Secondly, there are few theoretical explanations for why dropout works in continuous learning, as previous research was limited to basic DNN experimental scenarios. Finally, instead of manually adjusting the dropout rate in continual learning contexts that seem impractical, the dropout rate should be individually specified for each task to adapt efficiently to the sequence of tasks. We emphasize that existing adaptive dropout methods (Kingma et al., href63; Liu et al., href64) are inapplicable to regularization/prior methods since they only focus on connecting DNN with dropout and BNN. To achieve this goal, they must consider a restriction of BNNs with fixed priors, such as the log uniform distribution (Kingma et al., href65; Molchanov et al., href66) or the discrete quantized Gaussian prior (Gal et al., href67). Then, the dropout rate is also obtained by applying variational inference on the corresponding BNN. In the meantime, regularization/prior-based approach maintains learned knowledge using the learned model from the previous task as the prior in the current task. As a result, adaptive dropout is unavailable for regularization/prior-based methods.Our contributions are listed as follows:First, this paper introduces a novel method that continually applies variational dropout (CVD) to create auxiliary local variables, thus improving regularization/prior-based methods in continual learning. CVD provides two types of variables: task-specific and shared variables (the original weights of neural networks). The global variables are designed to preserve the acquired knowledge from previous tasks, allowing our methods to be combined with existing regularization/prior-based methods. In the meantime, the local variables characterize each specific task and adjust the global variables to perform well on the corresponding tasks. Intuitively, adding local variables, which are learned and saved for each specific task, can help the global variables escape the trap of a local optimum that is merely good for this task.Second, we show the application of CVD in both BNN and DNN. We jointly learn the posteriors of auxiliary local variables for each task and global variables for all tasks. In particular, considering the global variables, the estimated posterior distribution learned from the previous task can be flexibly used as the prior distribution for the current task. Meanwhile, the mechanism for the auxiliary variables is to treat them as Gaussian multiplicative noise in dropout when putting a constraint on approximations of their posteriors. Hence, it gives a mechanism to task-specifically learn dropout rate in continual learning.Third, we highlight three critical features of CVD that are not present in the previous regularization/prior-based methods for both DNNs and BNNs: (i) The uncorrelated likelihoods between different data instances reduce the high variance of stochastic gradient variational Bayes. By having the covariance between the likelihoods equals zero, the variance scales down by the minibatch size, resulting in a more stable learning process. (ii) The correlated pre-activation enhances the representation ability for each task. Intuitively, CVD creates hierarchical distributions between dimensions of the pre-activations, allowing better representing ability. (iii) The data-dependent regularization guarantees that the global variables are preserved in a good region for all tasks. Remarkably, our regularization is able to widen the minima and help the model avoid catastrophic forgetting (Mirzadeh et al., href68; Shi et al., href69; Cha et al., href70). Note that our theoretical properties are distinct from the existing local variables approach. Consequently, our CVD can be integrated with other auxiliary variables methods and takes advantage of variational dropout to enhance the performance.Finally, we evaluate the practical effectiveness of CVD using five regularization/prior-based methods, including Elastic Weight Consolidation (EWC) (Kirkpatrick et al., href71), Adaptive Group Sparsity based Continual Learning (AGS-CL) (Jung et al., href72), Variational Continual Learning (VCL) (Nguyen et al., href73), Generalized Variational Continual Learning (GVCL) (Loo et al., href74), and Uncertainty-based Continual Learning (UCL) (Ahn et al., href75). The experimental results on several benchmark datasets suggest that CVD can significantly increase the baseline performance. In particular, CVD has the ability to bring standard methods closer to state-of-the-art results in several experiments.In the rest of the paper, the related work and background are briefly summarized in Sect. href76. Sections href77 and href78 present our proposal and experiments respectively. The conclusion is drawn in Sect. href79.2 Related work and backgroundThis section introduces related work and then presents some backgrounds.2.1 Related workAn extensive number of investigations have recently discussed the problem of continual learning (CL), and they may be classified into three groups: memory-based, architecture-based, and regularization/prior-based approaches. This paper focuses on a regularization/prior-based strategy, which does not include storing and re-training previous data or constructing a dynamic architecture. The fundamental concept behind this method is to set a limit on the extent to which the current task’s model parameters differ from those of prior tasks. The constraint is frequently built in one of two ways: adding a regularization term or substituting the current task’s prior with the previous task’s posterior. We will go through some specific strategies from both directions in detail.When it comes to regularization (Benzing, href80; Li & Hoiem, href81; Zenke et al., href82; Kirkpatrick et al., href83; Van Linh et al., href84; Jung et al., href85; Ahn et al., href86; Bach et al., href87), an additional regularization term is added to the original loss, which constrains the learning weights of the current task to lie near to the solutions attained from earlier tasks. The regularization term is meant to avoid the catastrophic forgetting phenomenon, whereas the original loss attempts to perform well on the present task. Several strategies are proposed to assess the weight importance that determines the strict level of the constraints in regularization terms. Synaptic Intelligence (SI) (Zenke et al., href88) estimates the weight importance based on the loss function changes with respect to each weight. Memory-aware Synapses (MAS) (Aljundi et al., href89) uses the change of outputs instead of the loss function to evaluate the weight importance. Elastic Weight Consolidation (EWC) (Kirkpatrick et al., href90) is derived from Bayesian learning, and the diagonal Fisher information matrix measures weight importance. Adaptive Group Sparsity-based Continual Learning (AGS-CL) (Jung et al., href91) focuses on node importance instead of weight importance and uses the average activation of each node to measure.Meanwhile, prior-based methods (Farquhar & Gal, href92; Swaroop et al., href93; Nguyen et al., href94; Ahn et al., href95; Phan et al., href96; Henning et al., href97) take advantage of Bayesian Neural Networks (BNNs) (MacKay, href98; Neal, href99), in which the model parameters follow an inferred posterior distribution rather than merely point estimates. Regarding this approach, online variational inference (Ghahramani & Attias, href100; Sato, href101) is used to construct a constraint between consecutive tasks. In more detail, the estimated posterior obtained from the previous task is used as a prior to learn the current task. Variational continual learning (VCL) (Nguyen et al., href102) is the first work that applies it to continual learning. The objective function of VCL consists of two terms: Likelihood term and KL-divergence term. When the prior is the approximate posterior learned from previous tasks, KL-divergence between the current approximate posterior and the prior makes VCL more stable. Generalized Variational Continual Learning (GVCL) (Loo et al., href103) is introduced as a tempered version of VCL, which down-weights the KL-divergence in the objective function and mitigates the common over-pruning effect of variational inference by using task-specific FiLM layers. Uncertainty regularized Continual Learning (UCL) (Ahn et al., href104) improves VCL by defining node importance and then adding two regularization terms. Based on the node importance, the first term limits the change of weights related to important nodes, and the second term makes weights more active in learning new tasks.Experiments (Goodfellow et al., href105; Mirzadeh et al., href106) show that using dropout and stochastic gradient descent without combining continual learning strategies like regularization and additional memory can prevent catastrophic forgetting. This mark of dropout, when integrated with continual learning-based methods, further enhances the original methods significantly in performing well on previous tasks (De Lange et al., href107; Mirzadeh et al., href108; Nguyen et al., href109; Ha et al., href110; Nguyen et al., href111, href112). However, the impact of dropouts has not been discussed adequately, and the dropout rate is merely selected manually and fixed even when the learning tasks are changed. There is a lack of a mechanism to control this parameter when working on multiple tasks. Furthermore, dropout has not been taken into account in BNN, possibly due to the fact that BNN already possesses some of the key qualities of dropout, such as uncertainty and regularization. In continual learning with several tasks, however, we discover that the concept of dropout can be appropriately applied to both DNNs and BNNs. Adding auxiliary variables brings remarkable properties: correlated pre-activation and data-dependent regularization.In the meantime, variational dropout (VD) (Kingma et al., href113) provides a mechanism for learning the dropout rate in DNNs. We emphasize that VD is not used for Bayesian neural networks (BNNs), whose weights are random variables. It merely aims to connect DNNs with dropout and BNNs. In detail, a noise \(s \sim {\mathcal {N}}(1,\alpha )\) multiplied by a deterministic weight \(\theta _{ij}\) results in a random variable \(w_{ij} = s\theta _{ij}\) following \({\mathcal {N}}(\theta _{ij},\alpha \theta _{ij}^2)\). Notably, this property is only correct if \(\theta\) is a deterministic value. Therefore, VD is only used for a DNN. Furthermore, VD must make the KL-term (\(KL(q(W) \Vert p(W))\)) independent of \(\theta\) in order to ensure that the objective function (the evidence lower bound) of the related BNN is the same as the objective function of the original DNN with dropout w.r.t parameters \(\theta\). As a result, VD must set the prior distribution to a fixed log-uniform distribution. This limitation prevents VD from retaining the learned knowledge from the previous task, considering the context of prior-based approach, where posterior acquired from previous tasks is used as the prior distribution to learn the current task. In our work, thanks to separating the posteriors of local and global variables, CVD can function not only on DNNs but also on BNNs in continual learning.2.2 BackgroundConsider a neural network as a probabilistic model \(p({\textbf{y}} \vert {\textbf{x}},\varvec{\theta })\) over output \({\textbf{y}}\) conditioned on input \({\textbf{x}}\) and parameters \(\varvec{\theta }\) which represent the weight matrices. In the Bayesian approach, \(\varvec{\theta }\) are random variables and follow a prior \(p(\varvec{\theta })\). In continual learning, data streams arrive at and belong to consecutive tasks. Let \(({\textbf{X}}_t, {\textbf{Y}}_t) = \{({\textbf{x}}_t^{(i)}, {\textbf{y}}_t^{(i)})\}_{i=1}^{N_t}\) be data of task t where \(N_t\) is the number of data instances in this task. We focus on two directions: Regularization and online variational inference (OVI). The first direction poses an additional regularization term between the parameters of current and the previous tasks and uses point estimations. The second direction, OVI, is based on variational Bayesian inference and regularizes the parameters by a KL term. In particular, it considers the posterior distribution of the previous task as the prior distribution of the current task. We describe EWC, AGS-CL for regularization and VCL, GVCL for OVI.2.2.1 Regularization approachRegularization approach creates a connection between parameters learned in past and current task by adding a regularization term R:$$\begin{aligned} L_{t}(\theta ) = L(D_{t}, \theta ) + R(\theta , \theta _{t-1}^{*}) \end{aligned}$$where \(L(D_{t}, \theta )\) is the objective function of the current task t and \(\theta _{t-1}^{*}\) are the parameters learned from the previous task \(t-1\).
 
-EWC
 
-(Kirkpatrick et al., href114) uses maximum a posterior to obtain a point estimation of parameters and then applies Laplace approximation to estimate the true posterior by a Gaussian distribution. Due to the large number of parameters, the full covariance matrix is reduced to be diagonal and is obtained via the diagonal of the Fisher information matrix. This approximated posterior is considered as a prior to create a regularization term when learning new tasks. At task t, the objective function of EWC is described as follows:$$\begin{aligned} \begin{aligned} {\mathcal {L}}(\varvec{\theta })&= \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) + \log p( \varvec{\theta }) \\&=\sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) - \frac{\lambda }{2} \sum _{j=1}^{J} \left( \sum _{k=1}^{t-1} F_{k,j} \right) (\theta _{j} - \theta _{t-1,j}^{*})^2 \end{aligned} \end{aligned}$$where \(\lambda\) is a hyperparameter, J is the cardinality of \(\varvec{\theta }\), \(F_{k,j}\) is Fisher information with respect to \(\theta _j\) after learning task k.
 
-AGS-CL
+href41
 
-(Jung et al., href115) introduces a dual penalty in the loss function, which considers node importance. The application of the proximal gradient descent technique ensures model sparsity and immobilization throughout the training procedure. Consequently, this approach allows the learner to actively manage the model’s capacity, enabling it to either retain knowledge of previous tasks or adapt to new ones. The objective function for learning task t is defined as$$\begin{aligned} \begin{aligned} {\mathcal {L}}(\varvec{\theta })&= \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) \\ {}&\quad - \mu \sum _{n_\ell \in {\mathcal {G}}_0^{t-1}} \Vert \varvec{\theta }_{n_\ell } \Vert _2 - \lambda \sum _{n_\ell \in {\mathcal {G}} \setminus {\mathcal {G}}_0^{t-1}} \Omega _{n_\ell }^{t-1} \Vert \varvec{\theta }_{n_\ell } - \varvec{\theta }_{n_\ell }^{(t-1)} \Vert _2 \end{aligned} \end{aligned}$$in which \(\varvec{\theta }_{n_\ell }^{(t-1)}\) is the learned parameter vector for node n up to task \(t-1\), and \(\mu\), \(\lambda\) are the hyperparameters for the penalty terms. \(\Omega _{n_\ell }^{t-1}\) indicates the importance of node. \({\mathcal {G}}\) and \({\mathcal {G}}_0^{t-1}\) are group of all nodes and group of unimportant nodes, respectively.
-2.2.2 Prior approachPrior-based methods work based on BNNs. Bayesian inference aims to learn a model with weight parameters \(\theta\) in order to infer a conditional probability \(p(D \vert \theta )\). Intuitively, BNNs builds a model followed a prior \(p(\theta )\) and obtains a posterior distribution \(p(\theta \vert D)\). However, the fact that it does not exist any tractable form for \(p(\theta \vert D)\) posed a demand for a simpler approximation.
 
-Variational inference (VI)
+Article
+Open access
+02 May 2024
 
-Tackles the intractability in BNNs by using a simpler distribution \(q_{\phi }(\theta )\) with \(\phi\) be the parameter of the distribution. In particular, VI finds \(\phi\) that aligns the variational distribution \(q_{\phi }(\theta )\) closest to the intractable true posterior \(p(\theta \vert D)\). This can be achieved by minimizing the Kullback-Leiber (KL) between the two considering distribution. The optimization is then transformed to maximize the Evidence Lower Bound:$$\begin{aligned} ELBO = E_{q_{\phi }(\theta )} \log p (D \vert \theta ) - KL (q_{\phi }(\theta ) \Vert p(\theta )) \end{aligned}$$For practical computation, we use mean-field approximation that assumes the approximate posterior \(q_{\phi }(\theta )\) to be fully factorized and \(q_{\phi }(\theta ) = \prod _{j} q_{\phi }(\theta _{j})\).
 
-VCL
 
-(Nguyen et al., href116) leverages OVI to learn tasks continuously. At task t, the true posterior is approximated by a Gaussian variational distribution based on the mean-field approximation: \(q_t(\varvec{\theta }) = \prod _j^J {\mathcal {N}}(\mu _{t,j}, \sigma _{t,j}^2)\) where J is the cardinality of \(\theta\), and \(\mu _{t,j}, \sigma _{t,j}\) are the mean and standard deviation of \(\theta _j\) respectively. Inspired by OVI, \(q_t(\varvec{\theta })\) is exploited as the prior in the next task \(t+1\). The variational objective of VCL at task t is as follows:$$\begin{aligned} \sum _{i=1}^{N_t} E_{q_t(\varvec{\theta })} \left[ \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta })) \end{aligned}$$This objective consists of a Likelihood term and a KL-divergence term. While the former helps the learned model adapt to the current task, the latter prevents it from forgetting the previous tasks. The KL-term has a closed-form:$$\begin{aligned} \frac{1}{2} \left[ \left\| \frac{\varvec{\mu }_t - \varvec{\mu }_{t-1}}{\varvec{\sigma }_{t-1}}\right\| _2^2 + {\textbf{1}}^\intercal \left\{ \left( \frac{\varvec{\sigma }_{t}}{\varvec{\sigma }_{t-1}} \right) ^2 - \log \left( \frac{\varvec{\sigma }_{t}}{\varvec{\sigma }_{t-1}} \right) ^2 \right\} \right] \end{aligned}$$Meanwhile, due to intractability, VCL uses reparameterization trick and Monte-Carlo sampling to calculate the likelihood term:$$\begin{aligned} E_{q_t(\varvec{\theta })} \left[ \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] \approx \frac{1}{K} \sum _{k=1}^K \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }^{(k)}, {\textbf{x}}_t^{(i)}) \end{aligned}$$where \(\varvec{\theta }^{(k)} = \varvec{\mu }_t + \varvec{\sigma }_t \odot \varvec{\epsilon }_k\) and \(\varvec{\epsilon }_k\) (\(k\in \{1,2,..,K\}\)) is sampled from a unit Gaussian, and \(\odot\) is the element-wise multiplication.
 
-Generalized Variational Continual Learning (GVCL)
 
-(Loo et al., href117) uses a tempered version for the likelihood term of VCL. By adding a factor \(\beta\), with \(0< \beta < 1\), the KL-divergence regularization term is down-weighted and the ELBO is rewritten as follow:$$\begin{aligned} \beta -ELBO = E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - \beta {KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta }))} \end{aligned}$$Besides from \(\beta\), another hyperparameter \(\lambda\) is added to temper the previous task posterior based on changing its variance, which has the form as:$$\begin{aligned} \begin{aligned}&{\tilde{\sigma }}_{t}^{-2} = \lambda ({\sigma }_{t}^{-2} - {\sigma }_{0}^{-2}) + {\sigma }_{0}^{-2} \end{aligned} \end{aligned}$$where \(\sigma _0^{2}\) is the variance of \(p(\theta )\) at the first task. We then have a modified KL-divergence term:$$\begin{aligned} \frac{1}{2} \left[ \left\| \frac{\varvec{\mu }_t - \varvec{\mu }_{t-1}}{\varvec{{\tilde{\sigma }}}_{t-1}}\right\| _2^2 + {\textbf{1}}^\intercal \left\{ \left( \frac{\varvec{\sigma }_{t}}{\varvec{\sigma }_{t-1}} \right) ^2 - \log \left( \frac{\varvec{\sigma }_{t}}{\varvec{\sigma }_{t-1}} \right) ^2 \right\} \right] \end{aligned}$$GVCL also adds task-specific FiLM layers which contain shift and scale parameters (\(\tau\) and \(\rho\)). They act as local parameters that are saved after training each task. For a linear layer having width H, with \(1 \le i \le H\), the pre-activation is modified as \(h_{i}^{'} = \rho _{i} h_{i} + \tau _{i}\). For a convolutional layer having W and H as the dimensions of the output feature, and N filters of size \(K \times K\), the transformation is \(h_{i,j,k}^{'} = \rho _{i} *h_{i,j,k} + \tau _{i}\) where \(1 \le i \le N\), \(1 \le j \le W\), and \(1 \le k \le H\).
-3 Improving regularization/prior-based methods with continual variational dropout in continual learningWhen training the model for a new task, \(\varvec{\theta }\) can be moved intensively to the parameter region, leading to good performance for the current task. In the event that the constraints on previous tasks are not good and strict enough, the learned local optimum can be outside the region that works well on all tasks. To alleviate this problem, we introduce auxiliary local variables for each task which help to create a mechanism for adaptation. The goal is to make the global variables \(\varvec{\theta }\) capture the characteristics of all tasks while the local variables adapt to the corresponding task. As mentioned above, existing methods based on OVI or regularization usually keep the likelihood term unchanged but modify the KL-term or regularization term to deal with the stability-plasticity dilemma. In contrast, our work directly changes the likelihood term and can be employed in a wide range of regularization/prior-based methods.We will present CVD for both fully-connected and convolutional neural networks. Specifically, we will describe CVD for a particular layer of these networks and then how it can be applied to VCL, GVCL, and EWC. Similar derivation applied to UCL is demonstrated in Appendix href118.3.1 Continual variational dropout in each neural network layerConsider a hidden layer l of a fully-connected neural network, let \({\textbf{A}}^{(l)}\) be a \(M \times D\) matrix of input features, \(\varvec{\theta }^{(l)}\) be a \(D \times H\) weight matrix where M is the number of data instances in a minibatch, D and H are the number of input and output dimensions respectively. \(\varvec{\theta }^{(l)}\) follows a prior distribution \(p(\varvec{\theta }^{(l)})\). Denote the pre-activation \({\textbf{B}}^{(l)} = {\textbf{A}}^{(l)} \varvec{\theta }^{(l)}\). For each task, we add auxiliary variables \(s^{(l)}\) to the layer l and use a multiplicative combination: \({\textbf{B}}^{(l)} = ({\textbf{A}}^{(l)} \odot {\textbf{s}}^{(l)}) \varvec{\theta }^{(l)}\) where \(\odot\) is the element-wise multiplication. \({\textbf{s}}^{(l)}\) is a \(M \times D\) matrix where \(s_{md}^{(l)}\) is a random variable. It is flexible in choosing a prior for \(s_{md}^{(l)}\). In this section, we still select log-uniform prior as in Kingma et al. (href119) and will present the variants of CVD with different prior and posterior in Sect. href120. In particular, we can reinterpret multiplicative combination for each data instance m as follows:$$\begin{aligned} {\textbf{B}}_m^{(l)} = ({\textbf{A}}_m^{(l)} \odot {\textbf{s}}_m^{(l)}) \varvec{\theta }^{(l)} = {\textbf{A}}_m^{(l)} \tilde{\varvec{\theta }}^{(l)} \end{aligned}$$where \(\tilde{\varvec{\theta }}^{(l)} = [diag({\textbf{s}}_m^{(l)})] \varvec{\theta }^{(l)}\) and is considered as the model’s parameters for each task. It means that the local variables \({\textbf{s}}_m^{(l)}\) can change the global variable \(\varvec{\theta }^{(l)}\) to adapt to each data instance in a new task. As a result, it can help the global variable \(\varvec{\theta }^{(l)}\) move intensively to the good region for all tasks.We use variational inference to learn the local variables. Specifically, we put a constraint on the form of the approximate posterior in order to consider the local variable as a Gaussian multiplicative noise. We approximate the true posterior of \({\textbf{s}}^{(l)}_m\) (\(m\in \{1,..,M\}\) and \({\textbf{s}}^{(l)}_m \in {\mathbb {R}}^{1 \text {x} D}\)) by a Gaussian distribution: \(q({\textbf{s}}^{(l)}_m)= \prod _{d=1}^D {\mathcal {N}}(1,\alpha ^{(l)}_{t,d})\) where the mean is set to 1 and the variance \(\alpha ^{(l)}_{t,d}\) is learned to capture the change of \(\tilde{\varvec{\theta }}^{(l)}\) around \(\varvec{\theta }^{(l)}\). In addition, \(\alpha _t^{(l)}\) is shared across the inputs of data instances. It is worth noting that although we add a huge number of the auxiliary variables \({\textbf{s}}^{(l)}\) (a \(M \times D\) matrix), the number of parameters \(\varvec{\alpha }^{(l)}_t\) (a D-dimensional vector), which have to be learned, is considerably smaller than the cardinality of the global parameters. We can further reduce \(\varvec{\alpha }^{(l)}_t\) to a scalar. However, using a vector of variational parameters \(\varvec{\alpha }^{(l)}_t\) instead of a scalar makes the approximate posterior richer to characterize a new task t.As for convolutional layers, consider an \(M \times C \times W \times H\) matrix of input features \({\textbf{A}}^{(l)}\), a weight matrix \(\varvec{\theta }^{(l)}\) of shape \(C \times C^{'} \times K \times K\), where M is the number of data instances in a minibatch, C and \(C^{'}\) are the numbers of input and output channels respectively, W and H are the sizes of the input features, and K is the kernel size. For each task, an auxiliary matrix \({\varvec{s}}^{(l)}\) of shape \(M \times C \times W \times H\) is added to the layer l and modulates the global variable \(\varvec{\theta }^{(l)}\) by using a multiplicative combination in the same way as for the fully-connected layer:$$\begin{aligned} {\textbf{B}}_m^{(l)} = ({\textbf{A}}_m^{(l)} \odot {\textbf{s}}_m^{(l)}) *\varvec{\theta }^{(l)} = {\textbf{A}}_m^{(l)} *\tilde{\varvec{\theta }}^{(l)} \end{aligned}$$where \(*\) is the convolution operation.3.2 CVD for regularization/prior-based methodsNext, we will present how to apply CVD in continual learning settings. We use VCL and GVCL as case studies for OVI-based approach; EWC for regularization-based approach.
 
-CVD for VCL
 
-In terms of online variational inference, the approximate posterior of global variables \(\varvec{\theta }\) at a task \(t-1\) is utilized as the prior in the next task t: \(p(\theta ) = q_{t-1}(\theta )\). We maximize the log likelihood:$$\begin{aligned} \log p({\textbf{Y}}_t\vert {\textbf{X}}_t) = \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert {\textbf{x}}_t^{(i)}) \end{aligned}$$We use mean-field variational inference with variational distributions \(q_t({\varvec{\theta }}), q_t({{\textbf{s}}})\) and obtain ELBO:$$\begin{aligned} \begin{aligned} \sum _{i=1}^{N_t} E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - \kappa KL(q_t({\textbf{s}}) \Vert p({\textbf{s}})) - KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta })) \\ \end{aligned} \end{aligned}$$Note that the \(KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta }))\) term helps the learned model prevent forgetting the previous tasks and we keep this term as in VCL. We use log-uniform prior for \({\textbf{s}}\) and the approximation of \(KL(q_t({\textbf{s}}) \Vert p({\textbf{s}}))\) as in VD (Kingma et al., href121). Moreover, we tune a coefficient \(\kappa\) to adjust the effect of this term in experiments. For the likelihood term, we propose a variant of local reparameterization trick to calculate this term. In detail, we consider at each fully-connected layer l: \({\textbf{B}}^{(l)} = ({\textbf{A}}^{(l)} \odot {\textbf{s}}^{(l)}) \varvec{\theta }^{(l)}\) where \(b^{(l)}_{mh} = \sum _{d=1}^D (a^{(l)}_{md}. s^{(l)}_{md})\theta ^{(l)}_{dh}\). Reparameterization trick is sequentially adopted for variables \({\textbf{s}}^{(l)}\) and \(\varvec{\theta }^{(l)}\). Because \(q({\textbf{s}}^{(l)}_m)= \prod _{d=1}^D {\mathcal {N}}(1,\alpha ^{(l)}_{t,d})\), we can calculate the auxiliary local variables \({\textbf{s}}^{(l)}\):$$\begin{aligned} s^{(l)}_{md} = 1 + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md} \end{aligned}$$where \(\gamma ^{(l)}_{md}\) is sampled from \({\mathcal {N}} (0,1)\). It is plugged in the pre-activation:$$\begin{aligned} b^{(l)}_{mh} = \sum _{d=1}^D a^{(l)}_{md} (1 + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{t,md})\theta ^{(l)}_{dh} \end{aligned}$$Since, \(\theta _{dh}^{(l)} \sim {\mathcal {N}}(\mu _{t,dh}^{(l)}, (\sigma _{t,dh}^{(l)})^{2})\), we can rewrite: \(b_{mh}^{(l)} \sim {\mathcal {N}}(\omega _{mh}^{(l)}, \delta _{mh}^{(l)})\) where$$\begin{aligned} \omega _{mh}^{(l)}&= \sum _{d=1}^{D} a_{md}^{(l)}(1 + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md}) \mu _{t,dh}^{(l)} \\ \delta _{mh}^{(l)}&= \sum _{d=1}^{D} \left( a_{md}^{(l)}(1 + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md}) \right) ^{2} (\sigma _{t,dh}^{(l)})^{2} \end{aligned}$$By using reparameterization trick, we have \(b_{mh}^{(l)} = \omega _{mh}^{(l)} + \sqrt{\delta _{mh}^{(l)}} \varepsilon _{mh}^{(l)}\) where \(\varepsilon _{mh}^{(l)}\) is sampled from \({\mathcal {N}}(0,1)\).
-For convolutional layers, we express the matrices in term of vectors as in Molchanov et al. (href122). Considering each layer l, we have \(b_{mc'}^{(l)}\) as the corresponding \(W' \times H'\) output matrix of a \(C \times H \times W\) input \(a_{m}^{(l)}\) and a specific \(C \times K \times K\) filter \(\theta _{t,c'}\). We can rewrite: \(vec(b_{mc'}^{(l)}) \sim {\mathcal {N}}(\omega _{mc'}^{(l)}, \delta _{mc'}^{(l)})\) with:$$\begin{aligned} \omega _{mc'}^{(l)}&= vec \bigg ( a_{m}^{(l)}(1 + \sqrt{\alpha ^{(l)}_{t}} \gamma ^{(l)}_{m}) *\mu _{t,c'}^{(l)} \bigg ) \\ \delta _{mc'}^{(l)}&= diag \Bigg (vec\bigg ( \left( a_{m}^{(l)}(1 + \sqrt{\alpha ^{(l)}_{t}} \gamma ^{(l)}_{m}) \right) ^{2} *(\sigma _{t,c'}^{(l)})^{2}\bigg )\Bigg ) \end{aligned}$$where \(vec(\cdot )\) denotes the vectorization for a matrix.Let \(L^{(m)} = E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \log p({\textbf{y}}_t^{(m)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(m)})\) be the likelihood of data instance m and is expressed as:$$\begin{aligned} L^{(m)} = E_{\varvec{\gamma }_m,\varvec{\varepsilon }_m} \log p({\textbf{y}}_t^{(m)} \vert \varvec{\alpha }_t, \varvec{\mu }_t, \varvec{\sigma }_t, \varvec{\gamma }_m, \varvec{\varepsilon }_m, {\textbf{x}}_t^{(m)}) \end{aligned}$$After sampling \(\varvec{\gamma }\) and \(\varvec{\varepsilon }\), we can calculate the likelihood term and optimize the objective function with respect to variational parameters \(\varvec{\alpha }_t\), \(\varvec{\mu }_t\) and \(\varvec{\sigma }_t\) for task t.
+ ReferencesBeltagy, I., Peters, M.E., Cohan, A.: Longformer: the long-document transformer. arXiv preprint href42 (2020)Cho, S., Song, K., Wang, X., Liu, F., Yu, D.: Toward unifying text segmentation and long document summarization. In: Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing, pp. 106–118 (Dec 2022)href43 
+                Cohan, A., Dernoncourt, F., Kim, D.S., Bui, T., Kim, S., Chang, W., Goharian, N.: A discourse-aware attention model for abstractive summarization of long documents. arXiv preprint href44 (2018)Cui, P., Hu, L.: Sliding selector network with dynamic memory for extractive summarization of long documents. In: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 5881–5891 (2021)href45 
+                Cui, P., Hu, L., Liu, Y.: Enhancing extractive text summarization with topic-aware graph neural networks. arXiv preprint href46 (2020)Doan, X.D., Le Nguyen, M., Bui, K.H.N.: Multi graph neural network for extractive long document summarization. In: Proceedings of the 29th International Conference on Computational Linguistics, pp. 5870–5875 (2022)href47 
+                Dong, Y., Mircea, A., Cheung, J.C.: Discourse-aware unsupervised summarization of long scientific documents. arXiv preprint href48 (2020)Dong, Z., Tang, T., Li, L., Zhao, W.X.: A survey on long text modeling with transformers. arXiv preprint href49 (2023)Erkan, G., Radev, D.R.: Lexrank: graph-based lexical centrality as salience in text summarization. J. Artif. Intell. Res. 22, 457–479 (2004)href50 
+    href51 
+                Grail, Q., Perez, J., Gaussier, E.: Globalizing bert-based transformer architectures for long document summarization. In: Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume, pp. 1792–1810 (2021)href52 
+                Huang, Y.J., Kurohashi, S.: Extractive summarization considering discourse and coreference relations based on heterogeneous graph. In: Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume, pp. 3046–3052 (2021)href53 
+                Iandola, F.N., Shaw, A.E., Krishna, R., Keutzer, K.W.: Squeezebert: what can computer vision teach NLP about efficient neural networks? arXiv preprint href54 (2020)Jing, B., You, Z., Yang, T., Fan, W., Tong, H.: Multiplex graph neural network for extractive text summarization. arXiv preprint href55 (2021)Liu, Y., Lapata, M.: Text summarization with pretrained encoders. arXiv preprint href56 (2019)Miculicich, L., Han, B.: Document summarization with text segmentation. arXiv preprint href57 (2023)Phan, T.A., Nguyen, N.D.N., Bui, K.H.N.: Hetergraphlongsum: heterogeneous graph neural network with passage aggregation for extractive long document summarization. In: Proceedings of the 29th International Conference on Computational Linguistics, pp. 6248–6258 (2022)href58 
+                Rohde, T., Wu, X., Liu, Y.: Hierarchical learning for generation with long source sequences. arXiv preprint href59 (2021)Ruan, Q., Ostendorff, M., Rehm, G.: HiStruct+: improving extractive text summarization with hierarchical structure information. In: Findings of the Association for Computational Linguistics: ACL 2022, pp. 1292–1308 (May 2022)href60 
+                See, A., Liu, P.J., Manning, C.D.: Get to the point: summarization with pointer-generator networks. arXiv preprint href61 (2017)Sefid, A., Giles, C.L.: Scibertsum: extractive summarization for scientific documents. In: Document Analysis Systems: 15th IAPR International Workshop, DAS 2022, La Rochelle, 22–25 May 2022, Proceedings, pp. 688–701 (2022)href62 
+                Steinberger, J., et al.: Using latent semantic analysis in text summarization and summary evaluation. Proc. ISIM 4(93–100), 8 (2004)href63 
+                Vanderwende, L., Suzuki, H., Brockett, C., Nenkova, A.: Beyond sumbasic: task-focused summarization with sentence simplification and lexical expansion. Inf. Process. Manag. 43(6), 1606–1618 (2007)href64 
+    href65 
+                Wang, D., Liu, P., Zheng, Y., Qiu, X., Huang, X.: Heterogeneous graph neural networks for extractive document summarization. In: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pp. 6209–6219 (2020)href66 
+                Xiao, W., Carenini, G.: Extractive summarization of long documents by combining global and local context. arXiv preprint href67 (2019)Xiao, W., Carenini, G.: Systematically exploring redundancy reduction in summarizing long documents. arXiv preprint href68 (2020)Xu, J., Gan, Z., Cheng, Y., Liu, J.: Discourse-aware neural extractive text summarization. arXiv preprint href69 (2019)Yadav, A.K., Singh, A., Dhiman, M., Kaundal, R., Verma, A., Yadav, D.: Extractive text summarization using deep learning approach. Int. J. Inf. Technol. 14(5), 2407–2415 (2022)href70 
+                Zhong, M., Liu, P., Chen, Y., Wang, D., Qiu, X., Huang, X.: Extractive summarization as text matching. In: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pp. 6197–6208 (2020)href71 
+                href72 AcknowledgementsThis research was supported by “Pioneer” and “Leading Goose” R &D Program of Zhejiang (Grant No. 2023C03203, 2023C03180, 2022C03174). Author informationAuthors and AffiliationsSchool of Cyberspace Security, Hangzhou Dianzi University, Hangzhou, 310018, ChinaZhen Zhang, Wenhao Yun, Xiyuan Jia, Qiyun Lv, Hao Ni, Xin Wang & Guohua WuData Security Governance Zhejiang Engineering Research Center, Hangzhou Dianzi University, Hangzhou, 310018, ChinaGuohua WuAuthorsZhen Zhanghref73You can also search for this author in
+                        href74 href75Wenhao Yunhref76You can also search for this author in
+                        href77 href78Xiyuan Jiahref79You can also search for this author in
+                        href80 href81Qiyun Lvhref82You can also search for this author in
+                        href83 href84Hao Nihref85You can also search for this author in
+                        href86 href87Xin Wanghref88You can also search for this author in
+                        href89 href90Guohua Wuhref91You can also search for this author in
+                        href92 href93Corresponding authorCorrespondence to
+                href94. Editor informationEditors and AffiliationsSchool of Automation, Central South University, Changsha, ChinaBiao Luo Institute of Automation, Chinese Academy of Sciences, Beijing, ChinaLong Cheng Institute of Cyber-Systems and Control, Zhejiang University, Hangzhou, ChinaZheng-Guang Wu School of Automation, Guangdong University of Technology, Guangzhou, ChinaHongyi Li School of Electrical Engineering and Telecommunications, UNSW Sydney, Sydney, NSW, AustraliaChaojie Li  Rights and permissionshref95 Copyright information© 2024 The Author(s), under exclusive license to Springer Nature Singapore Pte Ltd. About this paperhref96Cite this paperZhang, Z. et al. (2024).  FHSI-GNN: Fusion Hierarchical Structure Information Graph Neural Network for Extractive Long Documents Summarization.
 
-CVD for GVCL
+                     In: Luo, B., Cheng, L., Wu, ZG., Li, H., Li, C. (eds) Neural Information Processing. ICONIP 2023. Communications in Computer and Information Science, vol 1963. Springer, Singapore. https://doi.org/10.1007/978-981-99-8138-0_12Download citationhref97href98href99DOI: https://doi.org/10.1007/978-981-99-8138-0_12Published: 26 November 2023
+                            Publisher Name: Springer, Singapore
+                                Print ISBN: 978-981-99-8137-3
+                                Online ISBN: 978-981-99-8138-0eBook Packages: href100href101Share this paperAnyone you share the following link with will be able to read this content:Get shareable linkSorry, a shareable link is not currently available for this article.Copy to clipboard
+                                Provided by the Springer Nature SharedIt content-sharing initiative
+                             Publish with ushref102
 
-We also add auxiliary variables and maximize the log likelihood: \(\log p({\textbf{Y}}_t\vert {\textbf{X}}_t) = \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert {\textbf{x}}_t^{(i)})\). We obtain the ELBO using mean-field variational inference with variational distributions \(q_t({\varvec{\theta }}), q_t({{\textbf{s}}})\) in the same way as in VCL but with tempered coefficients:$$\begin{aligned} \begin{aligned} \sum _{i=1}^{N_t} E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - \kappa KL(q_t({\textbf{s}}) \Vert p({\textbf{s}})) - \beta KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta })) \\ \end{aligned} \end{aligned}$$Note that GVCL also introduces FiLM layers as auxiliary variables. The two local variables can be combined as follow:$$\begin{aligned} \begin{aligned} b^{(l)}_{mh} = \rho ^{(l)}_{h}(\sum _{d=1}^D a^{(l)}_{md} (1 + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{t,md})\theta ^{(l)}_{dh}) + \tau ^{(l)}_{h} \end{aligned} \end{aligned}$$where \(\rho ^{(l)}\) and \(\tau ^{(l)}\) are the scale and shift parameters of layer l.
 
-CVD for EWC
 
-Due to adding auxiliary variables, we use type-II maximum a posterior (MAP-II) (Murphy, href123) to learn the model instead of utilizing MAP as in the original EWC. The objective function is described as follows:$$\begin{aligned} {\mathcal {L}}(\varvec{\theta }) = \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) + \log p( \varvec{\theta }) \end{aligned}$$After adding the auxiliary local variable \({\textbf{s}}\), the log likelihood \(\log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)})\) over \({\textbf{s}}\) is intractable. To solve this problem, we consider the evidence lower bound:$$\begin{aligned} \begin{aligned}&\sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert \varvec{\theta }, {\textbf{x}}_t^{(i)}) = \log \int _{{\textbf{s}}} p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) p({\textbf{s}}) d{\textbf{s}} \\&\ge \sum _{i=1}^{N_t} E_{q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - KL(q_t({\textbf{s}}) \Vert p({\textbf{s}})) \\ \end{aligned} \end{aligned}$$Therefore, we have the objective function:$$\begin{aligned} \begin{aligned}&\sum _{i=1}^{N_t} E_{q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] - KL(q_t({\textbf{s}}) \Vert p({\textbf{s}})) \\&- \frac{\lambda }{2} \sum _{j=1}^{J} \left( \sum _{k=1}^{t-1} F_{k,j} \right) (\theta _{j} - \theta _{t-1,j}^{*})^2 \\ \end{aligned} \end{aligned}$$Due to learning a point estimate for the global variables \(\varvec{\theta }\), we only adopt the reparameterization trick for the local variables \({\textbf{s}}\). Furthermore, \(KL(q_t({\textbf{s}}) \Vert p({\textbf{s}}))\) is also calculated as in the VCL case study. We optimize the objective function with respect to \(\varvec{\theta }\) and \(\varvec{\alpha }_t\). After optimizing, the Fisher information is computed for the global variables \(\varvec{\theta }\) to measure the weight’s importance as in the original EWC.
-3.3 Theoretical analysesIn this subsection, we theoretically analyze CVD’s properties such as uncorrelated likelihoods, correlated pre-activation, and data-dependent regularization based on adding auxiliary local variables for a particular task t. While the regularization property assures that the global variables are located in a good region for all tasks, the other properties help to learn each task well.
 
-Uncorrelated likelihoods and correlated pre-activation
 
-In terms of learning BNNs, most existing methods (Graves, href124; Blundell et al., href125; Oh et al., href126; Swiatkowski et al., href127), that use the usual Monte Carlo gradient estimator (Paisley et al., href128) or reparameterization trick (Kingma et al., href129), suffer from high variance. The local reparameterization trick (Kingma et al., href130) is proposed to address this problem. However, even though the local reparameterization trick has the property of uncorrelated likelihoods between different data instances to reduce high variance, it does not have correlated pre-activation to improve representation learning for each task. Therefore, we present these two properties to show the advantages of CVD in comparison with the existing methods in learning BNNs.
 
-Uncorrelated likelihoods between data instances
 
-Regarding variational inference, the objective function requires computations for two terms: the log-likelihood and the KL divergence. Assuming that the KL divergence can be integrated analytically under an approximated close form, the optimization now comes to estimate the likelihood term. An effective Stochastic gradient variational Bayes (SGVB) (Kingma & Welling, href131) is introduced as an efficient optimization method for this objective function. Using the reparameterization trick and Monte Carlo technique (Paisley et al., href132), we applied a variant of SGVB to estimate the likelihood term in the learning process with M data points over dataset \(N_t\) as follows:$$\begin{aligned} L^{(m)} = E{q_{t}(\theta ), q_{t}(s)} \log p(y_{t}^{(m)}\vert \theta ) \simeq L_{SGVB}^{(m)} = \frac{\vert N_t \vert }{M}\sum _{i=1}^{M} \log p(y_{t}^{i}\vert x_{t}^{i}, \theta , s) \end{aligned}$$Particularly, based on the reparameterization trick, the global variables \(\theta\) and the local variable s are considered as functions on random noises \(\gamma\) and \(\varepsilon\) that are sampled from noise distributions \(p(\gamma )\) and \(p(\varepsilon )\) respectively. As we use the local reparameterization trick and the preactivations \(b_{mh}\) is sampled instead of \(\theta _{dh}\), the likelihood of the \(m^{th}\) data instance can then be expressed as:$$\begin{aligned} L^{(m)} = E_{\varvec{\gamma }_m, \varvec{\varepsilon }_m} \log p({\textbf{y}}_t^{(m)} \vert \varvec{\alpha }_t, \varvec{\mu }_t, \varvec{\sigma }_t, \varvec{\gamma }_m, \varvec{\varepsilon }_m, {\textbf{x}}_t^{(m)}) \end{aligned}$$For two data instances m and \({m}'\), it is straightforward to see that \(\{\varvec{\gamma }_{m}, \varvec{\varepsilon }_{m}\}\) and \(\{\varvec{\gamma }_{{m}'}, \varvec{\varepsilon }_{{m}'}\}\) are independent, therefore, \(Cov [L^{(m)},L^{({m}')}]=0\). This property helps to reduce the high variance of stochastic gradient variational Bayes (Kingma et al., href133). Indeed, the likelihood of all data instances is approximated by minibatch-based Monte Carlo estimator and is written: \(L = \frac{N_t}{M} \sum _{m}^M L^{(m)}\) where M is the size of minibatch and \(N_t\) is the number of all data instances. The variance of L is expressed as follows:$$\begin{aligned} \begin{aligned} \frac{N_t^2}{M^2} \bigg ( \sum _{m=1}^{M} Var[L^{(m)}] + 2 \sum _{m=1}^{M}\sum _{{m}'=m+1}^{M} Cov[L^{(m)},L^{({m}')}] \bigg ) \end{aligned} \end{aligned}$$We emphasize that because data instances are drawn from empirical distribution, the variance \(Var [L^{(m)}]\) and covariance \(Cov [L^{(m)},L^{({m}')}]\) are computed with respect to the unit Gaussian distributions \(\varvec{\gamma }\) and \(\varvec{\varepsilon }\). Since \(Cov[L^{(m)},L^{({m}')}] =0\), CVD can achieve a lower variance estimation.Fig. 1href134T-SNE of last layer’s pre-activation. Features from the same classes are closer when adding variational dropouthref135
 
-Correlated pre-activation
 
-Figure href136 visualizes the last layer’s pre-activations. As can be seen in the figure, by adding the variational dropout, the features of the same class are drawn closer, therefore forming clearer clusters. We indicate that the appearance of auxiliary local variables has constructed a hierarchical distribution on the pre-activations, resulting in a better representation capability.
-We emphasize that the original local reparameterization trick (Kingma et al., href137) fully factorizes \(b_m\). Therefore, it only obtains the property of uncorrelated likelihoods but does not capture correlated representation. Clearly, employing the local reparameterization trick to the original pre-activation \({\bar{b}}^{(l)}_{mh}\) without any auxiliary local variables makes it follow a distribution \({\mathcal {N}}({\bar{\omega }}_{mh}^{(l)}, {\bar{\delta }}_{mh}^{(l)})\) where:$$\begin{aligned} {\bar{\omega }}_{mh}^{(l)}&= \sum _{d=1}^{D} a_{md}^{(l)} \mu _{t,dh}^{(l)} \\ {\bar{\delta }}_{mh}^{(l)}&= \sum _{d=1}^{D} \left( a_{md}^{(l)}\right) ^{2} (\sigma _{t,dh}^{(l)})^{2} \end{aligned}$$with \({\mathcal {N}}(\mu _{t,dh}^{(l)}, (\sigma _{t,dh}^{(l)})^{2})\) is the distribution of the global weight \(\theta _{dh}^{(l)}\). Since the true posterior is approximated based on mean-field approximation, the pre-activation is fully factorized, leading to no correlation between the dimensions.We show that, for each data instance m, adding the local variables for each layer l results in correlated pre-activation. Recall that considering an element h, we have \(b_{mh} \sim {\mathcal {N}}(\omega _{mh}, \delta _{mh})\) where \(\omega _{mh}, \delta _{mh}\) are functions over random variable \(\varvec{\gamma }_m\) which is derived from reparameterization trick on the local variables. As a consequence, CVD creates a hierarchical distribution on the pre-activation \({\textbf{b}}_m\) and can achieve better representation on each layer.
 
-An effective regularization for continual learning
+Access this chapter
 
-Recently, Wei et al. (href138) proved that dropout with Bernoulli distribution leads to the approximate regularization term:$$\begin{aligned} Reg_{dropout} = \frac{q}{1-q} \left\langle H_{h^{(l)}({\textbf{x}})}({\bar{L}}); \, diag \left( (h^{(l)}({\textbf{x}}))^{2} \right) \right\rangle \end{aligned}$$where q is the dropout probability. \({\bar{L}}\) is the original loss function without adding noises, \((h^{(l)}({\textbf{x}}))\) is the \(l^{th}\) hidden layer, \(H_{h^{(l)}({\textbf{x}})}({\bar{L}})\) is the Hessian matrix of \({\bar{L}}\) w.r.t \((h^{(l)}({\textbf{x}}))\) and \(\left\langle ; \, \right\rangle\) is the inner product of vectorizations of matrices.
-In this work, we extend the analyses to Gaussian multiplicative noise instead of only Bernoulli drop connect as in Wei et al. (href139). More specifically, we demonstrate that CVD achieves similar regularization as it induces a data-dependent regularization.
+href103
 
-Proposition 1
 
-Let  F be a function which is derived from the neural network, \(h^{(l)}\) be the l-th hidden layer of the network, \(F^{(l)}\) be the function based on the part of architecture from layer l to output layer: \(F({\textbf{x}}) = F^{(l)}(h^{(l)}({\textbf{x}}))\) and \({\bar{L}}(F({\textbf{x}})\) be a loss function. Dropout with multiplicative Gaussian noises leads to an approximate regularization term \(Reg_{mult}\) as follows:$$\begin{aligned}&Reg_{mult} = \frac{1}{2} \left\langle H_{h^{(l)}({\textbf{x}})}({\bar{L}}); \, diag \left( \varvec{\alpha }^{(l)} \odot (h^{(l)}({\textbf{x}}))^2 \right) \right\rangle \end{aligned}$$
-                    (1)
-                where \(H_{{\textbf{x}}}(F)\) is the Hessian of F w.r.t. \({\textbf{x}}\) and \(\alpha\) is the variance of Gaussian dropout, \(\left\langle ; \, \right\rangle\) is the inner product of vectorizations of matrices.
 
-Proof
 
-We consider the loss function at each task t, which is negative of the likelihood, when adding auxiliary variables \({\textbf{s}}\) to a layer l of the network. For simplicity, we remove the task index t in the loss function. The loss function is presented as follows:$$\begin{aligned} {\bar{L}}(F({\textbf{x}}, {\textbf{s}})) = {\bar{L}}( F^{(l)}( h^{(l)}({\textbf{x}}) \odot {\textbf{s}}^{(l)} ) ) \end{aligned}$$where \({\textbf{s}}^{(l)} \sim {\mathcal {N}}({\textbf{1}}, diag(\varvec{\alpha }^{(l)}))\) is the auxiliary local variables at layer l.
-Because \({\textbf{s}}^{(l)} \sim {\mathcal {N}}({\textbf{1}}, diag(\varvec{\alpha }^{(l)}))\), we use reparameterization trick for \({\textbf{s}}^{(l)}\): \({\textbf{s}}^{(l)} ={\textbf{1}} + \sqrt{\varvec{\alpha }}^{(l)} \odot \varvec{\gamma }\) where \(\varvec{\gamma } \sim {\mathcal {N}}({\textbf{0}}, I)\) and then plug it to the loss function (2):$$\begin{aligned} {\bar{L}}(F({\textbf{x}}, {\textbf{s}}))&= {\bar{L}}( F^{(l)}( h^{(l)}({\textbf{x}}) \odot ( {\textbf{1}} + \sqrt{\varvec{\alpha }^{(l)}} \odot \varvec{\gamma }) ) ) \\&= {\bar{L}}( F^{(l)}( h^{(l)}({\textbf{x}}) + (h^{(l)}({\textbf{x}}) \odot \sqrt{\varvec{\alpha }^{(l)}})\odot \varvec{\gamma }) ) \end{aligned}$$For simplicity, let \(\varvec{\delta } = ( h^{(l)}({\textbf{x}}) \odot \sqrt{\varvec{\alpha }^{(l)}} ) \odot \varvec{\gamma }\). Because \(\varvec{\gamma } \sim {\mathcal {N}}({\textbf{0}}, I)\), we achieve \(\varvec{\delta } \sim {\mathcal {N}} \Big ({\textbf{0}}, diag(\varvec{\alpha }^{(l)} \odot (h^{(l)}({\textbf{x}}))^2) \Big )\) and rewrite the loss function:$$\begin{aligned} {\bar{L}}(F({\textbf{x}}, {\textbf{s}})) = {\bar{L}}( F^{(l)}( h^{(l)}({\textbf{x}}) + \varvec{\delta } ) ) \end{aligned}$$We utilize Taylor expansion to approximate the loss function around \(\varvec{\delta }\):$$\begin{aligned} {\bar{L}}(F({\textbf{x}}, {\textbf{s}})) - {\bar{L}}(F({\textbf{x}})) \approx \varvec{J}_{h^{(l)}({\textbf{x}})}({\bar{L}}) \varvec{\delta } + \frac{1}{2} \varvec{\delta }^\top \varvec{H}_{h^{(l)}({\textbf{x}})}({\bar{L}}) \varvec{\delta } \end{aligned}$$where \(\varvec{J}_{{\textbf{x}}}(F)\) is the Jacobian of F w.r.t \({\textbf{x}}\) and \(\varvec{H}_{{\textbf{x}}}(F)\) is the Hessian of F w.r.t \({\textbf{x}}\). Note that the approximation error can approach 0 when \(\varvec{\delta }\) is small enough. This happens when \(\varvec{\alpha }^{(l)}\) is small enough. Because \(E_{\varvec{\delta }} [\varvec{J}_{h^{(l)}({\textbf{x}})}({\bar{L}}) \varvec{\delta } ] =0\), we can achieve an approximate regularization term \(Reg_{mult}\):$$\begin{aligned} Reg_{mult}&= E_{{\textbf{s}}} [{\bar{L}}(F({\textbf{x}}, {\textbf{s}}))] - {\bar{L}}(F({\textbf{x}})) \\&\approx \frac{1}{2} E_{\varvec{\delta }} \left[ \varvec{\delta }^\top \varvec{H}_{h^{(l)}({\textbf{x}})}({\bar{L}}) \varvec{\delta } \right] = \frac{1}{2} \left\langle \varvec{H}_{h^{(l)}({\textbf{x}})}({\bar{L}}); \, E[\varvec{\delta } \varvec{\delta }^\top ] \right\rangle \\&= \frac{1}{2} \left\langle \varvec{H}_{h^{(l)}({\textbf{x}})}({\bar{L}}); \, diag \left( \varvec{\alpha }^{(l)} \odot (h^{(l)}({\textbf{x}}))^2 \right) \right\rangle \end{aligned}$$where \(\left\langle ; \, \right\rangle\) is the inner product of the vectorizations of two matrices. \(\square\)
-Meanwhile, based on this regularization, Mirzadeh et al. (href140) analyzed that minimizing the second derivative of the loss w.r.t the activation can obtain the flatness of the minima where the model can perform well on all tasks. Similarly, CVD also has this property as discussed in Mirzadeh et al. (href141); Shi et al. (href142); Cha et al. (href143), therefore it can guarantee to preserve global variables in good region for all tasks.3.4 Variants of CVDIn this section, we justify the flexibility of CVD as it can adapt versatilely in diverse circumstances.Diversity in priors of CVD: CVD can work effectively with a variety of priors. In this section, we show the case when the prior of CVD follows a Gaussian instead of log uniform, and extend the approximated true posterior to \(q({\textbf{s}}^{(l)}_m)= \prod _{d=1}^D {\mathcal {N}}(\zeta ^{(l)}_{t,d},\alpha ^{(l)}_{t,d})\) where now both the mean \(\zeta ^{(l)}_{t,d}\) and the variance \(\alpha ^{(l)}_{t,d}\) are learnable parameters to adjust the global parameters \(\theta ^{(l)}\) fitting to task-specific data. The reparameterization trick is adopted for \(s^{(l)}\) as follow:$$\begin{aligned} s^{(l)}_{md} = \zeta ^{(l)}_{t,d} + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md} \end{aligned}$$where \(\gamma ^{(l)}_{md}\) is sampled from N (0, 1). It is the plugged in the preactivation:$$\begin{aligned} b^{(l)}_{mh} = \sum _{d=1}^D a^{(l)}_{md} (\zeta ^{(l)}_{t,d} + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{t,md})\theta ^{(l)}_{dh} \end{aligned}$$Since, \(\theta _{dh}^{(l)} \sim {\mathcal {N}}(\mu _{t,dh}^{(l)}, (\sigma _{t,dh}^{(l)})^{2})\), we rewrite: \(b_{mh}^{(l)} \sim {\mathcal {N}}(\omega _{mh}^{(l)}, \delta _{mh}^{(l)})\) where$$\begin{aligned} \omega _{mh}^{(l)}&= \sum _{d=1}^{D} a_{md}^{(l)}(\zeta ^{(l)}_{t,d} + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md}) \mu _{t,dh}^{(l)} \\ \delta _{mh}^{(l)}&= \sum _{d=1}^{D} \left( a_{md}^{(l)}(\zeta ^{(l)}_{t,d} + \sqrt{\alpha ^{(l)}_{t,d}} \gamma ^{(l)}_{md}) \right) ^{2} (\sigma _{t,dh}^{(l)})^{2} \end{aligned}$$Adopting reparameterization trick, we have \(b_{mh}^{(l)} = \omega _{mh}^{(l)} + \sqrt{\delta _{mh}^{(l)}} \varepsilon _{mh}^{(l)}\) where \(\varepsilon _{mh}^{(l)}\) is sampled from \({\mathcal {N}}(0,1)\). Let \(L^{(m)} = E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \log p({\textbf{y}}_t^{(m)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(m)})\) be the likelihood of data instance m and is expressed as:$$\begin{aligned} L^{(m)} = E_{\varvec{\gamma }_m,\varvec{\varepsilon }_m} \log p({\textbf{y}}_t^{(m)} \vert \varvec{\zeta }_{t}, \varvec{\alpha }_t, \varvec{\mu }_t, \varvec{\sigma }_t, \varvec{\gamma }_m, \varvec{\varepsilon }_m, {\textbf{x}}_t^{(m)}) \end{aligned}$$After sampling \(\varvec{\gamma }\) and \(\varvec{\varepsilon }\), we can calculate the likelihood term and optimize the objective function with respect to variational parameters \(\varvec{\zeta }_{t}\), \(\varvec{\alpha }_t\), \(\varvec{\mu }_t\) and \(\varvec{\sigma }_t\) for task t. The ELBO is the same as the original CVD for VCL and the \(KL(q_t({\textbf{s}}) \Vert p({\textbf{s}}))\) is approximated between two Gaussians.It is noteworthy that this variant of CVD also obtains the first two theoretical properties as in the original one. The uncorrelated likelihoods between data instances are preserved thanks to the local reparameterization trick applied to the pre-activations. The correlated pre-activation is achieved through the random variable \(\varvec{\gamma }_m\) derived from the reparameterization trick on the local variables, resulting in a correlation between dimensions of each row in the pre-activation matrix.
 
-Inducing FiLM layers
+Subscribe and save
 
-To the extent of auxiliary variables, GVCL (Loo et al., href144) introduced FiLM layers as local factors to capture the task-specific features. Apparently, both FiLM layers and CVD make use of two variables with different roles; namely, the global ones guarantee good performance for all tasks, and the local ones adjust the global to do well for each task. Nevertheless, the setting of CVD is different from FiLM layers as ours is injected after the activations while FiLM layers are placed following the pre-activations. This section introduces a different setting for CVD, which can then induce FiLM layers.
-In particular, we set the local variable s directly modulates the pre-activations instead of adjusting the global variables \(\theta\). Let \(b_{mh}\) be the original pre-activation and \(b^{'}_{mh}\) be the modulated pre-activations. We applied the above variant of CVD on the pre-activation as follows:$$\begin{aligned}&b^{'(l)}_{mh} = b_{mh}\left( \zeta ^{(l)}_{t,h} + \sqrt{\alpha ^{(l)}_{t,h}} \gamma ^{(l)}_{t,mh}\right) \\&= b_{mh}\zeta ^{(l)}_{t,h} + b_{mh}\sqrt{\alpha ^{(l)}_{t,h}} \gamma ^{(l)}_{t,mh} \end{aligned}$$Let \(\delta ^{(l)}_{t,mh} = b_{mh}\sqrt{\alpha ^{(l)}_{t,h}} \gamma ^{(l)}_{t,mh}\) we obtain:$$\begin{aligned}&b^{'(l)}_{mh} = b_{mh}\zeta ^{(l)}_{t,h} + \delta ^{(l)}_{t,mh} \end{aligned}$$It can be seen that by positioning CVD on the pre-activations, we recover both the scale and shift term in the FiLM layers used in GVCL. In particular, \(\zeta ^{(l)}_{t,h}\) plays the role of the scale coefficient and \(\delta ^{(l)}_{t,mh}\) acts as the shift as in FiLM. Consequently, CVD inherits characteristics of FiLM layers, such as manipulating the activations and solving the over-pruning effect in OVI methods.Moreover, CVD still preserves the theoretical properties analyzed above in this variant. Indeed, the local reparameterization trick is adopted, mitigating the sampling from the global variables to the pre-activations, hence obtaining the uncorrelated likelihoods property. Regarding the correlated pre-activation, the considering variant of CVD delegates the correlations to the following layers. To be precise, we denote the two consecutive layers as (l) and \((l+1)\). We then have the input for the next layer:$$\begin{aligned}&x^{(l+1)}_{mh} = f(b^{'(l)}_{mh}) = f(b_{mh}\zeta ^{(l)}_{t,h} + \delta ^{(l)}_{t,mh}) \end{aligned}$$where \(f(\cdot )\) is the activation function. By forwarding the input, we obtain the pre-activation of \((l+1)^{th}\) layer:$$\begin{aligned} b^{(l+1)}_{mg}&= \sum _{h=1}^{H} x_{mh}^{(l)} \theta ^{(l+1)}_{hg} = \sum _{h=1}^{H} f(b^{'(l)}_{mh}) \theta ^{(l+1)}_{hg} \\&= \sum _{h=1}^{H} f(b_{mh}\zeta ^{(l)}_{t,h} + b_{mh}\sqrt{\alpha ^{(l)}_{t,h}} \gamma ^{(l)}_{t,mh}) \theta ^{(l+1)}_{hg} \end{aligned}$$where g is the number of output features of layer \((l+1)^{th}\).Recall that the local reparameterization trick is applied on the pre-activation \(b^{(l+1)}_{mg}\), which now follows a distribution \({\mathcal {N}}(\omega _{mg}, \delta _{mg})\) where \(\omega _{mg}, \delta _{mg}\) are functions over random variable \(\varvec{\gamma }_m\) derived from reparameterization trick on the local variables of the previous layer. As a consequence, serving variational dropout as an adjusting factor on the pre-activation remains the correlated pre-activation as it transfers the hierarchical distribution to the next layer. In this way, this setting of CVD acquires the good representation capability of the original version.4 ExperimentsWe use five regularization/prior-based methods: EWC, AGS-CL, VCL, UCL, and GVCL, to evaluate how CVD improves them on six datasets: Split MNIST, Permuted MNIST, Split CIFAR-100, Split CIFAR-10/100, Split Omniglot, Split CUB-200 and Split ImageNet-R. We ignore considering episodic or corset memory to boost the effectiveness of all methods in our experiments. These datasets are generated from six original ones: MNIST (Deng, href145), CIFAR10, CIFAR100 (Krizhevsky & Hinton, href146), Omniglot, CUB-200 (Wah et al., href147) and ImageNet-R (Hendrycks et al., href148), and can be applied to simulate the process of continuous arriving data. In this work, we inherit AGS-CL setting for Split CUB-200 and UCL’s experiment setup for the remaining four datasets except Split ImageNet-R. We employ Split ImageNet-R to evaluate complicated classification data, which contains 10 sequences of tasks. All scenarios assume that data arrives task by task and all data points of a task come at the same time.We carried out experiments on two versions for each method, namely, the original one and the CVD application on the baseline. The superiority of CVD is clearly shown in Tables href149 and href150, and thoroughly discussed in Sects. href151, href152, href153 and href154. Furthermore, we verified the practicality of the correlated pre-activation and uncorrelated likelihood properties in Sect. href155. In Sect. href156, the two extended variants of CVD are proved to attain competitive or superior performance compared to the original CVD and other auxiliary local variables. Finally, we review the effectiveness of dropout with adaptive droprate against fixed droprate, the training time, and sensitivity to the additional hyperparameters \(\kappa\) in Sect. href157.
 
-Datasets
 
-We use six benchmark datasets to evaluate our method: Split MNIST, Permuted MNIST, Split CIFAR 100, Split CIFAR 10/100, Split Ominiglot, Split CUB-200 and Split ImageNet-R. The first two are variants of MNIST. Split MNIST consists of 5 consecutive tasks, each containing 2 classes divided from the original one. Permuted MNIST comprises 10 tasks; each is formed by a different permutation of MNIST. Split CIFAR 100 divides CIFAR100 into 10 tasks that hold 10 classes each. Split CIFAR 10/100 combined the two datasets, with CIFAR10 as the first task and CIFAR 100 as the following 10 tasks. Split Omniglot is made up of 50 alphabets and 50 tasks. Both Split CUB-200 and Split ImageNet-R contain 10 tasks and 20 classes in each task. We provide the specific number of tasks, number of training samples, number of testing samples, and labels per task in Table href158.
-Table 1 Details of benchmark datasetshref159
 
-Evaluation Metrics
 
-We evaluate our method using average accuracy across all tasks. The average accuracy after learning task t is formulated as follows:$$\begin{aligned} ACC_{t} = \frac{1}{t} \sum ^{t}_{i=1} R_{t,i} \end{aligned}$$where \(R_{j,i}\) is the accuracy on \(i\mathrm{{th}}\) task after learned task \(j\mathrm{{th}}\).
+Springer+ Basic
 
-Settings
 
-We use again the source codes of EWC and UCL, which are released from the original UCL paper,href160 GVCL from the GVCL paperhref161 and AGS-CL from their paper.href162 We implement VCL based on the source code of UCL. Similar to the experiments of UCL paper (Ahn et al., href163), we use fully-connected neural networks (FNNs) for Split and Permuted MNIST datasets and convolutional neural networks (CNN) for Split CIFAR-100, CIFAR-10/100 and Omniglot datasets. We omit experiments on MNIST-based datasets for AGS-CL due to the extensive experiment load and the absence of such experiments in the original AGS-CL paper. For Split CUB-200 and ImageNet-R datasets, we experiment with the top two performance models (GVCL and AGS-CL). We follow (Jung et al., href164) to use pre-trained AlexNet and employ Vision Transformer (ViT) (Dosovitskiy et al., href165) for Split CUB-200 and Split ImageNet-R, respectively. CVD is injected into several layers of the networks, we explicitly show their architectures and settings in the Appendix href166. We conduct all experiments on the datasets with minibatch sizes of 256 and 100 epochs and adopt the Adam optimizer with a learning rate of 0.001 for each task except Split CUB-200. In the Split CUB-200 experiment, we set minibatch sizes to 64 and utilize SGD optimizer with a learning rate of 0.005. For a fair comparison, all results are averaged over 5 different seeds, which also determine the order of sequences of tasks.
-Table 2 Average accuracy over all tasks on 5 benchmark datasetshref167
-Fig. 2href168Average accuracy and task accuracy on Split MNISThref169Fig. 3href170Average accuracy and task accuracy on PMNISThref1714.1 Effectiveness of CVD on Split MNIST and permuted MNIST datasetsTable href172 illustrates the average accuracy over all tasks after finishing training the last task on five datasets (Split MNIST, Permuted MNIST, Split CIFAR 10/100, CIFAR 100 and Omniglot). For Split MNIST, consistently, CVD-based methods outperform the corresponding baselines. In particular, CVD improves EWC significantly from \(97.65\) to \(99.79\%\) average accuracy and can outperform the state-of-the-art method such as UCL. The performances of CVD for VCL, UCL, and GVCL also increase noticeably. However, we found that in VCL, UCL, and GVCL, the original baselines seem to work well in this experiment and are comparable to CVD. This can be explained as the data distribution between tasks may be similar, and there might be excess uncertainty in VCL and UCL when adding noise through dropout.For Permuted MNIST, after training 10 tasks sequentially, EWC, VCL, UCL, GVCL, and GVCL-F achieve performances of \(92.82\%, 87.32\%\), \(96.18\%\), \(96.01\%\) and \(97.59\%\) respectively. After applying CVD, all the five baselines witnessed slight growth in the average accuracy. In detail, the accuracy of GVCL and GVCL-F grows from \(96.01\) to \(97.00\%\) and \(97.59\) to \(97.94\%\), respectively. In the meantime, UCL slightly increases by \(0.16\%\), and VCL raises by \(1.53\%\). Similarly, EWC with CVD also grows from \(92.82\%\) to \(92.96\%\). The reason for these slight rises in OVI methods, namely UCL, GVCL, and GVCL, is due to the fact that these methods themselves already have the property of uncertainty. This explanation can also answer for the indistinct results in the case of EWC since the original source code of UCL does include dropout in the architecture for EWC when working with Permuted MNIST.Figures href173 and href174 illustrate the average accuracy after learning each task, as well as the final accuracy for each task when completed learning on Split MNIST and Permuted MNIST. Regarding Split MNIST, the gap between the average accuracy of CVD-based and others grows more remarkable as the number of tasks increases. The final accuracy of each task also confirms the effect of adding local variables in preserving tasks’ performance. However, in GVCL, the effect of CVD is not as immense as FiLM due to the excess of uncertainty.Fig. 4href175Average accuracy and task accuracy on Split CIFAR 10/100href176Fig. 5href177Average accuracy and task accuracy on Split CIFAR 100href1784.2 Effectiveness of CVD on Split CIFAR 100 and Split CIFAR 10/100:Figures href179 and href180-Left illustrate the effectiveness of CVD in comparison with the baselines on the Split CIFAR 10/100 dataset. Overall, all methods have witnessed a remarkable increase in performance compared to their baseline results when applying CVD. In addition, the figure also depicts the average performances of all the methods after each task. It is clear that the average accuracy of all methods decreases when evaluating on test sets of previous tasks and the current one, which indicates the forgetting of acquired knowledge. However, CVD can help the baselines mitigate this phenomenon with the support of local variables to achieve better average accuracy through tasks. Specifically, EWC with CVD outperforms some of the others, including UCL and VCL, by achieving an average accuracy of \(74.23\%\), which even overcomes UCL with CVD (\(73.13\%\)). While AGS-CL already incorporates two regularization terms to manage its learning capacity, achieving a high performance at 76.03%, it’s noteworthy that the integration of CVD leading to additional regularization term further enhances accuracy, pushing it to 77.03%. This indicates the effectiveness of CVD to existing regularization-based methods. Furthermore, VCL is claimed to have low performance on CIFAR dataset (Loo et al., href181), and the improvements of CVD on VCL are also remarkable. Considerable gaps are also observed in the experiments with GVCL and GVCL-F. Notably, CVD boosts the performance of these two by \(7.23\%\) and \(3.36\%\), respectively.In Split CIFAR 100, as can be seen in Figs. href182 and href183-Middle, all results are under the curves which have been presented in Split CIFAR 10/100 experiments, even with fewer tasks. This can be explained as Split CIFAR 10/100 can prevent overfitting on Split CIFAR 100 using a model pre-trained on CIFAR-10 (the first task is CIFAR-10), which contains much more data than that of a task split from CIFAR-100. Again, all five methods show significant improvement after applying CVD. Specifically, CVD on the two GVCL and EWC obtain the most noticeable improvement (from 55.13 to 60.19% for GVCL, 61.71 to 65.25% for GVCL-F, and 60.56 to 63.20% for EWC).Fig. 6href184The change of accuracy through tasks on EWChref185We also provide the performances w.r.t. each task in the case of EWC on Split CIFAR 10/100 in Fig. href186. This figure displays information about the test accuracy of a task corresponding to the trained model of the task on the horizontal axis. From this perspective, we are able to identify how forgetting occurs on each task. As can be seen, CVD makes EWC more stable on all tasks, while most tasks are noticeably performed worse for the original. Similar results also appear on VCL, UCL, and GVCL; however, we do not visualize them here to save space. The figures for AGS-CL, VCL, UCL, and GVCL can instead be found in the Appendix href187 supplementary material. From these results, CVD is shown to not only improve performance in most tasks but also reduce the forgetting phenomenon more effectively.Fig. 7href188Average accuracy and task accuracy on Split Omniglothref189Fig. 8href190Average accuracy and task accuracy of AGS-CLhref1914.3 Effectiveness of CVD on Split OmniglotIn this experiment, we also use CNN but with a different architecture from those used in the CIFAR experiment. The difference between Split Omniglot and the other four mentioned datasets is that the number of classes is diverse among tasks, thus making it more practical. We rescale, augment, and split the data following the code provided in Ahn et al. (href192). The results of this experiment are illustrated in Figs. href193 and href194-Right.We can observe that CVD makes EWC and AGS-CL remarkably more stable. Furthermore, CVD helps EWC achieve a nearly state-of-the-art performance with \(90.14\%\) average accuracy on all 50 tasks, only after the two CVD versions of GVCL (with a result of \(92.27\%\) for the regular CVD version and \(93.63\%\) when using CVD and FiLM layer), thus obtaining a better performance than UCL and VCL in this experiment. Similarly, the results of VCL and UCL with CVD undergo a slighter fluctuation than the original method across 50 tasks. Additionally, the task accuracy demonstrates the ability to preserve learned knowledge, as in most tasks, the final accuracy of CVD is higher than the baselines. This indicates that CVD can also more effectively deal with the stability-plasticity dilemma in the case of long task sequences. Therefore, all other three methods (VCL, UCL, and GVCL), also deliver better performances by around \(6\%\) for the first two and \(3\%\) for the last one in comparison to the original application. Moreover, CVD also shows superiority against the FiLM layer in this experiment by \(1.36\%\).4.4 Effectiveness of CVD on Split CUB-200 and Split ImageNet-RIn this section, we present the results of our experiments designed to assess the effectiveness of CVD on more challenging datasets. Our investigation encompasses two large datasets, which are variants of CUB-200 and ImagetNet-R, using two methods (AGS-CL and GVCL) in this experiment. The results are presented in Table href195 and Fig. href196.
-Table 3 Average accuracy over all tasks on Split CUB-200 and Split ImageNet-Rhref197For the Split CUB-200 dataset, we applied CVD to the AlexNet architecture. The results demonstrated a consistent trend observed in previous experiments, indicating that CVD significantly enhances the stability and performance of the original methods. Noticeably, CVD contributes to a substantial improvement of over 3% in the performance of OVI-based methods, underscoring the alignment of CVD’s theoretical principles with its empirical impact on these methods. Moreover, CVD also shows superiority against the FiLM layer in this experiment by \(3.31\%\).To assess the capabilities of CVD on a more challenging dataset, we employ Imagenet-R. We leverage a pretrained Vision Transformer (ViT) to conduct experiments on Imagenet-R. Due to the limitations of our computational resources, we froze the backbone to reduce computational complexity and added several linear layers on top (see the architecture in Appendix href198). Figure href199 reveals that all methods achieve low accuracy and experience a noteworthy forgetting phenomenon. However, the application of CVD proves instrumental in mitigating this phenomenon, which improves significantly the performance of AGS-CL from 44.88% to 47.79% and GVCL from 46.97 to 48.53%. Additionally, the combination of FiLM and CVD pushes GVCL to achieve the best performance of 52.34%. These results underscore the robust efficacy of CVD in specific and local variables in general on a wide range of models and dataset scales.Fig. 9href200Average accuracy and task accuracy on Split CUB-200 and Split ImagetNet-Rhref2014.5 Analysis on theoretical propertiesThis section shows a detailed analysis of our suggested theoretical properties of CVD. To demonstrate the effectiveness of CVD when learning each task, we design an offline experimental scenario in which there is a single task and all data is available for a training process with multiple passes through the dataset.Fig. 10href202Average accuracy of using reparameterization trick, local reparameterization trick and CVD. The experiments is performed on four datasets, including MNIST, CIFAR 10, CIFAR 10/100 and Omniglothref203Analysis of the preactivation properties: Firstly, for the correlated pre-activation properties, we prove the superiority of CVD compared to the baselines by evaluating the accuracy on four datasets, MNIST, CIFAR10, CIFAR10/100, and Omniglot. In particular, we compare three extensions, including using the reparameterization trick, the application of the local reparameterization trick, and our proposed variational dropout. As shown in Fig. href204, CVD exceeds the two baselines by significant clearance on all datasets, especially on the two datasets CIFAR10 and CIFAR100, which require higher represent ability than the remainings. Namely, while CVD improves slightly by \(0.03\%\) and \(1.37\%\) on MNIST and Omniglot, respectively, the difference grows more significant for more complicated datasets. On CIFAR100, the dominance of CVD against regular the local reparameterization trick is \(8.98\%\) and climbs to \(11.49\%\) on CIFAR10/100. These observations confirm the effectiveness of the hierarchical distribution obtained when adding the variational dropout, resulting in correlated pre-activations and leading to better feature representation.
-Table 4 Average variance of gradients with respect to the variance of weightshref205
+      €32.70 /Month
+     
 
-Analysis of the uncorrelated likelihoods properties
 
-In order to clarify the uncorrelated likelihood property of CVD and the local reparameterization trick, we estimate the average variance of gradients with respect to the variance of weights in Table href206. In particular, after training the model, we pass the whole training set and calculate the gradients of the top and bottom layers of the corresponding architecture, i.e., for MNIST, the first and last fully connected layers’ gradient are considered. For the other three datasets, CIFAR 10, CIFAR 10/100, and Omniglot, the first and last convolutional layers are taken into account. The comparison is based on three adaptations: original, using local reparameterization trick, and using CVD.
-For most cases, the local reparameterization trick gains the lowest variance of gradients owing to the uncorrelated likelihood property. Our proposed CVD adds variational dropout to the architecture, which explicitly adds noise to the gradient, hence yielding a slightly greater variance to the baseline local reparameterization trick. Nevertheless, our variance still accesses a lower estimation compared to the regular reparameterization trick, as CVD also takes advantage of the local reparameterization trick.4.6 Experiments on CVD variants
-Table 5 Average accuracy corresponding to different prior distributionshref207
-
-Experiments on diversity of priors
-
-We demonstrate the diverse adaptation of CVD by showing that it works with various prior distributions. We report the average accuracy of CVD when using two prior distributions, log uniform and gaussian. The details of the application for log uniform are given in Sect. href208, and the Gaussian is in Sect. href209. We run the experiments on five datasets Split MNIST, Permuted MNIST, Split CIFAR 10/100, Split CIFAR 100, and Omniglot. The original baseline and the two variants of CVD are compared. Two approaches are taken into account, including VCL and GVCL.
-Table href210 shows the details results of this experiment. CVD with Gaussian prior achieves competitive results with log uniform in most cases. The most significant gap can be seen in VCL on Permuted MNIST. As stated above, adding variational dropout to VCL makes it prone to excess uncertainty, reducing the effectiveness of CVD and thus, leading to less than expected results. By additional learning the \(\zeta ^{(l)}_{t,d}\) as the mean of the approximated posterior, the adaptive mechanism is enhanced, therefore allowing remarkably more outstanding performance.
-Table 6 Average accuracy when setting the variational dropout as FiLM layershref211Fig. 11href212Average accuracy and task accuracy on Split MNIST, Split CIFAR, 10/100 and Split CIFAR 100href213
-
-Experiments on inducing FiLM layer variant
-
-Table href214 demonstrates the average accuracy when setting the variational dropout in the same way as FiLM layers in GVCL-F. In particular, the variational dropout is plugged into each pre-activation. In this experiment, we use the variant of CVD the same as in Sect. href215, in which the prior of CVD follows a Gaussian instead of log uniform, and the approximated posterior is \(q({\textbf{s}}^{(l)}_m)= \prod _{d=1}^D {\mathcal {N}}(\zeta ^{(l)}_{t,d},\alpha ^{(l)}_{t,d})\). The experiment is carried out on all five datasets Split MNIST, Permuted MNIST, Split CIFAR 100, Split CIFAR 10/100, and Omniglot.
-As shown in Table href216, the average accuracy of CVD shows slight superiority on all datasets compared to FiLM. The competitive results reflect that the properties of FiLM layers can be inherited by CVD when having the same setting as CVD can recover the shift and scale coefficient of FiLM layers. Furthermore, the noise in variational dropout adds up to the effectiveness of CVD.To provide a more comprehensive view of the difference between CVD and FiLM layers, we also visualize the average accuracy through the incremental process and the final accuracy with respect to each task in Fig. href217. It can be seen that, for earlier tasks, there is no clear dominance between FiLM layer and CVD in terms of final accuracy. Nevertheless, regarding later tasks, CVD stands out with significant gaps over FiLM layers. We state that CVD has superior plasticity compared to the FiLM layer, thanks to the theoretical properties still preserved in this variant of CVD.4.7 Ablation studyIn this section, we point out the preference of CVD over regular dropout with fixed droprate. We also confirm the effectiveness of CVD in terms of practicality by reporting the training time and sensitivity to the additional hyperparameters.Fig. 12href218Comparison between adaptive droprate and fixed dropratehref219Fig. 13href220Average accuracy through tasks of adaptive droprate with different fixed dropratehref221
-
-Adaptive droprate vs fixed droprate
-
-We perform analyses on the distinction between using dropout with fixed droprate and adaptive droprate. To highlight the effect of adaptive droprate against fixed one, we compare the difference in average accuracy on the two datasets, Split CIFAR 10 and Split CIFAR 100. All methods (VCL, EWC, UCL, GVCL, and GVCL-F) are taken into consideration.
-As shown in Fig. href222, it is straightforward to see the superiority of adaptive droprate over keeping it fixed in continual learning. Dropout, in general, can help prevent the learned model from being stuck at the local optimum that only works well for a task in standard cases. Nevertheless, adding local variables to each task achieves even a more flexible adapting mechanism to function well on a large number of tasks. Therefore, CVD significantly outperforms regular dropouts on all the baselines.Figure href223 demonstrates the justification of adaptive dropout over different fixed droprate. For all fixed droprate, the accuracy suffers from serious degradation right after the first task. In the meantime, adaptive droprate can adjust itself to separated tasks, thus, effectively preventing the catastrophic forgetting phenomenon.We emphasize that it is impractical to tune the dropout rate in continual learning scenarios manually. Instead, the dropout rate should be separately characterized for each task to adapt well to the sequence of tasks. Moreover, regarding the event where dropout tends to fall into the challenge of excessive uncertainty, using an adaptive drop rate would build more flexible control on the level of uncertainty. Based on these evidences, we claim that adaptive droprate would be much more practical and efficient for continual learning scenarios.
+Get 10 units per month
+Download Article/Chapter or eBook
+1 Unit = 1 Article or 1 Chapter
+Cancel anytime
+href104
 
-Sensitivity of 
-\(\kappa\)
+Buy Now
 
-Figure href224 shows that our method is robust against the impact of the additional hyperparameter \(\kappa\); the performance of our approach does not vary much when adjusting this hyperparameter, allowing us to achieve consistent results even with variations in this parameter values. The stability of our approach makes it easier to tune and can reduce the need for complex hyperparameter tuning processes. Therefore, it is reliable and could be suitable for a wide range of real-world applications where the ability to hyperparameter tuning processes is critical yet expensive.Fig. 14href225Sensitivity of \(\kappa\)href226Table 7 Training time with respect to each stephref227
 
-Training time
 
-We evaluate the training time and report our measures in Table href228. In particular, we use the NVIDIA A100-SXM4-80GB and record training time with respect to each minibatch, with 256 samples in each. It is clear that our strategy necessitates more training time due to the added overhead of training the added task-specific parameters. Nevertheless, the slight increase in computation costs is a negligible trade-off for the remarkable improvements in the performance of CVD.
-5 ConclusionIn this paper, we introduce a novel method that adds auxiliary local variables to improve regularization/prior-based methods. We consider CVD in both DNNs and BNNs instead of only DNNs as in Gaussian multiplicative noise. We find that CVD creates an adaptive mechanism to learn a new task and prevents forgetting the knowledge acquired from previous tasks. In particular, we theoretically demonstrate the advantages of CVD in terms of uncorrelated likelihoods between different data instances, correlated pre-activation, and an effective data-dependent regularization for continual learning. Our extensive experiments show that CVD improves the performance of regularization/prior-based methods with significant magnitudes.
 
-Availability of data and materials
-Not applicable.
-Noteshref229.href230.href231.ReferencesAhn, H., Cha, S., Lee, D., & Moon, T. (2019). Uncertainty-based continual learning with adaptive regularization. In Advances in Neural Information Processing Systems (pp. 4392–4402).Aljundi, R., Babiloni, F., Elhoseiny, M., Rohrbach, M., & Tuytelaars, T. (2018). Memory aware synapses: Learning what (not) to forget. In Proceedings of the European Conference on Computer Vision (ECCV) (pp. 139–154).Bach, T. X., Anh, N. D., Linh, N. V., & Than, K. (2023). Dynamic transformation of prior knowledge into Bayesian models for data streams. IEEE Transactions on Knowledge and Data Engineering, 35(4), 3742–3750.href232 
-    href233 
-                Benzing, F. (2020). Understanding regularisation methods for continual learning. In Workshop of Advances in Neural Information Processing Systems.Blundell, C., Cornebise, J., Kavukcuoglu, K., & Wierstra, D. (2015). Weight uncertainty in neural network. In International conference on machine learning (pp. 1613–1622). PMLR.Boluki, S., Ardywibowo, R., Dadaneh, S. Z., Zhou, M., & Qian, X. (2020). Learnable Bernoulli dropout for bayesian deep learning. In The International Conference on Artificial Intelligence and Statistics, AISTATS (pp. 3905–3916).Cha, S., Hsu, H., Hwang, T., Calmon, F. P., & Moon, T. (2021). CPR: Classifier-projection regularization for continual learning. In 9th International Conference on Learning Representations, ICLR.Deng, L. (2012). The MNIST database of handwritten digit images for machine learning research [best of the web]. IEEE Signal Processing Magazine, 29(6), 141–142.href234 
-    href235 
-                De Lange, M., Aljundi, R., Masana, M., Parisot, S., Jia, X., Leonardis, A., Slabaugh, G., & Tuytelaars, T. (2021). A continual learning survey: Defying forgetting in classification tasks. IEEE Transactions on Pattern Analysis and Machine IntelligenceDosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., &  Houlsby, N. (2020). An image is worth 16x16 words: Transformers for image recognition at scale. In International conference on learning representationsFarquhar, S., & Gal, Y. (2018). A unifying bayesian view of continual learning. In The Bayesian deep learning workshop at neural information processing systemsGal, Y., Hron, J., & Kendall, A. (2017). Concrete dropout. In Advances in Neural Information Processing Systems (pp. 3581–3590).Ghahramani, Z., & Attias, H. (2000). Online variational Bayesian learning. In Slides from talk presented at NIPS workshop on online learning.Goodfellow, I. J., Mirza, M., Xiao, D., Courville, A., & Bengio, Y. (2013). An empirical investigation of catastrophic forgetting in gradient-based neural networks. arXiv preprint href236Graves, A. (2011). Practical variational inference for neural networks. In Advances in Neural Information Processing Systems (pp. 2348–2356). Citeseer.Ha, C., Tran, V.-D., Van, L. N., & Than, K. (2019). Eliminating overfitting of probabilistic topic models on short and noisy text: The role of dropout. International Journal of Approximate Reasoning, 112, 85–104.href237 
-    href238 
-                Hendrycks, D., Basart, S., Mu, N., Kadavath, S., Wang, F., Dorundo, E., Desai, R., Zhu, T., Parajuli, S., Guo, M., Song, D., Steinhardt, J., & Gilmer, J. (2021). The many faces of robustness: A critical analysis of out-of-distribution generalization. In Proceedings of the IEEE/CVF international conference on computer vision (pp. 8340–8349).Henning, C., Cervera, M., D’Angelo, F., Von Oswald, J., Traber, R., Ehret, B., Kobayashi, S., Grewe, B. F., & Sacramento, J. (2021). Posterior meta-replay for continual learning. In Advances in neural information processing systems (Vol. 34).Jung, S., Ahn, H., Cha, S., & Moon, T. (2020). Continual learning with node-importance based adaptive group sparse regularization. In Advances in neural information processing systemsKingma, D. P., Salimans, T., & Welling, M. (2015). Variational dropout and the local reparameterization trick. Advances in Neural Information Processing Systems, 28, 2575–2583.href239 
-                Kingma, D. P., & Welling, M. (2014). Auto-encoding variational bayes. In: Bengio, Y., LeCun, Y. (eds.) 2nd international conference on learning representations, ICLR.Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho, T., Grabska-Barwinska, A., et al. (2017). Overcoming catastrophic forgetting in neural networks. Proceedings of the National Academy of Sciences, 114(13), 3521–3526.href240 
-    href241 
-    href242 
-                Krizhevsky, A. (2009). Learning multiple layers of features from tiny images. Technical report, University of Toronto.Li, Z., & Hoiem, D. (2017). Learning without forgetting. IEEE Transactions on Pattern Analysis and Machine Intelligence, 40(12), 2935–2947.href243 
-    href244 
-                Van Linh, N., Bach, T. X., & Than, K. (2022). A graph convolutional topic model for short and noisy text streams. Neurocomputing, 468, 345–359.href245 
-    href246 
-                Liu, Y., Dong, W., Zhang, L., Gong, D., & Shi, Q. (2019). Variational bayesian dropout with a hierarchical prior. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 7124–7133).Loo, N., Swaroop, S., & Turner, R. E. (2021). Generalized variational continual learning. In International conference on learning representationMacKay, D. J. C. (1992). A practical Bayesian framework for backpropagation networks. Neural Computation, 4(3), 448–472.href247 
-    href248 
-                Mirzadeh, S., Farajtabar, M., Pascanu, R., & Ghasemzadeh, H. (2020). Understanding the role of training regimes in continual learning. In Advances in neural information processing systemsMirzadeh, S. I., Farajtabar, M., & Ghasemzadeh, H. (2020). Dropout as an implicit gating mechanism for continual learning. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops (pp. 232–233).Molchanov, D., Ashukha, A., & Vetrov, D. (2017). Variational dropout sparsifies deep neural networks. In International conference on machine learning (pp. 2498–2507).Murphy, K. P. (2012). Machine learning: A probabilistic perspective. Cambridge: MIT Press.href249 
-                Neal, R. M. (1996). Bayesian learning for neural networks. Berlin: Springer.href250 
-    href251 
-                Nguyen, T., Mai, T., Nguyen, N., Van, L. N., & Than, K. (2022b). Balancing stability and plasticity when learning topic models from short and noisy text streams. Neurocomputing, 505, 30–43.href252 
-    href253 
-                Nguyen, S., Nguyen, D., Nguyen, K., Than, K., Bui, H., & Ho, N. (2021). Structured dropout variational inference for Bayesian neural networks. Advances in Neural Information Processing Systems, 34, 15188–15202.href254 
-                Nguyen, H., Pham, H., Nguyen, S., Van Linh, N., & Than, K. (2022a). Adaptive infinite dropout for noisy and sparse data streams. Machine Learning, 111(8), 3025–3060.href255 
-    href256 
-    href257 
-                Nguyen, C. V., Li, Y., Bui, T. D., & Turner, R. E. (2018). Variational continual learning. In International conference on learning representation.Nguyen, V.-S., Nguyen, D.-T., Van, L.N., & Than, K. (2019). Infinite dropout for training bayesian models from data streams. In IEEE international conference on big data (Big Data) (pp. 125–134). IEEEOh, C., Adamczewski, K., & Park, M. (2020). Radial and directional posteriors for Bayesian deep learning. In The thirty-fourth conference on artificial intelligence, AAAI (pp. 5298–5305)Paisley, J. W., Blei, D. M., & Jordan, M. I. (2012). Variational bayesian inference with stochastic search. In Proceedings of the 29th international conference on machine learning, ICMLPhan, H., Tuan, A. P., Nguyen, S., Linh, N. V., & Than, K. (2022). Reducing catastrophic forgetting in neural networks via Gaussian mixture approximation. In Pacific-Asia Conference on Knowledge Discovery and Data Mining (pp. 106–117). Springer: BerlinSato, M.-A. (2001). Online model selection based on the variational bayes. Neural Computation, 13(7), 1649–1681.href258 
-    href259 
-                Shi, G., Chen, J., Zhang, W., Zhan, L.-M., & Wu, X.-M. (2021). Overcoming catastrophic forgetting in incremental few-shot learning by finding flat minima. Advances in Neural Information Processing Systems, 34, 6747–6761.href260 
-                Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: A simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research, 15(1), 1929–1958.href261 
-    href262 
-                Swaroop, S., Nguyen, C.V., Bui, T. D., & Turner, R. E. (2018). Improving and understanding variational continual learning. In NeurIPS Continual Learning Workshop.Swiatkowski, J., Roth, K., Veeling, B., Tran, L., Dillon, J., Snoek, J., Mandt, S., Salimans, T., Jenatton, R., & Nowozin, S. (2020). The k-tied normal distribution: A compact parameterization of Gaussian mean field posteriors in Bayesian neural networks. In International conference on machine learning (pp. 9289–9299). PMLR.Van, L.N., Hai, N.L., Pham, H., & Than, K. (2022). Auxiliary local variables for improving regularization/prior approach in continual learning. In  Pacific-Asia conference on knowledge discovery and data mining (pp. 16–28). Springer: BerlinVan de Ven, G. M., & Tolias, A. S. (2019). Three scenarios for continual learning. In NeurIPS—Continual learning workshopWah, C., Branson, S., Welinder, P., Perona, P., & Belongie, S. (2011). The Caltech-UCSD Birds-200-2011 dataset.Wei, C., Kakade, S., & Ma, T. (2020). The implicit and explicit regularization effects of dropout. In International conference on machine learning (pp. 10181–10192). PMLR.Yin, D., Farajtabar, M., & Li, A. (2020). Sola: Continual learning with second-order loss approximation. In Workshop of advances in neural information processing systemsZenke, F., Poole, B., & Ganguli, S. (2017). Continual learning through synaptic intelligence. Proceedings of Machine Learning Research, 70, 3987.href263 
-                href264Funding This research has been supported in part by the NSF grant CNS-1747798 to the IUCRC Center for Big Learning and the NSF grant # 2239570.Author informationAuthor notesNam Le Hai and Trang Nguyen have contributed equally to this work.Authors and AffiliationsSchool of Information and Communication Technology, Hanoi University of Science and Technology, Hanoi, VietnamNam Le Hai, Trang Nguyen, Linh Ngo Van & Khoat ThanUniversity of Oregon, Eugene, USAThien Huu NguyenFPT Software AI Center, Hanoi, VietnamNam Le HaiAuthorsNam Le Haihref265You can also search for this author in
-                        href266 href267Trang Nguyenhref268You can also search for this author in
-                        href269 href270Linh Ngo Vanhref271You can also search for this author in
-                        href272 href273Thien Huu Nguyenhref274You can also search for this author in
-                        href275 href276Khoat Thanhref277You can also search for this author in
-                        href278 href279ContributionsThe contributions of each author are presented as follows: NLH: Methodology, Software, Validation, Formal analysis, Visualization, Writing—original draft, Investigation. TN: Methodology, Software, Validation, Formal analysis, Writing—original draft, Investigation. LNV: Conceptualization, Methodology, Validation, Formal analysis, Writing—original draft, Visualization, Investigation, Project administration. THN: Methodology, Validation, Formal analysis, Writing—review, Visualization, Supervision. KT: Methodology, Validation, Formal analysis, Writing—review, Supervision, Funding acquisition.Corresponding authorCorrespondence to
-                href280.Ethics declarations
-Conflicts of interest
-The authors declare that they have no competing interests.
-Code availability
-The implementation for CVD can be found in href281.
-Ethics approval
-Not applicable.
-Consent to participate
-Not applicable.
-Consent for publication
-Not applicable.
-Additional informationEditor: Gustavo Batista.Publisher's NoteSpringer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.A part of this work appears in Van et al. (href282).AppendicesAppendix A: Auxiliary local variables for uncertainty regularized continual learning (UCL)In this section, we review UCL (Ahn et al., href283) which is one of the state-of-the-art methods for continual learning and how to apply CVD to this method. UCL uses the same the likelihood term of VCL, but reinterprets the KL term of VCL to improve this term. The KL term is rewritten as follows:$$\begin{aligned} \frac{1}{2} \sum _{l=1}^L \left[ \left\| \frac{\varvec{\mu }_t^{(l)} - \varvec{\mu }_{t-1}^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}}\right\| _2^2 + {\textbf{1}}^\intercal \left\{ \left( \frac{\varvec{\sigma }_{t}^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}} \right) ^2 - \log \left( \frac{\varvec{\sigma }_{t}^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}} \right) ^2 \right\} \right] \end{aligned}$$
-                    (A1)
-                where l is the layer index of the neural network. UCL improves VCL by defining node importance and then adding two regularization terms. Based on the node importance, the first term limits the change of weights related to important nodes and the other makes weights more active to learn new tasks. In detail, UCL constrains the standard deviation of all weights connecting to the same node u in layer l to have the same value \(\varvec{\sigma }_{u}^{(l)}\) and then uses this parameter to measure node importance. Moreover, it modifies this KL term to freeze the weights related to important nodes:$$\begin{aligned} KL&= \sum _{l=1}^{L}\Big [\Big ( \frac{1}{2}\Big \Vert \mathbf {\Lambda }^{(l)}\odot (\varvec{\mu }_{t}^{(l)}-\varvec{\mu }_{t-1}^{(l)})\Big \Vert _2^2 \nonumber \\&+ (\varvec{\sigma }_{\text {init}}^{(l)})^2 \Big \Vert \Big (\frac{\varvec{\mu }_{t-1}^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}}\Big )^{2}\odot (\varvec{\mu }_{t}^{(l)}-\varvec{\mu }_{t-1}^{(l)}) \Big \Vert _1\Big )\nonumber \\&+ \frac{\beta }{2}{\textbf{1}}^\top \Big \{\Big (\frac{\varvec{\sigma }_t^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}}\Big )^2-\log \Big (\frac{\varvec{\sigma }_t^{(l)}}{\varvec{\sigma }_{t-1}^{(l)}}\Big )^2 + (\varvec{\sigma }_t^{(l)})^2-\log (\varvec{\sigma }_t^{(l)})^2\Big \}\Big ] \end{aligned}$$
-                    (A2)
-                where \(\varvec{\sigma }^{(l)}_{\text {init}}\) is the initial standard deviation hyperparameter for all weights on the l-th layer. The matrix \(\mathbf {\Lambda }^{(l)}_{uv}\triangleq \max \Big \{\frac{\varvec{\sigma }_{\text {init}}^{(l)}}{\varvec{\sigma }_{t-1,u}^{(l)}}, \frac{\varvec{\sigma }_{\text {init}}^{(l-1)}}{\varvec{\sigma }_{t-1,v}^{(l-1)}}\Big \}\) defines the regularization strength for the weight \(\varvec{\mu }_{t,uv}^{(l)}\).
 
-CVD for UCL
 
-We also add auxiliary variables to the original model and then maximize the log likelihood: \(\log p({\textbf{Y}}_t \vert {\textbf{X}}_t) = \sum _{i=1}^{N_t} \log p({\textbf{y}}_t^{(i)} \vert {\textbf{x}}_t^{(i)})\). Due to the intractability of the likelihood, we use mean-field variational inference with variational distributions \(q_t({\varvec{\theta }}), q_t({{\textbf{s}}})\):$$\begin{aligned}&\sum _{i=1}^{N_t} \log \int _{\varvec{\theta }} \int _{{\textbf{s}}} p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) p({\textbf{s}}) p(\varvec{\theta }) d\varvec{\theta } d{\textbf{s}} \nonumber \\&\quad = \sum _{i=1}^{N^{(t)}} \log \int _{\varvec{\theta }} \int _{s} \frac{p(y_{i}^{(t)} \vert s, \varvec{\theta }, x_{i}^{(t)}) p(s) q_{t-1}(\varvec{\theta })}{q(s) q(\varvec{\theta })} q(\varvec{\theta }) q(s) d\varvec{\theta } ds \nonumber \\&\quad \ge \sum _{i=1}^{N_t} E_{q_t({\varvec{\theta }}), q_t({{\textbf{s}}})} \left[ \log p({\textbf{y}}_t^{(i)} \vert {\textbf{s}}, \varvec{\theta }, {\textbf{x}}_t^{(i)}) \right] \nonumber \\&\quad - KL(q_t({\textbf{s}}) \Vert p({\textbf{s}})) - KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta })) \end{aligned}$$
-                    (A3)
-                Note that \(KL(q_t(\varvec{\theta }) \Vert q_{t-1}(\varvec{\theta }))\) is a different point between CVD for VCL and UCL. While CVD for VCL uses the KL term in Eq. (href284), the KL term in CVD for UCL is expressed in Eq. (href285). The remaining terms are built as in CVD for VCL.
-Appendix B: Architectures and settingsSplit MNIST and permuted MNISTFor Split MNIST, we use a fully-connected neural network (FCNN) with two hidden layers and multi-head output layer. Table href286 shows the detail of the network for Split MNIST dataset. For Permuted MNIST dataset, we also use FCNN but single-head output layer, and the architecture is shown in Table href287.
-Table 8 Network architecture for Split MNISThref288Table 9 Network architecture for Permuted MNISThref289We tune the hyperparameters of both CVD and the combined methods. Moreover, we again use the strategy of parameter initialization as in UCL’s experiments (Ahn et al., href290) in the beginning step of training process. All the hyperparameters of methods are listed as below:
 
-UCL—\(\beta :\) {0.0001; 0.001; 0.01; 0.02; 0.03}, \(\alpha :\) {0.01; 0.3; 5}
+ Chapter
+      
 
 
-EWC—\(\lambda :\) {40; 400; 4000; 10000; 40000}
+        EUR 29.95
+       
 
 
-VCL—not needed
+       Price includes VAT (Korea(Rep.))
+      
 
+        
 
-GVCL—\(\beta :\) {0.05; 0.1; 0.2}, \(\lambda :\) {1; 10; 100; 1000}
+Available as PDF
+Read on any device
+Instant download
+Own it forever
+Buy Chapter 
+       
 
 
-CVD—KL_weight \(\kappa\): {0.0001; 0.001; 0.01; 0.1; 1}
 
-Split CIFAR-10/100 and Split CIFAR-100:The detail of architecture is used in CIFAR experiments is shown in Table href291 and all the hyperparameters are listed as below:
 
-UCL—\(\beta :\) {0.0001; 0.0002; 0.001; 0.002}, \(\alpha :\) {0.01; 0.3; 5}, r :  {0.5; 0.125}, \(lr(\sigma ):\) {0.01; 0.02}
 
 
-EWC—\(\lambda :\) {400; 1000; 4000; 10000; 25000; 40000}
 
+ eBook
+      
 
-VCL—not needed
+       EUR 74.89
+      
 
+       Price includes VAT (Korea(Rep.))
+      
 
-GVCL—\(\beta :\) {0.05; 0.1; 0.2}, \(\lambda :\) {1; 10; 100; 1000}
+    
 
+Available as EPUB and PDF
+Read on any device
+Instant download
+Own it forever
+Buy eBook 
+       
 
-AGS-CL—\(\lambda :\) {1.5; 100; 400; 1000; 7000; 10000}, \(\mu :\) {0.5; 10; 20}, \(\rho :\) {0.1; 0.2; 0.3; 0.4; 0.5}
 
 
-CVD—KL_weight \(\kappa\): {0.0001; 0.001; 0.01; 0.1; 1}
 
-Table 10 Network architecture for Split CIFAR-10/100href292Split Omniglot:The detail of architecture for Omniglot dataset is given in Table href293. Since, for each task, the number of classes is different, we denoted the classes of \(i^{th}\) task as \(C_i\). All the hyperparameters are listed as below:
 
-UCL—\(\beta :\) {0.0001; 0.0002; 0.001; 0.002}, \(\alpha :\) {0.01; 0.3; 5}, r :  {0.5; 0.125}, \(lr(\sigma ):\) {0.01; 0.02}
 
 
-EWC—\(\lambda :\) {4000; 10000; 25000; 40000; 100000}
+ Softcover Book
+      
 
+       EUR 89.99
+      
 
-VCL—not needed
+       Price excludes VAT (Korea(Rep.))
+      
 
+    
 
-GVCL—\(\beta :\) {0.05; 0.1; 0.2}, \(\lambda :\) {1; 10; 100; 1000}
+Compact, lightweight edition
+Dispatched in 3 to 5 business days
+Free shipping worldwide - href105
+Buy Softcover Book 
+       
 
 
-AGS-CL—\(\lambda :\) {1.5; 100; 400; 1000; 7000; 10000}, \(\mu :\) {0.5; 10; 20}, \(\rho :\) {0.1; 0.2; 0.3; 0.4; 0.5}
 
 
-CVD—KL_weight \(\kappa\): {0.0001; 0.001; 0.01; 0.1; 1}
 
-Table 11 Network architecture for Split Omniglothref294Split CUB-200:We use AlexNet in this experiment, the detail of architecture is given in Table href295. All the hyperparameters are listed as below:
 
-GVCL—\(\beta :\) {0.05; 0.1; 0.2}, \(\lambda :\) {1; 10; 100; 1000}
+Tax calculation will be finalised at checkout
+Purchases are for personal use only
 
 
-AGS-CL—\(\lambda :\) {1.5; 100; 400; 1000; 7000; 10000}, \(\mu :\) {0.5; 10; 20}, \(\rho :\) {0.1; 0.2; 0.3; 0.4; 0.5}
 
 
-CVD-KL_weight \(\kappa\): {0.0001; 0.001; 0.01; 0.1; 1}
 
-Table 12 Network architecture for Split CUB-200href296Split ImangeNet-R:We freeze the pretrained ViT backbone and add 4 dense layers to build model in this experiment, the detail of the architecture is given in Table href297. All the hyperparameters are listed as below:
 
-GVCL—\(\beta :\) {0.001; 0.05; 0.1; 0.2}, \(\lambda :\) {1; 10; 50, 100; 1000}
 
 
-AGS-CL—\(\lambda :\) {1.5; 50; 100; 400; 1000; 7000; 10000}, \(\mu :\) {0.5; 10; 20}, \(\rho :\) {0.1; 0.2; 0.3; 0.4; 0.5}
-
-
-CVD-KL_weight \(\kappa\): {0.0001; 0.001; 0.01; 0.1; 1; 1.5}
-
-Table 13 Network architecture for Split ImageNet-Rhref298Appendix C: Supplement visualizationsFigures href299, href300, href301 and href302 are the supplement illustrations for the analysis in Sect. href303. Similarly, the charts show the test accuracy of a task corresponding to the trained model of the task on the horizontal axis. As can be seen from this extent, CVD allows AGS-CL, VCL, UCL, and GVCL to be more steady across the tasks, whereas the original performs substantially worse. Based on these findings, it can be concluded that CVD not only enhances performance in most tasks but also effectively minimizes the forgetting phenomena.Fig. 15href304The change of accuracy through tasks on VCLhref305Fig. 16href306The change of accuracy through tasks on UCLhref307Fig. 17href308The change of accuracy through tasks on AGS-CLhref309Fig. 18href310The change of accuracy through tasks on GVCLhref311Rights and permissionsSpringer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.href312About this articlehref313Cite this articleHai, N.L., Nguyen, T., Van, L.N. et al. Continual variational dropout: a view of auxiliary local variables in continual learning.
-                    Mach Learn 113, 281–323 (2024). https://doi.org/10.1007/s10994-023-06487-7href314Received: 12 July 2022Revised: 19 September 2023Accepted: 04 November 2023Published: 07 December 2023Issue Date: January 2024DOI: https://doi.org/10.1007/s10994-023-06487-7Share this articleAnyone you share the following link with will be able to read this content:Get shareable linkSorry, a shareable link is not currently available for this article.Copy to clipboard
-                            Provided by the Springer Nature SharedIt content-sharing initiative
-                        Keywordshref315href316href317href318
-
-
-
-
-
-
-href319
-Avoid common mistakes on your manuscript.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Advertisement
-
-
-
-
+href106
 
 
 
@@ -748,35 +638,35 @@ Advertisement
 
 Discover content
 
-href320
-href321
+href107
+href108
 
 
 
 Publish with us
 
-href322
-href323
-href324
+href109
+href110
+href111
 
 
 
 Products and services
 
-href325
-href326
-href327
-href328
+href112
+href113
+href114
+href115
 
 
 
 Our imprints
 
-href329
-href330
-href331
-href332
-href333
+href116
+href117
+href118
+href119
+href120
 
 
 
@@ -788,22 +678,22 @@ href333
 Your privacy choices/Manage cookies
 
 
-href334
+href121
 
 
-href335
+href122
 
 
-href336
+href123
 
 
-href337
+href124
 
 
-href338
+href125
 
 
-href339
+href126
 
 
 
@@ -813,8 +703,13 @@ href339
 
 South Korea Trial Consortium (3001948335)  - Chung Ang University (3000120396)  - 7029 SpringerLink South Korea KESLI Korean Journal Package (3000256740)  - South Korea Trial Consortium (3000522537)  - 5539 SpringerLink South Korea KESLI Full OJA Consortium - (3000171421)  - 9823  SpringerLink South Korea Shinwon (3000699960)  - South Korea Full eJournal Con - Academic 2015-2017 (3991460179)  - 8064 South Korea KESLI Korean Consortium (3000251005)  - 5539 SpringerLink South Korea KESLI Full eJournal Consortium - Academic (3000175460) 
 
-href340
+href127
 © 2024 Springer Nature
+
+
+
+
+
 
 
 
