@@ -130,14 +130,14 @@ def extract_citation_sent(title, full_text_citing_paper, list_tag_a):
 
 def get_citing_paper_soure_html(title_cited_paper , paper_url):
 
-	# def clean_new_line_inside_tag(soup):
-	# 	all_a_tags = soup.find_all('a')
-	# 	# Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
-	# 	for tag in all_a_tags:
-	# 		for attr, value in tag.attrs.items():
-	# 			if isinstance(value, str):
-	# 				tag[attr] = value.replace('\n', '')	
-	# 	return soup 
+	def clean_new_line_inside_tag(soup):
+		all_a_tags = soup.find_all('a')
+		# Loại bỏ ký tự \n trong tất cả các thuộc tính của thẻ <a>
+		for tag in all_a_tags:
+			for attr, value in tag.attrs.items():
+				if isinstance(value, str):
+					tag[attr] = value.replace('\n', '')	
+		return soup 
 
 	def replace_tag_a(soup):
 		#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
@@ -162,7 +162,7 @@ def get_citing_paper_soure_html(title_cited_paper , paper_url):
 	soup = BeautifulSoup(driver.page_source , 'html.parser')
 	with open('soup.html' ,'w') as f:
 		f.write(str(soup))
-	# soup = clean_new_line_inside_tag(soup) 
+	soup = clean_new_line_inside_tag(soup) 
 	soup , all_tag_a= replace_tag_a(soup) 
 	replaced_text = soup.get_text()
 	with open('temp.txt','w') as f:
