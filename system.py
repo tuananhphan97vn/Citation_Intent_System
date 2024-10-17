@@ -143,7 +143,7 @@ def get_citing_paper_soure_html(title_cited_paper , paper_url):
 		#replace all tag a with the href{i}, with i is the order of the tag <a> in the html soup file
 		links = soup.find_all('a')
 		# print(len(links))
-		links = list(set(links)) #get all unique tag a from the html soup object 
+		# links = list(set(links)) #get all unique tag a from the html soup object 
 		all_tag_a = links
 		# Loop through each <a> tag and replace it with {hrefi}
 		for i, link in enumerate(links):
@@ -152,6 +152,7 @@ def get_citing_paper_soure_html(title_cited_paper , paper_url):
 			# Replace the <a> tag with the replacement string
 			link.replace_with(replacement)
 		return soup , all_tag_a
+
 
 	options = webdriver.ChromeOptions()
 	service = Service(chrome_driver_path)
@@ -303,6 +304,6 @@ if __name__ == '__main__':
 	# for sent in result : 
 	# 	print(sent)
 	# run(title_cited_paper)
-
+	run(title=title_cited_paper)
 
 	

@@ -107,12 +107,15 @@ if __name__ == '__main__':
 	sents = sentence_split(replaced_text.get_text())
 	
 	with open('sent.txt','w') as f:
-		f.write("\n".join(sents))
+		f.write("\n".join([ sent for sent in  sents if sent.strip() != ' '] ))
 
 	replaced_text = replaced_text.get_text()
 	with open('replaced_text.txt' , 'w', encoding='utf-8') as f:
 		f.write(replaced_text)
 
 	# print(len(all_tag_a) , len(set(all_tag_a)))
-	sent = """In term of short and noise texts, enhancing word co-occurrence href50, href51, href52, href53, href54, href55, href56, href57 and exploiting external knowledge href58, href59, href60, href61, href62, href63, href64 have emerged as the two major approaches."""
-	print(map_sent_to_refer(sent , all_tag_a)[0])
+	sent = """These datasets are generated from six original ones: MNIST (Deng, href145), CIFAR10, CIFAR100 (Krizhevsky & Hinton, href146), Omniglot, CUB-200 (Wah et al., href147) and ImageNet-R (Hendrycks et al., href148), and can be applied to simulate the process of continuous arriving data."""
+	sent_match = map_sent_to_refer(sent , all_tag_a)
+	print(sent_match[0])
+	for s_m in sent_match[1]:
+		print(s_m)

@@ -294,9 +294,9 @@ if __name__ == '__main__':
 
 	# with open('html_text2.txt' , 'r', encoding='utf-8') as f:
 	# 	text = f.read()
-	title_cited_paper ="""Reducing catastrophic forgetting in neural networks via gaussian mixture approximation"""
-	citing_url = """https://www.sciencedirect.com/science/article/pii/S0925231222008785"""
-	list_citation_context = get_citing_paper_soure_html(title_cited_paper , citing_url)
+	# title_cited_paper ="""Reducing catastrophic forgetting in neural networks via gaussian mixture approximation"""
+	# citing_url = """https://www.sciencedirect.com/science/article/pii/S0925231222008785"""
+	# list_citation_context = get_citing_paper_soure_html(title_cited_paper , citing_url)
 
 	# all_tag_a = read_all_tag_a('all_tag_a.html')
 	# result = extract_citation_sent(title_cited_paper , text , all_tag_a)
