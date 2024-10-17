@@ -1,0 +1,619 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Balancing stability and plasticity when learning topic models from short and noisy text streams - ScienceDirect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      JavaScript is disabled on your browser.
+Please enable JavaScript to use all the features on this page.
+href0href1
+href2href3Helphref4href5href6href7Download full issueSearch ScienceDirectOutlinehref8href9href10href11href12href13href14href15href16href17href18href19href20href21href22href23href24href25Show full outlinehref26Figures (12)href27href28href29href30href31href32Show 6 more figuresTables (6)href33href34href35href36href37href38href39href40href41, 21 September 2022, Pages 30-43href42Balancing stability and plasticity when learning topic models from short and noisy text streamsAuthor links open overlay panelTung Nguyen a 1, Trung Mai a 1, Nam Nguyen a, Linh Ngo Van a, Khoat Than aShow moreOutlineAdd to MendeleyShareCitehref43href44AbstractLearning hidden topics from short text streams has become crucial in modern applications such as social networks, instant messages, question and answer forums, etc.
+Building an effective learning method poses two main challenges: Short and noisy data, as well as the stability-plasticity dilemma.
+In this paper, we investigate carefully how existing methods face these challenges.
+From our theoretical and empirical analyses, they often deal well with a challenge but ineffectively handle the other.
+In particular, they often suffer from catastrophic forgetting, because they impose a constraint on the learned knowledge from only the previous time step in the streaming duration.
+In this paper, we propose a novel method, namely BSP, which has a regularization term based on second-order Taylor expansion to accumulate information from all former minibatches.
+Moreover, external knowledge and Dropout technique will be combined at each time step to handle better short and noisy texts as well as enhance the model’s plasticity.
+We empirically evaluate BSP, compared to other state-of-the-art streaming methods in terms of dealing with stability-plasticity dilemma and handling short and noisy texts.
+The extensive experiments show superior effectiveness of BSP.href45href46KeywordsTopic modelsShort and noisy text streamsStreaming learningDropoutExternal knowledge1.
+IntroductionIn this era of the information explosion along with rapid development in social networks, instant messages, question and answer forums, short texts have become an abundant source.
+Learning hidden topics href47 from short texts plays an important role in obtaining valuable knowledge for a wide range of applications such as trending detection, recommendation system, opinion mining, etc.
+Unfortunately, the prevailing characteristics of short texts such as short, noisy, massive and dynamic cause many challenges.
+Short and noisy texts not only provide insufficiently information about word co-occurrence for learning methods but also can mislead them to unexpected results href48, href49.
+Moreover, when data is generated continually and collected in infinite minibatches, learning methods have to adapt quickly to new data without revisiting any previous one but still ensure good quality and generalization on the whole dataset.In term of short and noise texts, enhancing word co-occurrence href50, href51, href52, href53, href54, href55, href56, href57 and exploiting external knowledge href58, href59, href60, href61, href62, href63, href64 have emerged as the two major approaches.
+The former aims at aggregation techniques or novel models to capture the information of word co-occurrence.
+Meanwhile, the latter enriches topic models with a diversity of external knowledge such as href65 and word graph.
+Therefore, exploiting external knowledge not only enables conventional models (such as latent Dirichlet allocation (LDA) href66, probabilistic latent semantic indexing (PLSI) href67, etc.)
+but also improves modern models in the former approach to work well with short and noisy texts.
+Originally, existing studies only aim to mitigate the problems of short texts in the static environment where the dataset is fixed.
+At present, exploiting external knowledge href68, href69, href70 has been taken into consideration in the streaming environment.Regarding data streams, building an effective framework has been paid a great deal of attention by researchers with several proposed methods href71, href72, href73, href74, href75, href76, href77, href78, href79.
+They can be applied to dynamically train general models on new data without revisiting the old one.
+Among them, a few studies href80, href81, href82 focus on dealing with the shortness and sparsity problems of short texts.
+To address this issue, while some methods href83, href84 exploit external knowledge, Infinite Dropout (iDropout) href85 utilizes Dropout technique which is a data-dependent regularization in order to enhance model’s generalization.However, existing studies did not examine carefully the stability-plasticity dilemma href86 where the learning method is required keeping information from the past while still being plastic enough to adapt to new data.
+Generally, concept drifts (e.g new topics, events, etc.
+), in which the statistical characteristics of data change, often exist on data streams.
+When concept drifts occur, the learned model’s performance will drop significantly.
+A learning method with high plasticity can limit the effect of concept drifts and quickly learn new concepts.
+The traditional online Bayesian approach href87, href88 does not capture well the uncertainty of data when arriving data is big enough.
+Therefore, it does not deal well with concept drifts.
+This approach suffers from the phenomenon of overconfident posterior whose variance reduces to a small value href89, href90.
+Some studies href91, href92, href93, href94 focus on the issue in the online Bayesian approach.
+They aim to detect the time that a concept drift happens in data streams, then create mechanisms to forget a part of learned knowledge from previous data for quickly adapting to the concept.
+However, they often build complicated non-conjugate Bayesian models, leading to difficulty in posterior inference.
+Moreover, some of them href95, href96 require a lot of memory and computation to save a lot of previously learned models as well as make a probabilistic comparison for detecting concept drifts.
+Recently, href97, href98 show that Dropout can provide a simple but effective mechanism to improve the plasticity of learned model.
+href99 also illustrates that exploiting prior/external knowledge, that comes from global resources such as human knowledge, pre-trained model on large datasets, can be an effective solution to handle concept drifts.
+Meanwhile, recent studies ignored considering the models’ stability that relates to catastrophic forgetting phenomenon - the reduction of performance when working on the past data.
+This phenomenon is a hot topic in a field of machine learning: continual learning which aims at learning multi-tasks consecutively href100, href101, href102, href103.
+However, our work only focuses on one task, learning hidden topics on text streams, and there is a lack of thorough investigation about existing methods in terms of handling plasticity-stability as well as short and noisy texts.In this paper, we empirically investigate the ability of several streaming methods.
+According to our intensive investigations, albeit GCTM (Graph convolutional topic model) href104, TPS (Dynamic transformation href105 for data streams) href106 and iDropout (infinite Dropout) href107 achieve impressive results in comparison with other methods in terms of working on short texts and facing concept drift, they seriously suffer from catastrophic forgetting.
+href108 demonstrates this problem of the 6 methods on two datasets: The Irish Timeshref109 and UCInewshref110.
+Their performances drop significantly when evaluating documents in the past.
+One main reason is that they only impose constraint on the learned knowledge from the prior minibatch without directly considering the ones from further.
+Based on these observations, we propose a novel method which utilizes second-order Taylor expansion to accumulate information from all previous minibatches.
+Besides, the method exploits both external knowledge and Dropout technique to enhance the generalization.
+In summary, we have the following contributions:•We re-investigate carefully several methods in resolving the challenges: working with short and noisy texts and handling stability-plasticity dilemma.
+We analyze theoretical aspects as well as conduct intensive experiments about concept drift and catastrophic forgetting phenomenons to evaluate plasticity and stability levels of several existing methods.
+Note that previous works have not paid enough attention to these problems.
+Therefore, we provide a wide view about the extent to which existing methods face the challenges.•We propose a novel method, namely BSP, to balance stability and plasticity when learning topic models from short and noisy text streams to resolve the given challenges.
+We provide a mechanism to use both external knowledge and Dropout in one model, which enhances model’s plasticity and generalization on future data.
+Moreover, we build a regularization term based on accumulating information from all previous minibatches while existing methods only put a constraint on knowledge from the previous minibatch.
+As a result, this term helps our method better reduce catastrophic forgetting.href111href112Fig. 1.
+Catastrophic forgetting phenomenon in 6 methods: SVB href113, SVB-PP href114, PVB href115, TPS href116, iDropout href117 and GCTM href118.
+The experiments were conducted on “The Irish Times” and “UCInews” which contain 6 and 4 classes of texts respectively.
+A small subset of each dataset was hold out from each class.
+The classes were learned continually.
+After finishing training one class, Average Log Predictive Probability (Avg LPP) of the hold-out set was computed.
+H.igher is better.We use Latent Dirichlet Allocation (LDA) href119 as the base topic model for streaming setting to empirically evaluate BSP, compared to other state-of-the-art streaming methods in terms of dealing with stability-plasticity dilemma as well as coping with sparse and noisy texts.
+The extensive experimental results show the superior effectiveness of BSP.Roadmap: Section href120 provides closely related work and background for BSP.
+Our proposed model and learning process are described in Section href121.
+Section href122 shows some discussions about BSP’s properties in comparison with existing methods.
+We present evaluation results in Section href123 and make conclusion in Section href124.2.
+Related work and backgroundIn this section, we review some methods for streaming environments and how to apply some of them to LDA.2.1.
+Related workThere have been several studies to alleviate the problems of short and noisy texts and they have been divided into two major approaches: Enhancing word co-occurrence and exploiting external knowledge.
+The first approach href125, href126, href127, href128, href129, href130, href131, href132 focuses on enriching the information of word co-occurrence to make topic models work better.
+Some studies href133, href134, href135, href136 utilize aggregation strategies to construct longer pseudo-texts from short texts to increase word co-occurrence.
+As a result, they can help conventional topic models achieve better performance.
+Other studies href137, href138, href139, href140 aim to propose more suitable models to capture word-occurrence information from short texts.
+The second approaches href141, href142, href143, href144, href145, href146, href147, href148, href149 enrich conventional models with external knowledge such as href150, href151 href152.
+It is obvious that external knowledge is valuable to provide more contextual information as well as deal with noise.
+However, almost mentioned studies in both approaches only work in a static environment.
+Although they can work on big text datasets, they are not designed for data streams.Recently, learning from text streams problem has been studied intensively and several methods were proposed to deal with its issues such as avoiding revisiting past data href153, href154, href155, adapting quickly to concept drift href156, href157, href158, etc.
+With regard to inference manners, there are two major directions: Stochastic optimization and online variational inference href159, href160.
+The first approach href161, href162, href163 treats inference problem as a stochastic optimization problem where the objective function is the expectation of the likelihood.
+Stochastic variational inference (SVI) href164 only needs to analyze randomly sampled subsets instead of repeatedly pass through all the data.
+However, this method requires the existence of full dataset with a fixed number of data instances, which is not suitable for streaming environment where data can arrive infinitely.
+To handle this limit, population variational Bayes href165 assumes that each time in streaming environment, α data points will come from population distribution F. But it is extremely hard to choose a suitable number of data instances α.
+Meanwhile, the second approach href166, href167, href168, href169, href170 considers knowledge attained from a minibatch as the href171 for its next minibatch.
+In particular, in streaming variational Bayes (SVB) href172, prior distribution in the current batch is the variational distribution learned from the previous one.
+However when receiving enough data, SVB may become too stable and is unable to learn new information from the stream.
+To deal with this problem, hierarchical power priors (HPP) href173, href174 introduces a new mechanism to control the forgetting factor which relates to the forgetting degree of the model in the current minibatch (when this factor is defined by the users, the method is called SVB-PP).
+Unfortunately, by treating the forgetting factor as a hidden variable, the model is no longer conjugate and makes the inference become much more difficult.Although the mentioned frameworks introduce solutions to deal with streaming data, none of them pay careful attention to the appearance of short and noisy data.
+There are two feasible directions for these problems: Exploiting external knowledge and applying dropout technique.
+The first approach href175, href176, href177 uses external knowledge to enrich information of the original model and therefore achieves significant improvements.
+While some studies href178, href179 limit the form of external knowledge (such as GCTM href180 utilizes graph convolutional network), TPS href181 is more flexible to exploit knowledge which is represented by vectors and matrices.
+The second approach href182, href183 on the other hand uses Dropout href184 - a well-known powerful regularization technique for preventing overfitting.
+Moreover, Dropout provides an efficient way to approximately combine exponentially many models, working as a form of ensemble learning.
+Therefore, iDropout href185 can deal well with concept drift.Moreover, existing methods have not examined carefully the stability-plasticity dilemma when learning hidden topics from text streams.
+Albeit some studies focus on adapting concept drift href186, href187, they ignore considering catastrophic forgetting phenomenon in which learned knowledge from previous minibatches is forgotten rapidly.
+A recent work href188 focused on catastrophic forgetting when learning topic models on multiple datesets.
+However, this work only learned offline on each dataset, saved all data and trained models in each dataset and then proposed a solution to transfer knowledge among datasets.
+Therefore, it is impractical to work in streaming environment.
+To address the stability-plasticity dilemma, we did not follow the directions of stochastic optimization and online variational inference.
+We instead used a different technique based on second-order Taylor expansion to accumulate information of all tasks.
+This approach seems to be too stable, however, by integrating external knowledge and Dropout technique, the model can raise the plasticity.2.2.
+BackgroundIn this subsection, we briefly describe LDA href189 which is one of the most popular topic models for discovering underlying topics and structures inside data by an unsupervised manner.
+Then, we present how some state-of-the-art methods learn it in streaming environment.Suppose that a dataset contains D number of documents and each document has Nd words, nth word in document d is denoted by wdn.
+Given K number of topics and a vocabulary with size V, each topic k is characterized by a V dimensional vector of word probabilities on it: βk.
+Let θd (1×K) be the topic proportions of document d and zdn be the topic assignment of word n (1⩽n⩽Nd) in document d. LDA uses two Dirichlet distributions with two hyperparameters η and α to generate distributions of words on topics and topic proportions of documents respectively.
+Both η and α are selected manually.
+The graphical representation of LDA is shown in href190.
+The generative process of LDA is as follows:1.
+Draw the word distributions on topics βk∼Dirichlet(η) for k∈[1,K],2.
+For each document d:(a) Draw topic proportion: θd∼Dirichlet(α)(b) For nth word in document d:i.
+Draw a topic index: zdn∼Multinomial(θd)ii.
+Draw a word: wdn∼Multinomial(βzdn)href191href192Fig. 2.
+Graphical representation for Latent Dirichlet Allocation (LDA).Training LDA contains two stages: inferring the posteriors of local variables θd and zd for each document d and learning global variable β for all documents.
+When learning LDA on text streams, all streaming methods preserve the first stage as the origin href193 but propose different ways to update the global variable from a new minibatch without revisiting prior ones.
+SVB href194, PVB href195 and HPP href196 learn a variational distribution to approximate posterior distribution of β.
+Meanwhile, TPS href197, GCTM href198 and iDropout href199 use maximum a posterior (MAP) to find a point estimate of β in each minibatch, and then use this estimate to build a prior for the next one.Suppose that in streaming environment, documents come in sequence of minibatches: {D1,D2,…,Dt,…} where the superscript {1,2,…,t,…} are the time steps.
+Mean-field variational inference is used to approximate the true posterior distribution of local variables:(1)q(θd,zd|γd,ϕd)=q(θd|γd)∏n=1Ndq(zdn|ϕdn)With the variational distributions: q(θd|γd)=Dirichlet(γd) and q(zdn|ϕdn)=Multinomial(ϕdn) where γd(1×K) and ϕdn(1×K) are variational parameters w.r.t document d and word zdn respectively.
+According to href200, these parameters are updated until convergence as follows:(2)γdk←αk+∑n=1Ndϕdnkfork=1,…,K(3)ϕdnk∝exp(Eq[logθdk]+∑j=1VI[wdn=j]logβkj)where I[.]
+is an indicator function that equals 1 if the condition is true.
+Note that we can apply modern methods (such as amortized inference href201, href202, normalizing flow href203, href204 variables href205) to infer local variables, however, we only use the original mean-field method to compare fairly among streaming methods on global variables.TPS href206: TPS exploits the external knowledge η and builds a transformation function to change η to topic space: βt=f(η;πt) where πt is transformation parameters in minibatch Dt.
+TPS utilizes the pre-trained word embedding as the external knowledge and constructs the detailed transformation: βt=softmax(πtη).
+The learned transformation parameters πt-1 in the previous minibatch Dt-1 is used as the prior for the current minibatch Dt.
+The whole process is described as follows:1.Generate transformation matrix at time step t:∀k,πkt∼N(πkt-1,σI)2.Calculate word probabilities on topics:βkjt=softmaxπktηj=exp(πktη)j∑i=1VexpπktηiTPS uses MAP to learn πt.
+Its objective function w.r.t πkt at each time step t is as follows:(4)Lt(πkt)=∑d=1Dt∑n=1Nd∑j=1VϕdnkI[wdn=j]logβkjt-12σ‖πkt-πkt-1‖22It can be seen that TPS’s objective function contains two components: Lt(πkt)=L^t(πkt)+L̃t-1(πkt).
+The first term L^(πkt) is obtained from the LDA’s lower bound href207.
+The second term L̃t-1(πkt)=-12σ‖πkt-πkt-1‖22 plays the role of retaining knowledge from minibatch Dt-1.
+From now on, L^t is call the current loss and L̃t-1 is call the old loss.iDropout href208: For global variable β in the streaming environment, iDropout href209 builds the prior of βt at the time step t from the learned βt-1, then uses dropout on βt.
+The processes are presented as follows:1.Let ρt (K×V) be the dropout matrix which are sampled from Bernoulli distribution Ber(dr) where dr is the drop rate2.Generate global variable at time step t:∀k,βkt∼N(βkt-1,σI)3.Calculate the word probabilities on topics:β̃kjt=softmax(βkt⊙ρkt)j=exp(βkjtρkjt)∑i=1Vexp(βkitρkit)Then, iDropout uses MAP to learn each topic βkt when the dropout matrix ρt is randomly sampled in each iteration.
+The objective function is also the sum of two components: Lt(βkt)=L^t(βkt)+L̃t-1(βkt), in details:(5)Lt(βkt)=∑d=1Dt∑n=1Nd∑j=1VϕdnkI[wdn=j]logβ̃kjt-12σ‖βkt-βkt-1‖22As described above, at each time step, both TPS and iDropout keep information from only previous minibatch, therefore, although they gain significant improvements compared with other methods, they still suffer from catastrophic forgetting.
+For more details, the graphical representations for TPS and iDropout are shown in href210; the learning processes of them are presented in Algorithm 1 and 2 respectively.Algorithm 1 TPS training for LDARequire: External knowledge η, hyper parameter α, variance σEnsure: π Initialize π0 randomly for t=0,1,… do  Receive a minibatch Dt  whilenot convergence do   Compute βkt=softmax(πktη)   For each doc d∈Dt, infer (γd,ϕd) by computing href211, href212 iteratively until convergence   Maximizing href213 w.r.t πt  end while  πt+1=πt end forAlgorithm 2 iDropout for LDA:Require: Drop rate dr, hyper parameter α, variance σEnsure: β Initialize β0 randomly for t=0,1,… do  Receive a minibatch Dt  Draw drop matrix ρt randomly  while not convergence do   For each doc d∈Dt, infer (γd,ϕd) by computing href214, href215 iteratively until convergence   Maximizing href216 w.r.t βt  end while  βt+1=βt end forhref217href218Fig. 3.
+Graphical representation for TPS and iDropout.3.
+Balancing stability and plasticity in learning topic modelsIn this section, we first introduce our proposed model, and then develop a method to learn our model in streaming environment.3.1.
+Proposed modelAs we describe in Section href219, both exploiting external knowledge and using Dropout can improve effectively performance of the model especially when working with short and noisy texts.
+In this section, we will show how we combine both these techniques with the original LDA model.Let a matrix η of size L×V be the representation for external knowledge.
+This knowledge can be either word embedding or word graph.
+However, it is not straightforward to put external knowledge into the word distributions on topics β due to the difference in their shapes, i,e, η has size L×V while β has size K×V.
+Therefore, at each time step t, to integrate the external knowledge into the model’s global variable, we use a href220: βt=πtη with πt is a transformation matrix of size K×L (from now on, instead of learning βt we will update πt in each minibatch Dt).
+After that, we drop randomly a number of elements of matrix βt.
+This is implemented by making an element-wise product of βt and a drop matrix ρt (K×L), then going through a transformation: β̃t=f(βt⊙ρt).
+Each β̃kt must satisfy the condition that ∑j=1Kβ̃kjt=1.
+In practice, we choose f to be the softmax function.
+To keep randomness of Dropout, we draw different drop matrix ρt at each time step t. Each element ρkjt of ρt is generated by using Bernoulli dropout:•Bernoulli dropout: p(ρkjt=1)=1-dr,p(ρkjt=0)=drwith dr is the drop rate.
+At test phase, β has to be rescaled by E[ρkjt]=(1-dr).
+In terms of implementation, inverted dropout href221, which is a variant of the original Bernoulli dropout, is often used to avoid the rescaling step in the test phase:•Inverted dropout:p(ρkjt=1/(1-dr))=1-dr,p(ρkjt=0)=drBecause E[ρkjt]=1, inverted dropout does not need rescaling at test time.
+We also conducted inverted dropout in our implementations.The generative process of documents (href222) at each minibatch Dt is as follow:1.Draw the drop matrix ρt2.Calculate distribution over words β̃t:β̃kjt=softmax[(πktη)⊙ρkt]j=exp(πktη)jρkjt∑i=1Vexp(πktη)iρkit3.For each document d in minibatch Dt:(a) Draw topic proportion: θd∼Dirichlet(α)(b) For nth word in document d:i.
+Draw a topic index: zdn∼Multinomial(θd)ii.
+Draw a word: wdn∼Multinomial(β̃zdnt)href223href224Fig. 4.
+Graphical representation for BSP when applying to LDA.3.2.
+Learning processAt each time step t, according to LDA href225, the objective function Lt(γ,ϕ,πt) is the lower bound of the log likelihood:(6)logp(Dt|α,πt)⩾Lt(γ,ϕ,πt)=Eq(θ,z|γ,ϕ)[logp(θ,z,Dt|α,πt)]-Eq(θ,z|γ,ϕ)[logq(θ,z|γ,ϕ)]The parameters γ and ϕ are updated until convergence as formula href226, href227.
+However, we need a mechanism to achieve πt without revisiting the former minibatch.
+Since all topics are independent of each other, we only consider the objective function w.r.t πkt (the current loss) which is extracted from Lt(γ,ϕ,πt) href228:(7)L^t(πkt)=∑d=1Dt∑n=1Nd∑j=1VϕdnkI[wdn=j]logβ̃kjt=∑d=1Dt∑n=1Nd∑j=1VϕdnkI[wdn=j](πktη)jρkjt-∑d=1Dt∑n=1Nd∑j=1VϕdnkI[wdn=j]log∑i=1Vexp(πktη)iρkitThe biggest weakness of TPS and iDropout is their old loss L̃t-1 which aims to keep information from only previous time step.
+It is essential to build another old loss that can retain as much as possible knowledge from all preceding minibatches.
+Ideally, after minibatch Dt comes, we hope to solve: argmaxπkt1t∑i=1tL^i(πkt).
+However, revisiting data from the previous minibatches is forbidden.
+To preserve knowledge from the past, we use a straightforward method: replacing the current loss at each time step i(1⩽i<t) by its second-order Taylor expansion href229 at an optimal point.We consider the two first minibatches D1 and D2.
+Assume that after training D1, optimal point π̂1 is obtained.
+Then we can compute the gradient and href230 (second-order derivative) of L^1(πk1) at π̂k1, and construct the second-order Taylor expansion of L^1(πk) at π̂k1:L̃1(πk)≈L^k1(π̂k1)+(πk-π̂k1)⊺∇L^k1(π̂k1)+12(πk-π̂k1)⊺∇2L^k1(π̂k1)(πk-π̂k1)≈L^1(π̂k1)+12(πk-π̂k1)⊺∇2L^1(π̂k1)(πk-π̂k1)Where vector (matrix) AT denotes the transpose of vector(matrix) A. π̂1 is the optimal point, so the term ∇L^1(π̂k1) is approximately zero.
+When training on D2, the objective function w.r.t πk2 is 12(L^2(πk2)+L̃1(πk2)).
+Recursively, we build the old loss L̃t-1 by the approximation of the sum of the first t-1 minibatches’ current losses L̃kt-1(πk):(8)∑i=1t-1L^ki(π̂ki)+(πk-π̂k1)⊺∇L^k1(π̂ki)+12(πk-π̂ki)⊺Hki(πk-π̂ki)=πk⊺Akt-1πk+πk⊺bkt-1+Cwhere Hki is the Hessian matrix ∇2L^i(π̂ki) or its approximation, Akt-1=12∑i=1t-1Hki∈RL×L,bkt-1=∑i=1t-1∇L^ki-Hkiπ̂ki, and C∈R is a constant that does not depend on πk.
+We construct L̃t-1(πk) after training on minibatch Dt-1.
+When receiving minibatch Dt, the objective function is presented as follows:Lt(πkt)=1t[L^t(πkt)+L̃t-1(πkt)]As we can see, if we memorize the exact Hessian matrix, the required memory of the algorithm is O(KL2), since Aki and bki can be accumulated after training on minibatch i. Fortunately, L value is quite small (usually 50, 200 or 300), hence we can store full Hessian matrix without worrying about memory cost.
+Meanwhile, if we apply this design directly for β, an approximated version of Hessian matrix should be used because vocabulary’s size of all minibatches is so large.
+This is another reason why we do not work directly on β.This result is based on an assumption that, in a neighborhood around πki, the second-order approximation is close to the true objective function.
+Thus we still approximately maximize the average of all current loss functions from the first minibatch to the tth minibatch: 1t∑i=1tL^i(πkt).
+However, this design seems too stable.
+Intuitively, at each minibatch t, we store too much knowledge from previous minibatches while their loss function is already optimized.
+Thus, if the number of minibatches received is so large, the model will find it hard to learn from a new one.
+Empirically, we put a coefficient σ (0⩽σ⩽1) before L̃t-1 to control the impact of the old loss.
+The final objective function w.r.t πk at minibatch Dt is:(9)Lt(πkt)=1t[L^t(πkt)+σL̃t-1(πkt)]Although the coefficient σ can reduce the impact of information from the prior minibatches to the current one, the method is still lacking in plasticity when the number of minibatches coming is too large.
+Dropout is applied to tackle this issue.
+It plays as a data-dependent regularizer, which makes the model catch the geometric property of data.
+With this property, Dropout helps BSP more plastic to adapt to new information.
+Finally, we formally demonstrate our approach in Algorithm 3.Algorithm 3 Learning BSPRequire: External knowledge η, hyper parameter α, drop rate drEnsure: π Initialize π0 randomly for t=1,2,… do  Receive a minibatch Dt  Draw drop matrix ρt randomly  Build L̃t-1 from At-1 and bt-1  while not convergence do   For each doc d∈Dt, infer (γd,ϕd) by computing href231, href232 iteratively until convergence   For each topic k, maximizing href233 w.r.t πkt  end while  πt+1=πt  Akt=Akt-1+12Hki  bkt=bkt-1+∇L^ki-Hkiπ̂ki end for4.
+DiscussionIn this section, we analyze some properties of BSP: the roles of external knowledge and Dropout; the ability of the model in dealing with stability-plasticity dilemma compared with other methods.Notation.
+Let a→ be the vector with all elements equal to a.
+For vector v, let diag(v) denote the matrix with entries of v on its diagonal and 0 elsewhere.
+For vector v1,v2,v1⊙v2 is their entrywise product.
+For matrix M1 and M2,〈M1,M2〉 refers to the inner product of their vectorizations.4.1.
+The role of external knowledge and Dropout in BSPVarious works have proved that Bayesian models can improve performance significantly by exploiting prior knowledge like language or semantic knowledge href234, href235.
+In BSP, external knowledge plays a role in increasing model’s quality and generalization.
+When the amount of data becomes large, the impact of external knowledge will reduce.
+However, in streaming environment, it is not straightforward to know how much data is enough for a model to achieve good performance.
+Furthermore, at each time step, the collection of data is small, thus keeping appropriate prior will rapidly improve quality of learning process.
+Especially, effect of concept drift can be limited significantly by utilizing external knowledge which covers or relates to new concepts.In terms of Dropout, it is utilized by omitting randomly some elements of global variable βt at minibatch Dt.
+Dropout in BSP has two main roles.
+Firstly, in our framework, Dropout works throughout the data stream as a form of ensemble learning, which helps reduce the generalization error.
+Indeed, applying Dropout in each training time step is similar to sampling one learner from (2K×V) possible learners.
+Then, when using for testing, βt will be rescaled by E[ρt].
+In that way, Dropout can be seen as a means of training exponentially many models that share parameters, then averaging together their predictions.
+Secondly, Dropout can be theoretically proved to be a data-dependent regularization href236 which helps model reduce overfitting.
+These two properties of Dropout make BSP have better generalization on future data.
+In streaming environment, this characteristic is especially essential because data received is unstable and changes over time.It is interesting that the current loss L^ in BSP is equal to the sum of this in TPS and a data-dependent regularization created by Dropout.
+For simplicity, the superscripts t on the current loss and the parameters are removed.
+Assume ρkj is generated by inverted dropout:p(ρkjt=1/(1-dr))=1-dr,p(ρkjt=0)=drLet ∊∊kj=ρkj-1, we have:∊∊kj=dr1-drwithprobability1-dr-1withprobabilitydrLet βk=πkη.
+The current loss w.r.t πk in TPS is L^(πk)=L^(βk(πk)) while this in BSP is ∊∊L^(πk,∊)=L^((1→+∊k)⊙βk(πk))=L^(βk(πk)+δ) with ∊δ=∊k⊙βk(πk) is the perturbation to βk.
+We can apply Taylor expansion to analyze the influence of this perturbation:(10)∊L^(πk,∊)-L^(πk)≈δ⊺∇βkL^(βk)+12δ⊺∇βk2L^(βk)δThis provides an approximate version of the dropout regularizer:∊∊Rdrop=E∊k[L^(πk,∊)-L^(πk)]≈12Eδ[δ⊺∇βk2L^(βk)δ]Here the expectation of linear elements in Eq. href237 is vanished because the expectation ∊E[δ]=E[∊k⊙βk]=0.
+Take expectation over δ and use the fact that E[δδ⊺]=dr1-drdiag(βk2) because ∊δ=∊k⊙βk and the coordinates of ∊∊k are independent, we have:Eδ[δ⊺∇βk2L^(βk)δ]=〈∇βk2L^(βk),E[δδ⊺]〉=dr1-dr〈∇βk2L^(βk),diag(βk2)〉Finally we get(11)Rdrop=dr2(1-dr)∑j=1V∇βkj2L^(βkj)βkj2=dr2(1-dr)∑j=1Vμkj∑d=1D∑n=1Nd∑v=1VϕdnkI[wdn=v]βkj2Whereμkj=ρkj2softmaxβk⊙ρkjsoftmax(βk⊙ρk)j-1More details of calculating second-order derivative are described in href238.
+Unlike other regularization technique, Dropout is data-dependent.
+Each element βkj has different regularization parameter which depends on input data.
+This property helps each βkj catch the geometric property of data.Through the above interpretations, BSP is able to take full advantage of external knowledge and Dropout.
+By combining both techniques, BSP has better generalization as well as coping with noisy and sparse data better.
+Experimental results show that BSP can especially work well with short texts.4.2.
+Stability-plasticity dilemmaAll streaming learning frameworks have to face stability-plasticity dilemma.
+Specifically, all methods have to href239 between old and new information from data streams.
+Some of them, for example SVB href240, href241, as described in href242, seems too stable when it adapts with new data very slowly.
+This problem also potentially appears in SVB-PP href243, href244, although it tries to exploit initial prior at each time step in streaming period.
+Both SVB and SVB-PP aim to make the model at time step t+1 to be close to the model at time step t. Therefore, the model will adapt slowly to new data and the performance will be degraded significantly if concept drift happens.On the other hand, TPS and iDropout do not encounter this problem.
+Both these methods have an easy mechanism to balance old and new data.
+The objective functions w.r.t global variable of TPS (Eq. href245) and iDropout (Eq. href246) contain two terms: the first allows model to learn information from new minibatch and the second one keeps current model close to the previous model.
+TPS and iDropout therefore become more flexible to learn new data while still keeping relevant information from old minibatch.However, mechanisms of TPS, iDropout and also GCTM only retain previous knowledge, which can lead to catastrophic forgetting phenomenon.
+That is, model reduces performance when working with long-ago data.
+Meanwhile, by accumulating all previous minibatches’ knowledge, BSP is able to cope with this issue better.
+Experimental results show that BSP outperforms any other methods in dealing with catastrophic forgetting.
+Intuitively, our method may become too stable when the number of coming minibatches is too large.
+Fortunately, Dropout can mitigate this problem.
+By dropping randomly some elements of global variable in each training time step and especially by Dropout’s data-dependent property, BSP becomes more plastic.
+Moreover, utilizing external knowledge also helps BSP accommodate more quickly the information of new data.5.
+ExperimentsIn this section, we conduct extensive experiments to evaluate the performance of BSP compared to other methods.
+We examine our method in terms of log predictive probability and topic coherence on several datasets that have different properties: long, regular and short text; with or without timestamp.
+We also analyze how BSP and other frameworks deal with concept drift and especially catastrophic forgetting which is not considered carefully by previous works.
+Finally, we investigate the impacts of hyperparameters to our model.5.1.
+Datasets and baselinesDatasets: We conduct experiments on one long text dataset: Grolierhref247, 2 regular text datasets: TagMyNews (TMN)href248, Agnewshref249 and 5 short text datasets: TagMyNews-title (TMN-title), Agnews-title, Yahoo-title href250, href251, The Irish Timeshref252, UCInewshref253.
+The Yahoo-title dataset is crawled from a forum so they include more noisy texts.
+All datasets are preprocessed by tokenizing, removing stopwords and low frequency words as well as removing extremely short texts which have less than 3 words.
+Each long and regular text contain about 80 and 25 words respectively while the short ones only have around 5 words.
+The short texts help us investigate impacts of external knowledge and Dropout in streaming environment.External knowledge: We use word embedding as a form of external knowledge.
+The word embedding was pre-trained from 6 billion tokens of Wikipedia 2014 and Gigaword 5 by href254.
+Each word is represented by a 200-dimensional vector.Baselines: We compare BSP with other methods including TPS href255, iDropout href256, GCTM href257, SVB href258, SVB-PP href259,href260 PVB href261.
+While both BSP and TPS exploit word embedding (word2vec), GCTM uses an external href262.
+For fair comparison, we build a similar graph from word embeddings as in href263.
+In detail, we also compute cosine similarity between a pair of words from their word embeddings.
+Then, for each word in the vocabulary, the top 200 words with highest similar score are selected to build the graph used as prior knowledge for GCTM.
+The best version of each framework for each dataset is chosen by grid search.
+We use range of hyperparameters as follows:•SVB-PP: the multiple power prior ρ∈{0.6,0.7,0.8, 0.9,0.99}.•PVB: the href264 S∈{103,104,105,106,5×103,5×104,5×105,5×106} and dimming factor κ∈{0.5,0.6,0.7,0.7,0.9}.•TPS: the variance σ∈{0.01,0.1,1,10,100}.•iDropout: the variance σ∈{0.01,0.1,1,10,100} and dr∈{0,0.05,0.15,0.25,0.35}.•GCTM: the variance σ∈{0.01,0.1,1,10,100} and the initial value of ρ∈{-10.0,0.0,10.0}•BSP: the coefficient σ∈{0.001,0.01,0.1,1} and dr∈{0,0.05,0.15,0.25,0.35}.We set the hyperparameter α of Dirichlet distribution to 0.01, the number of topics K  = 50 for Grolier, TMN, TMN-title, K  = 100 for Agnews, Agnews-title, Yahoo-title, The Irish Times and UCInews.
+For SVB, SVB-PP and PVB, the hyperparameter of the global variable’s Dirichlet prior η is equal to 0.01.Evaluation metrics: We use 2 measures to evaluate the methods: Log predictive probability (LPP) to examine the predictiveness and generalization of a model on new data; Normalized pointwise mutual information (NPMI) which considers the coherence or semantic quality of individual topic.
+We compute LPP after every minibatch.
+However, due to measuring on all datasets, NPMI is computed after finishing the whole training process.5.2.
+Experiments on sparse and noisy data5.2.1.
+Experiments on datasets without time stampWe conduct experiments on 6 datasets without timestamp (TMN, TMN-title, Grolier, Yahoo-title, Agnews, Agnews-title) following the designs in href265, href266.
+The statistics of these datasets are described in href267.
+We conduct experiments on 1 long text, 2 regular text and 3 short text datasets to investigate how the methods work with noisy and sparse data compared to the common one.
+In each dataset, a holdout test set is randomly chosen.
+Each document in the holdout set must contain equal to or more than 5 words.
+The rest of dataset is shuffled before being divided into small minibatches with the same batchsize.
+We set batchsize to 500 for TMN, TMN-title, Grolier, 1000 for Agnews, Agnews-title and 5000 for Yahoo-title.Table 1.
+Some statistics about the datasets.DatasetVocabTraining sizeTest sizewords/docEmpty CellGrolier15,26923,0441,00079.9TMN11,59931,6041,00024.3Agnews32,483110,00010,00024.9TMN-title2,82326,2511,0004.6Yahoo-title21,439517,77010,0004.6Agnews-title15,936108,40010,0004.9In terms of LPP, the performances of all methods are presented in href268.
+BSP, iDropout, TPS and GCTM show significantly outstanding results compared with other methods.
+These are remarkable evidences of considerable benefits of external knowledge and Dropout.
+While BSP and TPS express good performances in all minibatches, iDropout and GCTM are inferior to the other methods in a few beginning ones.
+Word embedding is the main reason why BSP and TPS can achieve good performances sooner than the others.
+GCTM also uses external knowledge but due to the graph convolutional network, it takes longer time to optimize and achieve good performances.
+Meanwhile, SVB, SVB-PP and PVB find it hard to remain good results throughout streaming period especially on short text datasets.
+They gain improvements in some beginning steps, but the results then gradually decrease.
+It means that these baselines are unable to deal with short texts well even when the data received is large.
+Especially, BSP shows more remarkable advances in short text datasets compared with TPS and iDropout.
+This provides convincing evidence of combining external knowledge and Dropout for data stream.href269href270Fig. 5.
+Performance of seven methods in terms of generalization on 6 datasets without time stamp.
+Higher is better.NPMI results (href271) demonstrate effective influence of exploiting external knowledge during streaming environment.
+Long text dataset - Grolier contains more information of word co-occurrence than the others, therefore, the methods work better on it.
+iDropout shows superior performance compared to SVB, SVB-PP and PVB, however, it is unable to catch up with BSP and TPS in all datasets.
+GCTM shows unstable when performing especially well in TMN and Yahoo-title but gives really poor results in TMN-title and Agnews-title.
+On the other hand, BSP presents high NPMI in all datasets.
+Word embedding plays an important role in improving topic coherence of BSP when it integrates the knowledge of word’s relationship into the model.Table 2.
+Performance of the methods in terms of topic coherence.
+Higher is better.DatasetBSPiDropoutTPSGCTMSVBSVB-PPPVBEmpty CellTMN-title0.0193−0.0033−0.0003−0.0268−0.0756−0.0626−0.0681TMN0.06870.05640.05590.07990.01340.01040.0023Grolier0.31320.29080.32720.27010.21600.21870.2668Yahoo-title0.06790.02020.04120.1780−0.0901−0.0956−0.0759Agnews0.12170.02540.08610.0318−0.0171−0.0237−0.0141Agnews-title0.02670.00580.0728−0.04731−0.0592−0.0371−0.05895.2.2.
+Experiments on chronological streaming dataDatasets: In this section, we study on The Irish Times dataset and UCInews dataset.
+The Irish Times includes 1376099 documents from 02/01/1996 to 31/12/2017 with 6 classes and its vocabulary contains 28816 words.
+Meanwhile, UCInews dataset includes 422937 news stories between 10/03/2014 and 10/08/2014 with 4 classes and 25566 words in vocabulary.Setting: The two datasets are chronologically orders, so we divide them into minibatches based on timestamps.
+The Irish Times dataset is divided by month while each minibatch in UCInews dataset corresponds to 2 consecutive days.
+After training one minibatch, we use the next one to evaluate log predictive probability of the model.Experimental results: The results are shown in href272.
+It is clear that BSP, TPS, iDropout and GCTM outperform other methods.
+In both datasets, although iDropout shows better performances than SVB, SVB-PP and PVB, its results are lower than BSP, TPS and GCTM.
+The performances of BSP and TPS have no clear difference: TPS presents slightly higher LPP on The Irish Times and BSP shows better results on UCInews.
+While these models get excellent performances really soon, GCTM must spend much time on achieving good results.
+Both The Irish Times and UCInews are short-text datasets and they contain sparse and noisy data.
+Due to lack of mechanism to deal with this kind of data, SVB-PP, PVB and especially SVB suffer from overfitting and decline performances throughout learning process.
+On the other hand, the use of external knowledge and Dropout helps BSP cope with these issues effectively and enhances generalization of future data.
+The challenge of short texts in the two datasets also influences the performances of methods in terms of topic coherence when SVB, SVB-PP and PVB show low values of NPMI (href273).
+BSP, TPS and GCTM utilize external knowledge at each time step so they get better results.
+While GCTM outperforms the others in terms of The Irish Times dataset, TPS has the highest NPMI value when working with UCInews.href274href275Fig. 6.
+Performances of 7 methods in terms of generalization on chronological datasets.
+Higher is better.Table 3.
+Topic coherence of the methods on chronological datasets.
+Higher is better.DatasetBSPiDropoutTPSGCTMSVBSVB-PPPVBEmpty CellEmpty CellEmpty CellEmpty CellThe Irish Times0.03300.00410.00860.1240−0.0522−0.0592−0.0746UCInews0.0023−0.00470.0135−0.04498−0.1049−0.1072−0.10025.3.
+Stability and plasticitySetting: We evaluate stability and plasticity of the models by examining how they deal with catastrophic forgetting and concept drift respectively.
+To design scenarios for evaluating catastrophic forgetting and concept drift, we choose datasets which are categorized in classes.
+Each class is divided into minibatches with the same batchsize.
+We hold out a minibatch in each class for measuring catastrophic forgetting.
+Testing scenarios for each issue are described as follows:•Catastrophic forgetting: After completely training one class, we calculate average LPP of the current holdout test set and the previous ones.
+High average LPP values prove that the method preserves much information in the past and copes with catastrophic forgetting effectively.•Concept drift: All minibatches are trained consecutively.
+After training one minibatch, we use the next one to evaluate LPP of the model.
+Concept drift happens when data changes from a class to a new one.
+At this time, the model’s performance will degrade remarkably.
+A plastic model is which has low decrease in performance when concept drift happens and can increase LPP effectively in the next minibatches of the new class.Datasets: We conduct experiments on 4 datasets:•The Irish Times dataset contains 6 classes:“Sport”, “Opinion”, “News”, “Lifestyle”, “Business”, “Culture”.
+The batchsize is 2000.•UCInews dataset contains 4 classes: “Business”, “Technology”, “Entertainment”, “Health”.
+The batchsize is 2000.•Agnews and Agnews-title datasets, each contains 4 classes: “World”, “Sports”, “Business”, “Sci/Tech”.
+The batchsize in both datasets is 500.Stability: href276 presents the average LPPs of the methods after training on each class.
+It is clear that BSP outperforms all other methods in handling catastrophic forgetting.
+iDropout, TPS and GCTM have low average LPPs when working on the last classes.
+The reasons are their mechanisms which aim to keep information from only the former time step.
+Due to no method for preserving history information, PVB shows really bad results compared to the others.
+SVB seems stable but has poor performance in learning data.
+By accumulating all information from the past, BSP has high stability and copes with catastrophic forgetting effectively.href277href278Fig. 7.
+Catastrophic forgetting after training on each class.
+LPP is calculated averagely over hold-out test sets of the current and all previous minibatches.
+Higher is better.Plasticity: href279 illustrates performances of 7 methods when dealing with concept drift which is used to examine model’s plasticity.
+SVB-PP and PVB and especially SVB seem to be suffered from concept drift significantly when they find it hard to improve performances after data’s concept changes.
+GCTM shows more effective performances but it is unable to catch up with BSP, TPS and iDropout.
+While iDropout works well on The Irish Times and UCInews datasets, it shows lower results than BSP and TPS on Agnews and Agnews-title datasets.
+Besides, except BSP and TPS, iDropout and other methods’ performances drop significantly when concept drifts happen and take long time to recover.
+Thanks to utilizing prior knowledge, BSP and TPS can limit the decline in LPP caused by concept drift and improve the results faster.
+In addition, Dropout also enhances BSP’s generalization and help the model increase LPP effectively when new class comes.
+Despite no superiority compared to TPS and iDropout, BSP presents good performances in all 4 datasets especially in Agnews and Agnews-title.
+Keeping information of all previous minibatches seems to make BSP less plastic.
+However, despite having the highest stability, BSP still achieves good plasticity to learn data from new concept.
+This proves that combining external knowledge and Dropout can effectively improve model’s generalization.href280href281Fig. 8.
+Performance of the methods when dealing with concept drifts.
+Higher is better.5.4.
+Ablation studyIn this subsection we investigate how different factors influence our model in terms of dealing with concept drift and catastrophic forgetting.5.4.1.
+Sensitivity of BSP w.r.t drop rateIn this subsection, we examine the impact of drop rate on BSP.
+We use the same concept as in Section href282 and conduct experiments on the two datasets: The Irish Times and UCInews.
+We choose drop rate ρ∈{0,0.15,0.25,0.35}.
+href283, href284 show some interesting benefits of Dropout in BSP.
+The model without Dropout is inferior to that with Dropout in both concept drift and catastrophic forgetting phenomenons.
+As we explain above, Dropout plays an important role in improving plasticity of our model by its ensemble learning and data-independent property.
+Not only making the model more plastic, experimental results demonstrate that Dropout also enhances BSP’s stability.
+Intuitively, when using Dropout at a time step, the dropped elements of the global variable are not used to learn current minibatch, therefore, the model can keep more previous information.
+The results show that drop rate ρ=0.35 improves BSP’s performance better than the others in terms of both concept drift and catastrophic forgetting when working on The Irish Times and UCInews datasetshref285.href286href287Fig. 10.
+Sensitivity of the method with different drop rates when dealing with concept drifts.
+Higher is better.href288href289Fig. 9.
+Sensitivity of the method with different drop rates when dealing with catastrophic forgetting.
+Higher is better.5.4.2.
+Impact of keeping all previous informationThis subsection investigates effectiveness of accumulation technique applied in BSP.
+In detail, we make a different version of BSP which is called 1-BSP: keeping information from only the former minibatch and compare it with original BSP and TPS.
+Both BSP and 1-BSP use their best drop rate dr=0.35.
+We still conduct experiments on two datasets: The Irish Times and UCInews.
+href290, href291 show that performances of BSP and 1-BSP are similar in terms of dealing with concept drift, whereas BSP is still superior when handling catastrophic forgetting.
+It is interesting that despite accumulating all previous information, BSP still keeps plasticity.
+1-BSP and TPS have small difference in stability level because they both keep knowledge from only previous time step.href292href293Fig. 12.
+Effectiveness of accumulating all previous information when dealing with concept drifts.
+Higher is better.href294href295Fig. 11.
+Effectiveness of accumulating all previous information when dealing with catastrophic forgetting.
+Higher is better.6.
+ConclusionThis paper re-investigates some existing methods in dealing with prevailing challenges of text streams: stability-plasticity dilemma, sparse and noisy texts.
+We propose a novel method called BSP which utilizes external knowledge, Dropout and second-order approximation to handle these challenges.
+BSP is able to work well with short and noisy data, achieves superior performances in terms of both generalization and topic coherence.
+BSP especially outperforms the others in handling catastrophic forgetting while still keeps the model plastic enough to cope with concept drift.
+However, the coefficient σ in BSP’s objective function is tuned manually and is the same in all previous approximate loss functions.
+How can we adapt this coefficient well for each time step in streaming environment?
+This is an interesting question we want to solve in later studies.CRediT authorship contribution statementTung Nguyen: Conceptualization, Methodology, Software, Validation, Formal analysis, Writing - original draft, Writing - review & editing, Investigation.
+Trung Mai: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation.
+Nam Nguyen: Conceptualization, Software, Validation, Formal analysis, Investigation.
+Linh Ngo Van: Conceptualization, Methodology, Validation, Formal analysis, Writing - original draft, Writing - review & editing, Visualization, Investigation, Project administration.
+Khoat Than: Conceptualization, Methodology, Validation, Formal analysis, Writing - review & editing, Supervision, Funding acquisition.Declaration of Competing InterestThe authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.AcknowledgementsThis work was funded by Gia Lam Urban Development and Investment Company Limited, Vingroup and supported by Vingroup Innovation Foundation (VINIF) under project code VINIF.2019.DA18Appendix A.Appendix B. Log predictive probabilityLet Dtrain and Dtest are the train and test datasets respectively.
+Log Predictive Probability of the test set will be calculated using global parameter β learned from training set.
+Each document in the test set is divided into two part: wobs and who with ratio 80:20.
+LPP is used to calculate the predicting who ability of the model given β and wobs as follow:p(who|wobs,β)=∏w∈whop(w|wobs,β)≈∏w∈whop(w|θobs,β)=∏w∈who∑k=1Kp(w|z=k,β)p(z=k|θobs)=∏w∈who∑k=1Kθkobsβkwwhere θobs is attained from wobs and the learnt global variable β.
+Then LPP of each document d is computed:(12)LPPd=logp(who|wobs,β)|who|where |who| refer to length of d in who.
+LPP will be averaged over all text d in the test set.
+We also calculate LPP on 5 random splits and then take the average.Appendix C. Normalized pointwise mutual informationWe follow the computation in href296.
+After finishing training all minibatches, we pick top t=20 words with highest probability in each topic.
+For each topic k, let wk={w1k,w2k,…,wtk}.
+We compute NPMI as follows:NPMI(k,wk)=2t(t-1)∑i=2t∑j=1i-1logp(wik,wjk)p(wik)p(wjk)-logp(wik,wjk)≈2t(t-1)∑i=2t∑j=1i-1logD(wik,wjk)+10-2D-logD(wik)D(wjk)D2-logD(wik,wjk)+10-2D=2t(t-1)∑i=2t∑j=1i-1-1+2logD-logD(wik)-logD(wjk)logD-log(D(wik,wjk)+10-2)where D is the number of all documents, D(wik) is the number of document containing wik,D(wik,wjk) is the number of documents in which wik and wjk appear together.
+We will average NPMI on all K topics.Appendix D. Derivative of L^ w.r.t βkjRecall that:(13)L^(βkj)=∑d=1D∑n=1Nd∑j=1VϕdnkI[wdn=j]βkjρkj-∑d=1D∑n=1Nd∑j=1VϕdnkI[wdn=j]log∑i=1VexpβkjρkiWhere βkj=(πkη)j.
+Here for simplicity, we ignore the superscripts t on the current loss L^ and the parameters.
+We have:(14)∇βkjL^=∑d=1D∑n=1NdϕdnkI[wdn=j]ρkj-∑d=1D∑n=1Nd∑v=1VϕdnkI[wdn=v]ρkjexpβkjρkj∑i=1VexpβkiρkiTherefore:(15)∇βkj2L^=∑d=1D∑n=1Nd∑v=1VϕdnkI[wdn=v]∇βkj-ρkjexpβkjρkj∑i=1VexpβkiρkiWe define:(16)μkj=∇βkj-ρkjexpβkjρkj∑i=1Vexpβkiρki=-ρkj2exp(βkjρkj)∑i=1Vexpβkiρki+ρkjexp(βkjρkj)∑i=1Vexpβkiρki2=ρkj2softmaxβk⊙ρkjsoftmax(βk⊙ρk)j-1Finally, we have:(17)∇βkj2L^=μkj∑d=1D∑n=1Nd∑v=1VϕdnkI[wdn=v]Where:μkj=ρkj2softmaxβk⊙ρkjsoftmax(βk⊙ρk)j-1Recommended articlesData availabilityData will be made available on request.Referenceshref297H.
+Ahn, S. Cha, D. Lee, T. MoonUncertainty-based continual learning with adaptive regularizationAdvances in Neural Information Processing Systems (2019), pp.
+4392-4402href298href299Anh, N.D., Linh, N.V., Anh, N.K., Than, K., 2017.
+Keeping priors in streaming bayesian learning, in: Advances in Knowledge Discovery and Data Mining: 21st Pacific-Asia Conference, PAKDD 2017, pp.
+247–258.href300href301F.
+Bianchi, S. Terragni, D. HovyPre-training is a hot topic: Contextualized document embeddings improve topic coherenceProceedings of the Annual Meeting of the Association for Computational Linguistics, ACL (2021)href302href303P.
+Bicalho, M. Pita, G. Pedrosa, A. Lacerda, G.L.
+PappaA general framework to expand short text for topic modelingInf.
+Sci., 393 (2017), pp.
+66-81href304href305href306href307href308D.M.
+Blei, A.Y.
+Ng, M.I.
+JordanLatent dirichlet allocationJ.
+Mach.
+Learn.
+Res., 3 (2003), pp.
+993-1022href309href310href311T.
+Broderick, N. Boyd, A. Wibisono, A.C. Wilson, M.I.
+JordanStreaming variational bayesAdvances in Neural Information Processing Systems (2013), pp.
+1727-1735href312href313Y.
+Chaudhary, P. Gupta, K. Saxena, V. Kulkarni, T.A.
+Runkler, H. SchützeT.
+Cohn, Y.
+He, Y. Liu (Eds.
+), Topicbert for energy efficient document classification.
+Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing, Association for Computational Linguistics (2020), pp.
+1682-1690href314href315href316href317J.
+Chen, Y. Hu, J. Liu, Y. Xiao, H. JiangDeep short text classification with knowledge powered attentionProceedings of the AAAI Conference on Artificial Intelligence, 33 (2019), pp.
+6252-6259, href318href319href320href321X.
+Cheng, X. Yan, Y. Lan, J. GuoBtm: Topic modeling over short textsIEEE Trans.
+Knowl.
+Data Eng., 26 (2014), pp.
+2928-2941href322href323href324Chérief-Abdellatif, B.E., Alquier, P., Khan, M.E., 2019.
+A generalization bound for online variational inference, in: Asian Conference on Machine Learning.href325href326A.N.
+Duc, N.V. Linh, N.K.
+Anh, C.H.
+Nguyen, K. ThanBoosting prior knowledge in streaming variational bayesNeurocomputing, 424 (2021), pp.
+143-159href327href328Ghahramani, Z., Attias, H., 2000.
+Online variational bayesian learning, in: Slides from talk presented at NIPS workshop on Online Learning.href329href330P.
+Gupta, Y. Chaudhary, T. Runkler, H. SchützeNeural topic modeling with continual lifelong learningInternational Conference on Machine Learning, PMLR (2020), pp.
+3907-3917href331href332C.
+Ha, V.D.
+Tran, L.N.
+Van, K. ThanEliminating overfitting of probabilistic topic models on short and noisy text: The role of dropoutInt.
+J.
+Approximate Reason., 112 (2019), pp.
+85-104href333href334href335href336href337M.D.
+Hoffman, D.M.
+Blei, C. Wang, J.W.
+PaisleyStochastic variational inferenceJ.
+Mach.
+Learn.
+Res., 14 (2013), pp.
+1303-1347href338href339href340Hofmann, T., 1999.
+Probabilistic latent semantic indexing, in: Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval, pp.
+50–57.href341href342R.
+Kurle, B. Cseke, A. Klushyn, P. van der Smagt, S. GünnemannContinual learning with bayesian neural networks for non-stationary dataInternational Conference on Learning Representations (2019)href343href344J.H.
+Lau, D. Newman, T. BaldwinMachine reading tea leaves: Automatically evaluating topic coherence and topic model qualityProceedings of the 14th Conference of the European Chapter of the Association for Computational Linguistics (2014), pp.
+530-539href345href346href347href348A.
+Li, A. Boyd, P. Smyth, S. MandtDetecting and adapting to irregular distribution shifts in bayesian online learningAdvances in Neural Information Processing Systems 34 (2021)href349href350C.
+Li, Y. Duan, H. Wang, Z. Zhang, A.
+Sun, Z. MaEnhancing topic modeling for short texts with auxiliary word embeddingsACM Transactions on Information Systems (TOIS), 36 (2017), pp.
+1-30href351href352D.
+Li, S. Zamani, J. Zhang, P. LiIntegration of knowledge graph embedding into topic modeling with hierarchical dirichlet processProceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers) (2019), pp.
+940-950href353href354href355href356Linh Ngo Van, H.P.
+Nam Le Hai, K. ThanAuxiliary local variables for improving regularization/prior approach in continual learningPacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD) (2022)href357href358L.
+Liu, H. Huang, Y. Gao, Y. Zhang, X. WeiNeural variational correlated topic modelingThe World Wide Web Conference (2019), pp.
+1142-1152href359href360href361href362K.
+Mai, S. Mai, A. Nguyen, N. Van Linh, K. ThanEnabling hierarchical dirichlet processes to work better for short texts at large scalePacific-Asia Conference on Knowledge Discovery and Data Mining, Springer.
+(2016), pp.
+431-442href363href364href365href366A.
+Masegosa, T.D.
+Nielsen, H. Langseth, D. Ramos-López, A. Salmerón, A.L.
+MadsenBayesian models of data streams with hierarchical power priorsD.
+Precup, Y.W.
+Teh (Eds.
+), Proceedings of the 34th International Conference on Machine Learning, PMLR (2017), pp.
+2334-2343href367href368A.R.
+Masegosa, D. Ramos-López, A. Salmerón, H. Langseth, T.D.
+NielsenVariational inference over nonstationary data streams for exponential family modelsMathematics, 8 (2020), p. 1942href369href370href371J.
+McInerney, R. Ranganath, D.M.
+BleiThe population posterior and bayesian modeling on streamsAdvances in Neural Information Processing Systems, 28 (2015), pp.
+1153-1161href372href373href374R.
+Mehrotra, S. Sanner, W. Buntine, L. XieImproving lda topic models for microblogs via tweet pooling and automatic labelingProceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval (2013), pp.
+889-892href375href376href377href378M.
+Mermillod, A. Bugaiska, P. BoninThe stability-plasticity dilemma: Investigating the continuum from catastrophic forgetting to age-limited learning effectsFront.
+Psychol., 4 (2013), p. 504href379href380Mirzadeh, S., Farajtabar, M., Pascanu, R., Ghasemzadeh, H., 2020.
+Understanding the role of training regimes in continual learning, in: Advances in Neural Information Processing Systems.href381href382C.V.
+Nguyen, Y. Li, T.D.
+Bui, R.E.
+TurnerVariational continual learningThe International Conference on Learning Representations (ICLR) (2018)href383href384H.
+Nguyen, H. Pham, S. Nguyen, N. Van Linh, K. ThanAdaptive infinite dropout for noisy and sparse data streamsMach.
+Learn.
+(2022), pp.
+1-36href385href386V.S.
+Nguyen, D.T.
+Nguyen, L.N.
+Van, K. ThanInfinite dropout for training bayesian models from data streams2019 IEEE International Conference on Big Data (Big Data), IEEE (2019), pp.
+125-134href387href388href389href390J.
+Pennington, R. Socher, C. ManningGlove: Global vectors for word representationProceedings of the 2014 conference on empirical methods in natural language processing (EMNLP) (2014), pp.
+1532-1543href391href392href393H.
+Phan, A.P.
+Tuan, S. Nguyen, N.V. Linh, K. ThanReducing catastrophic forgetting in neural networks via gaussian mixture approximationPacific-Asia Conference on Knowledge Discovery and Data Mining, Springer.
+(2022), pp.
+106-117href394href395href396href397Prescott Adams, R., MacKay, D.J., 2007.
+Bayesian online changepoint detection.
+ArXiv e-prints, arXiv–0710href398href399J.
+Qiang, P. Chen, T. Wang, X. WuTopic modeling over short texts by incorporating word embeddingsPacific-Asia Conference on Knowledge Discovery and Data Mining, Springer.
+(2017), pp.
+363-374href400href401href402href403X.
+Quan, C. Kit, Y. Ge, S.J.
+PanShort and sparse text topic modeling via self-aggregationTwenty-fourth international joint conference on artificial intelligence, Citeseer (2015)href404href405M.A.
+SatoOnline model selection based on the variational bayesNeural Comput., 13 (2001), pp.
+1649-1681href406href407href408A.
+Srivastava, C. SuttonAutoencoding variational inference for topic models5th International Conference on Learning Representations, ICLR (2017)href409href410N.
+Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, R. SalakhutdinovDropout: a simple way to prevent neural networks from overfittingJ.
+Mach.
+Learn.
+Res., 15 (2014), pp.
+1929-1958href411href412href413Theis, L., Hoffman, M.D., 2015.
+A trust-region method for stochastic variational inference with applications to streaming data, in: Proceedings of the 32nd International Conference on Machine Learning, ICML 2015, pp.
+2503–2511.href414href415Thompson, L., Mimno, D., 2020.
+Topic modeling with contextualized word representation clusters.
+arXiv preprint arXiv:2010.12626.href416href417B.
+Tran, A.D. Nguyen, L.N.
+Van, K. ThanDynamic transformation of prior knowledge into bayesian models for data streamsIEEE Trans.
+Knowl.
+Data Eng.
+(2021)href418href419A.P.
+Tuan, B. Tran, T.H.
+Nguyen, L.N.
+Van, K. ThanBag of biterms modeling for short textsKnowl.
+Inf.
+Syst., 62 (2020), pp.
+4055-4090href420href421href422href423N.
+Van Linh, T.X.
+Bach, K. ThanA graph convolutional topic model for short and noisy text streamsNeurocomputing, 468 (2022), pp.
+345-359href424href425J.
+Wang, Z. Wang, D. Zhang, J. YanCombining knowledge with deep convolutional neural networks for short text classificationProceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence, IJCAI-17 (2017), pp.
+2915-2921, href426URL:https://doi.org/10.24963/ijcai.2017/406href427href428href429X.
+Wang, Y. YangNeural topic model with attention for supervised learningInternational Conference on Artificial Intelligence and Statistics, PMLR.
+(2020), pp.
+1147-1156href430href431href432Wei, C., Kakade, S., Ma, T., 2020.
+The implicit and explicit regularization effects of dropout.
+arXiv:2002.12915href433href434Y.
+Xu, H. Xu, L. Zhu, H. Hao, J. Deng, X.
+Sun, X. BaiTopic discovery for streaming short texts with ctm2018 International Joint Conference on Neural Networks (IJCNN), IEEE (2018), pp.
+1-7href435href436href437href438Yang, T., Hu, L., Shi, C., Ji, H., Li, X., Nie, L., 2021.
+Hgat: Heterogeneous graph attention networks for semi-supervised short text classification 39.href439href440Y.
+Yang, F. Wang, J. Zhang, J. Xu, S.Y.
+PhilipA topic model for co-occurring normal documents and short textsWorld Wide Web, 21 (2018), pp.
+487-513href441href442Yin, D., Farajtabar, M., Li, A., Levine, N., Mott, A., 2020.
+Optimization and generalization of regularization-based continual learning: a loss approximation viewpoint.
+arXiv preprint arXiv:2006.10974.href443href444J.
+Zeng, J. Li, Y.
+Song, C. Gao, M.R.
+Lyu, I. KingTopic memory networks for short text classificationProceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, ACL (2018), pp.
+3120-3131URL:  href445href446href447href448href449C.
+Zhang, J. Bütepage, H. Kjellström, S. MandtAdvances in variational inferenceIEEE Trans.
+Pattern Anal. Mach.
+Intell., 41 (2018), pp.
+2008-2026href450href451href452H.
+Zhao, L. Du, W. BuntineA word embeddings informed focused topic modelAsian Conference on Machine Learning (2017), pp.
+423-438href453href454href455H.
+Zhao, D. Phung, V. Huynh, Y. Jin, L. Du, W. BuntineTopic modelling meets deep neural networks: A surveyProceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI) (2021)href456Cited by (1)href4572024, Machine LearningTung Nguyen has received a B.S degree (2021) from Hanoi University of Science and Technology (HUST), Vietnam.
+He is currently a research assistant at the Data Science Laboratory, HUST.
+His recent research interests include continual learning, topic modeling and natural language processing.Trung Mai is currently studying at Hanoi University of Science and Technology (HUST), Vietnam.
+He is currently a research assistant at the Data Science Laboratory, HUST.
+His recent research interests are computer vision, continual learning and deep learning.Nguyen Hoang Nam is currently studying at the Hanoi University of Science and Technology (HUST).
+He is also a research assistant at the Data Science Laboratory, HUST.
+His recent research interests are online learning, continual learning and deep learning.Linh Ngo Van is a PhD student at Hanoi University of Science and Technology (HUST), Vietnam.
+He also received B.S (2011) and M.S (2014) degrees from HUST.
+He is currently a member of the Data Science Laboratory, HUST.
+His research interests include topic model, continual learning, recommender systems and big data.Prof.
+Khoat Than is currently an associate professor at Hanoi University of Science and Technology.
+He received a Ph.D. degree from Japan Advanced Institute of Science and Technology in 2013.
+He joins the Program Committees of various leading international conferences, including ICML, NIPS, IJCAI, ICLR, PAKDD, ACML.
+His recent research interests include representation learning, deep generative models, topic modeling, and continual learning.href458Equal contribution.href459href460href461href462href463https://cs231n.github.io/neural-networks-2/href464href465href466href467href468href469href470href471href472href473href474Due to requiring non-trivial efforts, SVB-HPP is not included in this paper.
+However, the original work href475 showed that if SVB-PP is tuned well, it is often comparable to SVB-HPPhref476Note that these results are only suitable to The Irish Times and UCInews.
+In term of Agnews and Agnews-title, the best drop rates are 0.85 and 0.75 respectively.href477© 2022 Elsevier B.V. All rights reserved.Recommended articleshref478Biochemical and Biophysical Research Communications, Volume 468, Issue 3, 2015, pp.
+409-410Christoph Alexiou, Bengt Fadeelhref479href480American Journal of Orthodontics and Dentofacial Orthopedics, Volume 162, Issue 4, 2022, pp.
+439-440Yoonkoo Kang, …, Cheol-Hyun Moonhref481href482Annals of Emergency Medicine, Volume 80, Issue 4, 2022, pp.
+e63-e64Nin-Chieh Hsu, …, Chia-Hao Hsuhref483href484The Auditory System in Sleep, 2018, pp.
+147-159Ricardo A. Vellutihref485Pattern Recognition Letters, Volume 173, 2023, pp.
+10-16Khang Nguyen, …, Khoat Thanhref486href487Statistics & Probability Letters, Volume 203, 2023, Article 109921Hajime Kawakamihref488Show 3 more articlesArticle MetricsCitationsCitation Indexes: 2CapturesReaders: 7Social MediaShares, Likes & Comments: 237href489href490href491href492href493href494href495href496href497Cookies are used by this site.
+Cookie SettingsAll content on this site: Copyright © 2024 Elsevier B.V., its licensors, and contributors.
+All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+For all open access content, the Creative Commons licensing terms apply.href498
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cookie Preference CenterWe use cookies which are necessary to make our site work.
+We may also use additional cookies to analyse, improve and personalise our content and your digital experience.
+For more information, see our href499 and the list of href500.
+You may choose not to allow some types of cookies.
+However, blocking some types may impact your experience of our site and the services we are able to offer.
+See the different category headings below to find out more or change your settings.
+Allow all Manage Consent PreferencesStrictly Necessary CookiesAlways activeThese cookies are necessary for the website to function and cannot be switched off in our systems.
+They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms.
+You can set your browser to block or alert you about these cookies, but some parts of the site will not then work.
+These cookies do not store any personally identifiable information.
+Cookie Details List‎Functional Cookies  Functional Cookies These cookies enable the website to provide enhanced functionality and personalisation.
+They may be set by us or by third party providers whose services we have added to our pages.
+If you do not allow these cookies then some or all of these services may not function properly.Cookie Details List‎Performance Cookies  Performance Cookies These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.
+They help us to know which pages are the most and least popular and see how visitors move around the site.Cookie Details List‎Targeting Cookies  Targeting Cookies These cookies may be set through our site by our advertising partners.
+They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites.
+If you do not allow these cookies, you will experience less targeted advertising.Cookie Details List‎Back ButtonCookie List Search IconFilter IconClear checkbox label labelApply CancelConsent Leg.Interest checkbox label label checkbox label label checkbox label label Confirm my choiceshref501Your Privacy [`dialog closed`]
