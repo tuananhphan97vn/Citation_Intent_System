@@ -1,0 +1,460 @@
+{
+    "search_metadata": {
+        "id": "671295778d04174c8964c63c",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/f7aa5777ed292791/671295778d04174c8964c63c.json",
+        "created_at": "2024-10-18 17:05:59 UTC",
+        "processed_at": "2024-10-18 17:05:59 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=7228556788885243036&hl=en&as_sdt=2005&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/f7aa5777ed292791/671295778d04174c8964c63c.html",
+        "total_time_taken": 0.78
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "7228556788885243036",
+        "hl": "en",
+        "as_sdt": "2005"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 13,
+        "time_taken_displayed": 0.03
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=7228556788885243036&hl=en&as_sdt=2005",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "A survey on long text modeling with transformers",
+            "result_id": "vu7SkEhkfscJ",
+            "link": "https://arxiv.org/abs/2302.14502",
+            "snippet": "Modeling long texts has been an essential technique in the field of natural language processing (NLP). With the ever-growing number of long documents, it is important to …",
+            "publication_info": {
+                "summary": "Z Dong, T Tang, L Li, WX Zhao - arXiv preprint arXiv:2302.14502, 2023 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "Z Dong",
+                        "link": "https://scholar.google.com/citations?user=gnQfRVMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=gnQfRVMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "gnQfRVMAAAAJ"
+                    },
+                    {
+                        "name": "T Tang",
+                        "link": "https://scholar.google.com/citations?user=t1mRUvQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=t1mRUvQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "t1mRUvQAAAAJ"
+                    },
+                    {
+                        "name": "L Li",
+                        "link": "https://scholar.google.com/citations?user=zeWrn-4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=zeWrn-4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "zeWrn-4AAAAJ"
+                    },
+                    {
+                        "name": "WX Zhao",
+                        "link": "https://scholar.google.com/citations?user=JNhNacoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=JNhNacoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "JNhNacoAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2302.14502"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=vu7SkEhkfscJ",
+                "cited_by": {
+                    "total": 44,
+                    "link": "https://scholar.google.com/scholar?cites=14375037323443367614&as_sdt=2005&sciodt=2005&hl=en",
+                    "cites_id": "14375037323443367614",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cites=14375037323443367614&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:vu7SkEhkfscJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3Avu7SkEhkfscJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=14375037323443367614&hl=en&as_sdt=2005",
+                    "cluster_id": "14375037323443367614",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=14375037323443367614&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:vu7SkEhkfscJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 2,
+            "title": "Hierarchical Attention Graph for Scientific Document Summarization in Global and Local Level",
+            "result_id": "1iE7LHqzeRoJ",
+            "link": "https://arxiv.org/abs/2405.10202",
+            "snippet": "Scientific document summarization has been a challenging task due to the long structure of the input text. The long input hinders the simultaneous effective modeling of both global high …",
+            "publication_info": {
+                "summary": "C Zhao, X Zhou, X Xie, Y Zhang - arXiv preprint arXiv:2405.10202, 2024 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "C Zhao",
+                        "link": "https://scholar.google.com/citations?user=R9akIzMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=R9akIzMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "R9akIzMAAAAJ"
+                    },
+                    {
+                        "name": "Y Zhang",
+                        "link": "https://scholar.google.com/citations?user=HPxykGUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=HPxykGUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "HPxykGUAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2405.10202"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=1iE7LHqzeRoJ",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=1907753254477570518&as_sdt=2005&sciodt=2005&hl=en",
+                    "cites_id": "1907753254477570518",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cites=1907753254477570518&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:1iE7LHqzeRoJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3A1iE7LHqzeRoJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=1907753254477570518&hl=en&as_sdt=2005",
+                    "cluster_id": "1907753254477570518",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=1907753254477570518&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:1iE7LHqzeRoJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Contrastive hierarchical discourse graph for scientific document summarization",
+            "result_id": "iUn14XOVgbsJ",
+            "type": "Pdf",
+            "link": "https://par.nsf.gov/servlets/purl/10464336",
+            "snippet": "The extended structural context has made scientific paper summarization a challenging task. This paper proposes CHANGES, a contrastive hierarchical graph neural network for …",
+            "publication_info": {
+                "summary": "H Zhang, X Liu, J Zhang - The 4th workshop on Computa-tional …, 2023 - par.nsf.gov",
+                "authors": [
+                    {
+                        "name": "H Zhang",
+                        "link": "https://scholar.google.com/citations?user=DT_HlbYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DT_HlbYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "DT_HlbYAAAAJ"
+                    },
+                    {
+                        "name": "X Liu",
+                        "link": "https://scholar.google.com/citations?user=E97kG9IAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=E97kG9IAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "E97kG9IAAAAJ"
+                    },
+                    {
+                        "name": "J Zhang",
+                        "link": "https://scholar.google.com/citations?user=7AkZSJsAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=7AkZSJsAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "7AkZSJsAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "nsf.gov",
+                    "file_format": "PDF",
+                    "link": "https://par.nsf.gov/servlets/purl/10464336"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=iUn14XOVgbsJ",
+                "cited_by": {
+                    "total": 7,
+                    "link": "https://scholar.google.com/scholar?cites=13511244682032925065&as_sdt=2005&sciodt=2005&hl=en",
+                    "cites_id": "13511244682032925065",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cites=13511244682032925065&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:iUn14XOVgbsJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AiUn14XOVgbsJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 7,
+                    "link": "https://scholar.google.com/scholar?cluster=13511244682032925065&hl=en&as_sdt=2005",
+                    "cluster_id": "13511244682032925065",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=13511244682032925065&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:iUn14XOVgbsJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 4,
+            "title": "Integrating Topic-Aware Heterogeneous Graph Neural Network with Transformer Model for Medical Scientific Document Abstractive Summarization",
+            "result_id": "23zDKoFS2UkJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10637403/",
+            "snippet": "The development of abstractive summarization methods is a crucial task in Natural Language Processing (NLP) that presents challenges, which require the creation of …",
+            "publication_info": {
+                "summary": "A Khaliq, A Khan, SA Awan, S Jan, M Umair… - IEEE …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "A Khan",
+                        "link": "https://scholar.google.com/citations?user=3iI5cKEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=3iI5cKEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "3iI5cKEAAAAJ"
+                    },
+                    {
+                        "name": "S Jan",
+                        "link": "https://scholar.google.com/citations?user=JmmLOZoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=JmmLOZoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "JmmLOZoAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ieee.org",
+                    "file_format": "PDF",
+                    "link": "https://ieeexplore.ieee.org/iel8/6287639/10380310/10637403.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=23zDKoFS2UkJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:23zDKoFS2UkJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3A23zDKoFS2UkJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=5321375149436665051&hl=en&as_sdt=2005",
+                    "cluster_id": "5321375149436665051",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=5321375149436665051&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 5,
+            "title": "Improving Faithfulness of Large Language Models in Summarization via Sliding Generation and Self-Consistency",
+            "result_id": "ogE2zaVA6RAJ",
+            "link": "https://aclanthology.org/2024.lrec-main.771/",
+            "snippet": "Despite large language models (LLMs) have demonstrated impressive performance in various tasks, they are still suffering from the factual inconsistency problem called …",
+            "publication_info": {
+                "summary": "T Li, Z Li, Y Zhang - Proceedings of the 2024 Joint International …, 2024 - aclanthology.org",
+                "authors": [
+                    {
+                        "name": "Y Zhang",
+                        "link": "https://scholar.google.com/citations?user=vCoh6tYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=vCoh6tYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "vCoh6tYAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "aclanthology.org",
+                    "file_format": "PDF",
+                    "link": "https://aclanthology.org/2024.lrec-main.771.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ogE2zaVA6RAJ",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=1218576255037079970&as_sdt=2005&sciodt=2005&hl=en",
+                    "cites_id": "1218576255037079970",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cites=1218576255037079970&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ogE2zaVA6RAJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AogE2zaVA6RAJ%3Ascholar.google.com%2F",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:ogE2zaVA6RAJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 6,
+            "title": "Enhanced topic-aware summarization using statistical graph neural networks",
+            "result_id": "LSC4Scz5e0QJ",
+            "link": "https://researchportal.port.ac.uk/en/publications/enhanced-topic-aware-summarization-using-statistical-graph-neural",
+            "snippet": "The rapid expansion of online content and big data has precipitated an urgent need for efficient summarization techniques to swiftly comprehend vast textual documents without …",
+            "publication_info": {
+                "summary": "A Khaliq, SA Awan, F Ahmad… - Computers …, 2024 - researchportal.port.ac.uk",
+                "authors": [
+                    {
+                        "name": "F Ahmad",
+                        "link": "https://scholar.google.com/citations?user=DAcxItYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DAcxItYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "DAcxItYAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "port.ac.uk",
+                    "file_format": "PDF",
+                    "link": "https://researchportal.port.ac.uk/files/93578625/Enhanced_topic-aware_summarization_using_statistical_graph_neural_networks.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=LSC4Scz5e0QJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:LSC4Scz5e0QJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3ALSC4Scz5e0QJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cluster=4934812472519958573&hl=en&as_sdt=2005",
+                    "cluster_id": "4934812472519958573",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=4934812472519958573&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:LSC4Scz5e0QJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Heterogeneous graphormer for extractive multimodal summarization",
+            "result_id": "zqaeuqAtLZwJ",
+            "link": "https://link.springer.com/article/10.1007/s10844-024-00886-5",
+            "snippet": "Multimodal summarization with multimodal output (MSMO) aims to generate summaries that incorporate both text and images. Existing methods have not effectively leveraged …",
+            "publication_info": {
+                "summary": "X Jiang, J Chen - Journal of Intelligent Information Systems, 2024 - Springer"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=zqaeuqAtLZwJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:zqaeuqAtLZwJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AzqaeuqAtLZwJ%3Ascholar.google.com%2F"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Automated Speaking Assessment of Conversation Tests with Novel Graph-based Modeling on Spoken Response Coherence",
+            "result_id": "spPR8_TzLHUJ",
+            "link": "https://arxiv.org/abs/2409.07064",
+            "snippet": "Automated speaking assessment in conversation tests (ASAC) aims to evaluate the overall speaking proficiency of an L2 (second-language) speaker in a setting where an interlocutor …",
+            "publication_info": {
+                "summary": "JT Li, BC Yan, TH Lo, YC Wang, YC Hsu… - arXiv preprint arXiv …, 2024 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "JT Li",
+                        "link": "https://scholar.google.com/citations?user=Nos610IAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Nos610IAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Nos610IAAAAJ"
+                    },
+                    {
+                        "name": "BC Yan",
+                        "link": "https://scholar.google.com/citations?user=YVnxMOoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=YVnxMOoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "YVnxMOoAAAAJ"
+                    },
+                    {
+                        "name": "TH Lo",
+                        "link": "https://scholar.google.com/citations?user=RNgvU2wAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=RNgvU2wAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "RNgvU2wAAAAJ"
+                    },
+                    {
+                        "name": "YC Wang",
+                        "link": "https://scholar.google.com/citations?user=VMD_E6AAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=VMD_E6AAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "VMD_E6AAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2409.07064"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=spPR8_TzLHUJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:spPR8_TzLHUJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AspPR8_TzLHUJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=8443391634801005490&hl=en&as_sdt=2005",
+                    "cluster_id": "8443391634801005490",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=8443391634801005490&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:spPR8_TzLHUJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 9,
+            "title": "VTCC-NLP at SemEval-2023 Task 6: Long-Text Representation Based on Graph Neural Network for Rhetorical Roles Prediction",
+            "result_id": "u4zXEPCxGIsJ",
+            "link": "https://aclanthology.org/2023.semeval-1.155/",
+            "snippet": "Rhetorical Roles (RR) prediction is to predict the label of each sentence in legal documents, which is regarded as an emergent task for legal document understanding. In this study, we …",
+            "publication_info": {
+                "summary": "H Nguyen, H Ngo, N Bui - … of the 17th International Workshop on …, 2023 - aclanthology.org",
+                "authors": [
+                    {
+                        "name": "H Ngo",
+                        "link": "https://scholar.google.com/citations?user=TDR3p1EAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=TDR3p1EAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "TDR3p1EAAAAJ"
+                    },
+                    {
+                        "name": "N Bui",
+                        "link": "https://scholar.google.com/citations?user=hrsoOCcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=hrsoOCcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "hrsoOCcAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "aclanthology.org",
+                    "file_format": "PDF",
+                    "link": "https://aclanthology.org/2023.semeval-1.155.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=u4zXEPCxGIsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:u4zXEPCxGIsJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3Au4zXEPCxGIsJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=10022956615345867963&hl=en&as_sdt=2005",
+                    "cluster_id": "10022956615345867963",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=10022956615345867963&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:u4zXEPCxGIsJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 10,
+            "title": "FHSI-GNN: Fusion Hierarchical Structure Information Graph Neural Network for Extractive Long Documents Summarization",
+            "result_id": "e9vywa_J94EJ",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-99-8138-0_12",
+            "snippet": "Extractive text summarization aims to select salient sentences from documents. However, most existing extractive methods struggle to capture inter-sentence relations in long …",
+            "publication_info": {
+                "summary": "Z Zhang, W Yun, X Jia, Q Lv, H Ni, X Wang… - … Conference on Neural …, 2023 - Springer"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=e9vywa_J94EJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:e9vywa_J94EJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3Ae9vywa_J94EJ%3Ascholar.google.com%2F",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=9365175706850614139&hl=en&as_sdt=2005",
+                    "cluster_id": "9365175706850614139",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=9365175706850614139&engine=google_scholar&hl=en"
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "current": 1,
+        "next": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=2005&cites=7228556788885243036&scipsc=1",
+        "other_pages": {
+            "2": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=2005&cites=7228556788885243036&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 1,
+        "next_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=10",
+        "next": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=10",
+        "other_pages": {
+            "2": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=10"
+        }
+    }
+}

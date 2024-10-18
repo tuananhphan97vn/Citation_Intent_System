@@ -1,0 +1,478 @@
+{
+    "search_metadata": {
+        "id": "6712912d0d379f9795a8f098",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/1e17299da6202cdc/6712912d0d379f9795a8f098.json",
+        "created_at": "2024-10-18 16:47:41 UTC",
+        "processed_at": "2024-10-18 16:47:41 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=9244488408968589108&hl=en&start=20&as_sdt=5,34&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/1e17299da6202cdc/6712912d0d379f9795a8f098.html",
+        "total_time_taken": 1.69
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "9244488408968589108",
+        "hl": "en",
+        "start": 20,
+        "as_sdt": "5,34"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 37,
+        "page_number": 3,
+        "time_taken_displayed": 0.02
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=9244488408968589108&hl=en&as_sdt=5,34",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Knowledge Graph Enhancement for Fine-grained Zero-shot Learning on ImageNet21K",
+            "result_id": "CLilcunRwn0J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10517649/",
+            "snippet": "Fine-grained Zero-shot Learning on the large-scale dataset ImageNet21K is an important task that has promising perspectives in many real-world scenarios. One typical solution is to …",
+            "publication_info": {
+                "summary": "X Chen, J Liu, Z Liu, L Wan, X Lan… - IEEE Transactions on …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "X Chen",
+                        "link": "https://scholar.google.com/citations?user=LR76K-MAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=LR76K-MAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "LR76K-MAAAAJ"
+                    },
+                    {
+                        "name": "Z Liu",
+                        "link": "https://scholar.google.com/citations?user=YOOlkJoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=YOOlkJoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "YOOlkJoAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=CLilcunRwn0J",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=9062036200803907592&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "9062036200803907592",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9062036200803907592&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:CLilcunRwn0J:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3ACLilcunRwn0J%3Ascholar.google.com%2F&start=20"
+            }
+        },
+        {
+            "position": 2,
+            "title": "CGUN-2A: Deep graph convolutional network via contrastive learning for large-scale zero-shot image classification",
+            "result_id": "o2OHJypvYjcJ",
+            "link": "https://www.mdpi.com/1424-8220/22/24/9980",
+            "snippet": "Taxonomy illustrates that natural creatures can be classified with a hierarchy. The connections between species are explicit and objective and can be organized into a …",
+            "publication_info": {
+                "summary": "L Li, L Liu, X Du, X Wang, Z Zhang, J Zhang, P Zhang… - Sensors, 2022 - mdpi.com"
+            },
+            "resources": [
+                {
+                    "title": "mdpi.com",
+                    "file_format": "PDF",
+                    "link": "https://www.mdpi.com/1424-8220/22/24/9980/pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=o2OHJypvYjcJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=3990874446646174627&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "3990874446646174627",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=3990874446646174627&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:o2OHJypvYjcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3Ao2OHJypvYjcJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 8,
+                    "link": "https://scholar.google.com/scholar?cluster=3990874446646174627&hl=en&as_sdt=5,34",
+                    "cluster_id": "3990874446646174627",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=3990874446646174627&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:o2OHJypvYjcJ:scholar.google.com/&hl=en&as_sdt=5,34"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Towards neural network interpretability using commonsense knowledge graphs",
+            "result_id": "zTq4WRY5A7wJ",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-19433-7_5",
+            "snippet": "Convolutional neural networks (CNNs) classify images by learning intermediate representations of the input throughout many layers. In recent work, latent representations of …",
+            "publication_info": {
+                "summary": "Y Ismaeil, D Stepanova, TK Tran… - International Semantic …, 2022 - Springer",
+                "authors": [
+                    {
+                        "name": "Y Ismaeil",
+                        "link": "https://scholar.google.com/citations?user=3--S1GsAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=3--S1GsAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "3--S1GsAAAAJ"
+                    },
+                    {
+                        "name": "D Stepanova",
+                        "link": "https://scholar.google.com/citations?user=bKey58cAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=bKey58cAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "bKey58cAAAAJ"
+                    },
+                    {
+                        "name": "TK Tran",
+                        "link": "https://scholar.google.com/citations?user=KqUMncQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=KqUMncQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "KqUMncQAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "kuleuven.be",
+                    "file_format": "PDF",
+                    "link": "https://lirias.kuleuven.be/retrieve/734022"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=zTq4WRY5A7wJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=13547734872217893581&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "13547734872217893581",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=13547734872217893581&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:zTq4WRY5A7wJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3AzTq4WRY5A7wJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cluster=13547734872217893581&hl=en&as_sdt=5,34",
+                    "cluster_id": "13547734872217893581",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=13547734872217893581&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 4,
+            "title": "Tight lower bounds on worst-case guarantees for zero-shot learning with attributes",
+            "result_id": "9vXEOyb-RHIJ",
+            "link": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/7c9b9ecc92a679f1b6c76ed8f99f2636-Abstract-Conference.html",
+            "snippet": "We develop a rigorous mathematical analysis of zero-shot learning with attributes. In this setting, the goal is to label novel classes with no training data, only detectors for attributes …",
+            "publication_info": {
+                "summary": "A Mazzetto, C Menghini, A Yuan… - Advances in Neural …, 2022 - proceedings.neurips.cc",
+                "authors": [
+                    {
+                        "name": "A Mazzetto",
+                        "link": "https://scholar.google.com/citations?user=FkZ0hSsAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FkZ0hSsAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "FkZ0hSsAAAAJ"
+                    },
+                    {
+                        "name": "C Menghini",
+                        "link": "https://scholar.google.com/citations?user=TDk55OQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=TDk55OQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "TDk55OQAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "neurips.cc",
+                    "file_format": "PDF",
+                    "link": "https://proceedings.neurips.cc/paper_files/paper/2022/file/7c9b9ecc92a679f1b6c76ed8f99f2636-Paper-Conference.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=9vXEOyb-RHIJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=8233985458905085430&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "8233985458905085430",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=8233985458905085430&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:9vXEOyb-RHIJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3A9vXEOyb-RHIJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cluster=8233985458905085430&hl=en&as_sdt=5,34",
+                    "cluster_id": "8233985458905085430",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=8233985458905085430&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:9vXEOyb-RHIJ:scholar.google.com/&hl=en&as_sdt=5,34"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Zero-shot Object Classification with Large-scale Knowledge Graph",
+            "result_id": "UVQew-XoTG4J",
+            "link": "https://openaccess.thecvf.com/content/CVPR2023W/L3D-IVU/html/Shiba_Zero-Shot_Object_Classification_With_Large-Scale_Knowledge_Graph_CVPRW_2023_paper.html",
+            "snippet": "Zero-shot learning is used to predict unseen categories and can solve problems such as dealing with unseen categories that were not anticipated at the time of training and the lack …",
+            "publication_info": {
+                "summary": "K Shiba, Y Mukuta, T Harada - Proceedings of the IEEE …, 2023 - openaccess.thecvf.com",
+                "authors": [
+                    {
+                        "name": "Y Mukuta",
+                        "link": "https://scholar.google.com/citations?user=emo91rIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=emo91rIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "emo91rIAAAAJ"
+                    },
+                    {
+                        "name": "T Harada",
+                        "link": "https://scholar.google.com/citations?user=k8rlJ8AAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=k8rlJ8AAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "k8rlJ8AAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "thecvf.com",
+                    "file_format": "PDF",
+                    "link": "https://openaccess.thecvf.com/content/CVPR2023W/L3D-IVU/papers/Shiba_Zero-Shot_Object_Classification_With_Large-Scale_Knowledge_Graph_CVPRW_2023_paper.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=UVQew-XoTG4J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:UVQew-XoTG4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3AUVQew-XoTG4J%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=7947983515920782417&hl=en&as_sdt=5,34",
+                    "cluster_id": "7947983515920782417",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=7947983515920782417&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:UVQew-XoTG4J:scholar.google.com/&hl=en&as_sdt=5,34"
+            }
+        },
+        {
+            "position": 6,
+            "title": "Multimodal Semantic Fusion for Zero-Shot Learning",
+            "result_id": "nwrMFwdSaCgJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10688093/",
+            "snippet": "Zero-shot learning (ZSL) aims to predict classes that have never appeared in the training stage. The key to addressing those unseen classes is to transfer knowledge from seen …",
+            "publication_info": {
+                "summary": "Y Feng, T Jiang, Y Liu, Z Huang… - 2024 IEEE International …, 2024 - ieeexplore.ieee.org"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=nwrMFwdSaCgJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:nwrMFwdSaCgJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3AnwrMFwdSaCgJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=2911667349512522399&hl=en&as_sdt=5,34",
+                    "cluster_id": "2911667349512522399",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=2911667349512522399&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 7,
+            "title": "Understanding substructures in commonsense relations in conceptnet",
+            "result_id": "CK_bleePtc4J",
+            "link": "https://arxiv.org/abs/2210.01263",
+            "snippet": "Acquiring commonsense knowledge and reasoning is an important goal in modern NLP research. Despite much progress, there is still a lack of understanding (especially at scale) …",
+            "publication_info": {
+                "summary": "K Shen, M Kejriwal - arXiv preprint arXiv:2210.01263, 2022 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "K Shen",
+                        "link": "https://scholar.google.com/citations?user=-D05LWQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=-D05LWQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "-D05LWQAAAAJ"
+                    },
+                    {
+                        "name": "M Kejriwal",
+                        "link": "https://scholar.google.com/citations?user=fetkEu4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=fetkEu4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "fetkEu4AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2210.01263"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=CK_bleePtc4J",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=14894969567412203272&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "14894969567412203272",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=14894969567412203272&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:CK_bleePtc4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3ACK_bleePtc4J%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=14894969567412203272&hl=en&as_sdt=5,34",
+                    "cluster_id": "14894969567412203272",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=14894969567412203272&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:CK_bleePtc4J:scholar.google.com/&hl=en&as_sdt=5,34"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Zero-shot fine-grained entity typing in information security based on ontology",
+            "result_id": "iuuoCIliAGUJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0950705121007346",
+            "snippet": "The field of information security suffers from the lack of labelled entities. This study proposes a zero-shot hybrid approach, combining a clustering algorithm with a method for …",
+            "publication_info": {
+                "summary": "H Zhang, J Zhu, J Chen, J Liu, L Ji - Knowledge-Based Systems, 2021 - Elsevier",
+                "authors": [
+                    {
+                        "name": "J Liu",
+                        "link": "https://scholar.google.com/citations?user=aMXhYFwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=aMXhYFwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "aMXhYFwAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ulster.ac.uk",
+                    "file_format": "PDF",
+                    "link": "https://pure.ulster.ac.uk/files/92486332/AcceptedManuscript.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=iuuoCIliAGUJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=7277925338526051210&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "7277925338526051210",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=7277925338526051210&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:iuuoCIliAGUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3AiuuoCIliAGUJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=7277925338526051210&hl=en&as_sdt=5,34",
+                    "cluster_id": "7277925338526051210",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=7277925338526051210&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 9,
+            "title": "Top2Label: Explainable zero shot topic labelling using knowledge graphs",
+            "result_id": "_lbDQ6brQ6kJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0957417423031780",
+            "snippet": "Automatic topic labelling aims to generate coherent, interpretable, and meaningful labels to facilitate the interpretation of various topics within a corpus of documents. Typically, we …",
+            "publication_info": {
+                "summary": "A Chaudhary, E Milios, E Rajabi - Expert Systems with Applications, 2024 - Elsevier",
+                "authors": [
+                    {
+                        "name": "E Milios",
+                        "link": "https://scholar.google.com/citations?user=ME8aQywAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ME8aQywAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "ME8aQywAAAAJ"
+                    },
+                    {
+                        "name": "E Rajabi",
+                        "link": "https://scholar.google.com/citations?user=Tjn215sAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Tjn215sAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Tjn215sAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "dal.ca",
+                    "file_format": "PDF",
+                    "link": "https://dalspace.library.dal.ca/bitstream/handle/10222/82151/AkhilChaudhary2022.pdf?sequence=3"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=_lbDQ6brQ6kJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:_lbDQ6brQ6kJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3A_lbDQ6brQ6kJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=12196851315183408894&hl=en&as_sdt=5,34",
+                    "cluster_id": "12196851315183408894",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=12196851315183408894&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 10,
+            "title": "TAGLETS: A system for automatic semi-supervised learning with auxiliary data",
+            "result_id": "keNby45vUBYJ",
+            "link": "https://proceedings.mlsys.org/paper_files/paper/2022/hash/294f82c43d69f66c04440cbb2740e52d-Abstract.html",
+            "snippet": "Abstract Machine learning practitioners often have access to a spectrum of data: labeled data for the target task (which is often limited), unlabeled data, and auxiliary data, the many …",
+            "publication_info": {
+                "summary": "W Piriyakulkij, C Menghini, R Briden… - Proceedings of …, 2022 - proceedings.mlsys.org",
+                "authors": [
+                    {
+                        "name": "W Piriyakulkij",
+                        "link": "https://scholar.google.com/citations?user=nlO1TkkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=nlO1TkkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "nlO1TkkAAAAJ"
+                    },
+                    {
+                        "name": "C Menghini",
+                        "link": "https://scholar.google.com/citations?user=TDk55OQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=TDk55OQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "TDk55OQAAAAJ"
+                    },
+                    {
+                        "name": "R Briden",
+                        "link": "https://scholar.google.com/citations?user=xpp5f2ORcNoC&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=xpp5f2ORcNoC&engine=google_scholar_author&hl=en",
+                        "author_id": "xpp5f2ORcNoC"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "mlsys.org",
+                    "file_format": "PDF",
+                    "link": "https://proceedings.mlsys.org/paper_files/paper/2022/file/294f82c43d69f66c04440cbb2740e52d-Paper.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=keNby45vUBYJ",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=1607907726059103121&as_sdt=5,34&sciodt=5,34&hl=en",
+                    "cites_id": "1607907726059103121",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=1607907726059103121&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:keNby45vUBYJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,34",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&q=related%3AkeNby45vUBYJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=1607907726059103121&hl=en&as_sdt=5,34",
+                    "cluster_id": "1607907726059103121",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cluster=1607907726059103121&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:keNby45vUBYJ:scholar.google.com/&hl=en&as_sdt=5,34"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 3,
+        "previous": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=5,34&cites=9244488408968589108&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=30&hl=en&as_sdt=5,34&cites=9244488408968589108&scipsc=1",
+        "other_pages": {
+            "1": "https://scholar.google.com/scholar?start=0&hl=en&as_sdt=5,34&cites=9244488408968589108&scipsc=1",
+            "2": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=5,34&cites=9244488408968589108&scipsc=1",
+            "4": "https://scholar.google.com/scholar?start=30&hl=en&as_sdt=5,34&cites=9244488408968589108&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 3,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=10",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=10",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=30",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=30",
+        "other_pages": {
+            "1": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=0",
+            "2": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=10",
+            "4": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9244488408968589108&engine=google_scholar&hl=en&start=30"
+        }
+    }
+}

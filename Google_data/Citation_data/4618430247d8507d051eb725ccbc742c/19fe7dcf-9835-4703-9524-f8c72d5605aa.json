@@ -1,0 +1,92 @@
+{
+    "search_metadata": {
+        "id": "671297e6ef60cb74a648cb98",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/1477092bccadbd8d/671297e6ef60cb74a648cb98.json",
+        "created_at": "2024-10-18 17:16:22 UTC",
+        "processed_at": "2024-10-18 17:16:22 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=170&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/1477092bccadbd8d/671297e6ef60cb74a648cb98.html",
+        "total_time_taken": 0.63
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 170,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 18,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Intelligent Pendeln-IIP Zwischenbericht AG CW, JS",
+            "result_id": "OrgyezapXB8J",
+            "type": "Pdf",
+            "link": "https://www.intelligent-pendeln.de/fileadmin/downloads/ip-zwischenbericht-2023.pdf",
+            "snippet": "1.1 Überblick Dieser Bericht fasst den Arbeitsstand der AGs Westerkamp und Schöning der Hochschule Osnabrück im IIP-Projekt zusammen. Er gibt einen Überblick über …",
+            "publication_info": {
+                "summary": "T Seidel, M Schaarschmidt, A Schaffland, M Bröker… - intelligent-pendeln.de",
+                "authors": [
+                    {
+                        "name": "M Schaarschmidt",
+                        "link": "https://scholar.google.com/citations?user=FirJpE0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FirJpE0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "FirJpE0AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "intelligent-pendeln.de",
+                    "file_format": "PDF",
+                    "link": "https://www.intelligent-pendeln.de/fileadmin/downloads/ip-zwischenbericht-2023.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=OrgyezapXB8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:OrgyezapXB8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AOrgyezapXB8J%3Ascholar.google.com%2F&start=170",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:OrgyezapXB8J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 2,
+            "title": "Meningkatkan Keterampilan Berpikir Komputasional Mahasiswa Menyelesaikan RAC Melalui Penerapan RBL-STEM",
+            "result_id": "7VEWnkS0GnMJ",
+            "type": "Citation",
+            "snippet": "",
+            "publication_info": {
+                "summary": "AI Kristiana, IL Mursyidah - 2023 - Media Sains Indonesia",
+                "authors": [
+                    {
+                        "name": "AI Kristiana",
+                        "link": "https://scholar.google.com/citations?user=tCotCzIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=tCotCzIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "tCotCzIAAAAJ"
+                    },
+                    {
+                        "name": "IL Mursyidah",
+                        "link": "https://scholar.google.com/citations?user=ffU-LyEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ffU-LyEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "ffU-LyEAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=7VEWnkS0GnMJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:7VEWnkS0GnMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A7VEWnkS0GnMJ%3Ascholar.google.com%2F&start=170"
+            }
+        }
+    ]
+}

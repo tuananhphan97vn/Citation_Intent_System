@@ -1,0 +1,381 @@
+{
+    "search_metadata": {
+        "id": "671297def3cbfa26104ae96a",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/7d81ce5843ce8b46/671297def3cbfa26104ae96a.json",
+        "created_at": "2024-10-18 17:16:14 UTC",
+        "processed_at": "2024-10-18 17:16:14 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=140&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/7d81ce5843ce8b46/671297def3cbfa26104ae96a.html",
+        "total_time_taken": 5.07
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 140,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 15,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Traffic Flow Prediction Using Big Data and Geographic Information Systems: A Survey of Data Sources, Frameworks, Challenges, and Opportunities",
+            "result_id": "-ufKkq-7AhsJ",
+            "type": "Pdf",
+            "link": "https://www.researchgate.net/profile/Sayed-Sayed-14/publication/372788139_Traffic_Flow_Prediction_Using_Big_Data_and_Geographic_Information_Systems_A_Survey_of_Data_Sources_Frameworks_Challenges_and_Opportunities/links/64c8c447db38b20d6dad3416/Traffic-Flow-Prediction-Using-Big-Data-and-Geographic-Information-Systems-A-Survey-of-Data-Sources-Frameworks-Challenges-and-Opportunities.pdf",
+            "snippet": "Big Data has been utilized extensively in numerous fields, including transportation. Using several sources of data, traffic conditions can be accurately anticipated and forecasted to …",
+            "publication_info": {
+                "summary": "SA Sayed, Y Abdelhamid, HA Hefny - Int. J. Com. Dig. Sys, 2023 - researchgate.net"
+            },
+            "resources": [
+                {
+                    "title": "researchgate.net",
+                    "file_format": "PDF",
+                    "link": "https://www.researchgate.net/profile/Sayed-Sayed-14/publication/372788139_Traffic_Flow_Prediction_Using_Big_Data_and_Geographic_Information_Systems_A_Survey_of_Data_Sources_Frameworks_Challenges_and_Opportunities/links/64c8c447db38b20d6dad3416/Traffic-Flow-Prediction-Using-Big-Data-and-Geographic-Information-Systems-A-Survey-of-Data-Sources-Frameworks-Challenges-and-Opportunities.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=-ufKkq-7AhsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:-ufKkq-7AhsJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A-ufKkq-7AhsJ%3Ascholar.google.com%2F&start=140",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:-ufKkq-7AhsJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 2,
+            "title": "The slow lane: a study on the diffusion of full-electric cars in Italy",
+            "result_id": "gCI9m-Pwg1QJ",
+            "link": "https://www.econstor.eu/handle/10419/300345",
+            "snippet": "The transition to a zero-emission car fleet is a pivotal element of Europe's decarbonisation strategy. Italy's participation in this trajectory is significant, given the size of its car fleet …",
+            "publication_info": {
+                "summary": "M Bonacina, M Demir, A Sileo, A Zanoni - 2024 - econstor.eu",
+                "authors": [
+                    {
+                        "name": "M Bonacina",
+                        "link": "https://scholar.google.com/citations?user=sSToYJ0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=sSToYJ0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "sSToYJ0AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "econstor.eu",
+                    "file_format": "PDF",
+                    "link": "https://www.econstor.eu/bitstream/10419/300345/1/1895513022.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=gCI9m-Pwg1QJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:gCI9m-Pwg1QJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AgCI9m-Pwg1QJ%3Ascholar.google.com%2F&start=140",
+                "versions": {
+                    "total": 11,
+                    "link": "https://scholar.google.com/scholar?cluster=6089975981487760000&hl=en&as_sdt=5,31",
+                    "cluster_id": "6089975981487760000",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=6089975981487760000&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:gCI9m-Pwg1QJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Foresight Plus: Scalable Serverless Real-Time Spatio-Temporal Traffic Forecasting",
+            "result_id": "8Em54S5VeusJ",
+            "link": "https://www.researchsquare.com/article/rs-3353187/latest",
+            "snippet": "Building a real-time, cost-effective, spatio-temporal forecasting system is a challenging problem with many practical applications such as traffic and road network management …",
+            "publication_info": {
+                "summary": "J Oakley, C Conlan, GV Demirci, A Sfyridis… - 2023 - researchsquare.com",
+                "authors": [
+                    {
+                        "name": "C Conlan",
+                        "link": "https://scholar.google.com/citations?user=Xe8RNp4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Xe8RNp4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Xe8RNp4AAAAJ"
+                    },
+                    {
+                        "name": "GV Demirci",
+                        "link": "https://scholar.google.com/citations?user=sFCVYMgAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=sFCVYMgAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "sFCVYMgAAAAJ"
+                    },
+                    {
+                        "name": "A Sfyridis",
+                        "link": "https://scholar.google.com/citations?user=qyWM3L8AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=qyWM3L8AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "qyWM3L8AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "researchsquare.com",
+                    "file_format": "PDF",
+                    "link": "https://www.researchsquare.com/article/rs-3353187/latest.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=8Em54S5VeusJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:8Em54S5VeusJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A8Em54S5VeusJ%3Ascholar.google.com%2F&start=140",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=16967968205915638256&hl=en&as_sdt=5,31",
+                    "cluster_id": "16967968205915638256",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=16967968205915638256&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:8Em54S5VeusJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "图神经网络在交通预测中的应用综述",
+            "result_id": "eroqNuN4adcJ",
+            "type": "Html",
+            "link": "https://transport.chd.edu.cn/cn/article/doi/10.19818/j.cnki.1671-1637.2023.05.003",
+            "snippet": "为寻求提升交通预测时空计算任务性能的有效途径, 探索图神经网络技术在交通预测中的应用前景和挑战, 回顾了交通预测方法的发展, 总结了模型驱动方法, 统计模型, 传统机器学习方法和 …",
+            "publication_info": {
+                "summary": "户佐安， 邓锦程， 韩金丽， 袁凯 - 交通运输工程学报, 2023 - transport.chd.edu.cn"
+            },
+            "resources": [
+                {
+                    "title": "chd.edu.cn",
+                    "file_format": "HTML",
+                    "link": "https://transport.chd.edu.cn/cn/article/doi/10.19818/j.cnki.1671-1637.2023.05.003"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=eroqNuN4adcJ",
+                "html_version": "https://transport.chd.edu.cn/cn/article/doi/10.19818/j.cnki.1671-1637.2023.05.003",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=15522070507970804346&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "15522070507970804346",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=15522070507970804346&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:eroqNuN4adcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AeroqNuN4adcJ%3Ascholar.google.com%2F&start=140"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Unifying spatiotemporal and frequential attention for traffic prediction",
+            "result_id": "K8TajKqehJAJ",
+            "link": "https://www.researchsquare.com/article/rs-4961410/latest",
+            "snippet": "Urban traffic flow prediction is an essential task within intelligent transportation systems, and numerous methodologies have been proposed to address it. However, most existing …",
+            "publication_info": {
+                "summary": "Q Guo, Q Tan, J Tang, B Shi - 2024 - researchsquare.com",
+                "authors": [
+                    {
+                        "name": "B Shi",
+                        "link": "https://scholar.google.com/citations?user=-e_1A6oAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=-e_1A6oAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "-e_1A6oAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "researchsquare.com",
+                    "file_format": "PDF",
+                    "link": "https://www.researchsquare.com/article/rs-4961410/latest.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=K8TajKqehJAJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:K8TajKqehJAJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AK8TajKqehJAJ%3Ascholar.google.com%2F&start=140",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=10413622693732205611&hl=en&as_sdt=5,31",
+                    "cluster_id": "10413622693732205611",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=10413622693732205611&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:K8TajKqehJAJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 6,
+            "title": "Explainable Spatially-Explicit GeoAI in Urban Analytics",
+            "result_id": "lFo-PB9w01UJ",
+            "type": "Pdf",
+            "link": "https://www.researchgate.net/profile/Filip-Biljecki/publication/374291691_Explainable_Spatially-Explicit_GeoAI_in_Urban_Analytics/links/664b5326479366623afe50f2/Explainable-Spatially-Explicit-GeoAI-in-Urban-Analytics.pdf",
+            "snippet": "Geospatial artificial intelligence (GeoAI) is proliferating in urban analytics, where graph neural networks (GNNs) have become one of the most popular methods in recent years …",
+            "publication_info": {
+                "summary": "P Liua, Y Zhanga, F Biljeckia - 2024 - researchgate.net"
+            },
+            "resources": [
+                {
+                    "title": "researchgate.net",
+                    "file_format": "PDF",
+                    "link": "https://www.researchgate.net/profile/Filip-Biljecki/publication/374291691_Explainable_Spatially-Explicit_GeoAI_in_Urban_Analytics/links/664b5326479366623afe50f2/Explainable-Spatially-Explicit-GeoAI-in-Urban-Analytics.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=lFo-PB9w01UJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:lFo-PB9w01UJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AlFo-PB9w01UJ%3Ascholar.google.com%2F&start=140",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=6184409992766839444&hl=en&as_sdt=5,31",
+                    "cluster_id": "6184409992766839444",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=6184409992766839444&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:lFo-PB9w01UJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Leveraging process mining for knowledge extraction and process optimization",
+            "result_id": "Hez9t4uS5PUJ",
+            "link": "https://theses.hal.science/tel-04188502/",
+            "snippet": "The automotive sector requires the mass production of electronic boards matching the highest quality standards and best-in-class performance. Nowadays, electronic boards are …",
+            "publication_info": {
+                "summary": "L Travé-Massuyès - 2023 - theses.hal.science",
+                "authors": [
+                    {
+                        "name": "L Travé-Massuyès",
+                        "link": "https://scholar.google.com/citations?user=N8T4gzQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=N8T4gzQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "N8T4gzQAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "hal.science",
+                    "file_format": "PDF",
+                    "link": "https://theses.hal.science/tel-04188502/file/2023DUONGLeToan.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Hez9t4uS5PUJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:Hez9t4uS5PUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AHez9t4uS5PUJ%3Ascholar.google.com%2F&start=140",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=17718447962767354909&hl=en&as_sdt=5,31",
+                    "cluster_id": "17718447962767354909",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=17718447962767354909&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:Hez9t4uS5PUJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Hardware-Software Codesign for Accelerating Graph Neural Networks on FPGA",
+            "result_id": "jhUCQCAEKWsJ",
+            "link": "https://search.proquest.com/openview/f3117d4ea8c40a83331ee7d4c12ddbad/1?pq-origsite=gscholar&cbl=18750&diss=y",
+            "snippet": "Abstract Graph Neural Networks (GNNs) have revolutionized many real-world applications where data can be represented as graphs. These applications include recommendation …",
+            "publication_info": {
+                "summary": "B Zhang - 2024 - search.proquest.com",
+                "authors": [
+                    {
+                        "name": "B Zhang",
+                        "link": "https://scholar.google.com/citations?user=Cze_VKUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Cze_VKUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Cze_VKUAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=jhUCQCAEKWsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:jhUCQCAEKWsJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AjhUCQCAEKWsJ%3Ascholar.google.com%2F&start=140"
+            }
+        },
+        {
+            "position": 9,
+            "title": "Application of Graph Neural Networks in Road Traffic Forecasting for Intelligent Transportation Systems",
+            "result_id": "oORXutJkpk4J",
+            "type": "Pdf",
+            "link": "https://repositorio-aberto.up.pt/bitstream/10216/151990/2/636674.pdf",
+            "snippet": "Traffic forecasting is a crucial aspect of Intelligent Transportation Systems, as it has the potential to improve the mobility and efficiency of transportation in cities while reducing costs …",
+            "publication_info": {
+                "summary": "ACM Gadelho - 2023 - repositorio-aberto.up.pt"
+            },
+            "resources": [
+                {
+                    "title": "up.pt",
+                    "file_format": "PDF",
+                    "link": "https://repositorio-aberto.up.pt/bitstream/10216/151990/2/636674.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=oORXutJkpk4J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:oORXutJkpk4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AoORXutJkpk4J%3Ascholar.google.com%2F&start=140",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:oORXutJkpk4J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 10,
+            "title": "Short-Term Traffic Flow Prediction Based on Wavelet Analysis and XGBoost",
+            "result_id": "ZhUawwEuiDMJ",
+            "type": "Html",
+            "link": "http://amjce.com/article/10.11648/j.ijtet.20241001.12",
+            "snippet": "Traffic flow prediction is of great significance for urban planning and alleviating traffic congestion. Due to the randomness and high volatility of urban road network short-term …",
+            "publication_info": {
+                "summary": "X Wang, F Fang - International Journal of Transportation Engineering …, 2024 - amjce.com"
+            },
+            "resources": [
+                {
+                    "title": "amjce.com",
+                    "file_format": "HTML",
+                    "link": "http://amjce.com/article/10.11648/j.ijtet.20241001.12"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ZhUawwEuiDMJ",
+                "html_version": "http://amjce.com/article/10.11648/j.ijtet.20241001.12",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ZhUawwEuiDMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AZhUawwEuiDMJ%3Ascholar.google.com%2F&start=140",
+                "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:ZhUawwEuiDMJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 15,
+        "previous": "https://scholar.google.com/scholar?start=130&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=150&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "8": "https://scholar.google.com/scholar?start=72&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=82&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=92&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "11": "https://scholar.google.com/scholar?start=102&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=112&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "13": "https://scholar.google.com/scholar?start=122&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "14": "https://scholar.google.com/scholar?start=132&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "16": "https://scholar.google.com/scholar?start=152&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "17": "https://scholar.google.com/scholar?start=162&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 15,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=150",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=150",
+        "other_pages": {
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=72",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=82",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=92",
+            "11": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=102",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=112",
+            "13": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=122",
+            "14": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=132",
+            "16": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=152",
+            "17": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=162"
+        }
+    }
+}

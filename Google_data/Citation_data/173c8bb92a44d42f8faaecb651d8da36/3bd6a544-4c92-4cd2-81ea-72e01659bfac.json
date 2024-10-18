@@ -1,0 +1,127 @@
+{
+    "search_metadata": {
+        "id": "671295798b7ba7e9034a5f96",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/40c6f17c391cab91/671295798b7ba7e9034a5f96.json",
+        "created_at": "2024-10-18 17:06:01 UTC",
+        "processed_at": "2024-10-18 17:06:01 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=7228556788885243036&hl=en&start=10&as_sdt=2005&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/40c6f17c391cab91/671295798b7ba7e9034a5f96.html",
+        "total_time_taken": 0.75
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "7228556788885243036",
+        "hl": "en",
+        "start": 10,
+        "as_sdt": "2005"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 13,
+        "page_number": 2,
+        "time_taken_displayed": 0.02
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=7228556788885243036&hl=en&as_sdt=2005",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "A Novel Question-Context Interaction Method for Machine Reading Comprehension",
+            "result_id": "kc1X1BT3MiQJ",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-99-5834-4_5",
+            "snippet": "Abstract Machine reading comprehension (MRC) is a challenging NLP task that requires machines to model the complex interactions between questions and specific contexts. In …",
+            "publication_info": {
+                "summary": "TA Phan, H Ngo, KHN Bui - Asian Conference on Intelligent Information …, 2023 - Springer",
+                "authors": [
+                    {
+                        "name": "TA Phan",
+                        "link": "https://scholar.google.com/citations?user=jyCp_v0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=jyCp_v0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "jyCp_v0AAAAJ"
+                    },
+                    {
+                        "name": "H Ngo",
+                        "link": "https://scholar.google.com/citations?user=TDR3p1EAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=TDR3p1EAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "TDR3p1EAAAAJ"
+                    },
+                    {
+                        "name": "KHN Bui",
+                        "link": "https://scholar.google.com/citations?user=hrsoOCcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=hrsoOCcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "hrsoOCcAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=kc1X1BT3MiQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:kc1X1BT3MiQJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3Akc1X1BT3MiQJ%3Ascholar.google.com%2F&start=10",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=2608418803034869137&hl=en&as_sdt=2005",
+                    "cluster_id": "2608418803034869137",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=2005&cluster=2608418803034869137&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 2,
+            "title": "Graph Neural Networks For Efficiently Creating Document Summaries",
+            "result_id": "UszWq321xQgJ",
+            "type": "Pdf",
+            "link": "https://www.researchgate.net/profile/Ermis-Arvanitis/publication/376852131_Graph_Neural_Networks_For_Efficiently_Creating_Document_Summaries/links/658c4fad2468df72d3dd53cb/Graph-Neural-Networks-For-Efficiently-Creating-Document-Summaries.pdf",
+            "snippet": "The automatic text summarization task in natural language processing aims to represent a text in a shorter, more manageable form for the reader. There are many approaches to this …",
+            "publication_info": {
+                "summary": "E Arvanitis - researchgate.net"
+            },
+            "resources": [
+                {
+                    "title": "researchgate.net",
+                    "file_format": "PDF",
+                    "link": "https://www.researchgate.net/profile/Ermis-Arvanitis/publication/376852131_Graph_Neural_Networks_For_Efficiently_Creating_Document_Summaries/links/658c4fad2468df72d3dd53cb/Graph-Neural-Networks-For-Efficiently-Creating-Document-Summaries.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=UszWq321xQgJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:UszWq321xQgJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AUszWq321xQgJ%3Ascholar.google.com%2F&start=10",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:UszWq321xQgJ:scholar.google.com/&hl=en&as_sdt=2005"
+            }
+        },
+        {
+            "position": 3,
+            "title": "A STUDY ON PRODUCT DESCRIPTION GENERATION LEVERAGING A PRODUCT ATTRIBUTE TABLE",
+            "result_id": "Gq2PBKnN9SoJ",
+            "type": "Citation",
+            "snippet": "",
+            "publication_info": {
+                "summary": "Y Li - 2023 - Waseda University"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Gq2PBKnN9SoJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:Gq2PBKnN9SoJ:scholar.google.com/&scioq=&hl=en&as_sdt=2005",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&q=related%3AGq2PBKnN9SoJ%3Ascholar.google.com%2F&start=10"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 2,
+        "previous": "https://scholar.google.com/scholar?start=0&hl=en&as_sdt=2005&cites=7228556788885243036&scipsc=1",
+        "next": null,
+        "other_pages": {
+            "1": "https://scholar.google.com/scholar?start=0&hl=en&as_sdt=2005&cites=7228556788885243036&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 2,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=0",
+        "previous": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=0",
+        "other_pages": {
+            "1": "https://serpapi.com/search.json?as_sdt=2005&cites=7228556788885243036&engine=google_scholar&hl=en&start=0"
+        }
+    }
+}

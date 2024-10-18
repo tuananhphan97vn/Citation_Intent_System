@@ -1,0 +1,425 @@
+{
+    "search_metadata": {
+        "id": "671297d7b6e4db4879414c83",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/f84f113ac502ce66/671297d7b6e4db4879414c83.json",
+        "created_at": "2024-10-18 17:16:07 UTC",
+        "processed_at": "2024-10-18 17:16:07 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=100&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/f84f113ac502ce66/671297d7b6e4db4879414c83.html",
+        "total_time_taken": 1.69
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 100,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 11,
+        "time_taken_displayed": 0.07
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Time series reconstruction and classification: a comprehensive comparative study",
+            "result_id": "WbxmDWr7KbYJ",
+            "link": "https://link.springer.com/article/10.1007/s10489-021-02926-x",
+            "snippet": "Time series approximation techniques can provide approximate results for the data in another new space by dimensionality reduction or feature extraction. In this study, we …",
+            "publication_info": {
+                "summary": "J Li, W Pedrycz, A Gacek - Applied Intelligence, 2022 - Springer",
+                "authors": [
+                    {
+                        "name": "W Pedrycz",
+                        "link": "https://scholar.google.com/citations?user=0nrcfZwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=0nrcfZwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "0nrcfZwAAAAJ"
+                    },
+                    {
+                        "name": "A Gacek",
+                        "link": "https://scholar.google.com/citations?user=vc7SlJAAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=vc7SlJAAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "vc7SlJAAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=WbxmDWr7KbYJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=13126299021857963097&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "13126299021857963097",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=13126299021857963097&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:WbxmDWr7KbYJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AWbxmDWr7KbYJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=13126299021857963097&hl=en&as_sdt=5,31",
+                    "cluster_id": "13126299021857963097",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13126299021857963097&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 2,
+            "title": "Influence Propagation for Linear Threshold Model with Graph Neural Networks",
+            "result_id": "1CNF9rhhLmoJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10411581/",
+            "snippet": "Influence propagation is a network phenomenon governing how information is diffused in a network. With the advent of deep learning, there has been growing interest in applying …",
+            "publication_info": {
+                "summary": "F Santos, A Stephens, PN Tan… - … Conference on Data …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "A Stephens",
+                        "link": "https://scholar.google.com/citations?user=btrxMOoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=btrxMOoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "btrxMOoAAAAJ"
+                    },
+                    {
+                        "name": "PN Tan",
+                        "link": "https://scholar.google.com/citations?user=pnangiEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=pnangiEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "pnangiEAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=1CNF9rhhLmoJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:1CNF9rhhLmoJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A1CNF9rhhLmoJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=7651160263982654420&hl=en&as_sdt=5,31",
+                    "cluster_id": "7651160263982654420",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=7651160263982654420&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 3,
+            "title": "Enhanced edge convolution-based spatial-temporal network for network traffic prediction",
+            "result_id": "SOLUdcX-sN4J",
+            "link": "https://link.springer.com/article/10.1007/s10489-023-04626-0",
+            "snippet": "Accurately predicting network traffic is helpful for improving a variety of spatial-temporal data mining applications, such as intelligent traffic control, network planning and anomaly …",
+            "publication_info": {
+                "summary": "Z Hu, K Ruan, W Yu, S Chen - Applied Intelligence, 2023 - Springer",
+                "authors": [
+                    {
+                        "name": "S Chen",
+                        "link": "https://scholar.google.com/citations?user=NxztLWkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=NxztLWkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "NxztLWkAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=SOLUdcX-sN4J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:SOLUdcX-sN4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ASOLUdcX-sN4J%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=16046605596359975496&hl=en&as_sdt=5,31",
+                    "cluster_id": "16046605596359975496",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=16046605596359975496&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 4,
+            "title": "SUSTeR: Sparse Unstructured Spatio Temporal Reconstruction on Traffic Prediction",
+            "result_id": "KuqSXEUahosJ",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3589132.3625631",
+            "snippet": "Mining spatio-temporal correlation patterns for traffic prediction is a well-studied field. However, most approaches are based on the assumption of the availability of and …",
+            "publication_info": {
+                "summary": "Y Wölker, C Beth, M Renz, A Biastoch - Proceedings of the 31st ACM …, 2023 - dl.acm.org",
+                "authors": [
+                    {
+                        "name": "Y Wölker",
+                        "link": "https://scholar.google.com/citations?user=yobegHAAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yobegHAAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "yobegHAAAAAJ"
+                    },
+                    {
+                        "name": "C Beth",
+                        "link": "https://scholar.google.com/citations?user=g991gX4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=g991gX4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "g991gX4AAAAJ"
+                    },
+                    {
+                        "name": "M Renz",
+                        "link": "https://scholar.google.com/citations?user=47gh3JkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=47gh3JkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "47gh3JkAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=KuqSXEUahosJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:KuqSXEUahosJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AKuqSXEUahosJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=10053752103359408682&hl=en&as_sdt=5,31",
+                    "cluster_id": "10053752103359408682",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=10053752103359408682&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 5,
+            "title": "A traffic flow forecasting model using graph convolutional recurrent neural networks with incomplete data",
+            "result_id": "TyfrBW0SQmIJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10422643/",
+            "snippet": "Traffic flow prediction is a fundamental problem for urban traffic control and management. In practice, incomplete data is a common challenge due to sparse sensor deployment, data …",
+            "publication_info": {
+                "summary": "Z Sun, J Dai, Y Zhao, C Zhang… - 2023 IEEE 26th …, 2023 - ieeexplore.ieee.org"
+            },
+            "resources": [
+                {
+                    "title": "researchgate.net",
+                    "file_format": "PDF",
+                    "link": "https://www.researchgate.net/profile/Ang-Ji-2/publication/374556831_A_traffic_flow_forecasting_model_using_graph_convolutional_recurrent_neural_networks_with_incomplete_data/links/6524ee8cfc5c2a0c3bc70571/A-Traffic-Flow-Forecasting-Model-Using-Graph-Convolutional-Recurrent-Neural-Networks-with-Incomplete-Data.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=TyfrBW0SQmIJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:TyfrBW0SQmIJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ATyfrBW0SQmIJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=7080241823639873359&hl=en&as_sdt=5,31",
+                    "cluster_id": "7080241823639873359",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=7080241823639873359&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 6,
+            "title": "TCGPN: Temporal-Correlation Graph Pre-trained Network for Stock Forecasting",
+            "result_id": "XrQWM8QDxJQJ",
+            "link": "https://arxiv.org/abs/2407.18519",
+            "snippet": "Recently, the incorporation of both temporal features and the correlation across time series has become an effective approach in time series prediction. Spatio-Temporal Graph Neural …",
+            "publication_info": {
+                "summary": "W Yan, Y Tan - arXiv preprint arXiv:2407.18519, 2024 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "Y Tan",
+                        "link": "https://scholar.google.com/citations?user=PjNxSPsAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=PjNxSPsAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "PjNxSPsAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2407.18519"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=XrQWM8QDxJQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:XrQWM8QDxJQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AXrQWM8QDxJQJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=10719697154254222430&hl=en&as_sdt=5,31",
+                    "cluster_id": "10719697154254222430",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=10719697154254222430&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:XrQWM8QDxJQJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 7,
+            "title": "GA2T: A traffic flow prediction model combined with graph attention networks",
+            "result_id": "a5hMzXKInv4J",
+            "link": "https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2023.19758",
+            "snippet": "Traffic flow prediction is the core component of the intelligent transportation system. In view of the low accuracy of the current traffic flow prediction methods, a new traffic flow prediction …",
+            "publication_info": {
+                "summary": "S Qi, Q Liu, C Liu, M Xu, Z Qiu - Journal of Computer-Aided Design & …, 2023 - jcad.cn"
+            },
+            "resources": [
+                {
+                    "title": "jcad.cn",
+                    "file_format": "PDF",
+                    "link": "https://www.jcad.cn/en/article/pdf/preview/10.3724/SP.J.1089.2023.19758.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=a5hMzXKInv4J",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=18347251958605977707&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "18347251958605977707",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=18347251958605977707&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:a5hMzXKInv4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aa5hMzXKInv4J%3Ascholar.google.com%2F&start=100",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:a5hMzXKInv4J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Graph2RETA: Graph Neural Networks for Pick-up and Delivery Route Prediction and Arrival Time Estimation",
+            "result_id": "B0-pdqZEtDQJ",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-70893-0_17",
+            "snippet": "This research proposes an effective way to address the issues faced by pick-up and delivery services. The real-world variables that affect delivery routes are frequently overlooked by …",
+            "publication_info": {
+                "summary": "W Sentanoe, S Saha, Y Diyanananda… - German Conference on …, 2024 - Springer",
+                "authors": [
+                    {
+                        "name": "W Sentanoe",
+                        "link": "https://scholar.google.com/citations?user=n5udHnQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=n5udHnQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "n5udHnQAAAAJ"
+                    },
+                    {
+                        "name": "Y Diyanananda",
+                        "link": "https://scholar.google.com/citations?user=KqXsPBQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=KqXsPBQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "KqXsPBQAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=B0-pdqZEtDQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:B0-pdqZEtDQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AB0-pdqZEtDQJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=3797735867526237959&hl=en&as_sdt=5,31",
+                    "cluster_id": "3797735867526237959",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=3797735867526237959&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 9,
+            "title": "Long-term traffic flow estimation: a hybrid approach using location-basedtraffic characteristic",
+            "result_id": "ysGZVHQHZgQJ",
+            "link": "https://journals.tubitak.gov.tr/elektrik/vol30/iss3/7/",
+            "snippet": "Traffic speed estimation plays a key role in various situations, ranging from individual's trip planning to urban traffic management. Despite many studies on short-term prediction, there …",
+            "publication_info": {
+                "summary": "T AYAR, F Atlinar, MA Güvensan… - Turkish Journal of …, 2022 - journals.tubitak.gov.tr",
+                "authors": [
+                    {
+                        "name": "MA Güvensan",
+                        "link": "https://scholar.google.com/citations?user=YPbvk4gAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=YPbvk4gAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "YPbvk4gAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "tubitak.gov.tr",
+                    "file_format": "PDF",
+                    "link": "https://journals.tubitak.gov.tr/cgi/viewcontent.cgi?article=3798&context=elektrik"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ysGZVHQHZgQJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=316949019993162186&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "316949019993162186",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=316949019993162186&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ysGZVHQHZgQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AysGZVHQHZgQJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 5,
+                    "link": "https://scholar.google.com/scholar?cluster=316949019993162186&hl=en&as_sdt=5,31",
+                    "cluster_id": "316949019993162186",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=316949019993162186&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:ysGZVHQHZgQJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 10,
+            "title": "Graph neural networks for traffic pattern recognition: An overview",
+            "result_id": "Ot4_NovzO-IJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10112264/",
+            "snippet": "This survey aims to provide an overview of the recent developments and applications of Graph Neural Networks (GNNs) in the field of traffic patterns recognition. The focus is on the …",
+            "publication_info": {
+                "summary": "E Binshaflout, H Ghazzai… - 2023 IEEE International …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "H Ghazzai",
+                        "link": "https://scholar.google.com/citations?user=UdzAFTIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=UdzAFTIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "UdzAFTIAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "kaust.edu.sa",
+                    "file_format": "PDF",
+                    "link": "https://repository.kaust.edu.sa/bitstreams/bc20fa52-aea9-47cb-9d9e-0caa5db4286c/download"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Ot4_NovzO-IJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=16301891055433801274&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "16301891055433801274",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=16301891055433801274&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:Ot4_NovzO-IJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AOt4_NovzO-IJ%3Ascholar.google.com%2F&start=100",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=16301891055433801274&hl=en&as_sdt=5,31",
+                    "cluster_id": "16301891055433801274",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=16301891055433801274&engine=google_scholar&hl=en"
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "current": 11,
+        "previous": "https://scholar.google.com/scholar?start=90&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=110&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "6": "https://scholar.google.com/scholar?start=50&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "7": "https://scholar.google.com/scholar?start=60&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "8": "https://scholar.google.com/scholar?start=70&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=80&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=90&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=110&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "13": "https://scholar.google.com/scholar?start=120&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "14": "https://scholar.google.com/scholar?start=130&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "15": "https://scholar.google.com/scholar?start=140&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 11,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+        "other_pages": {
+            "6": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=50",
+            "7": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=60",
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=70",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=80",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+            "13": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=120",
+            "14": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+            "15": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140"
+        }
+    }
+}

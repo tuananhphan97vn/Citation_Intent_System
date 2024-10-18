@@ -1,0 +1,321 @@
+{
+    "search_metadata": {
+        "id": "671297e4400bd5379a2c33d9",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/dcbc643a8cc0c967/671297e4400bd5379a2c33d9.json",
+        "created_at": "2024-10-18 17:16:20 UTC",
+        "processed_at": "2024-10-18 17:16:20 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=150&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/dcbc643a8cc0c967/671297e4400bd5379a2c33d9.html",
+        "total_time_taken": 0.62
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 150,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 16,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "A bilevel optimal control method and application to the hybrid electric vehicle",
+            "result_id": "XUn3tl1ZlTEJ",
+            "link": "https://hal.science/hal-04359870/",
+            "snippet": "In this article we present a new numerical method based on a bilevel decomposition of optimal control problems. A strong connection between the proposed method and the …",
+            "publication_info": {
+                "summary": "O Cots, R Dutto, S Jan, S Laporte - 2023 - hal.science",
+                "authors": [
+                    {
+                        "name": "O Cots",
+                        "link": "https://scholar.google.com/citations?user=JVn4K6UAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=JVn4K6UAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "JVn4K6UAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "hal.science",
+                    "file_format": "PDF",
+                    "link": "https://hal.science/hal-04359870/document"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=XUn3tl1ZlTEJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:XUn3tl1ZlTEJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AXUn3tl1ZlTEJ%3Ascholar.google.com%2F&start=150",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=3572860138424846685&hl=en&as_sdt=5,31",
+                    "cluster_id": "3572860138424846685",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=3572860138424846685&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:XUn3tl1ZlTEJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 2,
+            "title": "Improved Sparrow Search Algorithm Optimized Neural Network Analysis of Traffic Congestion",
+            "result_id": "4LdcLuMTma8J",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-53404-1_10",
+            "snippet": "Accurate traffic congestion prediction is of great significance for applications such as traffic control and route optimization. However, the traffic situation is affected by many complex …",
+            "publication_info": {
+                "summary": "L Banban, L Zhigang - International Conference on 6GN for Future …, 2023 - Springer"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=4LdcLuMTma8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:4LdcLuMTma8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A4LdcLuMTma8J%3Ascholar.google.com%2F&start=150"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Creating and Embedding Spatio-Temporal Knowledge Graphs.",
+            "result_id": "9_vdx1gq9HcJ",
+            "type": "Pdf",
+            "link": "https://iswc2023.semanticweb.org/wp-content/uploads/2023/11/ISWC2023_paper_372.pdf",
+            "snippet": "An important paradigm of spatial analysis is the first law of geography, formulated by Tobler, which states that every geographic object is related to each other, but near geographic …",
+            "publication_info": {
+                "summary": "M Böckling - DC@ ISWC, 2023 - iswc2023.semanticweb.org",
+                "authors": [
+                    {
+                        "name": "M Böckling",
+                        "link": "https://scholar.google.com/citations?user=pUwo2gkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=pUwo2gkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "pUwo2gkAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "semanticweb.org",
+                    "file_format": "PDF",
+                    "link": "https://iswc2023.semanticweb.org/wp-content/uploads/2023/11/ISWC2023_paper_372.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=9_vdx1gq9HcJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:9_vdx1gq9HcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A9_vdx1gq9HcJ%3Ascholar.google.com%2F&start=150",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=8643580145629527031&hl=en&as_sdt=5,31",
+                    "cluster_id": "8643580145629527031",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=8643580145629527031&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:9_vdx1gq9HcJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "BoxNet: Fine-grained Action Classification in Boxing",
+            "result_id": "hsUPXe9RdCAJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10327379/",
+            "snippet": "The skeleton data is widely used in general action recognition since it is robustly distinguish the action operator and complex background. When it comes to more fine-grained scenario …",
+            "publication_info": {
+                "summary": "Q Yang, S Xia - 2023 35th Chinese Control and Decision …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "S Xia",
+                        "link": "https://scholar.google.com/citations?user=GaMNZdkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=GaMNZdkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "GaMNZdkAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=hsUPXe9RdCAJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:hsUPXe9RdCAJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AhsUPXe9RdCAJ%3Ascholar.google.com%2F&start=150"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Training and evaluating deep learning models on road graphs for traffic prediction using SUMO",
+            "result_id": "yMsW6Dt5CdwJ",
+            "link": "https://serwiss.bib.hs-hannover.de/frontdoor/index/index/docId/3109",
+            "snippet": "The escalation of traffic volume in urban areas poses multifaceted challenges including increased accident risks, congestion, and prolonged travel times. Traditional approaches of …",
+            "publication_info": {
+                "summary": "E Vogel - 2024 - serwiss.bib.hs-hannover.de"
+            },
+            "resources": [
+                {
+                    "title": "hs-hannover.de",
+                    "file_format": "PDF",
+                    "link": "https://serwiss.bib.hs-hannover.de/files/3109/Bachelorarbeit_ErikVogel_DeepSUMO.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=yMsW6Dt5CdwJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:yMsW6Dt5CdwJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AyMsW6Dt5CdwJ%3Ascholar.google.com%2F&start=150",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=15855337261338381256&hl=en&as_sdt=5,31",
+                    "cluster_id": "15855337261338381256",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=15855337261338381256&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:yMsW6Dt5CdwJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 6,
+            "title": "Dynamic Deeper Graph Convolutional Network for Traffic Prediction",
+            "result_id": "p3x4oDM5gvQJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10164956/",
+            "snippet": "Graph convolutional networks (GCNs) are widely used in traffic prediction because they can better represent the structure of traffic network. GCNs can obtain deeper feature …",
+            "publication_info": {
+                "summary": "Z Cui, J Zhang, H Ding, G Noh… - 2023 IEEE 3rd …, 2023 - ieeexplore.ieee.org"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=p3x4oDM5gvQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:p3x4oDM5gvQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Ap3x4oDM5gvQJ%3Ascholar.google.com%2F&start=150"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Multi-Spatial Scale Spatio-Temporal Transformer: A Refined Traffic Data Forecasting Method",
+            "result_id": "REwvxb0YbkEJ",
+            "link": "https://www.researchsquare.com/article/rs-3190420/latest",
+            "snippet": "Accurate traffic data forecasting is essential to improve the efficiency of intelligent transportation systems. Existing traffic prediction models only model spatial dependency …",
+            "publication_info": {
+                "summary": "悦张 - 2023 - researchsquare.com"
+            },
+            "resources": [
+                {
+                    "title": "researchsquare.com",
+                    "file_format": "PDF",
+                    "link": "https://www.researchsquare.com/article/rs-3190420/latest.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=REwvxb0YbkEJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:REwvxb0YbkEJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AREwvxb0YbkEJ%3Ascholar.google.com%2F&start=150",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:REwvxb0YbkEJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Exploring the horizon of AI development: Navigating constraints of chips and power in the technological landscape",
+            "result_id": "4M6XxMvzWm8J",
+            "link": "https://www.ewadirect.com/proceedings/ace/article/view/13822",
+            "snippet": "With the proliferation of AI technology, machine learning has emerged as a cornerstone of AI systems, facilitating pattern recognition and decision-making through robust data analysis …",
+            "publication_info": {
+                "summary": "W Hou - Applied and Computational Engineering, 2024 - ewadirect.com"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=4M6XxMvzWm8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:4M6XxMvzWm8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A4M6XxMvzWm8J%3Ascholar.google.com%2F&start=150",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:4M6XxMvzWm8J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 9,
+            "title": "Use of Subgraph Mining in Histopathology Image Classification",
+            "result_id": "M-tnjepC1uoJ",
+            "link": "https://search.proquest.com/openview/cc47ced0f0162898758828a05acdcb07/1?pq-origsite=gscholar&cbl=2026366&diss=y",
+            "snippet": "Breast cancer is the most common cancer in women and has a high mortality rate. Computer vision techniques can be used to help experts to analyze the breast cancer biopsy samples …",
+            "publication_info": {
+                "summary": "B Berdiyev - 2022 - search.proquest.com"
+            },
+            "resources": [
+                {
+                    "title": "bilkent.edu.tr",
+                    "file_format": "PDF",
+                    "link": "https://repository.bilkent.edu.tr/bitstreams/dbc863cf-35e0-4f60-ae6b-0987b0aa5cd9/download"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=M-tnjepC1uoJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:M-tnjepC1uoJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AM-tnjepC1uoJ%3Ascholar.google.com%2F&start=150",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=16921786225053395763&hl=en&as_sdt=5,31",
+                    "cluster_id": "16921786225053395763",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=16921786225053395763&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 10,
+            "title": "Generalized Taxonomy-Guided Graph Neural Networks",
+            "result_id": "TRrDg3I1yLMJ",
+            "type": "Pdf",
+            "link": "https://www.ijcai.org/proceedings/2024/0289.pdf",
+            "snippet": "Graph neural networks have been demonstrated to be effective analytic apparatus for mining network data. Most real-world networks are inherently hierarchical, offering unique …",
+            "publication_info": {
+                "summary": "Y Zhou, JW Di Jin, D He, Z Yu, W Zhang - ijcai.org",
+                "authors": [
+                    {
+                        "name": "D He",
+                        "link": "https://scholar.google.com/citations?user=JyqwTr4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=JyqwTr4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "JyqwTr4AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ijcai.org",
+                    "file_format": "PDF",
+                    "link": "https://www.ijcai.org/proceedings/2024/0289.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=TRrDg3I1yLMJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:TRrDg3I1yLMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ATRrDg3I1yLMJ%3Ascholar.google.com%2F&start=150",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:TRrDg3I1yLMJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 16,
+        "previous": "https://scholar.google.com/scholar?start=140&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=160&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "8": "https://scholar.google.com/scholar?start=72&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=82&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=92&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "11": "https://scholar.google.com/scholar?start=102&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=112&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "13": "https://scholar.google.com/scholar?start=122&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "14": "https://scholar.google.com/scholar?start=132&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "15": "https://scholar.google.com/scholar?start=142&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "17": "https://scholar.google.com/scholar?start=162&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 16,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=160",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=160",
+        "other_pages": {
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=72",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=82",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=92",
+            "11": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=102",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=112",
+            "13": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=122",
+            "14": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=132",
+            "15": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=142",
+            "17": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=162"
+        }
+    }
+}

@@ -1,0 +1,352 @@
+{
+    "search_metadata": {
+        "id": "671297e5d0253ef99b937120",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/ee780d00a856a9e1/671297e5d0253ef99b937120.json",
+        "created_at": "2024-10-18 17:16:21 UTC",
+        "processed_at": "2024-10-18 17:16:21 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=160&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/ee780d00a856a9e1/671297e5d0253ef99b937120.html",
+        "total_time_taken": 1.15
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 160,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 17,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "The slow lane: a study on the diffusion of full-electric cars in Italy",
+            "result_id": "DAKqzvH_Rm8J",
+            "link": "https://services.bepress.com/feem/paper1446/",
+            "snippet": "The transition to a zero-emission car fleet is a pivotal element of Europe's decarbonisation strategy. Italy's participation in this trajectory is significant, given the size of its car fleet …",
+            "publication_info": {
+                "summary": "M Demir, A Sileo, A Zanoni - 2024 - services.bepress.com"
+            },
+            "resources": [
+                {
+                    "title": "bepress.com",
+                    "file_format": "PDF",
+                    "link": "https://services.bepress.com/cgi/viewcontent.cgi?article=2461&context=feem"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=DAKqzvH_Rm8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:DAKqzvH_Rm8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ADAKqzvH_Rm8J%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:DAKqzvH_Rm8J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 2,
+            "title": "Predictability Capabilities of Human Mobility Models",
+            "result_id": "iz7Ij4KSlywJ",
+            "type": "Pdf",
+            "link": "https://bia.unibz.it/view/pdfCoverPage?instCode=39UBZ_INST&filePid=13310858400001241&download=true",
+            "snippet": "Effectively capturing individual-and collective-level human mobility is paramount to solving many modern societal challenges. In the last few years, thanks to the availability of big …",
+            "publication_info": {
+                "summary": "M Luca - bia.unibz.it",
+                "authors": [
+                    {
+                        "name": "M Luca",
+                        "link": "https://scholar.google.com/citations?user=wKMrZZgAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=wKMrZZgAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "wKMrZZgAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "unibz.it",
+                    "file_format": "PDF",
+                    "link": "https://bia.unibz.it/view/pdfCoverPage?instCode=39UBZ_INST&filePid=13310858400001241&download=true"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=iz7Ij4KSlywJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:iz7Ij4KSlywJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aiz7Ij4KSlywJ%3Ascholar.google.com%2F&start=160",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=3213197948607807115&hl=en&as_sdt=5,31",
+                    "cluster_id": "3213197948607807115",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=3213197948607807115&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:iz7Ij4KSlywJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Topological and Temporal Data Augmentation for Temporal Graph Networks",
+            "result_id": "LDwnV38RFPQJ",
+            "link": "https://openreview.net/forum?id=HSgx1aJeR8",
+            "snippet": "Temporal graphs are extensively employed to represent evolving networks, finding applications across diverse fields such as transportation systems, social networks, and …",
+            "publication_info": {
+                "summary": "H Liu, J Wang, K Ding, J Caverlee - Temporal Graph Learning Workshop … - openreview.net",
+                "authors": [
+                    {
+                        "name": "H Liu",
+                        "link": "https://scholar.google.com/citations?user=Y8_AJX0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Y8_AJX0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Y8_AJX0AAAAJ"
+                    },
+                    {
+                        "name": "K Ding",
+                        "link": "https://scholar.google.com/citations?user=PI3myr8AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=PI3myr8AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "PI3myr8AAAAJ"
+                    },
+                    {
+                        "name": "J Caverlee",
+                        "link": "https://scholar.google.com/citations?user=LB1dq_sAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=LB1dq_sAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "LB1dq_sAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "openreview.net",
+                    "file_format": "PDF",
+                    "link": "https://openreview.net/pdf?id=HSgx1aJeR8"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=LDwnV38RFPQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:LDwnV38RFPQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ALDwnV38RFPQJ%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:LDwnV38RFPQJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "Predição do número de alunos por municípios do projeto “Saúde com Agente” utilizando Redes Neurais de Grafos (GNN)",
+            "result_id": "OGMu1NA8JwsJ",
+            "link": "https://lume.ufrgs.br/handle/10183/276963",
+            "snippet": "A previsão de dados espaciais tem ganhado crescente importância em diversas áreas do conhecimento. Nesse contexto, modelos baseados em redes neurais e aprendizado …",
+            "publication_info": {
+                "summary": "LM Puttlitz - 2024 - lume.ufrgs.br"
+            },
+            "resources": [
+                {
+                    "title": "ufrgs.br",
+                    "file_format": "PDF",
+                    "link": "https://lume.ufrgs.br/bitstream/handle/10183/276963/001208025.pdf?sequence=1"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=OGMu1NA8JwsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:OGMu1NA8JwsJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AOGMu1NA8JwsJ%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:OGMu1NA8JwsJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 5,
+            "title": "ReG-NAS: Graph Neural Network Architecture Search using Regression Proxy Task",
+            "result_id": "L27cQWrsXYcJ",
+            "link": "https://openreview.net/forum?id=t7HIN3fUAUu",
+            "snippet": "Neural Architecture Search (NAS) has become a focus that has been extensively researched in recent years. Innovative achievements are yielded from the area like …",
+            "publication_info": {
+                "summary": "B Wei, C Hao - openreview.net",
+                "authors": [
+                    {
+                        "name": "C Hao",
+                        "link": "https://scholar.google.com/citations?user=fWEIPSUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=fWEIPSUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "fWEIPSUAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "openreview.net",
+                    "file_format": "PDF",
+                    "link": "https://openreview.net/pdf?id=t7HIN3fUAUu"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=L27cQWrsXYcJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:L27cQWrsXYcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AL27cQWrsXYcJ%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:L27cQWrsXYcJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 6,
+            "title": "An application of graph neural networks for stock market data",
+            "result_id": "8e6nMhuHnQ0J",
+            "type": "Pdf",
+            "link": "https://www.eventiotic.com/eventiotic/files/Papers/URL/ee2a47a5-7a4c-4460-9f62-5dc57bf5b8f1.pdf",
+            "snippet": "This research is developed in order to describe the behavior present in the market and Limit Order book dynamics, using the concepts of supervised and unsupervised learning. The …",
+            "publication_info": {
+                "summary": "D Radojičić, N Radojičić - eventiotic.com",
+                "authors": [
+                    {
+                        "name": "N Radojičić",
+                        "link": "https://scholar.google.com/citations?user=SH42-usAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=SH42-usAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "SH42-usAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "eventiotic.com",
+                    "file_format": "PDF",
+                    "link": "https://www.eventiotic.com/eventiotic/files/Papers/URL/ee2a47a5-7a4c-4460-9f62-5dc57bf5b8f1.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=8e6nMhuHnQ0J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:8e6nMhuHnQ0J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A8e6nMhuHnQ0J%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:8e6nMhuHnQ0J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Simulating Traffic Networks",
+            "result_id": "M_FZU3NdIvsJ",
+            "type": "Citation",
+            "snippet": "",
+            "publication_info": {
+                "summary": "S Driving"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=M_FZU3NdIvsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:M_FZU3NdIvsJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AM_FZU3NdIvsJ%3Ascholar.google.com%2F&start=160"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Bilevel Programming Model of Discrete Traffic Network Based on Machine Learning Optimization Hybrid Algorithm",
+            "result_id": "YCy9Uq7Gm14J",
+            "type": "Pdf",
+            "link": "http://scholar-press.com/uploads/papers/CNd4Vfl3tzj5WUqMOVGym0OsU2mhEUO0LccdsZkQ.pdf",
+            "snippet": "With the rise of living standards, more and more people choose to travel by car, which increases the pressure on the urban traffic network (TN). The TN needs to be re planned and …",
+            "publication_info": {
+                "summary": "J Li - 2022 - scholar-press.com"
+            },
+            "resources": [
+                {
+                    "title": "scholar-press.com",
+                    "file_format": "PDF",
+                    "link": "http://scholar-press.com/uploads/papers/CNd4Vfl3tzj5WUqMOVGym0OsU2mhEUO0LccdsZkQ.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=YCy9Uq7Gm14J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:YCy9Uq7Gm14J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AYCy9Uq7Gm14J%3Ascholar.google.com%2F&start=160",
+                "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:YCy9Uq7Gm14J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 9,
+            "title": "GA2T: 结合图注意力网络的交通流预测模型",
+            "result_id": "KlglpblwyLsJ",
+            "link": "https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2023.19758",
+            "snippet": "交通流预测是智能交通系统的核心组成部分. 针对当前交通流预测方法准确率低的问题, 提出一种交通流预测模型GA2T. 通过构建具有融合式编解码器的Transformer …",
+            "publication_info": {
+                "summary": "祁舒畅， 刘起东， 刘超越， 徐明亮， 邱紫鑫 - 计算机辅助设计与图形学学报, 2023 - jcad.cn"
+            },
+            "resources": [
+                {
+                    "title": "jcad.cn",
+                    "file_format": "PDF",
+                    "link": "https://www.jcad.cn/cn/article/pdf/preview/10.3724/SP.J.1089.2023.19758.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=KlglpblwyLsJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:KlglpblwyLsJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AKlglpblwyLsJ%3Ascholar.google.com%2F&start=160",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=13531189023076603946&hl=en&as_sdt=5,31",
+                    "cluster_id": "13531189023076603946",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13531189023076603946&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:KlglpblwyLsJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 10,
+            "title": "Derin ögrenme ile çizge zaman serilerinin analizi",
+            "result_id": "xRAQ9XajddMJ",
+            "link": "http://193.140.108.196:8080/handle/20.500.11851/10593",
+            "snippet": "Zaman serileri bir nesnenin zamansal değişimini anlamak için kullanılır. Finans, enerji sektörü, trafik gibi çeşitli alanlarda zaman serileri ile karşılaşılmaktadır. Ayrıca anomali …",
+            "publication_info": {
+                "summary": "MM Keskin - 2022 - 193.140.108.196"
+            },
+            "resources": [
+                {
+                    "title": "193.140.108.196",
+                    "file_format": "PDF",
+                    "link": "http://193.140.108.196:8080/bitstream/20.500.11851/10593/1/791695.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=xRAQ9XajddMJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:xRAQ9XajddMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AxRAQ9XajddMJ%3Ascholar.google.com%2F&start=160",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=15237264645590880453&hl=en&as_sdt=5,31",
+                    "cluster_id": "15237264645590880453",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=15237264645590880453&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:xRAQ9XajddMJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 17,
+        "previous": "https://scholar.google.com/scholar?start=150&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=170&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "8": "https://scholar.google.com/scholar?start=72&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=82&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=92&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "11": "https://scholar.google.com/scholar?start=102&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=112&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "13": "https://scholar.google.com/scholar?start=122&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "14": "https://scholar.google.com/scholar?start=132&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "15": "https://scholar.google.com/scholar?start=142&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "16": "https://scholar.google.com/scholar?start=152&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 17,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=150",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=150",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=170",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=170",
+        "other_pages": {
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=72",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=82",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=92",
+            "11": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=102",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=112",
+            "13": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=122",
+            "14": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=132",
+            "15": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=142",
+            "16": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=152"
+        }
+    }
+}

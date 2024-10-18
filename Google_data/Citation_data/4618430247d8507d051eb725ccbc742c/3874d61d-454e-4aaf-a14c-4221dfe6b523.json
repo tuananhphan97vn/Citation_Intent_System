@@ -1,0 +1,400 @@
+{
+    "search_metadata": {
+        "id": "671297dd8de63c208a508964",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/e762a1a12b3d3367/671297dd8de63c208a508964.json",
+        "created_at": "2024-10-18 17:16:13 UTC",
+        "processed_at": "2024-10-18 17:16:13 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=130&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/e762a1a12b3d3367/671297dd8de63c208a508964.html",
+        "total_time_taken": 0.81
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 130,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 14,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Intelligent Spatial Prediction and Interpolation Methods",
+            "result_id": "ekt3F1y9SGQJ",
+            "link": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003308423-7/intelligent-spatial-prediction-interpolation-methods-di-zhu-guofeng-cao",
+            "snippet": "Spatial prediction methods represent a set of tools for obtaining accurate data of geographic variables from limited observations. As an emerging subfield of GIScience that uses artificial …",
+            "publication_info": {
+                "summary": "D Zhu, G Cao - Handbook of Geospatial Artificial Intelligence, 2024 - taylorfrancis.com",
+                "authors": [
+                    {
+                        "name": "D Zhu",
+                        "link": "https://scholar.google.com/citations?user=1hQ-KuEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=1hQ-KuEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "1hQ-KuEAAAAJ"
+                    },
+                    {
+                        "name": "G Cao",
+                        "link": "https://scholar.google.com/citations?user=9M4g4nUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=9M4g4nUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "9M4g4nUAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ekt3F1y9SGQJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ekt3F1y9SGQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aekt3F1y9SGQJ%3Ascholar.google.com%2F&start=130",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:ekt3F1y9SGQJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 2,
+            "title": "A Fundamental Model with Stable Interpretability for Traffic Forecasting",
+            "result_id": "eFvQ_sosBzAJ",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3615889.3628510",
+            "snippet": "Deep learning models have been widely applied in traffic prediction and analysis. Notably, attention-based models like Graph Attention Network (GAT) have brought significant insights …",
+            "publication_info": {
+                "summary": "X Gou, L Hu, D Wang, X Zhang - … Workshop on Geo-Privacy and Data …, 2023 - dl.acm.org",
+                "authors": [
+                    {
+                        "name": "X Gou",
+                        "link": "https://scholar.google.com/citations?user=wVIIl84AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=wVIIl84AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "wVIIl84AAAAJ"
+                    },
+                    {
+                        "name": "L Hu",
+                        "link": "https://scholar.google.com/citations?user=C-3UuqsAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=C-3UuqsAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "C-3UuqsAAAAJ"
+                    },
+                    {
+                        "name": "D Wang",
+                        "link": "https://scholar.google.com/citations?user=5hGRe_QAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=5hGRe_QAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "5hGRe_QAAAAJ"
+                    },
+                    {
+                        "name": "X Zhang",
+                        "link": "https://scholar.google.com/citations?user=BhRJe4wAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=BhRJe4wAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "BhRJe4wAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "acm.org",
+                    "file_format": "PDF",
+                    "link": "https://dl.acm.org/doi/pdf/10.1145/3615889.3628510"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=eFvQ_sosBzAJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:eFvQ_sosBzAJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AeFvQ_sosBzAJ%3Ascholar.google.com%2F&start=130",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=3460784089027599224&hl=en&as_sdt=5,31",
+                    "cluster_id": "3460784089027599224",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=3460784089027599224&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 3,
+            "title": "Modeling Environment Intelligent Transport System for Eco-Friendly Urban Mobility.",
+            "result_id": "VVOt8WBZWe8J",
+            "type": "Pdf",
+            "link": "https://ceur-ws.org/Vol-3675/paper9.pdf",
+            "snippet": "The research in this paper focuses on developing a modeling environment for urban mobility systems and traffic flow services. A modeling environment for urban mobility systems and …",
+            "publication_info": {
+                "summary": "V Pavlyshyn, E Manziuk, O Barmak, I Krak… - IntelITSIS, 2024 - ceur-ws.org",
+                "authors": [
+                    {
+                        "name": "E Manziuk",
+                        "link": "https://scholar.google.com/citations?user=bwW-dBEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=bwW-dBEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "bwW-dBEAAAAJ"
+                    },
+                    {
+                        "name": "O Barmak",
+                        "link": "https://scholar.google.com/citations?user=pl4wbzoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=pl4wbzoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "pl4wbzoAAAAJ"
+                    },
+                    {
+                        "name": "I Krak",
+                        "link": "https://scholar.google.com/citations?user=oJB9PpYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=oJB9PpYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "oJB9PpYAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ceur-ws.org",
+                    "file_format": "PDF",
+                    "link": "https://ceur-ws.org/Vol-3675/paper9.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=VVOt8WBZWe8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:VVOt8WBZWe8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AVVOt8WBZWe8J%3Ascholar.google.com%2F&start=130",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:VVOt8WBZWe8J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "An Efficient Two-stage Gradient Boosting Framework for Short-term Traffic State Estimation",
+            "result_id": "_GG3PUyuAz4J",
+            "link": "https://arxiv.org/abs/2302.10400",
+            "snippet": "Real-time traffic state estimation is essential for intelligent transportation systems. The NeurIPS 2022 Traffic4cast challenge provides an excellent testbed for benchmarking short …",
+            "publication_info": {
+                "summary": "Y Lu - arXiv preprint arXiv:2302.10400, 2023 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "Y Lu",
+                        "link": "https://scholar.google.com/citations?user=u45sF6kAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=u45sF6kAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "u45sF6kAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2302.10400"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=_GG3PUyuAz4J",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=4468606897757839868&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "4468606897757839868",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=4468606897757839868&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:_GG3PUyuAz4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A_GG3PUyuAz4J%3Ascholar.google.com%2F&start=130",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=4468606897757839868&hl=en&as_sdt=5,31",
+                    "cluster_id": "4468606897757839868",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=4468606897757839868&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:_GG3PUyuAz4J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Fundamental problems in graph learning: optimization, generalization, privacy, and model design",
+            "result_id": "CTsMAR_NVMkJ",
+            "link": "https://etda.libraries.psu.edu/catalog/24108wxc272",
+            "snippet": "This dissertation extensively investigates various aspects of Graph Neural Networks (GNNs) in the context of graph representation learning, a field that has made significant strides in …",
+            "publication_info": {
+                "summary": "W Cong - 2024 - etda.libraries.psu.edu",
+                "authors": [
+                    {
+                        "name": "W Cong",
+                        "link": "https://scholar.google.com/citations?user=yYHxZ6MAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yYHxZ6MAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "yYHxZ6MAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "psu.edu",
+                    "file_format": "PDF",
+                    "link": "https://etda.libraries.psu.edu/files/final_submissions/30023"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=CTsMAR_NVMkJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:CTsMAR_NVMkJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ACTsMAR_NVMkJ%3Ascholar.google.com%2F&start=130",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:CTsMAR_NVMkJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 6,
+            "title": "On Rainbow Vertex Antimagic Coloring and Its Application on STGNN Time Series Forecasting on Subsidized Diesel Consumption.",
+            "result_id": "c1DqKInmDAgJ",
+            "type": "Pdf",
+            "link": "https://www.iaeng.org/IJAM/issues_v54/issue_5/IJAM_54_5_22.pdf",
+            "snippet": "Let G=(V, E) be a simple, connected and un-directed graph. We introduce a new notion of rainbow vertex antimagic coloring. This is a natural expansion of rainbow vertex coloring …",
+            "publication_info": {
+                "summary": "IL Mursyidah, IH Agustin, RI Baihaki… - … International Journal of …, 2024 - iaeng.org",
+                "authors": [
+                    {
+                        "name": "IL Mursyidah",
+                        "link": "https://scholar.google.com/citations?user=ffU-LyEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ffU-LyEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "ffU-LyEAAAAJ"
+                    },
+                    {
+                        "name": "IH Agustin",
+                        "link": "https://scholar.google.com/citations?user=iikwzpQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=iikwzpQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "iikwzpQAAAAJ"
+                    },
+                    {
+                        "name": "RI Baihaki",
+                        "link": "https://scholar.google.com/citations?user=IQgblnUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=IQgblnUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "IQgblnUAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "iaeng.org",
+                    "file_format": "PDF",
+                    "link": "https://www.iaeng.org/IJAM/issues_v54/issue_5/IJAM_54_5_22.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=c1DqKInmDAgJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:c1DqKInmDAgJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Ac1DqKInmDAgJ%3Ascholar.google.com%2F&start=130",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=580091928795304051&hl=en&as_sdt=5,31",
+                    "cluster_id": "580091928795304051",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=580091928795304051&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:c1DqKInmDAgJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Faster abnormality localization and recognition in a secured video bitstream by implementation of video encryption techniques",
+            "result_id": "nA8KJanmR5oJ",
+            "link": "https://www.matec-conferences.org/articles/matecconf/abs/2024/04/matecconf_icmed2024_01147/matecconf_icmed2024_01147.html",
+            "snippet": "Cloud video storage uses an encrypted format to protect user data. It means encrypted video processing is an essential part of secured cloud storage. In order to detect suspicious or …",
+            "publication_info": {
+                "summary": "M Sivalakshmi, KR Prasad… - MATEC Web of …, 2024 - matec-conferences.org"
+            },
+            "resources": [
+                {
+                    "title": "matec-conferences.org",
+                    "file_format": "PDF",
+                    "link": "https://www.matec-conferences.org/articles/matecconf/pdf/2024/04/matecconf_icmed2024_01147.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=nA8KJanmR5oJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:nA8KJanmR5oJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AnA8KJanmR5oJ%3Ascholar.google.com%2F&start=130"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Neural ODE-Guided Imputation Computing for Building IoT Time Series with High Missing Gaps",
+            "result_id": "tTOuhdJYcwcJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10580710/",
+            "snippet": "Imputing missing data in Building Internet of Things (BIoT) poses a significant challenge due to the complex multi-dimensional variations and the inevitable occurrence of long-span …",
+            "publication_info": {
+                "summary": "R Zhao, C Chen, R Li, S Liu, J Liu… - 2024 27th International …, 2024 - ieeexplore.ieee.org"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=tTOuhdJYcwcJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:tTOuhdJYcwcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AtTOuhdJYcwcJ%3Ascholar.google.com%2F&start=130"
+            }
+        },
+        {
+            "position": 9,
+            "title": "Wavelet Decomposition Self-Supervised Neural Networks for Traffic Flow Forecasting",
+            "result_id": "5en7Yu_jJK8J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10662847/",
+            "snippet": "Accurate traffic flow forecasting is of great significance for improving traffic flow efficiency, optimizing public traffic resources, and improving traffic management capability. However …",
+            "publication_info": {
+                "summary": "Y Li, Z Sun, C Du, Z Jiang, Y Xia - 2024 43rd Chinese Control …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "Z Sun",
+                        "link": "https://scholar.google.com/citations?user=l2_g4YIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=l2_g4YIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "l2_g4YIAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=5en7Yu_jJK8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:5en7Yu_jJK8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A5en7Yu_jJK8J%3Ascholar.google.com%2F&start=130"
+            }
+        },
+        {
+            "position": 10,
+            "title": "Comparative Analysis of Two Graph Neural Network-Based Approaches to Traffic Speed Forecasting",
+            "result_id": "xG-VTUtUlTkJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10420996/",
+            "snippet": "Traffic forecasting is an important area of research in transportation technology since it can help planners and engineers make informed decisions about how to manage traffic and …",
+            "publication_info": {
+                "summary": "R Ojha, H Poddar, A Mohanty, V Jadhav… - … Conference on Next …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "H Poddar",
+                        "link": "https://scholar.google.com/citations?user=MQZBTE4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=MQZBTE4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "MQZBTE4AAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=xG-VTUtUlTkJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:xG-VTUtUlTkJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AxG-VTUtUlTkJ%3Ascholar.google.com%2F&start=130"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 14,
+        "previous": "https://scholar.google.com/scholar?start=120&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=140&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "8": "https://scholar.google.com/scholar?start=72&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=82&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=92&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "11": "https://scholar.google.com/scholar?start=102&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=112&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "13": "https://scholar.google.com/scholar?start=122&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "15": "https://scholar.google.com/scholar?start=142&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "16": "https://scholar.google.com/scholar?start=152&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "17": "https://scholar.google.com/scholar?start=162&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 14,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=120",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=120",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140",
+        "other_pages": {
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=72",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=82",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=92",
+            "11": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=102",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=112",
+            "13": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=122",
+            "15": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=142",
+            "16": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=152",
+            "17": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=162"
+        }
+    }
+}

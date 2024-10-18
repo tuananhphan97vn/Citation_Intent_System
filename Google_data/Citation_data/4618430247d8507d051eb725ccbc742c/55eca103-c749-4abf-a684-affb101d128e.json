@@ -1,0 +1,473 @@
+{
+    "search_metadata": {
+        "id": "671297c96de1e4d5ca1c0e00",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/49f9fe66819e8dc4/671297c96de1e4d5ca1c0e00.json",
+        "created_at": "2024-10-18 17:15:53 UTC",
+        "processed_at": "2024-10-18 17:15:53 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=50&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/49f9fe66819e8dc4/671297c96de1e4d5ca1c0e00.html",
+        "total_time_taken": 2.16
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 50,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 6,
+        "time_taken_displayed": 0.02
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Flight delay propagation modeling: Data, Methods, and Future opportunities",
+            "result_id": "eoJ0tKf7oQ8J",
+            "link": "https://www.sciencedirect.com/science/article/pii/S1366554524001169",
+            "snippet": "Persistent flight delays have continually posed a substantial challenge within the aviation sector. These delays infiltrate the air transportation network, precipitating disruptions to …",
+            "publication_info": {
+                "summary": "C Li, J Mao, L Li, J Wu, L Zhang, J Zhu, Z Pan - … Research Part E: Logistics …, 2024 - Elsevier",
+                "authors": [
+                    {
+                        "name": "J Mao",
+                        "link": "https://scholar.google.com/citations?user=cDzZKz8AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=cDzZKz8AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "cDzZKz8AAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=eoJ0tKf7oQ8J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:eoJ0tKf7oQ8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AeoJ0tKf7oQ8J%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 5,
+                    "link": "https://scholar.google.com/scholar?cluster=1126458079524979322&hl=en&as_sdt=5,31",
+                    "cluster_id": "1126458079524979322",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=1126458079524979322&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 2,
+            "title": "Spatial-temporal graph attention fuser for calibration in iot air pollution monitoring systems",
+            "result_id": "hoaLQtix1PUJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10325090/",
+            "snippet": "The use of Internet of Things (IoT) sensors for air pollution monitoring has significantly increased, resulting in the deployment of low-cost sensors. Despite this advancement …",
+            "publication_info": {
+                "summary": "KF Niresi, M Zhao, H Bissig, H Baumann… - 2023 IEEE …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "KF Niresi",
+                        "link": "https://scholar.google.com/citations?user=3qQfrzwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=3qQfrzwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "3qQfrzwAAAAJ"
+                    },
+                    {
+                        "name": "M Zhao",
+                        "link": "https://scholar.google.com/citations?user=sBJwDUYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=sBJwDUYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "sBJwDUYAAAAJ"
+                    },
+                    {
+                        "name": "H Baumann",
+                        "link": "https://scholar.google.com/citations?user=LYbudUoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=LYbudUoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "LYbudUoAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2309.04508"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=hoaLQtix1PUJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=17713978776742495878&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "17713978776742495878",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=17713978776742495878&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:hoaLQtix1PUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AhoaLQtix1PUJ%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=17713978776742495878&hl=en&as_sdt=5,31",
+                    "cluster_id": "17713978776742495878",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=17713978776742495878&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 3,
+            "title": "Review on machine learning-based traffic flow prediction methods",
+            "result_id": "QpaRcteilf8J",
+            "type": "Html",
+            "link": "https://transport.chd.edu.cn/en/article/doi/10.19818/j.cnki.1671-1637.2023.03.003",
+            "snippet": "The research status and development trend of macro traffic flow prediction of designated road sections and regional road network at home and abroad were analyzed by literature …",
+            "publication_info": {
+                "summary": "YAO Jun-feng, HE Rui, SHI Tong-tong… - 交通运输工程 …, 2023 - transport.chd.edu.cn"
+            },
+            "resources": [
+                {
+                    "title": "chd.edu.cn",
+                    "file_format": "HTML",
+                    "link": "https://transport.chd.edu.cn/en/article/doi/10.19818/j.cnki.1671-1637.2023.03.003"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=QpaRcteilf8J",
+                "html_version": "https://transport.chd.edu.cn/en/article/doi/10.19818/j.cnki.1671-1637.2023.03.003",
+                "cited_by": {
+                    "total": 5,
+                    "link": "https://scholar.google.com/scholar?cites=18416805297425323586&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "18416805297425323586",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=18416805297425323586&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:QpaRcteilf8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AQpaRcteilf8J%3Ascholar.google.com%2F&start=50",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:QpaRcteilf8J:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "PM2ECGCN: Parallelized spatial-temporal structures of multi-lead ECG with graph convolution network for multi-center cardiac disease diagnosis",
+            "result_id": "-ibTOHxqYHEJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0957417424007358",
+            "snippet": "Cardiovascular diseases (CVDs) are the leading global cause of death. As first-line diagnostic tool for CVDs, electrocardiograms (ECG) non-invasively assess cardiac condition …",
+            "publication_info": {
+                "summary": "D Wang, Q Hu, C Cao, X Feng, H Wu, S Zhu… - Expert Systems with …, 2024 - Elsevier",
+                "authors": [
+                    {
+                        "name": "D Wang",
+                        "link": "https://scholar.google.com/citations?user=LGL964QAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=LGL964QAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "LGL964QAAAAJ"
+                    },
+                    {
+                        "name": "Q Hu",
+                        "link": "https://scholar.google.com/citations?user=7cX0MMIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=7cX0MMIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "7cX0MMIAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=-ibTOHxqYHEJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:-ibTOHxqYHEJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A-ibTOHxqYHEJ%3Ascholar.google.com%2F&start=50"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Automatic incident detection using edge-cloud collaboration based deep learning scheme for intelligent transportation systems",
+            "result_id": "28EveXIc6V0J",
+            "link": "https://link.springer.com/article/10.1007/s10489-023-04673-7",
+            "snippet": "Automatic incident detection not only plays an important role in traffic safety management, but also contributes to the operation of intelligent transportation systems. Although the …",
+            "publication_info": {
+                "summary": "Y Lu, Q Lin, H Chi, JY Chen - Applied Intelligence, 2023 - Springer",
+                "authors": [
+                    {
+                        "name": "Y Lu",
+                        "link": "https://scholar.google.com/citations?user=bC0iXoYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=bC0iXoYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "bC0iXoYAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=28EveXIc6V0J",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=6766971193085903323&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "6766971193085903323",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=6766971193085903323&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:28EveXIc6V0J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A28EveXIc6V0J%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=6766971193085903323&hl=en&as_sdt=5,31",
+                    "cluster_id": "6766971193085903323",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=6766971193085903323&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 6,
+            "title": "Graph Neural Network for spatiotemporal data: methods and applications",
+            "result_id": "lqlZgdlvqIcJ",
+            "link": "https://arxiv.org/abs/2306.00012",
+            "snippet": "In the era of big data, there has been a surge in the availability of data containing rich spatial and temporal information, offering valuable insights into dynamic systems and processes for …",
+            "publication_info": {
+                "summary": "Y Li, D Yu, Z Liu, M Zhang, X Gong, L Zhao - arXiv preprint arXiv …, 2023 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "Y Li",
+                        "link": "https://scholar.google.com/citations?user=qFLHrXwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=qFLHrXwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "qFLHrXwAAAAJ"
+                    },
+                    {
+                        "name": "D Yu",
+                        "link": "https://scholar.google.com/citations?user=45jOSjQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=45jOSjQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "45jOSjQAAAAJ"
+                    },
+                    {
+                        "name": "Z Liu",
+                        "link": "https://scholar.google.com/citations?user=mtpOwccAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=mtpOwccAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "mtpOwccAAAAJ"
+                    },
+                    {
+                        "name": "M Zhang",
+                        "link": "https://scholar.google.com/citations?user=1dUxfIcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=1dUxfIcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "1dUxfIcAAAAJ"
+                    },
+                    {
+                        "name": "L Zhao",
+                        "link": "https://scholar.google.com/citations?user=qnvyqtwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=qnvyqtwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "qnvyqtwAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2306.00012"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=lqlZgdlvqIcJ",
+                "cited_by": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cites=9775185971176384918&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "9775185971176384918",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=9775185971176384918&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:lqlZgdlvqIcJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AlqlZgdlvqIcJ%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=9775185971176384918&hl=en&as_sdt=5,31",
+                    "cluster_id": "9775185971176384918",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=9775185971176384918&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:lqlZgdlvqIcJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Adaptive Fusion Graph Convolutional Networks Based Interpretable Fault Diagnosis Method for HVAC Systems Enhanced by Unlabeled Data",
+            "result_id": "DwwIOktd3boJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S037877882401017X",
+            "snippet": "Fault diagnosis is critical in maintaining the operational stability and reliability of Heating, Ventilation, and Air Conditioning (HVAC) systems, which are crucial for ensuring indoor …",
+            "publication_info": {
+                "summary": "Q Deng, Z Chen, W Zhu, Z Li, Y Yuan, Y Wang - Energy and Buildings, 2024 - Elsevier",
+                "authors": [
+                    {
+                        "name": "Z Chen",
+                        "link": "https://scholar.google.com/citations?user=7Eq0KTAAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=7Eq0KTAAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "7Eq0KTAAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=DwwIOktd3boJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:DwwIOktd3boJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ADwwIOktd3boJ%3Ascholar.google.com%2F&start=50"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Dynamic spatial Transformer WaveNet network for traffic forecasting",
+            "result_id": "a4BFi1S1Om8J",
+            "link": "https://www.worldscientific.com/doi/abs/10.1142/S2196888822500324",
+            "snippet": "Traffic forecasting has emerged as an important task for developing intelligent transportation systems. Recent works focus on representing traffic as graph operation and using graph …",
+            "publication_info": {
+                "summary": "KHN Bui, ND Nguyen, H Yi - Vietnam Journal of Computer Science, 2023 - World Scientific",
+                "authors": [
+                    {
+                        "name": "KHN Bui",
+                        "link": "https://scholar.google.com/citations?user=hrsoOCcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=hrsoOCcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "hrsoOCcAAAAJ"
+                    },
+                    {
+                        "name": "H Yi",
+                        "link": "https://scholar.google.com/citations?user=EQUD_CQAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=EQUD_CQAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "EQUD_CQAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "worldscientific.com",
+                    "file_format": "PDF",
+                    "link": "https://www.worldscientific.com/doi/pdf/10.1142/S2196888822500324"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=a4BFi1S1Om8J",
+                "cited_by": {
+                    "total": 7,
+                    "link": "https://scholar.google.com/scholar?cites=8014917861577687147&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "8014917861577687147",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=8014917861577687147&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:a4BFi1S1Om8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aa4BFi1S1Om8J%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=8014917861577687147&hl=en&as_sdt=5,31",
+                    "cluster_id": "8014917861577687147",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=8014917861577687147&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 9,
+            "title": "Real-time spatio-temporal forecasting with dynamic urban event and vehicle-level flow information",
+            "result_id": "OlK0hQOC_aIJ",
+            "link": "https://wrap.warwick.ac.uk/175521/",
+            "snippet": "Building a real-time spatio-temporal forecasting system is a challenging problem which has many practical applications such as traffic and road network management. Most forecasting …",
+            "publication_info": {
+                "summary": "C Conlan, J Oakley, GV Demirci… - CEUR Workshop …, 2023 - wrap.warwick.ac.uk",
+                "authors": [
+                    {
+                        "name": "C Conlan",
+                        "link": "https://scholar.google.com/citations?user=Xe8RNp4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Xe8RNp4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Xe8RNp4AAAAJ"
+                    },
+                    {
+                        "name": "GV Demirci",
+                        "link": "https://scholar.google.com/citations?user=sFCVYMgAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=sFCVYMgAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "sFCVYMgAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "warwick.ac.uk",
+                    "file_format": "PDF",
+                    "link": "https://wrap.warwick.ac.uk/175521/1/WRAP-real-time-spatio-temporal-forecasting-urban-event-vehicle-level-flow-Conlan-2023.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=OlK0hQOC_aIJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=11744686354891821626&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "11744686354891821626",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=11744686354891821626&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:OlK0hQOC_aIJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AOlK0hQOC_aIJ%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=11744686354891821626&hl=en&as_sdt=5,31",
+                    "cluster_id": "11744686354891821626",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=11744686354891821626&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:OlK0hQOC_aIJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 10,
+            "title": "Traffic flow prediction using big data and gis: a survey of data sources, frameworks, challenges, and opportunities",
+            "result_id": "AIxYThdiqIkJ",
+            "link": "https://journals.uob.edu.bh/handle/123456789/4914",
+            "snippet": "Big Data has been utilized extensively in numerous fields, including the transportation sector. Using several sources of data, traffic conditions can be accurately anticipated and …",
+            "publication_info": {
+                "summary": "S Ahmed, Y Abdel-Hamid… - International Journal of …, 2023 - journals.uob.edu.bh",
+                "authors": [
+                    {
+                        "name": "S Ahmed",
+                        "link": "https://scholar.google.com/citations?user=_vVYrLcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=_vVYrLcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "_vVYrLcAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "uob.edu.bh",
+                    "file_format": "PDF",
+                    "link": "https://journals.uob.edu.bh/bitstream/handle/123456789/4914/IJCDS140147.pdf?sequence=3&isAllowed=y"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=AIxYThdiqIkJ",
+                "cited_by": {
+                    "total": 5,
+                    "link": "https://scholar.google.com/scholar?cites=9919286031521713152&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "9919286031521713152",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=9919286031521713152&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:AIxYThdiqIkJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AAIxYThdiqIkJ%3Ascholar.google.com%2F&start=50",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=9919286031521713152&hl=en&as_sdt=5,31",
+                    "cluster_id": "9919286031521713152",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=9919286031521713152&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:AIxYThdiqIkJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 6,
+        "previous": "https://scholar.google.com/scholar?start=40&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=60&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "1": "https://scholar.google.com/scholar?start=0&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "2": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "3": "https://scholar.google.com/scholar?start=20&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "4": "https://scholar.google.com/scholar?start=30&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "5": "https://scholar.google.com/scholar?start=40&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "7": "https://scholar.google.com/scholar?start=60&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "8": "https://scholar.google.com/scholar?start=70&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=80&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=90&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 6,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=40",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=40",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=60",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=60",
+        "other_pages": {
+            "1": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=0",
+            "2": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=10",
+            "3": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=20",
+            "4": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=30",
+            "5": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=40",
+            "7": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=60",
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=70",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=80",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90"
+        }
+    }
+}

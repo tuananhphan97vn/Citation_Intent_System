@@ -1,0 +1,549 @@
+{
+    "search_metadata": {
+        "id": "671297c1c76a3a1b3ef35ba8",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/60f8489c0860f046/671297c1c76a3a1b3ef35ba8.json",
+        "created_at": "2024-10-18 17:15:45 UTC",
+        "processed_at": "2024-10-18 17:15:45 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=20&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/60f8489c0860f046/671297c1c76a3a1b3ef35ba8.html",
+        "total_time_taken": 2.72
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 20,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 3,
+        "time_taken_displayed": 0.02
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "Spatio-temporal dynamic graph relation learning for urban metro flow prediction",
+            "result_id": "btxg09Xdnb4J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10107812/",
+            "snippet": "Urban metro flow prediction is of great value for metro operation scheduling, passenger flow management and personal travel planning. However, the problem is challenging. First …",
+            "publication_info": {
+                "summary": "P Xie, M Ma, T Li, S Ji, S Du, Z Yu… - IEEE Transactions on …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "P Xie",
+                        "link": "https://scholar.google.com/citations?user=iCkan18AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=iCkan18AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "iCkan18AAAAJ"
+                    },
+                    {
+                        "name": "M Ma",
+                        "link": "https://scholar.google.com/citations?user=Fr_WCy4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Fr_WCy4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Fr_WCy4AAAAJ"
+                    },
+                    {
+                        "name": "T Li",
+                        "link": "https://scholar.google.com/citations?user=CQ1HneMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=CQ1HneMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "CQ1HneMAAAAJ"
+                    },
+                    {
+                        "name": "S Ji",
+                        "link": "https://scholar.google.com/citations?user=vL5PwMIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=vL5PwMIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "vL5PwMIAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2204.02650"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=btxg09Xdnb4J",
+                "cited_by": {
+                    "total": 24,
+                    "link": "https://scholar.google.com/scholar?cites=13735378348993993838&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "13735378348993993838",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=13735378348993993838&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:btxg09Xdnb4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Abtxg09Xdnb4J%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 5,
+                    "link": "https://scholar.google.com/scholar?cluster=13735378348993993838&hl=en&as_sdt=5,31",
+                    "cluster_id": "13735378348993993838",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13735378348993993838&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 2,
+            "title": "Graph attention network with spatial-temporal clustering for traffic flow forecasting in intelligent transportation system",
+            "result_id": "FAQafqAhqdUJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/9912369/",
+            "snippet": "With the development of the Internet of Things (IoT) and 5G technologies, IoT devices deployed on roads are able to collect a large amount of traffic data at any time. Road …",
+            "publication_info": {
+                "summary": "Y Chen, T Shu, X Zhou, X Zheng… - IEEE Transactions …, 2022 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "X Zhou",
+                        "link": "https://scholar.google.com/citations?user=jkNvIacAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=jkNvIacAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "jkNvIacAAAAJ"
+                    },
+                    {
+                        "name": "X Zheng",
+                        "link": "https://scholar.google.com/citations?user=FRhnJjkAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FRhnJjkAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "FRhnJjkAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=FAQafqAhqdUJ",
+                "cited_by": {
+                    "total": 19,
+                    "link": "https://scholar.google.com/scholar?cites=15395873774336869396&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "15395873774336869396",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=15395873774336869396&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:FAQafqAhqdUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AFAQafqAhqdUJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=15395873774336869396&hl=en&as_sdt=5,31",
+                    "cluster_id": "15395873774336869396",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=15395873774336869396&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 3,
+            "title": "Dynamic Causal Explanation Based Diffusion-Variational Graph Neural Network for Spatiotemporal Forecasting",
+            "result_id": "ymrThFS_PhwJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10589693/",
+            "snippet": "Graph neural networks (GNNs), especially dynamic GNNs, have become a research hotspot in spatiotemporal forecasting problems. While many dynamic graph construction methods …",
+            "publication_info": {
+                "summary": "G Liang, P Tiwari, S Nowaczyk, S Byttner… - … on Neural Networks …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "G Liang",
+                        "link": "https://scholar.google.com/citations?user=FNynKI4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FNynKI4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "FNynKI4AAAAJ"
+                    },
+                    {
+                        "name": "P Tiwari",
+                        "link": "https://scholar.google.com/citations?user=sDnmJ_YAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=sDnmJ_YAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "sDnmJ_YAAAAJ"
+                    },
+                    {
+                        "name": "S Nowaczyk",
+                        "link": "https://scholar.google.com/citations?user=0ZvlTaoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=0ZvlTaoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "0ZvlTaoAAAAJ"
+                    },
+                    {
+                        "name": "S Byttner",
+                        "link": "https://scholar.google.com/citations?user=tezNk54AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=tezNk54AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "tezNk54AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ieee.org",
+                    "file_format": "PDF",
+                    "link": "https://ieeexplore.ieee.org/iel8/5962385/6104215/10589693.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ymrThFS_PhwJ",
+                "cited_by": {
+                    "total": 9,
+                    "link": "https://scholar.google.com/scholar?cites=2035274451344648906&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "2035274451344648906",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=2035274451344648906&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ymrThFS_PhwJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AymrThFS_PhwJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=2035274451344648906&hl=en&as_sdt=5,31",
+                    "cluster_id": "2035274451344648906",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=2035274451344648906&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 4,
+            "title": "Mask-guided spatial–temporal graph neural network for multifrequency electrical impedance tomography",
+            "result_id": "a6mWHBrKBL8J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/9853625/",
+            "snippet": "Multifrequency electrical impedance tomography (mfEIT) is an emerging biomedical imaging modality that exploits frequency-dependent electrical properties. The mfEIT image …",
+            "publication_info": {
+                "summary": "Z Chen, Z Liu, L Ai, S Zhang… - IEEE Transactions on …, 2022 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "Z Chen",
+                        "link": "https://scholar.google.com/citations?user=rcYbPlMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=rcYbPlMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "rcYbPlMAAAAJ"
+                    },
+                    {
+                        "name": "Z Liu",
+                        "link": "https://scholar.google.com/citations?user=rV53y9IAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=rV53y9IAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "rV53y9IAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ed.ac.uk",
+                    "file_format": "PDF",
+                    "link": "https://www.research.ed.ac.uk/files/289148057/Mask_guided_Spatial_Temporal_Graph_Neural_Network.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=a6mWHBrKBL8J",
+                "cited_by": {
+                    "total": 19,
+                    "link": "https://scholar.google.com/scholar?cites=13764348574648674667&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "13764348574648674667",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=13764348574648674667&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:a6mWHBrKBL8J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aa6mWHBrKBL8J%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=13764348574648674667&hl=en&as_sdt=5,31",
+                    "cluster_id": "13764348574648674667",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13764348574648674667&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 5,
+            "title": "Gnn cleaner: Label cleaner for graph structured data",
+            "result_id": "Kd6EEVaBlr4J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10158394/",
+            "snippet": "Graph Neural Network (GNN) has emerged as a predominant tool for graph data analysis. Despite their proliferation, the low-quality labels of many real-world graphs will undermine …",
+            "publication_info": {
+                "summary": "J Xia, H Lin, Y Xu, C Tan, L Wu, S Li… - IEEE Transactions on …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "J Xia",
+                        "link": "https://scholar.google.com/citations?user=aPKKpSYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=aPKKpSYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "aPKKpSYAAAAJ"
+                    },
+                    {
+                        "name": "H Lin",
+                        "link": "https://scholar.google.com/citations?user=o5A23qIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=o5A23qIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "o5A23qIAAAAJ"
+                    },
+                    {
+                        "name": "Y Xu",
+                        "link": "https://scholar.google.com/citations?user=ciG27FYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ciG27FYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "ciG27FYAAAAJ"
+                    },
+                    {
+                        "name": "C Tan",
+                        "link": "https://scholar.google.com/citations?user=6kTV6aMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=6kTV6aMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "6kTV6aMAAAAJ"
+                    },
+                    {
+                        "name": "L Wu",
+                        "link": "https://scholar.google.com/citations?user=Tk7TrCoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Tk7TrCoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Tk7TrCoAAAAJ"
+                    },
+                    {
+                        "name": "S Li",
+                        "link": "https://scholar.google.com/citations?user=SKTQTXwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=SKTQTXwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "SKTQTXwAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Kd6EEVaBlr4J",
+                "cited_by": {
+                    "total": 11,
+                    "link": "https://scholar.google.com/scholar?cites=13733306320373997097&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "13733306320373997097",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=13733306320373997097&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:Kd6EEVaBlr4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AKd6EEVaBlr4J%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=13733306320373997097&hl=en&as_sdt=5,31",
+                    "cluster_id": "13733306320373997097",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13733306320373997097&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 6,
+            "title": "Spatio-temporal fusion of meteorological factors for multi-site PM2. 5 prediction: A deep learning and time-variant graph approach",
+            "result_id": "yS1hr7G_qBAJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S001393512302090X",
+            "snippet": "In the field of environmental science, traditional methods for predicting PM2. 5 concentrations primarily focus on singular temporal or spatial dimensions. This approach …",
+            "publication_info": {
+                "summary": "H Wang, L Zhang, R Wu, Y Cen - Environmental Research, 2023 - Elsevier",
+                "authors": [
+                    {
+                        "name": "L Zhang",
+                        "link": "https://scholar.google.com/citations?user=kz0LhuoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=kz0LhuoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "kz0LhuoAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=yS1hr7G_qBAJ",
+                "cited_by": {
+                    "total": 11,
+                    "link": "https://scholar.google.com/scholar?cites=1200420070566735305&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "1200420070566735305",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=1200420070566735305&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:yS1hr7G_qBAJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AyS1hr7G_qBAJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cluster=1200420070566735305&hl=en&as_sdt=5,31",
+                    "cluster_id": "1200420070566735305",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=1200420070566735305&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 7,
+            "title": "Deep representation learning: Fundamentals, technologies, applications, and open challenges",
+            "result_id": "1x01PhlxeToJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10323465/",
+            "snippet": "Machine learning algorithms have had a profound impact on the field of computer science over the past few decades. The performance of these algorithms heavily depends on the …",
+            "publication_info": {
+                "summary": "KT Baghaei, A Payandeh, P Fayyazsanavi… - IEEE …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "A Payandeh",
+                        "link": "https://scholar.google.com/citations?user=1jiEt2gAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=1jiEt2gAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "1jiEt2gAAAAJ"
+                    },
+                    {
+                        "name": "P Fayyazsanavi",
+                        "link": "https://scholar.google.com/citations?user=ZVQw2OAAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ZVQw2OAAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "ZVQw2OAAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "ieee.org",
+                    "file_format": "PDF",
+                    "link": "https://ieeexplore.ieee.org/iel7/6287639/6514899/10323465.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=1x01PhlxeToJ",
+                "cited_by": {
+                    "total": 6,
+                    "link": "https://scholar.google.com/scholar?cites=4213523279613599191&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "4213523279613599191",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=4213523279613599191&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:1x01PhlxeToJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A1x01PhlxeToJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=4213523279613599191&hl=en&as_sdt=5,31",
+                    "cluster_id": "4213523279613599191",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=4213523279613599191&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 8,
+            "title": "Graph ensemble deep random vector functional link network for traffic forecasting",
+            "result_id": "X3dSlmQWmfUJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S1568494622008584",
+            "snippet": "Traffic forecasting is crucial to achieving a smart city as it facilitates public transportation management, autonomous driving, and the resource relocation of the sharing economy …",
+            "publication_info": {
+                "summary": "L Du, R Gao, PN Suganthan, DZW Wang - Applied Soft Computing, 2022 - Elsevier",
+                "authors": [
+                    {
+                        "name": "L Du",
+                        "link": "https://scholar.google.com/citations?user=lL-lWnwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=lL-lWnwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "lL-lWnwAAAAJ"
+                    },
+                    {
+                        "name": "R Gao",
+                        "link": "https://scholar.google.com/citations?user=PrIHu7QAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=PrIHu7QAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "PrIHu7QAAAAJ"
+                    },
+                    {
+                        "name": "PN Suganthan",
+                        "link": "https://scholar.google.com/citations?user=yZNzBU0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yZNzBU0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "yZNzBU0AAAAJ"
+                    },
+                    {
+                        "name": "DZW Wang",
+                        "link": "https://scholar.google.com/citations?user=VrnmrbMAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=VrnmrbMAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "VrnmrbMAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=X3dSlmQWmfUJ",
+                "cited_by": {
+                    "total": 15,
+                    "link": "https://scholar.google.com/scholar?cites=17697200832003602271&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "17697200832003602271",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=17697200832003602271&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:X3dSlmQWmfUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AX3dSlmQWmfUJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=17697200832003602271&hl=en&as_sdt=5,31",
+                    "cluster_id": "17697200832003602271",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=17697200832003602271&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 9,
+            "title": "Multiscale graph based spatio-temporal graph convolutional network for energy consumption prediction of natural gas transmission process",
+            "result_id": "j68DfC9iX8EJ",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0360544224022631",
+            "snippet": "Energy consumption prediction is crucial for planning and managing natural gas networks, enhancing transmission efficiency. However, most of relevant studies fail to consider the …",
+            "publication_info": {
+                "summary": "C Wang, D Zhou, X Wang, S Liu, T Shao, C Shui, J Yan - Energy, 2024 - Elsevier"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=j68DfC9iX8EJ",
+                "cited_by": {
+                    "total": 1,
+                    "link": "https://scholar.google.com/scholar?cites=13933963728191205263&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "13933963728191205263",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=13933963728191205263&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:j68DfC9iX8EJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aj68DfC9iX8EJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=13933963728191205263&hl=en&as_sdt=5,31",
+                    "cluster_id": "13933963728191205263",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=13933963728191205263&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 10,
+            "title": "Vulnerability detection via multiple-graph-based code representation",
+            "result_id": "uzERmVj1MGQJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10596932/",
+            "snippet": "During software development and maintenance, vulnerability detection is an essential part of software quality assurance. Even though many program-analysis-based and machine …",
+            "publication_info": {
+                "summary": "F Qiu, Z Liu, X Hu, X Xia, G Chen… - IEEE Transactions on …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "Z Liu",
+                        "link": "https://scholar.google.com/citations?user=U_yKZbYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=U_yKZbYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "U_yKZbYAAAAJ"
+                    },
+                    {
+                        "name": "X Hu",
+                        "link": "https://scholar.google.com/citations?user=DFERPF4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DFERPF4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "DFERPF4AAAAJ"
+                    },
+                    {
+                        "name": "X Xia",
+                        "link": "https://scholar.google.com/citations?user=XSZRxOEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=XSZRxOEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "XSZRxOEAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=uzERmVj1MGQJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=7219539963548873147&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "7219539963548873147",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=7219539963548873147&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:uzERmVj1MGQJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AuzERmVj1MGQJ%3Ascholar.google.com%2F&start=20",
+                "versions": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cluster=7219539963548873147&hl=en&as_sdt=5,31",
+                    "cluster_id": "7219539963548873147",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=7219539963548873147&engine=google_scholar&hl=en"
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "current": 3,
+        "previous": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=30&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "1": "https://scholar.google.com/scholar?start=0&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "2": "https://scholar.google.com/scholar?start=10&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "4": "https://scholar.google.com/scholar?start=30&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "5": "https://scholar.google.com/scholar?start=40&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "6": "https://scholar.google.com/scholar?start=50&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "7": "https://scholar.google.com/scholar?start=60&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "8": "https://scholar.google.com/scholar?start=70&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=80&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=90&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 3,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=10",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=10",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=30",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=30",
+        "other_pages": {
+            "1": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=0",
+            "2": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=10",
+            "4": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=30",
+            "5": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=40",
+            "6": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=50",
+            "7": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=60",
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=70",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=80",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90"
+        }
+    }
+}

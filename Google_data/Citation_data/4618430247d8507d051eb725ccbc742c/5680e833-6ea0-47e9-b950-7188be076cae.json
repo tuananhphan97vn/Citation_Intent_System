@@ -1,0 +1,432 @@
+{
+    "search_metadata": {
+        "id": "671297dbcf32e0409994b54c",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/bfbbc1c75c660e60/671297dbcf32e0409994b54c.json",
+        "created_at": "2024-10-18 17:16:11 UTC",
+        "processed_at": "2024-10-18 17:16:11 UTC",
+        "google_scholar_url": "https://scholar.google.com/scholar?cites=12462651559794521593&hl=en&start=120&as_sdt=5,31&scipsc=1",
+        "raw_html_file": "https://serpapi.com/searches/bfbbc1c75c660e60/671297dbcf32e0409994b54c.html",
+        "total_time_taken": 0.61
+    },
+    "search_parameters": {
+        "engine": "google_scholar",
+        "cites": "12462651559794521593",
+        "hl": "en",
+        "start": 120,
+        "as_sdt": "5,31"
+    },
+    "search_information": {
+        "organic_results_state": "Results for exact spelling",
+        "total_results": 172,
+        "page_number": 13,
+        "time_taken_displayed": 0.04
+    },
+    "profiles": {
+        "link": "https://scholar.google.com/scholar?cluster=12462651559794521593&hl=en&as_sdt=5,31",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "IV-GNN: interval valued data handling using graph neural network",
+            "result_id": "1bwL-gicq_0J",
+            "link": "https://link.springer.com/article/10.1007/s10489-022-03780-1",
+            "snippet": "Interval-valued data is an effective way to represent complex information where uncertainty, inaccuracy etc. are involved in the data space and they are worthy of taking into account …",
+            "publication_info": {
+                "summary": "S Dawn, S Bandyopadhyay - Applied Intelligence, 2023 - Springer",
+                "authors": [
+                    {
+                        "name": "S Dawn",
+                        "link": "https://scholar.google.com/citations?user=HpUG6VIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=HpUG6VIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "HpUG6VIAAAAJ"
+                    },
+                    {
+                        "name": "S Bandyopadhyay",
+                        "link": "https://scholar.google.com/citations?user=mHrEBuUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=mHrEBuUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "mHrEBuUAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "springer.com",
+                    "file_format": "PDF",
+                    "link": "https://link.springer.com/content/pdf/10.1007/s10489-022-03780-1.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=1bwL-gicq_0J",
+                "cited_by": {
+                    "total": 4,
+                    "link": "https://scholar.google.com/scholar?cites=18278875074982034645&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "18278875074982034645",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=18278875074982034645&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:1bwL-gicq_0J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3A1bwL-gicq_0J%3Ascholar.google.com%2F&start=120",
+                "versions": {
+                    "total": 12,
+                    "link": "https://scholar.google.com/scholar?cluster=18278875074982034645&hl=en&as_sdt=5,31",
+                    "cluster_id": "18278875074982034645",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=18278875074982034645&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 2,
+            "title": "Application of Spatial Temporal Graph Neural Networks for Forecasting Data Time Series River Pollution Waste Content in Probolinggo",
+            "result_id": "NfCdIz7P6xUJ",
+            "link": "https://www.atlantis-press.com/proceedings/iconnsmal-22/125987147",
+            "snippet": "Flooding has become a serious problem in Probolinggo. One of the causes of flooding is the accumulation of garbage in the river. Garbage can also cause river water pollution. To …",
+            "publication_info": {
+                "summary": "N Mauliska, W Lestari… - … on Neural Networks …, 2023 - atlantis-press.com",
+                "authors": [
+                    {
+                        "name": "W Lestari",
+                        "link": "https://scholar.google.com/citations?user=HieaTioAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=HieaTioAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "HieaTioAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "atlantis-press.com",
+                    "file_format": "PDF",
+                    "link": "https://www.atlantis-press.com/article/125987147.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=NfCdIz7P6xUJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=1579583960115966005&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "1579583960115966005",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=1579583960115966005&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:NfCdIz7P6xUJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ANfCdIz7P6xUJ%3Ascholar.google.com%2F&start=120",
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:NfCdIz7P6xUJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 3,
+            "title": "Recent Advances in Graph-based Machine Learning for Applications in Smart Urban Transportation Systems",
+            "result_id": "a6LvzVRlREAJ",
+            "link": "https://arxiv.org/abs/2306.01282",
+            "snippet": "The Intelligent Transportation System (ITS) is an important part of modern transportation infrastructure, employing a combination of communication technology, information …",
+            "publication_info": {
+                "summary": "H Wu, S Yan, M Liu - arXiv preprint arXiv:2306.01282, 2023 - arxiv.org",
+                "authors": [
+                    {
+                        "name": "S Yan",
+                        "link": "https://scholar.google.com/citations?user=W35eLa4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=W35eLa4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "W35eLa4AAAAJ"
+                    },
+                    {
+                        "name": "M Liu",
+                        "link": "https://scholar.google.com/citations?user=woHxot0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=woHxot0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "woHxot0AAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "arxiv.org",
+                    "file_format": "PDF",
+                    "link": "https://arxiv.org/pdf/2306.01282"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=a6LvzVRlREAJ",
+                "cited_by": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cites=4630937731750404715&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "4630937731750404715",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=4630937731750404715&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:a6LvzVRlREAJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Aa6LvzVRlREAJ%3Ascholar.google.com%2F&start=120",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=4630937731750404715&hl=en&as_sdt=5,31",
+                    "cluster_id": "4630937731750404715",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=4630937731750404715&engine=google_scholar&hl=en"
+                },
+                "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:a6LvzVRlREAJ:scholar.google.com/&hl=en&as_sdt=5,31"
+            }
+        },
+        {
+            "position": 4,
+            "title": "An Efficient Skip Link-based Traffic Prediction Algorithm with Multi-Scale Feature Extraction",
+            "result_id": "p79clG4GaWMJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10566931/",
+            "snippet": "Traffic prediction is an important component in the development of Intelligent Transportation Systems (ITS). To improve the accuracy of traffic prediction, many existing studies focus on …",
+            "publication_info": {
+                "summary": "C Liu, X Li, G Li, C Gong - 2023 19th International Conference …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "X Li",
+                        "link": "https://scholar.google.com/citations?user=J1AZJnYAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=J1AZJnYAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "J1AZJnYAAAAJ"
+                    },
+                    {
+                        "name": "G Li",
+                        "link": "https://scholar.google.com/citations?user=qovg0wcAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=qovg0wcAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "qovg0wcAAAAJ"
+                    },
+                    {
+                        "name": "C Gong",
+                        "link": "https://scholar.google.com/citations?user=guttoBwAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=guttoBwAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "guttoBwAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=p79clG4GaWMJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:p79clG4GaWMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Ap79clG4GaWMJ%3Ascholar.google.com%2F&start=120",
+                "versions": {
+                    "total": 2,
+                    "link": "https://scholar.google.com/scholar?cluster=7163263754314760103&hl=en&as_sdt=5,31",
+                    "cluster_id": "7163263754314760103",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=7163263754314760103&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 5,
+            "title": "Using Machine Learning and Deep learning for traffic congestion prediction: a review",
+            "result_id": "I-VxpGd-F3AJ",
+            "link": "https://www.elgaronline.com/edcollchap/book/9781803929545/book-part-9781803929545-11.xml",
+            "snippet": "With the acceleration of urbanisation, decreased vehicle prices and increased population in many cities, traffic demand has been rapidly increasing in recent years. Urban road traffic …",
+            "publication_info": {
+                "summary": "AS Mihaita, Z Li, H Singh, N Sharma… - Handbook on Artificial …, 2023 - elgaronline.com",
+                "authors": [
+                    {
+                        "name": "AS Mihaita",
+                        "link": "https://scholar.google.com/citations?user=Bubaqd4AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Bubaqd4AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "Bubaqd4AAAAJ"
+                    },
+                    {
+                        "name": "N Sharma",
+                        "link": "https://scholar.google.com/citations?user=qBY-a8gAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=qBY-a8gAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "qBY-a8gAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "uts.edu.au",
+                    "file_format": "PDF",
+                    "link": "https://opus.lib.uts.edu.au/bitstream/10453/176229/2/2022_Aug_LR_DL_for_traffic_congestion_prediction_SimonaMihaita_revised.pdf"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=I-VxpGd-F3AJ",
+                "cited_by": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cites=8077063440317932835&as_sdt=5,31&sciodt=5,31&hl=en",
+                    "cites_id": "8077063440317932835",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=8077063440317932835&engine=google_scholar&hl=en"
+                },
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:I-VxpGd-F3AJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AI-VxpGd-F3AJ%3Ascholar.google.com%2F&start=120",
+                "versions": {
+                    "total": 7,
+                    "link": "https://scholar.google.com/scholar?cluster=8077063440317932835&hl=en&as_sdt=5,31",
+                    "cluster_id": "8077063440317932835",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=8077063440317932835&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 6,
+            "title": "Traffic Forecasting & Route Optimization in Smart Environment Using Graph Representation Learning",
+            "result_id": "Kf3jz2R870gJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10293287/",
+            "snippet": "Route optimization and traffic forecasting play pivotal roles in efficient traffic management and the development of intelligent transportation systems in smart cities. In tandem, traffic …",
+            "publication_info": {
+                "summary": "SMAH Shah, SFH Shah, S Hussain… - 2023 IEEE …, 2023 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "SMAH Shah",
+                        "link": "https://scholar.google.com/citations?user=v5uTzJ0AAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=v5uTzJ0AAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "v5uTzJ0AAAAJ"
+                    },
+                    {
+                        "name": "SFH Shah",
+                        "link": "https://scholar.google.com/citations?user=D_xqBaoAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=D_xqBaoAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "D_xqBaoAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Kf3jz2R870gJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:Kf3jz2R870gJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AKf3jz2R870gJ%3Ascholar.google.com%2F&start=120"
+            }
+        },
+        {
+            "position": 7,
+            "title": "A Highly Efficient and Effective Attribute Learning Framework for Road Graph from Aerial Imagery and GPS",
+            "result_id": "SgLhAy19joIJ",
+            "link": "https://dl.acm.org/doi/abs/10.1145/3615833.3628594",
+            "snippet": "Road attributes play a pivotal role in digital maps, providing critical information for various routing and planning applications that aim to create a safe and efficient traffic environment …",
+            "publication_info": {
+                "summary": "Y He, E Eftelioglu, M Moustafa… - Proceedings of the 11th …, 2023 - dl.acm.org",
+                "authors": [
+                    {
+                        "name": "Y He",
+                        "link": "https://scholar.google.com/citations?user=OaAO-aIAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=OaAO-aIAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "OaAO-aIAAAAJ"
+                    },
+                    {
+                        "name": "E Eftelioglu",
+                        "link": "https://scholar.google.com/citations?user=1Cc9d6gAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=1Cc9d6gAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "1Cc9d6gAAAAJ"
+                    },
+                    {
+                        "name": "M Moustafa",
+                        "link": "https://scholar.google.com/citations?user=QGdReUEAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=QGdReUEAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "QGdReUEAAAAJ"
+                    }
+                ]
+            },
+            "resources": [
+                {
+                    "title": "acm.org",
+                    "file_format": "PDF",
+                    "link": "https://dl.acm.org/doi/pdf/10.1145/3615833.3628594"
+                }
+            ],
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=SgLhAy19joIJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:SgLhAy19joIJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3ASgLhAy19joIJ%3Ascholar.google.com%2F&start=120",
+                "versions": {
+                    "total": 3,
+                    "link": "https://scholar.google.com/scholar?cluster=9407594303915622986&hl=en&as_sdt=5,31",
+                    "cluster_id": "9407594303915622986",
+                    "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cluster=9407594303915622986&engine=google_scholar&hl=en"
+                }
+            }
+        },
+        {
+            "position": 8,
+            "title": "Hypernetwork Temporal Embedding for Graph",
+            "result_id": "tlo-Nt_YMyMJ",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10387072/",
+            "snippet": "Representation learning on temporal graphs has been a crucial facilitator in uncovering insights from real-world temporal graphs. In previous approaches, a common practice was to …",
+            "publication_info": {
+                "summary": "C Changwen - … Computer Conference on Wavelet Active Media …, 2023 - ieeexplore.ieee.org"
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=tlo-Nt_YMyMJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:tlo-Nt_YMyMJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3Atlo-Nt_YMyMJ%3Ascholar.google.com%2F&start=120"
+            }
+        },
+        {
+            "position": 9,
+            "title": "Forecasting is all we need: Adapting graph neural network methods for a peer-to-peer sharing economy platform",
+            "result_id": "cW4qyuCm_g4J",
+            "link": "https://ieeexplore.ieee.org/abstract/document/10675887/",
+            "snippet": "Estimating events in the near future with the help of forecasting techniques is undoubtedly of crucial importance in practice and facilitates decision-making from a management …",
+            "publication_info": {
+                "summary": "A Ricklin, G Lu, D Georgi - 2024 11th IEEE Swiss Conference …, 2024 - ieeexplore.ieee.org",
+                "authors": [
+                    {
+                        "name": "A Ricklin",
+                        "link": "https://scholar.google.com/citations?user=DjBIj1QAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DjBIj1QAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "DjBIj1QAAAAJ"
+                    },
+                    {
+                        "name": "G Lu",
+                        "link": "https://scholar.google.com/citations?user=QSVEbsAAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=QSVEbsAAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "QSVEbsAAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=cW4qyuCm_g4J",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:cW4qyuCm_g4J:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AcW4qyuCm_g4J%3Ascholar.google.com%2F&start=120"
+            }
+        },
+        {
+            "position": 10,
+            "title": "7 Intelligent Spatial",
+            "result_id": "ooDltg2TQawJ",
+            "link": "https://books.google.com/books?hl=en&lr=&id=liXpEAAAQBAJ&oi=fnd&pg=PA121&ots=CO6eMh0O_2&sig=iFw_yNhlH4JiRRA5mFGEFlAHLeg",
+            "snippet": "The necessity to obtain accurate predictions from observed data can be found in all scientific disciplines (Cressie, 2015). Measurements of geographic variables (phenomena) are …",
+            "publication_info": {
+                "summary": "D Zhu, G Cao - Handbook of Geospatial Artificial Intelligence, 2023 - books.google.com",
+                "authors": [
+                    {
+                        "name": "G Cao",
+                        "link": "https://scholar.google.com/citations?user=9M4g4nUAAAAJ&hl=en&oi=sra",
+                        "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=9M4g4nUAAAAJ&engine=google_scholar_author&hl=en",
+                        "author_id": "9M4g4nUAAAAJ"
+                    }
+                ]
+            },
+            "inline_links": {
+                "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ooDltg2TQawJ",
+                "related_pages_link": "https://scholar.google.com/scholar?q=related:ooDltg2TQawJ:scholar.google.com/&scioq=&hl=en&as_sdt=5,31",
+                "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&q=related%3AooDltg2TQawJ%3Ascholar.google.com%2F&start=120"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 13,
+        "previous": "https://scholar.google.com/scholar?start=110&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "next": "https://scholar.google.com/scholar?start=130&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+        "other_pages": {
+            "8": "https://scholar.google.com/scholar?start=70&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "9": "https://scholar.google.com/scholar?start=80&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "10": "https://scholar.google.com/scholar?start=90&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "11": "https://scholar.google.com/scholar?start=100&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "12": "https://scholar.google.com/scholar?start=110&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "14": "https://scholar.google.com/scholar?start=130&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "15": "https://scholar.google.com/scholar?start=140&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "16": "https://scholar.google.com/scholar?start=150&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1",
+            "17": "https://scholar.google.com/scholar?start=160&hl=en&as_sdt=5,31&cites=12462651559794521593&scipsc=1"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 13,
+        "previous_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+        "previous": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+        "next_link": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+        "next": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+        "other_pages": {
+            "8": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=70",
+            "9": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=80",
+            "10": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=90",
+            "11": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=100",
+            "12": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=110",
+            "14": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=130",
+            "15": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=140",
+            "16": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=150",
+            "17": "https://serpapi.com/search.json?as_sdt=5%2C31&cites=12462651559794521593&engine=google_scholar&hl=en&start=160"
+        }
+    }
+}
