@@ -1,0 +1,111 @@
+{
+    "full-text-retrieval-response": {
+        "coredata": {
+            "prism:url": "https://api.elsevier.com/content/article/pii/S1566253520302992",
+            "dc:identifier": "doi:10.1016/j.inffus.2020.06.006",
+            "eid": "1-s2.0-S1566253520302992",
+            "prism:doi": "10.1016/j.inffus.2020.06.006",
+            "pii": "S1566-2535(20)30299-2",
+            "dc:title": "Multi-level information fusion to alleviate network congestion ",
+            "prism:publicationName": "Information Fusion",
+            "prism:aggregationType": "Journal",
+            "pubType": "fla",
+            "prism:issn": "15662535",
+            "prism:volume": "63",
+            "prism:startingPage": "248",
+            "prism:endingPage": "255",
+            "prism:pageRange": "248-255",
+            "dc:format": "application/json",
+            "prism:coverDate": "2020-11-30",
+            "prism:coverDisplayDate": "November 2020",
+            "prism:copyright": "\u00a9 2020 Elsevier B.V. All rights reserved.",
+            "prism:publisher": "Elsevier B.V.",
+            "dc:creator": [
+                {
+                    "@_fa": "true",
+                    "$": "Lai, Joel Weijia"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Chang, Jie"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Ang, L.\u2009K."
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Cheong, Kang Hao"
+                }
+            ],
+            "dc:description": "\n                  While increasing urban traffic can be an indicator of development, this inevitably results in traffic congestion in urban road networks. Is there a way to manage traffic flow through the control of traffic signals such that the overall network congestion is improved? Traffic light signals can be represented as two states of an Ising model. It is possible for traffic lights to \u201dcommunicate\u201d with each other through a fusion process from a remote management control system. This requires collection of information which can be fed to a centralized decision-making control mechanism. We first explore the fusion process between traffic signals and show that it is possible for traffic flow in a city to follow the phase transition as exhibited in the 2D Ising model. The model will be extended to show that a random switching between signalling control mechanisms can result in congested traffic being susceptible to transit out of congestion.\n               ",
+            "openaccess": "0",
+            "openaccessArticle": false,
+            "openaccessType": null,
+            "openArchiveArticle": false,
+            "openaccessSponsorName": null,
+            "openaccessSponsorType": null,
+            "openaccessUserLicense": null,
+            "dcterms:subject": [
+                {
+                    "@_fa": "true",
+                    "$": "Information flow"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Fusion process"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Urban flow"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Traffic network"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Social dynamics"
+                },
+                {
+                    "@_fa": "true",
+                    "$": "Ising model"
+                }
+            ],
+            "link": [
+                {
+                    "@href": "https://api.elsevier.com/content/article/pii/S1566253520302992",
+                    "@rel": "self",
+                    "@_fa": "true"
+                },
+                {
+                    "@href": "https://www.sciencedirect.com/science/article/pii/S1566253520302992",
+                    "@rel": "scidir",
+                    "@_fa": "true"
+                }
+            ]
+        },
+        "scopus-id": "85087943431",
+        "scopus-eid": "2-s2.0-85087943431",
+        "link": {
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85087943431",
+            "@rel": "abstract"
+        },
+        "originalText": {
+            "xocs:doc": {
+                "xocs:meta": {
+                    "xocs:open-access": {
+                        "xocs:oa-article-status": {
+                            "@is-open-access": "0",
+                            "@is-open-archive": "0"
+                        }
+                    },
+                    "xocs:available-online-date": {
+                        "@yyyymmdd": "20200621",
+                        "$": "2020-06-21"
+                    }
+                }
+            }
+        }
+    }
+}
