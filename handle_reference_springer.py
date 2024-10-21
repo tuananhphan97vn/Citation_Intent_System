@@ -104,5 +104,6 @@ if __name__ == '__main__':
 	# cited_paper_url = search_paper_by_title_wos( title)
 	# citing_paper_url = get_paper_soure_html(cited_paper_url)
 	#access citting paper url and load the html content from this link 
-	url = """https://www.sciencedirect.com/science/article/pii/S0952197623002257#b41"""
+	# url = """https://www.sciencedirect.com/science/article/pii/S0952197623002257#b41"""
+	url = "https://www.sciencedirect.com/science/article/pii/S0952197623002257"
 	get_paper_soure_html(url)

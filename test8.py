@@ -99,23 +99,27 @@ def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "e
 	return result
 
 if __name__ == '__main__':
-	with open('soup.html' , 'r') as f:
+	with open('test.html' , 'r') as f:
 		soup = f.read()
 	soup = BeautifulSoup(soup , 'html.parser')
-	replaced_text , all_tag_a = replace_tag_a(soup)
+	links = soup.find_all(class_= 'side-panel-reference')
+	for link in links:
+		print(link)
+	# replaced_text , all_tag_a = replace_tag_a(soup)
 
-	sents = sentence_split(replaced_text.get_text())
+	# sents = sentence_split(replaced_text.get_text())
 	
-	with open('sent.txt','w') as f:
-		f.write("\n".join([ sent for sent in  sents if sent.strip() != ' '] ))
+	# with open('sent.txt','w') as f:
+	# 	f.write("\n".join([ sent for sent in  sents if sent.strip() != ' '] ))
 
-	replaced_text = replaced_text.get_text()
-	with open('replaced_text.txt' , 'w', encoding='utf-8') as f:
-		f.write(replaced_text)
+	# replaced_text = replaced_text.get_text()
+	# with open('replaced_text.txt' , 'w', encoding='utf-8') as f:
+	# 	f.write(replaced_text)
 
-	# print(len(all_tag_a) , len(set(all_tag_a)))
-	sent = """These datasets are generated from six original ones: MNIST (Deng, href145), CIFAR10, CIFAR100 (Krizhevsky & Hinton, href146), Omniglot, CUB-200 (Wah et al., href147) and ImageNet-R (Hendrycks et al., href148), and can be applied to simulate the process of continuous arriving data."""
-	sent_match = map_sent_to_refer(sent , all_tag_a)
-	print(sent_match[0])
-	for s_m in sent_match[1]:
-		print(s_m)
+	# # print(len(all_tag_a) , len(set(all_tag_a)))
+	# sent = """These datasets are generated from six original ones: MNIST (Deng, href145), CIFAR10, CIFAR100 (Krizhevsky & Hinton, href146), Omniglot, CUB-200 (Wah et al., href147) and ImageNet-R (Hendrycks et al., href148), and can be applied to simulate the process of continuous arriving data."""
+	# sent_match = map_sent_to_refer(sent , all_tag_a)
+	# print(sent_match[0])
+	# for s_m in sent_match[1]:
+	# 	print(s_m)
+	# print(soup)
