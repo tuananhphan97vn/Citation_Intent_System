@@ -6,20 +6,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Long-term traffic flow forecasting using a hybrid CNN-BiLSTM model - ScienceDirect
-
+Deep reinforcement learning for the dynamic and uncertain vehicle routing problem | Applied Intelligence
 
 
 
@@ -36,13 +23,6 @@ Long-term traffic flow forecasting using a hybrid CNN-BiLSTM model - ScienceDire
 
 
 
-      JavaScript is disabled on your browser.
-      Please enable JavaScript to use all the features on this page.
-      
-
-href188href376
-href213href82Helphref58href389href284href23Download full issueSearch ScienceDirectOutlinehref22href271href114href128href227href210href415href112href134href451href205href186href55href24Show full outlinehref206Figures (11)href3href108href440href204href350href366Show 5 more figuresTables (6)href124href207href17href163href387href315href34href9href400, May 2023, 106041href408Long-term traffic flow forecasting using a hybrid CNN-BiLSTM modelhref361Author links open overlay panelManuel Méndez, Mercedes G. Merayo, Manuel NúñezShow moreOutlineAdd to MendeleyShareCitehref0href363Under a Creative Commons href175open accessAbstractThe increase of road traffic in large cities during the last years has produced that long and short-term traffic flow forecasting is a critical need for the authorities. The availability of good traffic flow prediction methods is a must to make informed decisions concerning (punctual) traffic congestions. Previous work has shown that the accuracy of these methods decreases if we consider urban traffic and long-term predictions. In this paper we present a hybrid model, combining a Convolutional href402 and a Bidirectional Long–Short-Term Memory network, and apply it to long-term traffic flow prediction in urban routes. This model combines the capability of CNN to extract hidden valuable features from the input model and the capability of BiLSTM to understand the temporal context. In order to assess the usefulness of our model, we considered four streets of the city of Madrid with different characteristics and compared the results of our proposed model with the ones obtained by eight widely used baseline models. The results show that our hybrid model outperforms the baseline models with respect to three metrics commonly used in regression: href247, href262 and accuracy.href380href172KeywordsDeep learningHybrid modelsTraffic flow forecasting1. Introductionhref157 implies a high growth of the traffic flow in big cities. Because of this, traffic congestion is one of the main problems of most big cities. Traffic flow forecasting is an essential tool for traffic management, specially, in the most congested and frequented roadways. The high presence of signalisation in cities makes urban traffic flow more unpredictable and random than traffic flow in freeways. In most cases, temporal trends (monthly, daily or hourly) are insufficient to optimally model traffic flow. Other factors such as href436, traffic flow in nearby roadways and type of day (working day, public holiday or weekend) are also essential to model traffic flow.Traffic flow forecasting can be classified in short-term and long-term. On the one hand, short-term models are able to predict traffic flow from a few minutes to one hour in advance, that is, in a very close future. On the other hand, long-term models are able to predict traffic flow from two hours to several days in advance. It seems reasonable that in short-term models, temporal trends have a very high influence in the traffic flow. However, in long-term models, the influence of temporal trends decreases and we have to look for other factors, such as the ones mentioned above, whose influence will be more significant.By reviewing the existing literature on traffic flow prediction, we noticed that the majority of the approaches consider predictions in the short-term. In these approaches, high accuracy is usually achieved only when predicting the values a few minutes in advance. Unfortunately, this is not a very useful information to manage the traffic flow because it will be too late to hint drivers about bad conditions. In order to provide advanced trip plannings to users, we think that it is more important to develop models that can make accurate predictions in longer terms.By focusing on the architectures used to forecast traffic flow in recent work, we can mention the frequent usage of Long–Short-Term Memory (LSTM) networks. These models can easily learn and understand the sequence information. However, they are adapted to deal with temporal correlations and they can only use the features given by the dataset. In order to improve its performance, some authors have suggested the hybridisation between LSTMs and href238 (CNNs). CNNs have the capability to filter out noise and extract new and valuables features from the input matrix. Thus, an LSTM will use the new information given by a CNN to identify temporal patterns and make the corresponding forecasts. Therefore, a hybrid CNN-LSTM model usually will outperform the accuracy of a single LSTM model.Bidirectional LSTM (BiLSTM) networks are an extension of LSTM networks in which two LSTMs are applied: one is applied to the input data (forward) and the other one is applied to the reverse of the input data (backward). Experimental evidence (href31) shows that in tasks related to time series, BiLSTM models offer better predictions than LSTMs, although LSTMs reach the equilibrium faster than BiLSTMs. As the href54 increases, the temporal dependencies are fewer. Because of this, it is needed to find new relationships between variables that do not necessarily have to be temporal. In this line, the application of convolutional operations to the input matrix before the application of the BiLSTM model is a promising approach that we will explore in this paper.In this work we propose a novel hybrid CNN-BiLSTM architecture to forecast long-term traffic flow. The goal is to leverage the potential of a CNN block to extract complex characteristics from the input matrix and the capability of a BiLSTM block to find temporal dependencies between variables by understanding doubly (forward and backward) the context in each situation. In order to evaluate the performance of our CNN-BiLSTM model, we compare it with eight baseline models. In particular, we compare it with CNN-LSTM, in order to determine whether it is worth to use BiLSTM rather than LSTM, and with a BiLSTM, in order to determine whether it is worth to use a hybrid model or not.As a href166, we will apply our model and we will compare it with the baselines in four main roadways of Madrid. We take data from the official website of Madrid City Council, being data originally extracted from sensors that are part of a network of permanent traffic stations.href2031.1. ContributionsThe main contributions of the paper are summarised as follows:1.We developed a novel architecture that can be used in time series forecasting. This architecture is based on the hybridisation of a CNN and a BiLSTM href320.2.We applied the new model to forecast the traffic flow in four stations of Madrid. The model showed a very good performance with respect to three metrics.3.A side result of our experiments was the creation of a historical database on traffic flow measured in four stations of Madrid and a procedure to built such a database in other stations. The database currently contains flow traffic information (of the considered station), temporal information, nearest stations information and context information.4.With the goal of optimising the model, we performed a careful fine-tuning of the considered hyperparameters.5.In order to show the usefulness of our model, we compared it with several powerful baseline models typically used in time series forecasting.6.The code of our proposed method and the datasets used in this paper are freely available at href443.1.2. OutlineThe rest of the paper is organised as follows. In Section href314, we briefly review related work. In Section href357 we present the main characteristics of the problem that we will confront and will describe the data used in it. In addition, we will explain the data collecting and data pre-processing phases. In Section href396, we describe the proposed hybrid model. In Section href264, we briefly present the main characteristics of each baseline model. In Section href373, we present our experiments and discuss the quality/accuracy of the proposed model, in particular, in comparison with baseline models. Finally, in Section href110, we give our conclusions and outline some directions for future work.2. Related workShort-term traffic flow forecasting is a href37 case study in order to show the quality of forecasting models. In fact, many machine learning models have been developed to tackle this issue. We can classify them in machine learning models and href99 models. Machine learning models such as auto-regressive models (ARIMA or similar) (href60, href426), K-nearest neighbours (KNN) (href162), linear regression (href331) or href246 (SVR) (href298) are usually applied. In recent years, href121 models such as, long–short term memory networks (LSTM) (href161, href268, href240), multi layer href222 networks (href33), bidirectional LSTM (BiLSTM) networks (href178) and href12 (RBF) (href221, href336) have also been used.Work in the scope of long-term traffic flow forecasting is less common. First, statistical models are usually not used in recent work. We can mention the use of a two context-aware Random Forest model (href118) and the hybridisation of an ARIMA model and a href35 model (href101). In contrast, href445 are commonly used. For example, a href81 (RNN) with a GPU-based implementation has been used to forecast long-term traffic flow in the cities of Odense and Beijing, obtaining a high accuracy (href83). Some authors have used graph href429 (GNN) to forecast traffic flow. Very recent work presents a spatial–temporal graph attention network that learns the dynamic graph structure and spatial–temporal dependency of the data (href89). This model is evaluated in two public datasets collected in California. Also very recently, an overview of recent spatio-temporal GNN models for traffic forecasting has been presented (href245). However, recent approaches tend to use hybrid neural networks, combining at least two different models, and are able to obtain better accuracy. For example, the combination of an LSTM model and an encoder–decoder architecture using a hard attention mechanism (href176) was developed and applied to data from href456. Following a similar line, a hybrid model which combines wavelet networks, LSTM and href338 has been used to forecast next day traffic flow in England href164 while a hybrid model, which combines a graph convolutional network and an LSTM, was proposed to forecast long-term traffic flow in New York (href407). A href345 auto-encoder and a BiLSTM auto-encoder have been used to detect anomalies in traffic flow (href243). Finally, it is worth to mention that multi-task learning has also been used in traffic flow forecasting (href53). The idea is to combine the data of different cities (in this case, Xi’an and Chengdu) to obtain a single model.Now, we will focus on models similar to our proposal. First, it is worth pointing out that BiLSTM models are not commonly used to work with time series, although recent studies show that BiLSTM reaches higher accuracy than LSTM due to their capability to use input data twice for training (Siami-Namini et al., 2019). However, in other topics, mostly related to href344, BiLSTMs have been successfully applied. For example, in mention extraction tasks (href225) or to write href405 (href16). Moreover, a single CNN very rarely has been employed in time series problems because its nature is not adequate for it. However, specially in recent years, it has been often combined with classical time series models to extract hidden information and, thus, increase the performance of the model. For example, a hybrid model composed by an LSTM, a CNN and an auto-encoder has been applied to forecast electricity consumption in Brazil (href179) while the combination of a DNN and an LSTM has been used to detect phishing URLs (href18). Similarly, models which combine CNNs and BiLSTMs are not frequent in the literature and most of them are tailored to solve problems related to href59 such as href259 (href437), text classification (href77), sentiment analysis (href149, href297) and fake news detection (href242). Other environments where these hybrid models have been recently used are video summarising (href323), DNA-protein binding predicting (href218) and remaining useful life estimation (href304).An interesting line of work, where hybrid models are also present, takes genetic programming as base model. These approaches have been use to forecast the stock market (href277) and electricity href142 (href63). In addition, hybrid genetic programming and neural network models have been used to predict wind power (href352), forecast href208 (href36) and href147 concentration in rivers (href73).To the best of our knowledge, a CNN-BiLSTM hybrid model has not been used to deal neither with time series nor with traffic flow forecasting.3. Problem description, data collection and processingIn this section we briefly describe the problem that we confront and the data that we will use. In particular, we will sketch the process to transform data into the format used by our model.3.1. Problem descriptionOur problem is to forecast long-term traffic flow in major roadways of big cities. Specifically, we will forecast the flow 12, 24, 48 and 72 h in advance. We will use data of the four last available timesteps. Let h be a given timestep and h+k be the timestep in which we desire to make the forecasting: we will use nine href214, corresponding to timesteps ranging from h−3 to h, to forecast the target variable in the h+k timestep. In order to provide a solution to this problem, our final goal is to find a model which explains, with an error as small as possible, the behaviour of the target variable over time. Let x1,…,x9 be the nine predictor variables (we will describe them in the next section), y be the target variable (we will also describe it in the next section) and ϵ∈R+ be an error. Our model can be expressed by the following equation: (1)y(h+k)=fx1(h−3),…,x1(h),x2(h−3),…,x2(h),…x9(h−3),…,x9(h)+ϵ3.2. Data description In this section we will identify the predictor variables and the target variable. We will also indicate the sources of the data that we used for our experiments.Table 1. Target stations and their href346 stations.Target station: location (direction)Aux. station 1: location (direction)Aux. station 2: location (direction)P/Castellana (N-S)C/José Abascal (W-E)A/ General Perón (E-W)C/Arturo Soria (N-S)C/Alcalá (W-E)C/Costa Rica (W-E)P/Sta María (S-N)P/del Prado (N-S)P/Infanta Isabel (E-W)C/Gran Vía (W-E)C/Hortaleza (S-N)C/Alcalá (E-W)href448href258Fig. 1. Location of the target stations in a map of Madrid.The target variable is the hourly number of vehicles passing through a traffic station in a certain direction. In order to perform experiments that could validate the usefulness of our model, we selected four traffic stations in the city of Madrid, targeting streets with big traffic flows but having different characteristics. Three of them are located in core city areas and one of them is a main entry/exit roadway of the city. The stations are:•Paseo de la Castellana (P/Castellana) taking data in the North–South direction. This is a major street that crosses Madrid from downtown to North.•Calle Arturo Soria (C/Arturo Soria) taking data in the North–South direction. This is a long street that crosses Madrid from North to South in the East part of the city.•Paseo de Santa María de la Cabeza (P/Sta María) taking data in the South–North direction. This is an important communication channel from downtown to the South of the city.•Calle Gran Vía (C/Gran Vía) taking data in the West–East direction. This is a shopping and touristic centrally located street.href15 shows the distribution of the four target stations in a map of Madrid.The first group of predictor variables are: type of day (public holiday, working day or weekend), daily average temperature, daily minimum temperature, daily maximum temperature and daily rain. In addition, we also consider as predictor variables the hourly amount of vehicles in the target station and in two auxiliary stations (two different for each target station). We selected the auxiliary stations by taking into account the traffic intensity (we prefer stations in roadways with high traffic intensity) and the proximity to the target station. href269 shows the corresponding auxiliary stations for each target station. Finally, we also use the hour in the timestep as a predictor variable. Therefore, we have nine predictor variables. For each prediction, we collect input data from four different hours: for each prediction we use 36 predictor variables. href431 shows an extract of the initial data-set (before pre-processing) where we can see, for each hour value, the values corresponding to the predictor and target variables.For our experiments, data have been extracted from the websites of different institutions. href343 have been obtained from AEMEThref79 and correspond to measures in El Retiro href21, located in the centre of Madrid, while type of day and traffic data have been extracted from the Madrid City Hall website.href306href313href195Fig. 2. Extract of href279 (Arturo Soria station).3.3. Data analysisNext, we will make a brief href14 of the hourly traffic flow in the target stations that we will consider in our experiments. In href311 we observe similar ranges in three of the stations. The range of the fourth one, P/Castellana, is wider. Moreover, we appreciate a very small number of atypical values which will be considered actual values and not caused by a human error, as we will discuss in the next section. In href261 we can observe that the hourly evolution of the traffic flow follows a similar pattern in all the stations (each of them in its corresponding range). Summarising, this evolution shows an increase on the number of vehicles from 5 a.m. until approximately 9/10 a.m. Then, there is a valley with small oscillations until approximately 6/7 p.m. At this time, a big decrease in the traffic flow begins until 5 a.m. of the next day. We note that the variation between day and night in C/Gran Vía is smaller than the one happening in the rest of stations (in relative terms). This implies that traffic flow in C/Gran Vía is significantly less dependent on temporal variables compared to the rest of stations. href433href159Fig. 3. Target data in each station (box-plot).href105href56Fig. 4. Mean of vehicles by hour in each target station.3.4. Data pre-processingData pre-processing has not been an easy task. In this section, we will describe step by step the whole process performed so that users making use of our work can try and mimic these steps to forecast traffic flow in other cities.•In the first step, we downloaded the different data-sets from the corresponding websites. Once all data-sets were downloaded, we unified the format of the date column (the junction column) in all data-sets. Then, we transformed daily data into hourly data and joined all data-sets.•In the second step, we added non available (NA) data by using the mean between previous and next values (all NA data are numerical). We also categorised data which required it and scaled all data between 0 and 1.•Next, we normalised all the variables (predictor variables and target variable) between 0 and 1 by using the well-known MinMaxScaler method. This step was applied in order to transform all the numerical variables to the same scale.•Subsequently, we transformed data from a sequence to pairs of input (predictor variables) and output (target variable), that is, we transformed a time series problem into a href103 problem.•Finally, we reshaped data from a flatten vector to a matrix with nine columns (one by predictor variable) and four rows (one by timestep). The reshape is needed because the proposed model requires data in matrix form as input.It should be mentioned that we did not remove outliers. We manually analysed href165 and concluded that, in all cases, they corresponded to a notorious event happening in Madrid and they were not due to a human error.4. CNN-BiLSTM architectureIn this section, we will describe the proposed model: a hybrid CNN-BiLSTM. First, this architecture is built to leverage CNN advantages for filtering and removing noise data, obtaining substantial internal valuable information of the time series. The removal of the noise data is performed by applying dimension reduction. Therefore, non-relevant information, that is, the noise, is not included in the reduced matrix. The hidden internal valuable information is obtained by applying the convolutional operation: the filters or kernel matrix pass through the input matrix, highlighting different characteristics depending on the kernel and, thus, obtaining hidden information. Second, this architecture is built to leverage the capability of a BiLSTM network to model and forecast both in short-term and long-term cases of temporal data sequences. The power of BiLSTM models lies in the training process. In this model, input data is trained twice, from left to right and from right to left, in parallel. Both context interpretations are combined in the output, providing more comprehensive information of the data context in this model than, for example, in a unidirectional LSTM model. We might say that the CNN acts as an encoder layer mechanism that learns new features from the input data sequences, while the BiLSTM acts as a decoder that learns the temporal relations in data stream and outputs the traffic flow prediction.The proposed model has two differentiated blocks. The CNN block has a CNN layer, a pooling layer and a flatten operator. The CNN block output will be used as input by the BiLSTM block. This second block includes a BiLSTM layer, a dropout layer and a dense layer. Since convolutional and pooling layers were originally developed to extract features from an image, they only work with matrix data. Therefore, we will need to format input data to be in matrix form as we explained in Section href273. Next, we will describe in detail the CNN and BiLSTM blocks.4.1. CNN blockAs usual, convolutional and pooling layers aim to filter incoming data to extract important information from the matrix. Convolutional operations are performed by the href404 between input data and smaller matrices called kernels or filters. Usually, several filters are considered and they can be seen as windows with a given height and width that slide a certain number of cells, usually called stride, across the input matrix by applying the convolution operation on each sub-region of the matrix that it intersects. This process obtains a convoluted matrix, which represents a singular feature of the original input matrix. Obviously, the application of several filters will carry out that more different convoluted features will be obtained. A model that uses several convoluted features will more accurately represent the input matrix than a model that only uses the original input matrix. Therefore, the performance of a given model will be improved by using more filters. The convolutional operation can be formally expressed as follows. Let H be the input matrix, I be the kernel matrix and m and n be the indexes of rows and columns of the result matrix (R). We have (2)R[m,n]=(H⋅I)[m,n]=∑j∑kI[j,k]⋅H[m−j,n−k]The convolutional layer uses the ReLU href442. This is the most widely used activation function applied in CNN models. Its main advantage is that it does not activate every neuron at the same time because it transforms all negative values into 0. Due to this, ReLU has a big computational efficiency. Actually, ReLU is six times faster to train than other activation functions such as tanh (href51). ReLU is defined as follows: (3)f(x)=x+=max(0,x)The convolutional layer is followed by a max pooling layer. A pooling layer is a sub-sampling method that aims to reduce the dimension of the convolutional matrix by removing values but keeping the most important features detected by each filter. There are several types of pooling layers, but the most widely used, being the one used in our model, is the max pooling layer. Similarly to the previous description of filter, we use a window to traverse the matrix. We take the values of each patch of the matrix as input and return the maximum of each patch. This layer produces new matrices that can be considered as summarised versions of the convolutional matrices. The pooling operation also induces an increase of the model robustness. That is, small modifications in the input will not affect the output. Finally, the pooling layer is followed by a flatten operator, which unrolls the values at the last dimension in order to reshape the next layer input.4.2. BiLSTM blockThe second component of the model is a BiLSTM block composed by a BiLSTM network, a dropout layer and a dense layer.In order to understand the performance and architecture of a BiLSTM network, we will first describe an (unidirectional) LSTM network. An LSTM network is a type of recurrent neural network (RNN). Traditional RNNs do not have a previously defined structure of layers. They use cyclic connections in their hidden layers that provide short-term memory to the model and, therefore, the capability of working with sequence data (as time series). However, traditional RNNs have the issue known as long-term dependencies problem: a gradual forgetfulness of past information as the number of neurons increases. LSTMs solve this problem by saving relevant information through all LSTM units in a kind of href438 known as href80.Each LSTM unit consists of a memory cell and three gates that regulate the information flow by deciding which information will be forgotten and which one will remain in the model. This is the key to learn long-term dependencies by the LSTM and solve the previously mentioned issue. These three gates are called forget gate, input gate and output gate. Next, we briefly describe their features.In the forget gate, a href26 is applied to the information included in the current input (Xt) and the previous hidden state (h−1). This function, denoted by ft, returns a value between 0 and 1 that indicates the percentage of the information that will be kept.The input gate takes the information from the current input and from the previous hidden state and passes them through a second sigmoid function, transforming this information into values between 0 and 1. The same information also passes through a tanh function, which helps to regulate the network, returning a value between −1 and 1. Then, the sigmoid output (it) is multiplied by the tanh output (C̃t) to decide which information is important to keep.Now, we have enough information to compute the cell state. First, the previous cell state (Ct−1) is multiplied by the forget output. Then, the output of the input gate is added, updating the cell state with new values considered relevant by the network. The result of these two operations is the new cell state (Ct).Finally, we have the output gate. It decides the value of the next hidden state. First, the information from the current input and from the previous hidden state passes through a third sigmoid function. Then, the new cell state passes through a tanh function. Both of these outputs are multiplied point-by-point. The output of the output gate (ot) will be the new hidden state (ht). Therefore, the new cell state and the new hidden state will be carried to the next timestep.Formally, the operations that happen in an LSTM cell are given by the following expressions: (4)ft=σ(Wf⋅[ht−1,xt]+bf)it=σ(Wi⋅[ht−1,xt]+bi)C̃t=tanh(Wc⋅[ht−1,xt]+bC)Ct=ft⋅Ct−1+it⋅C̃tot=σ(Wo[ht−1,xt]+bo)ht=ot⋅tanh(Ct)where σ represents a sigmoid function, tanh represents a href1, xt represents the input data in time t, ht represents the hidden state in time t, each Wx represents a weight matrix and each bx represents a bias vector.Once we have explained the behaviour of an LSTM network, we can describe how BiLSTM networks work. They are an evolution of LSTM networks based on Bidirectional RNNs, an extension of RNNs. A BiLSTM network contains a forward LSTM network and a backward LSTM network. The forward LSTM uses as input a sequence of values ranging from t−k to t while the backward LSTM uses as input a sequence ranging from t to t−k. The outputs of the forward (h⃗) and backward (h⃖) networks are computed by using the previously described mechanism of a single LSTM. The BiLSTM layer outputs a vector (Yt) that is obtained by using the following equation: (5)Yt=σ(ht⃗,ht⃖)In this case, a sigmoid function unifies the outputs of the single LSTM networks.Note that BiLSTMs use the so-called dropout technique in order to regulate over-fitting. The dropout rate is indeed a hyperparameter to consider in the definition of the model.Finally, we stack a fully-connected layer that returns the prediction output.4.3. Tuning parametersFirst, we set in advance the number of epochs (100) and the batch size (32). Then, we applied an href434 algorithm in order to fine-tune the hyperparameters of the model. The ranges of the possible values of hyperparameters were selected by ensuring to use a reasonable computational time in the execution of the model (at most, 70 seconds per epochs). The obtained hyperparameters were as follows.The convolutional layer contains 256 filters. Our experiments showed that having a higher number of filters achieved a very modest decrease of the error while considerably increasing the computation time. Besides, using a lower number of filters considerably increased the error. As kernel, we use a 2 × 2 matrix. Although this kernel dimension might look too small, we must take into account that the input matrix has also a relatively small dimension (9 × 4). By using a higher dimension kernel, a small number of hidden features would be extracted by the convolutional operation. In the max pooling layer, we use a 2 × 2 window with a stride of 2 to apply the max pooling operation. Again, we use a small window dimension because of the small dimension of the input matrix. We fixed the stride value after several experiments revealing that for higher values, the dimension reduction implies a significant information loss. This pooling operation is made by using a same padding technique, which means that output and input sizes would be the same with stride equal to 1. Therefore, it requires the filter window to slip outside the input matrix. For this, it is necessary to add either a row or a column of zeros. Our experiments showed that the usual no padding technique, which means that only the input matrix will be covered by the filter window with the given stride, obtained slightly worse results than same padding.Focusing now on the BiLSTM block, the BiLSTM layer contains 500 BiLSTM units (each of them is composed by a forward LSTM unit and a backward LSTM unit). We considered 500 BiLSTM units because this number provided a good trade-off between observed error and computational time. The initial weights of the BiLSTM layer were set from a random href417. We also made preliminary experiments with other distributions such as random uniform, truncated normal, zeros distribution and ones distribution. After that, we conclude that random normal gave the best results. Then, we added a dropout layer with a rate of 0.5. As the dropout rate did not seem to have influence in the final results, we decided to use the usually considered best dropout rate value for hidden layers (href340). The fully connected layer has only 1 output neuron with a linear activation function because we predict only one value.We used the Adam optimiser as optimisation algorithm for stochastic href72 on the network by using as loss function the mean absolute error.Finally, we would like to explain the order applied to the 36 predictor variables (nine variables by each of the four considered timesteps). It is natural to consider a 9 × 4 input matrix because the relationship between variables with a difference of one timestep will be bigger than the relationship between variables with a bigger difference. For the same reason, we considered natural that the rows should be in ascending time order. However, there is not a by default order for the nine columns corresponding to the predictor variables. We considered a grouping by affinity (see Fig. 2) but it should be analysed whether this order makes sense. In order to show that we are choosing the best order, it would be necessary to produce the 9!=362.880 different combinations and perform the experiments for each of these combinations. Even if this would be feasible, this approach does not scale with the number of predictor variables. Therefore, we decided to perform a different experiment with the goal of checking whether the specific order between columns have a relevant impact. We produced eight random combinations, took one traffic station and one prediction and compared the training curves to see whether there were significant differences between them. As can be seen in href250, the curves of all the groupings are quite similar, so that we have some evidence to claim that the order of the predictor variables does not significantly affect either the training process or the final loss.href244href384Fig. 5. Loss function value (y axis) during the epochs (x axis) of the training process, using eight different combinations of the same predictor variables (Arturo Soria, 12 h in advance).We have used Netron (href399) to provide a href109 of our hybrid model, including the values of the relevant hyperparameters (see href332). The interested reader is referred to https://github.com/MMH1997/CNN-BiLSTM-network for the complete code of the model.href453href10Fig. 6. Our proposed hybrid model.5. Baseline modelsIn this section we will briefly describe the baseline models whose performance will be compared with the one of the proposed model. We will specify the hyperparameter values for each baseline model.5.1. Random forest (RF) regressorThe RF Regressor algorithm is a statistical machine learning model whose prediction is based on the output of combined regression href140. These regression trees are trained by randomly sampled subsets of the original training set. The final output value of the RF model will be the mean of the regression trees outputs. The use of several regression trees considerably improves the use of a single one. Specifically, it avoids original handicaps of regression trees such as a high susceptibility to a brief data modification and over-fitting.We will use the following hyperparameters in this algorithm: 100 regression trees, a maximum depth of 10 for each tree and a minimum number of samples required in a node before splitting it of 20. These values were set after performing preliminary experiments. These experiments showed that for more than 100 regression trees, the mean absolute error converges to a similar value. Similarly, maximum depth and minimum number of samples required in a node have been selected after a fine-tuning process.5.2. Linear regression (LR)LR is a statistical href421 used to find a linear relationship between a dependent or target variable and several independent or predictor variables. In our case, we do not use any variant such as Ridge or Lasso.5.3. k-Nearest neighbours algorithm (KNN)KNN is a non-parametric and statistical algorithm that bases its output on the mean of the target variable of the k most similar observations. KNN does not have a training phase, that is, it does not learn a specific model. It just makes predictions computing the similarity between observations.After a fine-tuning process, we decided to use the following hyperparameters: 5 as k value, euclidean metric as similarity distance and the weight of each neighbour will be inversely proportional to its distance to the target observation.5.4. Simple recurrent neural networks (SRNN)SRNNs were the first recurrent network. They carry out a recurrent connection between the output of the previous and current inputs. This process develops a temporal feedback in the network. SRNNs were the prelude of the more powerful and accurate LSTM networks and derivatives.In our experiments, after a fine-tuning process, we used an SRNN with 500 units, followed by a dense layer with 1 neuron. In this case, we train the model using a Stochastic href430 as optimiser, with a learning rate of 0.1.5.5. Convolutional neural network (CNN)CNN is commonly used to work with images and matrices. Its architecture is described in Section 4. In this case, we use the matrix 9 × 4 as input to obtain the corresponding target variable as output. We use a 2D convolutional layer with 256 filters, a kernel size of 2 × 2 and a relu as activation function. This is followed by a MaxPooling layer with a pool size 2 × 2. Then, we add a flatten layer and finally a dense layer with 1 neuron and a linear function as activation.5.6. LSTM networkLSTM network is the most widely used deep learning model in regression and time series tasks. Its architecture has been described in Section 4. In our experiments, we use a unidirectional LSTM layer with 500 units followed by a dropout layer with a rate of 0.5 and by a dense layer with 1 neuron. We use these hyperparameters in order to obtain a model with a similar complexity to our proposed model.5.7. BiLSTM networkBiLSTM is a decisive baseline model. It will show us whether it is worth to add the CNN block to the proposed model. Its architecture is the same as the one described in Section 4, but without including the CNN block. As happens with the previously described baseline, we will use similar hyperparameters to the proposal with the same purpose. The BiLSTM contains 500 BiLSTM units followed by a dropout layer with a rate of 0.5 and by a dense layer with 1 neuron.5.8. CNN-LSTM networkThis is also a decisive baseline model. It will allow us to determine whether it is worth to use a BiLSTM rather than an LSTM in the proposed model. Its architecture is similar to the one described in Section 4. The only difference is that we will use here a unidirectional LSTM network rather than a BiLSTM network. The hyperparameters in the CNN block will be exactly the same as in the proposed model. The LSTM block contains 500 LSTM units followed by a dropout layer with a rate of 0.5 and by a dense layer with 1 neuron.5.9. Discarded alternative baseline modelsIn addition to the considered baseline models, we analysed other possibilities such as multi-layer perceptron neural network (MLP). However, this type of neural networks does not have a temporal component. For example, in order to use MLP it would be necessary a data flattened, which would completely eliminate the temporal dependencies, so that data can be taken by the model as a single vector.6. ExperimentsIn this section, we evaluate the proposed model in the four data-sets corresponding to each target station. We also compare it with the eight baseline models previously described. For each experiment, we use 2/3 of data to train and 1/3 of data to test. We randomly chose the training and testing sets. In order to evaluate the performance of the models, we considered three metrics.•Mean absolute error (MAE). This metric is one of the most used in regression to evaluate the quality of a model predictions. Its definition is: (6)MAE=1n∑i=1n|yˆi−yi|being n the total number of evaluated observations, yˆi the predicted value of the ith observation and yi the actual value of the ith observation.•Accuracy (Acc). This is a classification metric that can be very useful to implement measures by the authorities. For each station, we will classify the values (actual and predicted) in three categories (low volume of traffic, medium volume of traffic and high volume of traffic). Let Pk be the kth percentile of the target variable. The first category includes the observations which are between P0 and P15, the second category includes the observations which are between P15 and P85 and the third category includes the observations which are between P85 and P100. Acc is defined as the ratio between the number of well-classified observations and the total number of observations.•href351 (RMSE). This metric is also widely used in regression. We considered it just in case that it could reveal results different from the ones corresponding to MAE. Its definition is: (7)RMSE=1n∑i=1n(yˆi−yi)2being n the total number of evaluated observations, yˆi the predicted value of the ith observation and yi the actual value of the ith observation.It should be mentioned that we considered another typical metric in regression: mean absolute percentage error (MAPE). However, MAPE has some disadvantages (href98) that hinder its usefulness. For example, when the actual value is close to 0, it yields extremely large percentage errors. In case that actual value is 0 and the predicted value is not 0, it produces undefined errors. We have this situation in our data, particularly, early morning data in working days, when the hourly traffic flow can be close to 0 or even 0. Therefore, we discarded it.Concerning some of the models that we use, note that neural networks and RF models present a random component. Because of this, we evaluated each of these models five times in each station, using different seeds, in order to give consistency to our experiments. Then, the average of the five evaluations by model and station was considered.href372 The rest of models (KNN and LR) do not have a random component and, therefore, only one evaluation in each station was performed.We will show and comment the results of the experiments in each target station and from a broad perspective. In the discussion of the results, we will emphasise more the values corresponding to MAE. The rationale is that models are trained to optimise MAE and that our observations show that results corresponding to the three metrics are quite similar.Finally, one remark about the presentation of the results corresponding to the experiments. MAE values obtained by the LR and CNN models are much higher than the ones corresponding to the rest of the models. Therefore, we have decided to remove the LR and CNN models in the graphs because, using a linear scale, it would condition the plot ranges and, therefore, the graphical displays. Nevertheless, these values can be found in the different tables presenting the numeric results.6.1. P/Castellana station resultsIn this station, as we can see in href236 and href183, the best performance is obtained in all time href229 by the proposed model except when predicting results 12 h in advance. The MAE of the proposed model is 1.2% higher than the MAE of BiLSTM in the 12 h granularity. However, the MAE of the proposed model is 3.6% smaller than the MAE of the second best model (CNN-LSTM) in 24 h granularity; 3.2% smaller than the MAE of the second best model (BiLSTM) in 48 h granularity and 1.8% smaller than the MAE of the second best model (BiLSTM) in 72 h granularity. By taking into account the average of all granularities, the MAE of the proposed model is 2.2% smaller than the MAE of the second best model (BiLSTM). Acc behaves similar to MAE: the proposed model obtains the best performance in all granularities except when working 12 h in advance (in this case, BiLSTM obtains the best performance). Considering the RMSE, in all granularities our proposal obtains the best results except when working 24 h in advance. By taking into account the average of all granularities, the RMSE of the proposed model is 2.3% smaller than the RMSE of the second best model (RF). Interestingly enough, in this station, all the models show better results, both for MAE and for Acc (not for RMSE), in 24 h granularity than in 12 h granularity. This phenomenon appears sometimes in some models applied to other stations.href131href355Fig. 7. Line charts of MAE (top), Acc (centre) and RMSE (bottom) by model and granularity (P/Castellana).Table 2. MAE (top), Acc (centre) and RMSE (bottom) average values by granularity and model (P/Castellana).GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF176.23153.44183.29196.42175.44153.37182.56196.01LR395.33228.38300.63319.03395.33228.38300.63319.03KNN179.99167.45197.78209.18179.99167.45197.78209.18SRNN165,44161.61213.52208.77161.04153.41203.75205.14CNN353.44269.79326.07338.02350.68262.14320.86337.11LSTM157.61153.67187.74197.81152.52151.86182.31192.67CNN-LSTM151.57141.55178.63185.65146.49135.00174.62182.83BiLSTM142.85142.75174.55187.32141.09139.86171.60182.89Proposed model144.22136.51168.92183.95138.62135.09166.83180.38GranularityMeanMaxEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF0.790.8290.7920.7780.7920.8310.7920.779LR0.7070.750.720.7120.7070.750.720.712KNN0.8030.8130.7890.7680.8030.8130.7890.768SRNN0.8070.8130.7820.7730.8170.8270.7860.777CNN0.6870.7430.720.7110.6920.7470.7240.714LSTM0.8260.840.8050.7940.8340.8460.8140.798CNN-LSTM0.8340.8460.8080.8070.8380.8520.8170.811BiLSTM0.840.8470.8170.8070.8460.8530.8240.816Proposed model0.8390.8510.8220.8080.8480.8560.8230.812GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF253.95233.04264.73293.57253.02232.82263.91292.9LR475.13321.28393.11408.41475.13321.28393.11408.41KNN269.28256.02291304.78269.28256.02291304.78SRNN263.98264.76322.02317.52258.03253.57307.1306.58CNN458.45354.49429.96443.1455.09350.72423.65438.9LSTM257.14256.76294.7320.66249.4253.79289.78311.89CNN-LSTM249.96244.93287.29299.11238.66235.92281.15295.82BiLSTM230.42243.28283.49300.93227.97239.9280.84291.76Proposed model224.46241.47277.24291.11219.37226.54273.742856.2. C/Arturo Soria station resultsIn this station, as we can see in href44 and href418, the best results are obtained by the proposed model in all granularities. The MAE of the proposed model is 2.5% smaller than the MAE of the second best model (BiLSTM) in 12 h granularity; the MAE of the proposed model is 13.5% smaller than the MAE of the second best model (BiLSTM) in 24 h granularity; the MAE of the proposed model is 5.6% smaller than the MAE of the second best model (BiLSTM) in 48 h granularity and, finally, 7.7% smaller than the MAE of the second best model (BiLSTM) in 72 h granularity. On average, the MAE of the proposed model is 7.4% smaller than the MAE of the second best model (BiLSTM). The Acc and RMSE of the proposed model also obtain the best performance in all granularities.href90href369Fig. 8. Line charts of MAE (top), Acc (centre) and RMSE (bottom) by model and granularity (C/Arturo Soria).Table 3. MAE (top), Acc (centre) and RMSE (bottom) average values by granularity and model (C/Arturo Soria).GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF111.4599.00125.45129.76111.2798.93124.76129.60LR242.80150.72198.54204.11242.80150.72198.54204.11KNN107.85108.59129.25134.47107.85108.59129.25134.47SRNN88.3693.74134.43128.0485.1096.20126.72124.10CNN174.79163.33195.42201.25170.30158.47192.90196.61LSTM95.36106.03123.90131.4293.07103.72121.46127.74CNN-LSTM100.02108.57128.73135.0398.35104.60127.65128.79BiLSTM84.1398.68117.97128.1481.8197.08116.60126.44Proposed model82.0685.41111.43118.2179.8784.02108.32117.4GranularityMeanMaxEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF0.8350.8420.8020.7950.8330.840.8010.794LR0.7150.750.7180.7150.7150.750.7180.715KNN0.8150.8160.7920.7840.8150.8160.7920.784SRNN0.8370.8290.7870.80.8440.8340.7970.815CNN0.7140.7240.7370.7330.7220.730.7410.737LSTM0.8280.8160.7980.7930.8040.8070.7960.788CNN-LSTM0.820.8140.7870.790.8170.810.7820.781BiLSTM0.8370.8270.810.8020.8310.8220.8040.793Proposed model0.8530.8520.8250.820.8480.8470.8150.814GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF168.31161.36192.76196.78168.22161.18191.75196.38LR299.36218.53264.21266.91299.36218.53264.21266.91KNN174.38177.06201.65206.95174.38177.06201.65206.95SRNN165.50179.94219.09210.16162.25176.24215.93203.41CNN253.35231.67271.94278.38247.84229.15268.80271.25LSTM154.90172.33193.57200.00152.19169.43192.55196.23CNN-LSTM152.70174.14196.78203.02150.33168.60195.82198.03BiLSTM137.93162.37185.80195.51135.30161.00183.42194.46Proposed model137.05158.12181.02190.34133.08157.44176.24188.046.3. P/Sta María station resultsIn this station, as we can see in href42 and href69, the proposed model obtains again the best performance in all granularities. The MAE of the proposed model is 2.8% smaller than the MAE of the second best model (BiLSTM) in 12 h granularity; the MAE of the proposed model is 5.3% smaller than the MAE of the second best model (RF) in 24 h granularity; the MAE of the proposed model is 2.4% smaller than the MAE of the second best model (BiLSTM) in 48 h granularity and 1.7% smaller than the MAE of the second best model (BiLSTM) in 72 h granularity. On average, the MAE of the proposed model is 3.6% smaller than the MAE of the second best model (BiLSTM). The Acc of the proposed model also obtains the best performance in all granularities. However, the RMSE of the proposed model obtains the best performance in all cases except in 24 h in advance. On average, the RMSE of the proposed model is 2.2% smaller than the RMSE of the second best model (BiLSTM).href2href254Fig. 9. Line charts of MAE (top), Acc (centre) and RMSE (bottom) by model and granularity (P/Sta María).Table 4. MAE (top), Acc (centre) and RMSE (bottom) average values by granularity and model (P/Sta María).GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF95.44100.46118.01122.1895.20100.19117.72122.00LR212.83138.61175.71185.15212.83138.61175.71185.15KNN124.31107.45120.12127.39124.31107.45120.12127.39SRNN98.32103.50135.83124.1495.0299.12124.72122.70CNN165.34157.29182.85189.79129.64155.41181.70185.53LSTM96.05107.29120.77122.4494.75104.43117.60121.69CNN-LSTM99.49103.65118.86122.4495.48103.21116.54121.14BiLSTM89.75104.11112.97119.1788.13101.64110.97117.83Proposed model87.3096.12110.25117.2085.0593.68105.76113.49GranularityMeanMaxEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF0.8280.8360.7890.7910.830.8380.7890.792LR0.70.7360.710.7060.70.7360.710.706KNN0.7830.820.7950.7810.7830.820.7950.781SRNN0.820.8190.770.790.8290.8230.7930.795CNN0.7070.7290.7250.7210.7130.730.7270.723LSTM0.8280.8160.7910.7880.8370.8210.7960.792CNN-LSTM0.8270.830.8050.7970.8390.8360.8090.8BiLSTM0.8380.8190.8110.80.8460.830.8170.806Proposed model0.8470.8390.8210.8110.8510.8460.8270.818GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF138.84148.12165.65170.90138.49147.91165.23170.66LR250.55189.85223.74235.18250.55189.85223.74235.18KNN174.61160.42170.67267.84174.61160.42170.67267.84SRNN154.09160.69200.05186.55149.65155.05184182.92CNN233.27210.59241.12248.36229.8210.13237.39242.29LSTM141.19155.72169.13169.71136.77153.11167.2168.99CNN-LSTM152.16161.58176.07179.77147.48160.58173.77178.64BiLSTM131.13151.53162.66167.73130.04148.91160.07166.2Proposed model126.78151.36162.44159.12124.23147.42159.34155.026.4. C/Gran Vía station resultsFinally, the MAE results corresponding to C/Gran Vía station show again that our proposed model outperforms all the baseline models for all granularities (see href234 and href136). The MAE of the proposed model is 7.1% smaller than the MAE of the second best model (BiLSTM) in 12 h granularity; the MAE of the proposed model is 4.3% smaller than the MAE of the second best model (RF) in 24 h granularity; the MAE of the proposed model is 7.3% smaller than the MAE of the second best model (RF) in 48 h granularity and 3.1% smaller than the MAE of the second best model (BiLSTM) in 72 h granularity. On average, the MAE of the proposed model is a 6.7% smaller than the MAE of the second best model (BiLSTM). In this station, the Acc of the proposed model is the best in all granularities except in 12 h in advance. In this case, BiLSTM is slightly better than the proposed model. However, the RMSE of the proposed model obtains the best performance in only one granularity (48 h in advance). On the average, the RMSE of the proposed model is 0.8% higher than the obtained in the best model (BiLSTM).href187href4Fig. 10. Line charts of MAE (top), Acc (centre) and RMSE (bottom) by model and granularity (C/Gran Vía).We assume that anomalies seen in these results can be explained by considering the particularities of the C/Gran Via data mentioned in data analysis Section href170.Table 5. MAE (top), Acc (centre) and RMSE (bottom) average values by granularity and model (C/Gran Vía).GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF153.26154.36175.40173.94153.02154.06175.08173.86LR259.88196.55243.91251.27259.88196.55243.91251.27KNN154.19163.22176.77182.84154.19163.22176.77182.84SRNN146.56151.16197.96189.87145.33149.03187.62186.94CNN251.39210.4243.94254.32241.22206.02242.07248.64LSTM151.75164.61185.41186.13150.02163.19181.75182.19CNN-LSTM148.40156.94175.86179.07146.42156.31174.44176.53BiLSTM143.43161.29175.69175.20140.86156.36171.38172.29Proposed model133.22147.7162.66168.61131.38143.91159.29164.86GranularityMeanMaxEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF0.7740.7820.7640.7560.7750.7830.7650.757LR0.70.730.7050.6980.70.730.7050.698KNN0.7740.7740.7560.7460.7740.7740.7560.746SRNN0.7820.7830.7390.7390.7840.7870.7450.743CNN0.6960.7070.6990.6890.7010.710.70.691LSTM0.780.7670.7520.7390.7870.7710.7610.746CNN-LSTM0.7870.7830.7640.7550.7930.7860.7670.761BiLSTM0.8050.780.7580.7430.8090.7830.7640.756Proposed model0.7930.7940.770.7610.8030.80.7830.765GranularityMeanMinEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 hRF227.05237.78264.29263.39226.95237263.79263.23LR330.7283.97333.29338.74330.7283.97333.29338.74KNN231.73250.37265.98267.84231.73250.37265.98267.84SRNN241.14256.25308.66303.99243.79252.88296.72301.48CNN339.19304.66340.29352.37327.48300.05337.17346.3LSTM230.6248.07272.23267.54227.86243.76266.6262.43CNN-LSTM242.61266.54288.49291.55240.53266.54288.5291.55BiLSTM220.92243.05261.21257.62219.13237.2255.77250.2Proposed model224.55239.19261.11266.24217.7230.73258.2261.176.5. Summary of the resultsFinally, we will analyse the general behaviour of each model by taking into account the average value of all the stations. As we can see in href27 and href199, the proposed model obtains the best results in all the granularities and metrics except considering RMSE in 24 h in advance. By granularity, the MAE of the proposed model is 3% smaller than the MAE of the second best model (BiLSTM) in 12 h granularity; 8.1% smaller than the MAE of the second best models (RF and BiLSTM) in 24 h granularity; 4.8% smaller than the MAE of the second best model (BiLSTM) in 48 h granularity and 3.6% smaller than the MAE of the second best model (BiLSTM) in 72 h granularity. On average, the MAE of the proposed model is 4.8% smaller than the MAE of second best model, BiLSTM. Now, we can analyse the impact of the components that we apply in the proposed model. On average, to use a BiLSTM block rather than an LSTM block implies an 8.1% decrease of the MAE while adding a CNN block rather than not adding it implies a decrease of the MAE by 4.8%. Finally, the performance of both improvements implies a decrease of the MAE by 10.3% with respect to a single LSTM model.href388href38Fig. 11. Line charts of MAE (top), Acc (centre) and RMSE (bottom) by model and granularity (average of four stations).The station in which the proposed model obtains the biggest difference with respect to the baseline models is C/Gran Vía. This may be in part due to the smaller temporal dependence in this station, as we mentioned in Section 3.3. This result shows that the hidden characteristics detected by the CNN block of the proposed model are not only temporal dependencies: it is also able to identify relationships between different predictor variables. On the contrary, the baseline models are not so well suited to detect these relationships. These non-temporal relations are present to a greater or lesser extent in all stations data. Because of this, the proposed model obtains the best results in fifteen out of the sixteen performed experiments.Table 6. MAE, Acc and RMSE values by granularity and model (average of the four stations).GranularityMAEAccRMSEEmpty Cell12 h24 h48 h72 h12 h24 h48 h72 h12 h24 h48 h72 hRF134.1126.817150.542155.5750.8070.8220.7860.78197.04195.09221.86231.16KNN141.585136.678155.98163.470.7940.8060.7830.77212.5210.97232.3339.35SRNN124.64127.5140.44162.70.81150.8110.76950.775206.18215.51265.45254.33LSTM125.197132.897154.455159.450.8150.810.7860.778195.96208.22232.41239.48CNN-LSTM124.87127.677150.52155.5470.8170.8180.7910.787199.36211.79237.16243.36BiLSTM115.04126.713145.295152.4580.830.8180.80.788180.1200.06223.29230.45Proposed model111.69116.43138.32146.990.8330.8340.8090.8178.21197.53220.45226.7Briefly discussing the Acc values, we can mention that it commonly behaves as MAE. The Acc of the proposed model obtains the best results in all granularities. We can highlight that there is a low increase of the Acc in the proposed model (and in others such as RF, CNN-LSTM and KNN) from the 12 to the 24 h granularity. For this metric, the proposed model obtains the best performance in fourteen out of the sixteen experiments.Finally, briefly discussing the RMSE values, we note that, in general, our proposal obtains the best performance in all the granularities except in 24 h in advance. In this case, RF obtains the best results in three out of four stations. However, RF obtains poorer RMSE than our proposal when predicting 12 h in advance, while our proposal obtains similar RMSE to RF in 24 h in advance. Moreover, our proposal obtains the best performance in ten out of the sixteen experiments while the second best model (RF) obtains only the best results in four out of the sixteen experiments. Therefore, our model does not only stand out for its best performance, but also by its higher consistency with respect to baseline models.7. Conclusions and future workIn this paper we presented the development of a hybrid model between two types of neural networks (CNN and BiLSTM) for long-term traffic flow forecasting. We have evaluated the usefulness of our model in four traffic stations of Madrid. In order to assess the quality and performance of the proposed model, we compared it with eight baseline models typically used in time series problems. The results show that, in general, the proposed model obtains the lowest error in all granularities. By granularity, and considering MAE, the proposal takes a higher difference respect to the best baseline models in 24 h granularity, obtaining an MAE 8.1% smaller than the one obtained by the second best model. On the contrary, the lower difference with respect to the best baseline model is achieved in 12 h granularity, obtaining an MAE 3.3% smaller than the one obtained by the second best model. We would also like to point out that, on average, the accuracy obtained in 24 h granularity (0.834) is slightly higher than the one obtained in 12 h granularity (0.833). By station, and considering Acc, the proposal obtains the higher accuracy in C/Arturo Soria station, obtaining an average accuracy of 0.837, while the lower is obtained in C/Gran Vía station (0.78). Our proposal obtains the best RMSE in 10 out of the sixteen experiments. It also confirms the best performance of our proposal with respect to the baseline models. Moreover, the consistency of the proposed model in all the granularities is another advantage to take into account. We can bring out two main conclusions of our work. First, the extraction of characteristics (CNN layer) from a time series matrix is relevant to obtain a better quality of the forecasts. Second, in light of the obtained results, we can claim that a BiLSTM network obtains better results than an LSTM network in time series tasks. By extension, the hybridisation of BiLSTM and CNN is more accurate than the hybridisation between an LSTM and CNN.We consider some lines for future work. First, in order to decrease the error of the model, we would like to perform a detailed analysis about the behaviour of different hyperparameters in the CNN-BiLSTM hybrid model. Second, we would like to export the model to other traffic stations in Madrid and to other cities that could require it. In the second case, we will establish a criterion for href39 as general as possible. Third, we would like to introduce new predictor variables. For example, it would be useful to have a variable that determines the state of traffic restrictions under stressful and unusual conditions such as a pandemic. In this line, we would like to use href435 prediction models (href428), in particular, our previous work on ozone concentration (href215), to enhance traffic flow predictions. Finally, we would like to integrate our work with current research on href375 (CEP) (href342, href382, href255, href385) to implement a system that could automatically raise alarms by taking into account complex events generated from different contexts, specifically, traffic flow and air quality.CRediT authorship contribution statementManuel Méndez: Conceptualization, Software, Validation, Data curation, Writing – original draft, Writing – review & editing, Visualization. Mercedes G. Merayo: Conceptualization, Methodology, Writing – original draft, Writing – review & editing, Supervision, Funding acquisition. Manuel Núñez: Conceptualization, Methodology, Writing – original draft, Writing – review & editing, Supervision, Funding acquisition.Declaration of Competing InterestThe authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.AcknowledgementsWe would like to thank the anonymous reviewers of this paper for the careful reading and their constructive comments, which have helped us to further strengthen the paper.Recommended articlesData availabilityData will be made available on request.Referenceshref239Abdi, J., Moshiri, B., Sedigh, A.K., 2010. Comparison of RBF and MLP neural networks in short-term traffic flow forecasting. In: 2010 International Conference on Power, Control and Embedded Systems. pp. 1–4. href378.href70href359Abduljabbar R., Dia H., Tsai P.-W.Unidirectional and bidirectional LSTM models for short-term traffic predictionJ. Adv. Transp., 2021 (2021), pp. 1-16, href139href295href41Abu Kwaik K., Saad M., Chatzikyriakidis S., Dobnik S.LSTM-CNN deep learning model for sentiment analysis of dialectal arabicSmaïli K. (Ed.), Arabic Language Processing: From Theory to Practice, 978-3-030-32959-4, Springer International Publishing, Cham (2019), pp. 108-121, href341href335href122href411Ari D., Alagoz B.B.An effective integrated genetic programming and neural network model for electronic nose calibration of air pollution monitoring applicationNeural Comput. Appl., 34 (2022), pp. 12633-12652, href52href123href104href151Ari D., Alagoz B.B.DEHypGpOls: a genetic programming with evolutionary hyperparameter optimization and its application for stock market trend predictionSoft Comput., 27 (2023), pp. 2553-2574, href281href444href171href61Baldi, P., Sadowski, P.J., 2013. Understanding Dropout. In: Burges, C.J.C., Bottou, L., Ghahramani, Z., Weinberger, K.Q. (Eds.), Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a Meeting Held December 5-8, 2013, Lake Tahoe, Nevada, United States. pp. 2814–2822.href420href383Balwant, M.K., 2019. Bidirectional LSTM Based on POS tags and CNN Architecture for Fake News Detection. In: 2019 10th International Conference on Computing, Communication and Networking Technologies. ICCCNT, pp. 1–6. href270.href406href45Belhadi A., Djenouri Y., Djenouri D., Lin C.-W.A recurrent neural network for urban long-term traffic flow forecastingAppl. Intell., 50 (2020), href285href392href296Brazález E., Macià H., Díaz G., Valero V., Boubeta-Puig J.PITS: an intelligent transportation system in pandemic timesEng. Appl. Artif. Intell., 114 (2022), Article 105154, href324href11href397href293href412href327Bui Khac Hoai N., Cho J., Yi H.Spatial-temporal graph neural network for traffic forecasting: An overview and open research issuesAppl. Intell., 52 (2022), href93href300href30Chen C., Hu J., Meng Q., Zhang Y.Short-time traffic flow prediction with ARIMA-GARCH modelIEEE Intelligent Vehicles Symposium (IV), 2011, Baden-Baden, Germany, June 5-9, 2011, IEEE (2011), pp. 607-612, href226href190href20href47Chou C., Shie C., Chang F., Chang J., Chang E.Y.Representation learning on large and small data (2017), href266href202href220Chu, Q., Li, G., Zhou, R., Ping, Z., 2021. Traffic Flow Prediction Model Based on LSTM with Finnish Dataset. In: 2021 6th International Conference on Intelligent Computing and Signal Processing. ICSP, pp. 389–392. href455.href181href318Díaz G., Macià H., Valero V., Boubeta-Puig J., Cuartero F.An intelligent transportation system to control air pollution and road traffic in cities integrating CEP and colored Petri netsNeural Comput. Appl., 32 (2) (2020), pp. 405-426, href117href364href424href249Goodwin P., Lawton R.On the asymmetry of the symmetric MAPEInt. J. Forecast., 0169-2070, 15 (4) (1999), pp. 405-408, href329href62href130href119href302href319Hong H., Huang W., Zhou X., Du S., Bian K., Xie K.Short-term traffic flow forecasting: Multi-metric KNN with related station discovery12th International Conference on Fuzzy Systems and Knowledge Discovery, FSKD 2015, Zhangjiajie, China, August 15-17, 2015, IEEE (2015), pp. 1670-1675, href398href414href360href325Hussain T., Muhammad K., Ullah A., Cao Z., Baik S.W., de Albuquerque V.H.C.Cloud-assisted multiview video summarization using CNN and bidirectional LSTMIEEE Trans. Ind. Inform., 16 (1) (2020), pp. 77-86, href19href168href111href135Kang, C., Zhang, Z., 2020. Application of LSTM in Short-term Traffic Flow Prediction. In: 2020 IEEE 5th International Conference on Intelligent Transportation Engineering. ICITE, pp. 98–101. href294.href339href275Kong X., Zhang J., Wei X., Xing W., Lu W.Adaptive spatial-temporal graph attention networks for traffic flow forecastingAppl. Intell., 52 (2022), pp. 1-17, href286href100href78href263Li D.Predicting short-term traffic flow in urban based on multivariate linear regression modelJ. Intell. Fuzzy Systems, 39 (2) (2020), pp. 1417-1427, href310href189href132href185Li Y., Chai S., Ma Z., Wang G.A hybrid deep learning framework for long-term traffic flow predictionIEEE Access, 9 (2021), pp. 11264-11271, href403href394href251href193Li S., Xie Q., Yang J.Daily suspended sediment forecast by an integrated dynamic neural networkJ. Hydrol., 604 (2022), Article 127258, href217href354href148href282href76href191Li, C., Zhan, G., Li, Z., 2018. News Text Classification Based on Improved Bi-LSTM-CNN. In: 2018 9th International Conference on Information Technology in Medicine and Education. ITME, pp. 890–893. href326.href252href317Lin X., Huang Y.Short-term high-speed traffic flow prediction based on ARIMA-GARCH-M modelWirel. Pers. Commun., 117 (4) (2021), pp. 3421-3430, href115href43href386href283Lin J.C.-W., Shao Y., Zhou Y., Pirouz M., Chen H.-C.A Bi-LSTM mention hypergraph model with encoding schema for mention extractionEng. Appl. Artif. Intell., 0952-1976, 85 (2019), pp. 175-181, href287URL href379href46href173href393href446href328Makarenkov V., Rokach L., Shapira B.Choosing the right word: Using bidirectional LSTM tagger for writing support systemsEng. Appl. Artif. Intell., 0952-1976, 84 (2019), pp. 1-10, href219URL href257href454href95href143href67href312Méndez M., Ibias A., Núñez M.Using deep learning to detect anomalies in traffic flow14th Asian Conference on Intelligent Information and Database Systems, ACIIDS’22, LNCS 13757, Springer (2022), pp. 299-312href167href395href66href228Méndez M., Merayo M.G., Núñez M.Machine learning algorithms to forecast air quality: a surveyArtif. Intell. Rev. (2023)(in press)href290href280Méndez M., Montero C., Núñez M.Using deep transformer based models to predict ozone levels14th Asian Conference on Intelligent Information and Database Systems, ACIIDS’22, LNAI 13757, Springer (2022), pp. 169-182href152href49href150href377Netron open source tool (2022)href50, accessed: 2022-06-30href129href113Ozcan A., Catal C., Donmez E., Senturk B.A hybrid DNN–LSTM model for detecting phishing URLsNeural Comput. Appl., 35 (2023), pp. 4957-4973, href274href235href368href29Passricha V., Aggarwal R.K.A hybrid of deep CNN and bidirectional LSTM for automatic speech recognitionJ. Intell. Syst., 29 (1) (2020), pp. 1261-1274, href106href28href7href88Peiris A.T., Jayasinghe J., Rathnayake U.Forecasting electricity power generation of Pawan Danawi wind farm, Sri Lanka, using Gene Expression ProgrammingAppl. Comput. Intell. Soft Comput., 2022 (2022), Article 7081444, href57href91href211Peng H., Du B., Liu M., Liu M., Ji S., Wang S., Zhang X., He L.Dynamic graph convolutional network for long-term traffic flow prediction with reinforcement learningInform. Sci., 0020-0255, 578 (2021), pp. 401-416, href84URL href154href265href267href305href358href401Poonia, P., Jain, V.K., 2020. Short-Term Traffic Flow Prediction: Using LSTM. In: 2020 International Conference on Emerging Trends in Communication, Control and Computing (ICONC3). pp. 1–4. href241.href292href5Rhanoui M., Mikram M., Yousfi S., Barzali S.A CNN-BiLSTM model for document-level sentiment analysisMach. Learn. Knowl. Extract., 2504-4990, 1 (3) (2019), pp. 832-847, href182URL href260href97href71href86Rick R., Berton L.Energy forecasting model based on CNN-LSTM-AE for many time series with unequal lengthsEng. Appl. Artif. Intell., 0952-1976, 113 (2022), Article 104998, href169URL href102href92href347href6href425href457Roldán J., Boubeta-Puig J., Martínez J.L., Ortiz G.Integrating complex event processing and machine learning: An intelligent architecture for detecting IoT security attacksExpert Syst. Appl., 149 (2020), Article 113251, href3481–22href144href330href439href125href452Semlali B.B., Amrani C.E., Ortiz G., Boubeta-Puig J., de Prado A.G.SAT-CEP-monitor: An air quality monitoring software architecture combining complex event processing with satellite remote sensingComput. Electr. Eng., 93 (2021), Article 107257, href87href419href155href422href365href201Shubhangi, D., Pratibha, A., 2021. Asthma, Alzheimer’s and Dementia Disease Detection based on Voice Recognition using Multi-Layer Perceptron Algorithm. In: 2021 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems. ICSES, pp. 1–7. href137.href447href231Siami-Namini, S., Tavakoli, N., Namin, A.S., 2019. The Performance of LSTM and BiLSTM in Forecasting Time Series. In: 2019 IEEE International Conference on Big Data (Big Data). pp. 3285–3292. href107.href153href158Song J.W., Park Y.I., Hong J.J., Kim S.G., Kang S.J.Attention-based bidirectional LSTM-CNN model for remaining useful life estimation53rd IEEE Int. Symposium on Circuits and Systems, ISCAS’21, IEEE (2021), pp. 1-5, href194href308href116Soon K.L., Lim J.M.-Y., Parthiban R.Extended pheromone-based short-term traffic forecasting models for vehicular systemsEng. Appl. Artif. Intell., 0952-1976, 82 (2019), pp. 60-75, href353URL href192href74href276href75href333href64Wang Y., Li L., Xu X.A piecewise hybrid of ARIMA and SVMs for short-term traffic flow predictionLiu D., Xie S., Li Y., Zhao D., El-Alfy E.M. (Eds.), Neural Information Processing - 24th International Conference, ICONIP 2017, Guangzhou, China, November 14-18, 2017, Proceedings, Part V, Lecture Notes in Computer Science, vol. 10638, Springer (2017), pp. 493-502, href416href141href321href197Wang Z., Su X., Ding Z.Long-term traffic prediction based on LSTM encoder-decoder architectureIEEE Trans. Intell. Transp. Syst., 22 (10) (2021), pp. 6561-6571, href200href146href413href85Zameer A., Arshad J., Khan A., Raja M.A.Z.Intelligent and robust prediction of short term wind power using genetic programming based ensemble of neural networksEnergy Convers. Manage., 134 (2017), pp. 361-372, href322href441href362href449href256href133Zarei N., Ghayour M.A., Hashemi S.Road traffic prediction using context-aware random forest based on volatility nature of traffic flowsSelamat A., Nguyen N.T., Haron H. (Eds.), Intelligent Information and Database Systems - 5th Asian Conference, ACIIDS 2013, Kuala Lumpur, Malaysia, March 18-20, 2013, Proceedings, Part I, Lecture Notes in Computer Science, vol. 7802, Springer (2013), pp. 196-205, href301href25href289href40Zhang Y., Qiao S., Ji S., Li Y.DeepSite: bidirectional LSTM and CNN models for predicting DNA–protein bindingInt. J. Mach. Learn. Cybern., 11 (2020), pp. 841-851, href177href356href334href248Zhang Y., Yang Y., Zhou W., Wang H., Ouyang X.Multi-city traffic flow forecasting via multi-task learningAppl. Intell., 51 (2021), pp. 1-19, href391href367href196Zhu J.Z., Cao J.X., Zhu Y.Traffic volume forecasting based on radial basis function neural network with the consideration of traffic flows at the adjacent intersectionsTransp. Res. C, 0968-090X, 47 (2014), pp. 139-154, href253URL href156href224href198href410href291Cited by (66)href3712024, Applied Soft ComputingShow abstractThe prediction accuracy of strip crown is low under complex industrial data environments to general machine learning models, i.e., lack of reasonable mechanism explanation and spatial dimension dependence, which will directly affect the product quality of hot-rolled electrical steel. Therefore, a high-precision crown prediction model is proposed for electrical steel in hot rolling based on a theoretical model-guided BO-CNN-BiLSTM (Bayesian optimization, Convolution Neural Network, and Bidirectional Long Short-term Memory) framework. The work roll wear model, thermal crown model, and the secondary deformation model of the strip between stands, based on the primary deformation by the loaded gap profile, were constructed. The mechanism parameters and measured parameters are integrated into a dataset as input feature variables. In the TG-BO-CNN-BiLSTM framework, the CNN-BiLSTM model, which can achieve spatial dimension dependence, was used to extract its feature component and sequentially predict the crown using the dataset, simultaneously, the BO module optimizes the hyperparameter of the CNN-BiLSTM model. The advantages of the proposed model are verified by adopting multiple evaluation indicators, which improves running speed and prediction accuracy. The effects of process parameters on the crown with typical upstream and downstream stands were comprehensively analyzed with the proposed model. A high-precision crown control strategy, combining the framework and influence law, for multi-stand and multi-method was proposed to obtain the high-precision crown. The control strategy applied in 1450 mm 4-high hot strip mills shows that the production performance of electrical steel is significantly improved.href3372024, Physica A: Statistical Mechanics and its ApplicationsShow abstractWithin Intelligent Transportation Systems (ITSs), modeling of traffic flow assumes a pivotal role, as it is crucial for alleviating traffic congestion and reducing carbon emissions. Developing a reliable and sustainable model for predicting traffic flow is highly challenging due to the fluctuations and nonlinear characteristics of traffic flow. In addition to being a practical problem, accurately forecasting traffic flow provides substantial challenges to the researchers working in this area. The aim of this study is to develop a complex framework for forecasting short-term traffic flow with the purpose of improving prediction accuracy. In order to attain this goal, a Bidirectional Long Short-Term Memory (Bi-LSTM) model with a Modified Firefly Optimization Algorithm (MFOA) known as MFOA-Bi-LSTM has been proposed. The MFOA optimization technique has been utilized to optimize the hyperparameters of the deep learning models. Moreover, the optimization of the Bi-LSTM network prediction model is achieved through the application of the MFOA technique, which is renowned for its ability to converge quickly, maintain robustness and perform extensive global searches. To better capture complex patterns in the input data and increase prediction accuracy, model’s architecture makes use of the bidirectional capabilities of Bi-LSTM layers. This combination of Bi-LSTM and FOA is proposed for optimizing complex sequence modeling tasks where selecting the right hyperparameters for the model is challenging and it allows for automated hyperparameter tuning and often leads to improved model performance. In terms of performance metrics including Root Mean Square Error (RMSE), Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE) and Correlation Coefficient (r), the proposed model significantly outperforms the other selected models and study findings confirm its appropriateness for the predictive task.href82024, Engineering Applications of Artificial IntelligenceShow abstractForeign exchange rate affects many countries' economic status and development. Therefore, it is essential to find the factors affecting the exchange rate price and make reasonable predictions. This paper proposes the novel LASSO-BiLSTM-based ensemble learning method by integrating least absolute shrinkage and selection operator (LASSO) and bidirectional long short-term memory (LSTM) to predict the USD/CNY exchange rate. First, 29 variables are selected to reflect economic activities on market and macroeconomic levels. Then, LASSO-BiLSTM-based ensemble learning approach is adopted with two steps: 1) LASSO is used to select six highly correlated variables with the exchange rate to reduce noises. 2) BiLSTM is employed to forecast the exchange rate with the six chosen variables. Last, to test the effectiveness of BiLSTM, comparisons with four deep learning algorithms, which are extreme learning machine (ELM), kernel extreme learning machine (KELM), long short-term memory (LSTM), and support vector regression (SVR), are conducted. The result shows that LASSO-BiLSTM outperforms the other models in 1-step forecast (MAE: 0.051, RMSE: 0.072, MDA: 0.777). The same conclusion applies to 3-steps and 6-steps forecasts. Overall, the proposed LASSO-BiLSTM-based ensemble learning method demonstrates high potential in time series forecasting.href1802023, Ocean EngineeringShow abstractAccurate vessel traffic flow (VTF) prediction can enhance navigation safety and economic efficiency. To address the challenge of the inherently complex and dynamic growth of the VTF time series, a new hierarchical methodology for VTF prediction is proposed. Firstly, the original VTF data is reconfigured as a three-dimensional tensor by a modified Bayesian Gaussian CANDECOMP/PARAFAC (BGCP) tensor decomposition model. Secondly, the VTF matrix (hour ✕ day) of each week is decomposed into high- and low-frequency matrices using a Bidimensional Empirical Mode Decomposition (BEMD) model to address the non-stationary signals affecting prediction results. Thirdly, the self-similarities between VTF matrices of each week within the high-frequency tensor are utilised to rearrange the matrices as different one-dimensional time series to solve the weak mathematical regularity in the high-frequency matrix. Then, a Dynamic Time Warping (DTW) model is employed to identify grouped segments with high similarities to generate more suitable high-frequency tensors. The experimental results verify that the proposed methodology outperforms the state-of-the-art VTF prediction methods using real Automatic Identification System (AIS) datasets collected from two areas. The methodology can potentially optimise relation operations and manage vessel traffic, benefiting stakeholders such as port authorities, ship operators, and freight forwarders.href652024, Journal of Cloud Computinghref2322023, IEEE Accesshref278href303This work has been supported by the State Research Agency (AEI) of the Spanish Ministry of Science and Innovation under grant href423 (AwESOMe); the Comunidad de Madrid, Spain under grant href216 (FORTE-CM) co-funded by EIE Funds of the European Union
- .href94href32.href427AEMET is the state meteorological agency of Spain: href237.href209href233.href381We think that repeating the experiment five times was enough because the results were very stable and there was a small variance. In fact, average and best results were very close, as can be appreciated in href272, href316, href230, href174.© 2023 The Author(s). Published by Elsevier Ltd.Recommended articleshref184Applied Acoustics, Volume 182, 2021, Article 108274Himanish Shekhar Das, Pinki Royhref458href374Engineering Applications of Artificial Intelligence, Volume 123, Part C, 2023, Article 106411Keer Wu, …, Teng Zhouhref450href309Alexandria Engineering Journal, Volume 74, 2023, pp. 467-480Guowen Dai, …, Wang Luohref288href409Information Fusion, Volume 100, 2023, Article 101946Yi Xu, …, Weifeng Lvhref120href138Physica A: Statistical Mechanics and its Applications, Volume 583, 2021, Article 126293Ke Wang, …, Sheng Donghref299href48Expert Systems with Applications, Volume 218, 2023, Article 119587Yanjie Wen, …, Xiaoyu Wanghref307Show 3 more articlesArticle MetricsCitationsCitation Indexes: 64CapturesReaders: 39href390href349href432href160href145href212href223href126href96Cookies are used by this site.  Cookie SettingsAll content on this site: Copyright © 2024 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the Creative Commons licensing terms apply.href370
 
 
 
@@ -59,10 +39,803 @@ href213href82Helphref58href389href284href23Download full issueSearch ScienceDire
 
 
 
-Cookie Preference CenterWe use cookies which are necessary to make our site work. We may also use additional cookies to analyse, improve and personalise our content and your digital experience. For more information, see our href127 and the list of href13.
 
 
-You may choose not to allow some types of cookies. However, blocking some types may impact your experience of our site and the services we are able to offer. See the different category headings below to find out more or change your settings.
 
-Allow all Manage Consent PreferencesStrictly Necessary CookiesAlways activeThese cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.
-Cookie Details List‎Functional Cookies  Functional Cookies These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.Cookie Details List‎Performance Cookies  Performance Cookies These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site.Cookie Details List‎Targeting Cookies  Targeting Cookies These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. If you do not allow these cookies, you will experience less targeted advertising.Cookie Details List‎Back ButtonCookie List Search IconFilter IconClear checkbox label labelApply CancelConsent Leg.Interest checkbox label label checkbox label label checkbox label label Confirm my choiceshref68Your Privacy [`dialog closed`]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your privacy, your choice
+
+
+
+We use essential cookies to make sure the site can function. We also use optional cookies for advertising, personalisation of content, usage analysis, and social media.By accepting optional cookies, you consent to the processing of your personal data - including transfers to third parties. Some third parties are outside of the European Economic Area, with varying standards of data protection.See our href124 for more information on the use of your personal data.Manage preferences for further information and to change your choices.
+
+
+
+Accept all cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+href200
+
+
+
+Advertisement
+
+
+href340
+
+
+
+
+
+
+
+
+href7
+
+href251
+
+
+
+
+href233
+
+
+href249
+href336
+href63
+
+
+
+href109
+
+
+href9
+
+
+
+
+
+
+Search
+
+
+
+Search by keyword or author
+
+
+
+
+
+
+Search
+
+
+
+
+
+
+Navigation
+
+
+href208
+
+
+href247
+
+
+href164
+
+
+
+
+
+
+
+
+
+
+
+href350
+
+
+
+
+
+href372
+
+
+
+
+
+Article
+
+
+
+Deep reinforcement learning for the dynamic and uncertain vehicle routing problem
+
+
+                            Published: 18 April 2022
+
+
+
+
+Volume 53, pages 405–422, (2023)
+                        
+
+href13
+
+
+
+
+
+href95
+
+
+
+
+                                Access provided by Chung Ang University
+
+
+
+href150
+href176
+href357
+
+
+
+
+
+
+
+
+
+                                Deep reinforcement learning for the dynamic and uncertain vehicle routing problem
+                            
+
+
+
+
+Download PDF
+
+
+
+
+
+
+
+
+
+href201href362 & href0 
+            href2721 
+
+
+
+
+
+5723 Accesses
+
+
+
+
+38 Citations
+
+
+href326
+
+
+
+
+
+
+
+
+AbstractAccurate and real-time tracking for real-world urban logistics has become a popular research topic in the field of intelligent transportation. While the routing of urban logistic service is usually accomplished via complex mathematical and analytical methods. However, the nature and scope of real-world urban logistics are highly dynamic, and the existing optimization technique cannot precisely formulate the dynamic characteristics of the route. To ensure customers’ demands are met, planners need to respond to these changes quickly (sometimes instantaneously). This paper proposes the formulation of a novel deep reinforcement learning framework to solve a dynamic and uncertain vehicle routing problem (DU-VRP), whose objective is to meet the uncertain servicing needs of customers in a dynamic environment. Considering uncertain information about the demands of customers in this problem, the partial observation Markov decision process is designed to frequently observe the changes in customers’ demands in a real-time decision support system that consists of a deep neural network with a dynamic attention mechanism. Besides, a cutting-edge reinforcement learning algorithm is presented to control the value function of the DU-VRP for better training the routing process’s dynamics and uncertainty. Computational experiments are conducted considering different data sources to obtain satisfactory solutions of the DU-VRP.
+
+
+
+
+
+Similar content being viewed by others
+
+
+
+
+
+
+href19
+
+
+Chapter
+© 2022
+
+
+
+
+
+
+
+
+
+href269
+
+
+Chapter
+© 2022
+
+
+
+
+
+
+
+
+
+href55
+
+
+Chapter
+© 2023
+
+
+
+
+
+
+
+
+Explore related subjects
+Discover the latest articles, news and stories from top researchers in related subjects.
+
+
+href143
+
+
+
+
+
+href257
+Avoid common mistakes on your manuscript.
+
+
+
+
+
+
+
+
+1 IntroductionE-commerce giant enterprises such as Alibaba and JD have recently invested a large number of resources in group-on buying, especially for fresh food. This trend is becoming more popular and receiving more attention as the next-generation research topic [href80]. Meanwhile, to incorporate the dynamic dispatching policy and the real-time routing strategy for fresh food delivery services, vehicle routing is a cornerstone activity that is frequently related to the decision- making processes of several real-world transportation systems [href379]. In particular, meeting customers’ expectations and optimizing delivery requirements are expected to ensure food businesses a competitive advantage because food delivery accounts for a large portion of operational costs [href351]. Although many researchers have been working on deterministic or static vehicle routing problems (VRPs), little attention has been paid to dealing with uncertainty and dynamics in the VRPs simultaneously [href193,href315,href24]. Furthermore, in classical VRP models, the delivery requirements in VRPs are assumed as static, implying that some essential real-world constraints (i.e., dynamic and uncertain demands of customers) are neglected. This assumption may result in the inapplicability of real-world implementation. For example, in the food delivery industry, the failure of meeting the uncertain demands punctually would result in losing the freshness of food.The basic VRP was initially formulated by Dantzig and Ramser as a generalization of the Traveling Salesman Problem (TSP) [href284]. The VRP has been known as among the most difficult problems in combinatorial optimization [href331]. Due to its significance in practice, several VRP variants have been widely studied since the 1950s till now [href216]. In the following, two extended VRPs are described by indicating their main differences from the basic VRP problem. One is the Dynamic VRP (DVRP), which differs from the basic VRP by supposing that some values associated with customers, locations, and vehicles may change dynamically [href129]. Such a proposition is common in today’s vibrant production and transportation environment. Another is the Dynamic and Un certain VRP (DU-VRP), which is an extension of the DVRP by incorporating both uncertainties and dynamics in the vehicle routing procedure simultaneously. In practice, it is difficult to know the exact and fully-confirmed information in advance. For example, dispatchers have to update real-time information regarding the vehicles’ positions and consider the uncertainty of each customer’s demand. In this study, we focus on the DU-VRP as it has a wider range of applicability.More preciously, we consider to solve the DU-VRP by a Deep Reinforcement Learning (DRL) approach. A small-size DU-VRP example shown in Fig. href166 reveals how demand uncertainty affects the routes of vehicles in a consistent fashion and indicates the importance of real-time communication under a DU-VRP environment. Real-time communication needs to collect uncertain information and assign tasks in a dynamic way. In the DU-VRP, new customers arrive dynamically in the service areas. Figure 1 is drawn to illustrate the route execution of a single vehicle in an uncertain and dynamic environment. An initial route intends to visit the currently-known customers (i.e., Nodes A, B, C, D, E) before the vehicle leaves the depot at the time t0. While the vehicle executes this route, some requests from customers (i.e., Nodes L, X, Y, Z, K) may appear at times t1, t2, t3 in order. Each customer has a given demand by themselves. Furthermore, consumer demands may be uncertain and dynamically changing, and the requests that result from their demands are highly uncertain. In this case, this initial route may be adjusted to meet changes of the environment, e.g., the executed route at the time tf may be changed to be A → L→ B → X → C → Y → D → Z → E → K.
+Fig. 1href198Illustration of the DU-VRPhref61A real-time communication scheme under a DU-VRP environment is depicted in Fig. href352. The dispatcher can tailor the routing to the dynamic environment at each time step. In a dynamic DU-VRP environment, a dispatcher is treated as an agent to give instructions to the vehicles. The dispatcher makes a sequence decision to fulfill the needs of each customer when the vehicle is ready (e.g., Customer A highlighted by the first double-headed arrow in Fig. 2). When the location of the customer results in environmental changes, the DU-VRP system receives environmental information in real time and makes a potential decision on updating a new route.
+Fig. 2href11Timeline of events for the DU-VRPhref184An essential challenge in solving the DU-VRP is enabling the dispatchers to learn from the customer-vehicle data in real time. Furthermore, consumer demands may be uncertain and dynamically changing, and the requests that result from their demands are highly uncertain. Each customer-vehicle-based time is associated with the high-dimensional data to address the dynamic constraints. These realistic constraints may be designed by the Markov decision process (MDP), in which the dispatcher can select an action in a dynamic environment [href141]. However, conventional optimization methods are inapplicable to handle large-scale and complex MDPs, especially for collecting or controlling the components of the so-called value function in MDP, due to the so-called “curse of data dimensionality” that happens when the accuracy of the model decreases as the number of features increases. On the other hand, the dispatcher determines the daily route of vehicles in a given map while the locations of potential customers may differ. One primary concern in this practical setting is that uncertainty data need to be collected repeatedly with different customers’ demands in the map sequentially. Traditional optimization methods (e.g., robust optimization approach, distributionally robust optimization approach and chance-constrained programming approach) may not be effective in dealing with system dynamics for real-time decision-making [href68]. Hence, to reduce the DU-VRP data dimensionally, the development of a cutting-edge DRL approach through investigating a learning-while-optimizing strategy is needed.The recent progress in machine learning (ML) shows that deep reinforcement learning (DRL), which integrates deep learning (DL) and reinforcement learning (RL) techniques, is able to handle such a kind of routing problems with dynamics and uncertainties competently [href328]. While reinforcement learning is a model-free approach in which an agent learns the best rules from its environment [href136]. The policy of the MDP is fully dependent on the current state at each time step. Partially observable Markov decision processes (POMDPs) are the improved MDPs in which the state at each time step is not known with inerrability, that is, the state is not completely observable [href107, href353]. Graph-based POMDPs are an extension of standard POMDPs that add routing and graph information to the state space, action space, and reward structure.Graph-based POMDPs are an appropriate solution for the DU-VRP, because a dispatcher does not fully receive customer information across the service area but just at certain points. As a result, graph-based POMDPs make it easier to connect dynamic routing challenges to the graph-based approaches that are commonly used to address them – design and amend routes as new information is learnt. The end-to-end architecture has been proposed to address the underlying dynamics and uncertainties in real-world transportation systems, owing to its advantages in storing previous data and producing multi-step predictions [href126, href367]. To adapt partially observable decision-making for the DU-VRP situations, we tempt to model this problem as a group-based POMDP and develop a novel DRL method to solve the DU-VRP efficiently.The main contributions of this study are highlighted as follows. 
+
+
+This study is among the first to investigate how to develop a novel end-to-end DRL framework for the DU-VRP.
+
+
+We design a novel graph-based POMDP model to reflect the dynamic environment and uncertain customers’ demands in the DU-VRP.
+
+
+An adaptive policy is designed to train the objective function value and enhance the learning performance, especially for the graph-based POMDP model.
+
+
+The proposed DRL methodology is validated by baseline comparisons and sensitivity analysis using real-world data.
+
+The remainder of this paper is organized as follows. We systematically integrate the recent applications of DRL and RL methods on the VRPs and related transportation cases in Section href313. Section href298 defines and formulates the DU-VRP by a graph-based POMDP and proposes a novel DRL methodology for the graph-based POMDP. Section href189 conducts computational experiments to validate the proposed DRL methodology’s performance. The conclusions of this study and future research directions are provided in the last section.2 Literature reviewWhile software and hardware computing capabilities have advanced in recent years, academia and business have increasingly focused on using machine learning approaches to address combinatorial optimization issues [href330]. To analyze large-scale data, DL’s perceptual skills and RL’s reasoning cognition may be used to combinatorial optimization issues. It will outperform standard approaches in terms of resilience and generality. The two key objectives for using deep reinforcement learning are to approximate and explore innovative policies [href346].Traditional optimization methods may be utilized to deal with the uncertainties in transportation systems and provide optimum VRP solutions. On the other hand, these technologies may not be effective in dealing with system dynamics for real-time decision-making. Because these methods need longer to create solutions, they cannot respond to system dynamics as quickly as reinforcement learning approaches, particularly when dealing with routing problems [href40]. As a result, RL may be a superior option to classic optimisation approaches since it can be taught with real-world data to interact more effectively with system dynamics and consumer demand uncertainties, resulting in quicker real-time routing and dispatching choices.Reinforcement learning is a popular technique for dealing with dynamic decision-making difficulties in the face of uncertainty. This portion of the review focuses mostly on model-free RL algorithms, which may be divided into three categories. There are three types of RL algorithms: 1) value-based algorithms (e.g., Q-learning, Deep Q-learning (DQN)) [href185, href220], 2) policy-based algorithms (e.g., REINFORCE) [href118], and 3) actor-critic algorithms, which integrate value-based with policy-based algorithms [href344]. Several new techniques for solving routing problems have been proposed in the literature, including: 1) recurrent neural network (RNN) model with an attentional mechanism based on an encoder-decoder architecture [href122,href65,href6], 2) graph embedding network models to express the policy that captures a node’s property in the context of its graph neighbourhood [href301, href211, href85], and 3) the representation of the environment based on the MDP [href76, href67, href2].Deep Reinforcement learning enhances classic RL by employing deep neural networks (DNNs) as function approximators, which has shown to be successful in a variety of control issues. Asynchronous techniques are given as an alternative, and they can execute concurrent and independent computing tasks. Minh et al. [href209] introduced the asynchronous advantage actor-critic (A3C), which allows many actor-critic agents to train in parallel. Each agent has its own set of parameters and interacts with the environment in a unique way. A global network receives updates from each agent and combines them asynchronously to create a global policy. Advantage actor-critic(A2C) is a synchronous and deterministic variation of A3C. Experiments by Minh et al. [href111] suggested that A3C can train quicker than DQN.We systematically integrate the recent applications of DRL and RL methods on the VRPs and related transportation cases, including urban freight deliveries and on-demand ridesharing for passenger transportation. On-demand ridesharing concerns based on DRL are investigated from two perspectives: 1) order dispatching that matches rider demands with available cars; and 2) vehicle repositioning is a proactive method of balancing vehicle supply and demand by moving idle automobiles from one zone to another. Existing DRL papers for urban freight delivery, order dispatching, and vehicle repositioning are reviewed in the next three paragraphs. We shall synthesize the problem characteristics and DRL approaches, highlighting the novelty of our paper.The travelling salesman problem (TSP), which involves the routing of a single vehicle, is a rudimentary variant of VRP problems. Archetti et al. [href15] considered the dynamic TSP with stochastic release dates as an MDP and proposed an RL-based approach for solving this TSP. Only spatial information of nodes is relevant in the TSP difficulties discussed above. DRL actions are used to gradually develop the vehicle path by adding nodes one at a time. VRPs have been created using cutting-edge approaches based on approximate algorithms, but they still have issues with long running time and poor solution quality when dealing with huge problems. The goal is to determine the best vehicle delivery routes and technician service routes in order to reduce the overall distance traveled by the delivery and service routes. Qiu et al. [href314] proposed a DRL method to solve it. Traditional approaches face a contradiction between computational efficiency and solution quality in the face of the present rapid rise in logistical needs. The majority of current optimization methods are taking a long time to compute in urban transportation networks. To address these issues, Zhao et al. [href127] developed a new DRL model that includes an encoder-decoder network with an attentional mechanism. To efficiently tackle the problem, Zhang et al. [href159] designed the Multi-Agent Attention Model, a unique RL method that can solve routing problems instantaneously while benefiting from extensive offline training. Yu et al. [href41] presented a novel DRL-based technique for developing routes in the shortest time possible. Their method combines the heuristic and the DNN to train the vehicle routing data. In the framework of crowdsourced urban delivery, Ahamed et al. [href354] designed a new DRL-based technique for solving the difficulty of distributing shipment orders to ad hoc couriers. Silva et al. [href279] presented a multi-agent RL approach to solve the VRP by using the RL ideas, especially the Q-Learning algorithm to improve the agent’s self-adaptive skills and to adapt quickly to the unique characteristics of the situation to be handled by the architecture. The goal of this framework is for each agent to be able to change their activities based on their interactions with other agents and the environment. Kang et al. [href205] considered a graph-based DRL algorithm that handles the acceptance of order requests and determines the route itineraries of multiple vehicles.In view of the important challenges to the efficient dispatching of orders, Zou et al. [href349] designed a DRL technique based on DQN for solving the online food ordering delivery problem. Kullman et al. [href194] addressed the situation of a ride-hailing service operator managing a fleet of electric vehicles. To maximize the profit, the operator must allocate cars to demands as they come, as well as recharge and reposition vehicles in advance of future requests. Kullman et al. [href312] applied DRL to tackle this challenge, creating policies that make decisions based on Q-value approximations learnt by deep neural networks. On a ride-sharing platform, ride dispatching is a core operation task that matches drivers to trip-requesting clients on a constant basis. Wang et al. [href235] offered an MDP model for the ride dispatching problem and presented learning techniques for improving the existing policy for drivers based on DQN with action search. Liang et al. [href128] provided a scalable framework for promoting real-time taxi operations that incorporates RL with a centralized programming structure. To construct a near-optimal strategy, Turan et al. [href145] developed the DRL method via Proximal Policy Optimization (PPO). Chen et al. [href16] used fleets of drones and vehicles to solve the challenge of dynamic same-day delivery. They describe a DQN strategy that takes advantage of both state and action space data. Liu et al. [href192] enhanced DRL for food route delivery by leveraging Dijkstra’s algorithm to determine the existing policy and compute the vehicle tour in each iteration, allowing the system to learn from past trajectories more effectively.In view of the important challenges to the efficient dispatch of vehicle repositioning orders, Liu et al. [href183] designed a novel RL method to handle the path of driving vehicles in emergency situations. Tang et al. [href31] offered an RL approach to solve an automated electric taxi fleet’s online routing problem with the consideration of the dynamic demands of the taxis. Koh et al. [href223] designed a novel DRL approach to solve a real-time vehicle navigation problem. Mao et al. [href37] designed a novel DRL technique to solve a real-world taxi dispatching service problem. They specifically include the RL framework, which focuses on how to find an optimum policy when the MDP technique is unavailable. As a result, rather than depending on any previous model knowledge, the agent in RL will communicate directly with the transport system and change the control approach. AI-Abbasi et al. [href274] introduced a distributed model-free pool (DeepPool) that learns optimal allocation strategies by observing the environment using DQN approaches. DeepPool also incorporates travel demand information with DL models to control vehicle dispatching for enhanced ride-sharing services. Basso et al. [href342] presented a Safe RL approach to solve the Dynamic Stochastic Electric Vehicle Routing Problem. The main concept is to use Monte Carlo simulations to learn offline about stochastic consumer demands and energy usage in order to design the route predictably and securely online. Guo et al. [href51] focused on establishing a real-time routing system to optimize the rentability of car service providers, given the complicated metropolitan situation and unpredictable social occurrences (e.g., taxi drivers). To deal with this challenge, an RL framework with a dynamic attention mechanism and a DNN is presented by Guo et al. [href104]. Because of the variety of settings, the ambiguity in sensor data, and the complicated interaction with other road users, operational decisions for vehicles are difficult. In the form of DRL with Monte Carlo tree search, Hoel et al. [href132] offered a comprehensive framework for tactical decision making that integrates the notions of planning and learning.We compare our current scenario with a wide variety of existing methods. Relevant papers solving VRPs under various scenarios are summarized in Table href239. Below is a summary of the existing methods from each category. The third column shows the observable characteristics of the state. It can be observed that most of the existing methods are for perfect state observability. The fourth column shows the characteristics of online or offline. With a few exceptions, as indicated in Table 1, the bulk of research in both urban freight delivery and order dispatching operates in a full-state observability environment and online fashion.
+Table 1 Summary of DRL applications to VRPshref27These existing works did not optimize over time and in the face of uncertainty by capturing the dynamic aspects of customers’ demands. Because the underlying mathematical model is a non-trivial sequential stochastic optimization model that is impossible to solve, the bulk of the studies is based on full observability techniques without a mathematical model for the suggested dispatch policies. Some studies provided a mathematical model with an assumption of operating in a full state observability environment but ignoring the uncertainty in the future customer’s demand. Few works [href112, href8] applied the RL approach to optimise different forms of routing for partial observability. Moreover, each of these studies focused on a certain set of decisions that must be made in order to operate a fleet of vehicles. Based on the above literature review, we come to some insightful conclusions on the current research gaps and then highlight the main innovative aspects of our study. 
+
+
+Till now, academic papers on the application of DRL (RL) to handle the dynamic and uncertain issues in the VRP system have rarely been found. To the best of our knowledge, this study is pioneering to explore how to develop a novel DRL methodology for the DU-VRP.
+
+
+In the literature, most of DRL (DL) methods are based on full state observability. Instead, we adopt a new graph-based partially observable Markov decision process (POMDP) to formulate the partial state observability of the uncertainty and dynamics in the DU-VRP system.
+
+
+Most of the existing research applies single neural networks (e.g., NN, RNN, etc.) to approximate the value function in their end-to-end DRL framework. In comparison, we propose a cutting-edge graph-embedding network to tackle the dynamic customers’ coordinates in the DU-VRP environment.
+
+3 DRL methodology for DU-VRPThis section explains how the DRL methodology is developed for the DU-VRP. First, the DU-VPR is modelled and described by the POMDP in Section href382. Then, we propose a cutting-edge DRL methodology to solve the DU-VRP, combining a DL approach with a graph embedding network for the DU-VRP and an RL approach to optimize the graph embedding network in Section href261.3.1 Modelling the DU-VRP by POMDPIn contrast to the static VRP, real-world applications are often produced in a dynamic environment. Typically, in the dynamic VRP, the information available to the dispatchers may change during the execution of the routes with new demands. Therefore, DU-VRP situations do not necessarily have the Markov property because of the temporal dependence of customers’ demands. The problem with such an implementation is responding to new demands while optimizing the total traveling cost. Due to the difficulty of uncertainties and dynamics, static mixed integer programming (MIP) models are not directly applicable for modeling the DU-VRP. Graph-based POMDPs are an extension of standard POMDPs that add routing and graph information to the state space, action space, and reward structure. As a contribution to the literature, we present a novel graph-based partially observed Markov decision process (POMDP) to model the DU-VRP. Figure href120 illustrates the sequential process of the POMDP for modeling the DU-VRP by the notations defined as follows.
+
+
+Time steps
+Vehicle routings are considered to be optimized over a finite time horizon for each time step t = 0,1,2,…, T, where T represents the length of a morning or an evening peak period.
+
+
+States
+The graph-based POMDP is associated with a directed graph model, \(G=(\mathbb {C},E)\), where \(\mathbb {C}=\{c_{0},c_{1},\ldots ,\) cn,cn+ 1} represents a set of nodes; c0 and cn+ 1 are the source and sink depots; ci is customer i(i = 1,…,n). It is assumed that each customer is associated with only one node. The element \(E=\{(i,j),c_{i},c_{j}\in \mathbb {C}\} \) represents a set of arcs. A fleet of non-homogeneous vehicles k = 1,…,m is regarded as a set of agents. Each agent (vehicle) starts its route at the dummy source depot c0 and stops at the dummy sink depot cn+ 1. Each customer i has a demand di. A new binary variable uik that equals 1 if an agent k meets the demand of customer i , and 0 otherwise, is defined. A new binary variable xijk that equals 1 if an agent k travels from customer i to customer j; 0, otherwise, is defined.
+Fig. 3href57Illustration the sequential process of the POMDP for DU-VRPhref265
+The graph is transformed into the set of states \(\mathcal {S} = \{S_{t},t=1,\ldots ,T\}\) at time steps. Each state St consists of three elements: a set of customers in the current state \(\mathbb {C}_{t}\); vehicles’ location \({\mathscr{M}}_{t}\); and customers’ demands \(\mathcal {D}_{t}\) at time step t. Note that \(\mathbb {C}_{t}\) is composed of \(\mathbb {C}_{t}^{next}\) and \(\mathbb {C}_{t}^{new}\), \(\mathbb {C}_{t}\) ∈ \(\mathbb {C}\), where \(\mathbb {C}_{t}^{next}\) represents the unserved customers at time step t, and \(\mathbb {C}_{t}^{new}\) represents the new customers at time step t. Note that the vehicles’ locations are represented by \({\mathscr{M}}_{t}=\{{m_{k}^{t}},k=1,\ldots ,n\}\), where \({m_{k}^{t}}\) defines the location of vehicle k at time step t. Note that the customers’ demand \(\mathcal {D}_{t}\) is obtained dynamically during the servicing of the new customers. With the above formulations, the state space of the DU-VRP is denoted as \(S_{t}=\{(\mathbb {C}_{t},{\mathscr{M}}_{t},\mathcal {D}_{t})\mid \mathbb {C}_{t}\in \mathbb {R}_{+}^{n},{\mathscr{M}}_{t} \in \mathbb {R}_{+}^{n},\mathcal {D}_{t} \in \mathbb {R}_{+}^{n}.\)
+
+
+Observation states
+The DU-VRP decisions are dynamically executed in a real map, in which the demand of customers is inaccessible for the agents indeed. As a result, the agent has to infer a probability distribution over the set of possible states based on a set of observations. The observation states are associated with an observed current customers’ location \(\tilde {{\mathscr{M}}}_{t}\) and observed customers’ demands \(\tilde {\mathcal {D}}_{t}\) at time step t,defined as \(O_{t}=\{(\tilde {{\mathscr{M}}}_{t},\tilde {\mathcal {D}}_{t}) \mid \tilde {{\mathscr{M}}}_{t}=\{\tilde {m}_{ik}^{t},i,k=1,\ldots ,n\},\tilde {\mathcal {D}}_{t}=\{\tilde {d}_{i}^{t},i=1,\ldots ,n\}\) where \(\tilde {m}_{ik}^{t}\) is the observed distance between new customer i and vehicle k at time step t, and \(\tilde {d}_{i}^{t}\) is the observed demand of customer i at time step t. Thus, the whole observation space is defined as \(\mathcal {O}=\{O_{t},t=1,\ldots ,T\}\).
+
+
+Action
+Notation Yt+ 1 is defined as a pointer referring to the action of the available customers at time step t. The action sequence is denoted as \(\mathcal {Y}=\{Y_{1},\ldots ,Y_{t}\}\) recording the past information of actions.
+
+
+Transition probability
+The transition probability \(\mathbb {T}(s'\mid s,y)=\Pr (S_{t+1}=s'\mid S_{t}=s,y_{t}=y)\) represents the probability of a given action yt from the current state s to the next state s′ at time step t, for all \(s',s\in \mathcal {S}\), and \(y\in \mathcal {Y}\).
+
+
+Observation probability
+The observation transition probability \(p(o' \mid s,y)=\Pr (O_{t+1} = o' \mid S_{t} = s,Y_{t} = y)\) represents the probability of a given action Yt from the current state St to the observation state Ot+ 1 at time step t, for all \(o' \in \mathcal {O},s \in \mathcal {S}\), and \(y \in \mathcal {Y}\).
+
+
+Observation Reward function
+The reward function is defined as R(Ot+ 1,Yt+ 1) = V (Ot+ 1,Yt+ 1) − P(Ot+ 1,Yt+ 1), where V (Ot+ 1,Yt+ 1), P(Ot+ 1,Yt+ 1) are the complete observation reward and partial observation penalty functions, respectively. V (Ot+ 1, \(Y_{t+1} )={\sum }_{k=1}^{m}{\sum }_{i=1}^{n}u_{ik}-{\sum }_{k=1}^{m}{\sum }_{i=1}^{n}{\sum }_{j=1}^{n}\) cijxijk,
+is calculated as the reward of demand fulfillment and the negative value of the distance between two customers during the action. \(P(O_{t+1},Y_{t+1} )=C_{1}{\sum }_{k=1}^{m}\) \(\max \limits \{{\sum }_{i=1}^{n}d_{i}{\sum }_{j=1}^{n}x_{ijk}-q_{k},0\}\), where the qk and di represent the capacity of vehicle k and demand of customer i, respectively. In this penalty function, the penalty term with coefficient C1 guarantees capacity constraints of each vehicle. The immediate reward Rt is generated after the vehicle moved from Ot to Ot+ 1 taking action yt+ 1.
+
+
+Policy
+The policy is a stochastic rule π, which controls the tour to serve all customer requests at each time step.
+
+
+State Value function
+The state value function is defined as \(V_ \pi (o) = \mathbb {E}_{\pi }\) \([ {\sum }_{k=0}^{\infty } R_{t+k+1} {\mid } O_{t}{=}o ]\), for all \(o \in \mathcal {O}\), which is the expected return when starting in state o executing a policy π.
+
+
+Action Value function
+The action value function \(\mathbb {Q}(o,y) = \mathbb {E} [R_{t+1}+v(O_{t+1} ) \mid O_{t}=o,Y_{t}=y]\), represents the expected return for taking action y in state o, for all \(o\in \mathcal {O}\), v ∈ V, \(y \in \mathcal {Y}\).
+
+3.2 DRL methodologyThis subsection proposes a cutting-edge graph embedding network model (GENM), which is fundamentally an encoder-decoder structure. The modelling specifics of the proposed DRL methodology for the DU-VRP are described as follows.3.2.1 Overview of DRL methodologyThe main structure of the proposed DRL methodology is illustrated in Fig. href277. At the beginning of each time slot, the dispatchers receive data from the information dispatch center (IDC) that collects the current customer demand in real time. The main function of the IDC is to update the overall flow of the information about the locations and demands according to changes in the dynamic environment. The environment information can add a set of observations to the POMDP model through a DL approach, which is designed to obtain the observation values. Then, the agent observes the environment at each state and produces an action through an encoder-decoder network. Finally, the RL approach is performed to implement the optimized tour strategy.
+Fig. 4href20The structure of the DRL methodology for the DU-VRPhref34According to the above analysis, the proposed DRL methodology for the DU-VRP is based on the bidirectional interfaces with a combination of DL and RL approaches. The DL approach develops tour strategy through the graph from the tour graph creation when receiving the real-time information of customers’ demands, and then delivers the tour strategy to the RL approach. Subsequently, the RL approach optimizes the tour strategy for each vehicle in such a way that each vehicle implements its tour strategy to drive towards the next node. Besides, the DL approach transmits a request for the current state to the POMDP model with the updated data.3.2.2 A DL approachWe design a DL approach containing the graph embedding network, RNN, attention mechanism with pooling layer. The DL approach is introduced to construct a real-time controller which can estimate the state and action values using the encoder-decoder network. In the input layer of the encoder-decoder network, we design a graph embedding method to analyze the characteristics of the DU-VRP at each state in Fig. href232. The Rectified Linear Unit (ReLU) activation function is the linear unit, as it can accelerate the convergence of the embedding node. This graph-based method has been applied to describe the relationships between each pair of nodes in the graph by compressing an adjacency matrix with the consideration of customer coordinates. This graph embedding network, also called Struc2vec (S2V), combines the environment state with the previously developed tour graph [href273]. This encoder-decoder network maps each customer in a tour graph into a low-dimensional vector in sequence with attention mechanism [href140].
+Fig. 5href237The process of the input layer in the deep learning for the DU-VRPhref355To deal with the partially observable decision-making of the DU-VRP, an improved overall process of RNN is developed based on the graph embedding method in this study, are displayed in Fig. href171. The S2V and the RNNs are determined by the encoder network. However, due to conventional RNNs’ vanishing gradients, RNNs are limited in their ability to learn long-term relationships [href22]. Long Short Term Memory (LSTM) is a concept that is used in RNNs cells to solve long-term dependence difficulties and carry information across numerous time steps. The LSTM cells in the RNN ensure the customer information to handle the input context from the S2V network, which is computed as a p-dimensional feature embedding such as \({\mu _{i}^{t}}\), for each node ci at time step t in a graph G. The current nodes are aggregated recursively according to the graph’s topology. After some iterations, a new p-dimensional feature embedding for each node will be produced by the S2V network. The S2V network initializes the embedding \({\mu _{i}^{0}}=0\) for all elements of \(\mathbb {C}\), considering both current graph information and long-range interactions between these nodes. All embeddings update synchronously at each iteration, as shown in Eq. (1):
+$$  \mu_{i}^{t+1}\gets f(c_{i}, \{ {\mu_{j}^{t}} \}_{j\in\mathcal{N}(i)} , \{\tilde{m}_{ij}^{t} \}_{j\in\mathcal{N}(i)},\tilde{d}_{i}^{t};{\Theta})  $$
+                    (1)
+                where \(\mathcal {N}(i)\) expresses the set of neighbors of node ci in G, \(\tilde {m}_{ij}^{t}\) represents the observed distance between customer i and customer j at time step t, \(\tilde {d}_{i}^{t}\) represents the observed demand of customer i at time step t, and f() is a nonlinear function parameterized by Θ. The features of the nodes ci are propagated to other nodes through a nonlinear function.
+Fig. 6href383The process of an improved neural network for the DU-VRPhref125After the Tth iteration, the embedding of each node will contain information regarding its neighbors on the graph, including node features and propagation functions. The nonlinear function f(), which is used to update the embedding μi is defined as shown in Eq. (2):
+$$ \begin{array}{@{}rcl@{}} \mu_{i}^{t+1} \!&\gets&\! \mathit{ReLU}(\theta_{1} c_{i} + \theta_{2}{\sum}_{j\in\mathcal{N}(i)}{\mu_{j}^{t}}  +  \theta_{3} {\sum}_{j\in\mathcal{N}(i)} \mathit{ReLU}(\theta_{4} \tilde{d}_{i}^{t} ) \\&&\!+\theta_{5} {\sum}_{j\in\mathcal{N}(i)} ReLU(\theta_{6} \tilde{m}_{ij}^{t} )) \end{array} $$
+                    (2)
+                where 𝜃1 ∈ Rp;𝜃2,𝜃3, 𝜃5 ∈ Rp×p;and 𝜃4,𝜃6 ∈ Rp represent the dimensional model vectors, which are represented by the parameter Θ. The ReLU function \((ReLU\left (z\right )=\max \limits \) {0,z}) is applied to accelerate the convergence of the embedding node. Then the embeddings for each node are input into an RNN, which consists of LSTM that uses the input data to create a sequence of p-dimensional latent memory states \({C_{i}^{e}}\in \mathbb {R}^{p}\) in the encoder network. Equations (3) to (8) are the internal expressions of the LSTM cells:
+$$  f_{i}=\sigma(W_{f}\cdot\left[h_{i-1},{\mu_{i}^{T}}\right]+b_{f})  $$
+                    (3)
+                $$  J_{i}=\sigma(W_{j}\cdot\left[h_{i-1},{\mu_{i}^{T}}\right]+b_{j})  $$
+                    (4)
+                $$  {\widetilde{C}}_{i}=tanh(W_{C}\cdot\left[h_{i-1},{\mu_{i}^{T}}\right]+b_{C})  $$
+                    (5)
+                $$  {C_{i}^{e}}=f_{i}\ast C_{i-1}^{e}+J_{i}\ast{\widetilde{C}}_{i}  $$
+                    (6)
+                $$  o_{i}=\sigma(W_{O}\left[h_{i-1},{\mu_{i}^{T}}\right]+b_{O})  $$
+                    (7)
+                $$  h_{i}=o_{i}\ast tanh({C_{i}^{e}})  $$
+                    (8)
+                where \(\sigma \left (z\right )=1/(1+e^{-z})\) is a sigmoid function, and \(\tanh \) is an activation function that converts the input to a real-value between -1 and 1. The symbol ∗ indicates the multiplication of the corresponding elements of the operation; Wf,Wj,WC,WO denote the weight parameters; and bf, bj,bC,bO denote the bias parameters. A set of state vectors S = (S1,S2,…,St) with hidden states H = (h1,h2,…, ht) is produced when the embedding node passes through the encoder.Next, the LSTMs cells are adopted to develop the decoder, which is decoding the encoder context and outputting the predicted sequence to the nodes in tours. The decoder constructs a series of p-dimensional latent memory by Eq. (2). Following that, the decoder is used to decode the encoders’ input and output the tour in an iterative fashion. In each iteration, the decoder applies a series of p-dimensional latent states of the current partial constructed customer \(y\left (<i\right )\) to predict the distribution of the next node.To predict a distribution among the customers from the encoding context, we improve an attention mechanism (AM) method proposed by Nazari et al. [href138]. The encoder part only contains the coordinates and demands information at the current iteration and the decoder part only remembers static information from the past in the Nazari et al. [href381]. In the output layer of the DL approach, the AM is applied to compute the alignment vector in the decoder network. We design an attention mechanism with a pooling layer to modify the input of the decoder network. All the hidden states \({C_{t}^{i}}\) consist of the static (the states information) and dynamic (the observation states information) element \({C_{i}^{e}}\in \mathbb {R}\) from each iteration in the encoder. \({C_{t}^{i}}\) is important as it is a combination of the outputs from the encoder and decoder, containing the previous information about customers’ demands. Before feeding the hidden state into the decoder, we first apply a pooling layer on one of the dimensions of the hidden state and make sure it has the same shape as the decoder input. The encoder and decoder hidden state \({C_{i}^{d}}\in \mathbb {R}\) are combined to determine the alignment vector as follow by Eqs. (9)-(12).
+$$  C_{t}^{\prime}=pooling\left( {C_{t}^{i}}\right)  $$
+                    (9)
+                $$  {a_{t}^{i}}={v_{a}^{T}}\ast tanh\left( W^{e}C_{t}^{\prime}+W^{d}{C_{i}^{d}}\right)  $$
+                    (10)
+                $$  a_{t}\left( \left\{{C_{i}^{e}}\right\}_{i=1}^{n},{C_{i}^{d}},W^{e},W^{d},v\right)=softmax({a_{t}^{i}})  $$
+                    (11)
+                $$  c_{t}={\sum}_{i=1}^{n}C_{t}^{\prime} {a_{t}^{i}}  $$
+                    (12)
+                where va ∈ Rp represents an attention vector and We,Wd ∈ Rp×p denote attention matrices. The function softmax is called an activation function that allocates the probability of visiting the next customer \(y\left (i\right )\) according to Eq. (13):
+$$  p\left( y\left( i\right) \mid y\left( <i\right),S\right )=softmax\left( \widetilde{u_{i}}\right)  $$
+                    (13)
+                where \(\widetilde {u_{i}} = v^{T}tanh\left (W_{c}\left [\left \{{C_{i}^{e}}\right \}_{i=1}^{n},c_{t}\right ]\right ),v\!\in \! R^{p}\) represents an attention vector. This probability distribution indicates that the decoder network is attending to the customer in the given state S in the form of a probability. Consequently, we use the rule of the probability chain to factorize the probability of a tour, as obtained by Eq. (14):
+$$  p\left( Y \mid S\right) = {\prod}_{i=1}^{n}{p\left( y\left( i\right) \mid y\left( <i\right),S\right)}  $$
+                    (14)
+                3.2.3 An RL approachWe present an RL approach to train the model parameters of the proposed DL approach for DU-VRP. The RL approach, which is different from the supervised learning approach, uses a reward mechanism for the adaptive agents to improve their performance, instead of relying on optimal solutions to the DU-VRP. In this RL approach, as shown in Fig. href28, the agents can interact with the environmental changes controlled by a processor that consists of the graph-learning, sequence-learning, and policy-learning networks. The processor can observe the states from a dynamic DU-VRP environment. Subsequent to the observation, the updated state is the input to the graph-learning network. Then, the sequence-learning network reorders the updated state and delivers the outcome to the policy-learning network, which produces the optimal action to the environment.
+Fig. 7href88Interaction agent-environment in the reinforcement learning for the DU-VRPhref178To deal with the partially observable state of the DU- VRP, we develop a novel RL approach based on the POMDP model. The asynchronous advantage actor-critic (called “A3C”) algorithm uses asynchronous gradient descent for optimization of deep neural network controllers based on actor-critic methods, introduced by Mnih [href364], where an ‘actor’ refers to the learned policy, and ’critic’ refers to add a value function to the REINFORCE policy gradient algorithm [href244]. The actor develops a sample route throughout the training procedure. The value function, on the other hand, adjusts the intended rewards and improves itself using the created routes before revising the policy. The value function is then used to update the policy’s parameters in the area of improving performance. Because the critic is modelled using a bootstrap approach, the variance is reduced, making the learning more reliable than vanilla policy gradient methods. The A3C algorithm allows many actor-critic agents to train in parallel. Each actor-critic has its own set of parameters and interacts with the environment in a unique way. A global network receives updates from each agent and combines them asynchronously to create a global policy. In this way, parallel actor-learners accumulate updates for improving training stability. A model-free policy-based RL approach by integrating the A3C algorithm is proposed to train the model parameters for the DU-VRP, as displayed in Fig. href58.
+Fig. 8href54The framework of the asynchronous advantage actor-critic algorithmhref250There are two sets of parameters in the A3C algorithm. In the DL method, we employ the symbol Γ to denote the collection of model parameters, including the graph embedding 𝜃; LSTM parameters W,b; and attention parameters v,W. The performance measure is defined based on the policy gradient method as follow:
+$$  J(\mathrm{\Gamma})=\mathbb{E}_{\pi\sim\mathrm{\Gamma}(.\mid o)}V_{\pi}\left( o\right)  $$
+                    (15)
+                The ‘critic’ is provided to estimate the action value function associated with parameters φ, which can train the model parameters Γ as ‘actor’. The A3C algorithm follows an approximate policy gradient
+$$  \mathrm{\nabla}_{\mathrm{\Gamma}}J(\mathrm{\Gamma}) = \mathbb{E}_{\pi\sim\mathrm{\Gamma} \left (. \mid o \right)}\left[\mathrm{\nabla}_{\mathrm{\Gamma}}log\pi_{\mathrm{\Gamma}}\left( Y \mid O\right) Q_{\varphi}\left( O , y\right)\right]  $$
+                    (16)
+                Then, we introduce a baseline function B(O), which can reduce variance without changing expectations for the RL approach [href155]. Typically, the baseline function is the state value function \(B\left (O\right )=V_{\pi }\left (O,\varphi \right )\). Thus,
+$$ \begin{array}{@{}rcl@{}} \mathrm{\nabla}_{\mathrm{\Gamma}}J(\mathrm{\Gamma})&=&\mathbb{E}_{\pi\sim\mathrm{\Gamma}\left( . \mid O\right)}\left[\mathrm{\nabla}_{\mathrm{\Gamma}}log\pi_{\mathrm{\Gamma}}\left( Y \mid O\right)\left( Q_{\varphi}\left( O,y\right)\right.\right.\\&&\left.\left.-V_{\pi}\left( O,\varphi\right)\right)\right] \end{array} $$
+                    (17)
+                The proposed A3C algorithm’s pseudo-code is described below, where Γo,φo are the weights of a global network with weights assigned to the actor and critic, respectively. Besides, the agents runn in parallel threads with their own network parameters, are denoted as Γn,φn for agent n.
+4 Experiments and resultsThis section conducts three groups of experiments to assess the proposed DRL model’s performance. The initial set of experiments is designed to train the DRL model. The performance of the DRL model is then demonstrated on the basic VRP dataset in the second set of experiments. Finally, the third groups of experiments is implemented in real-world scenarios to ensure that the DRL method is successful. All programs are coded in PyCharm with Python 3.7 and Pytorch 1.8, and the results reported below are obtained on a PC with an Intel Core i7 processor and 32GB of RAM.4.1 Experimental parametersSince the DU-VRP is a relatively new topic with no standard dataset, the initial set of experiments uses randomly generated cases. Meanwhile, customer locations are created at random on a 1 ∗ 1 map, with the depot as the first node and the rest as customer nodes. The customers’ demand is a random variable parameter within [1,9]. The vehicles have a capacity ranging from 20 to 60. Finally, vehicles of various capacities will arrive at the depot and transport items to all customers.The configuration of the parameters in the initial set of experiments is shown in Table href337.
+Table 2 The experiment configuration of DU-VRP instanceshref212The initial set of experiments focuses on creating an optimal strategy to control the DRL method. During the procedure, parallel actor-learners in the proposed algorithm are introduced to speed up the proposed technique, and randomly generated issues are employed as training cases. Many parameters in the proposed technique must be adjusted in order to reach the optimal outcome. These parameters are chosen according to the training process. Table href311 shows the values of parameters.
+Table 3 Parameters configuration for the proposed DRLhref148We save and test the RL approach after the training process to see how it performs. The experiment instance is presented in Table href21 during the test phase. Table href213 shows the average tour lengths of our proposed DRL.
+Table 4 Testing process of the experimental instanceshref359Table 5 Average tour length of proposed DRLhref52The proposed DL approach can handle the DU-VRP efficiently by applying RL for generating better policies, as shown in Table 5.4.2 Performance on benchmarking datasetsIn this second set of the experiment, we adopt the RNNs with 128 hidden units in the encoder network, which corresponds to the number of nodes in the graph embedding. The inputs by small batch B = 128 are generated using the benchmark data set during the training. These small batches directly determine the weights of our model in optimization. Each static (the states information) element consisting of the customer coordinate is embedded into a vector with 128 hidden units sharing among the inputs. The dynamic (the observation states information) element is then embedded in the same way. The dynamic elements including the customers’ demand, the remaining load of vehicles are mapped to a vector of size 128. For the decoder network, we employ a layer of 128 hidden units in the LSTM. In the actor and critical networks, we initialize two types of settings, either by using greedy search for decoding, or by applying the best result from a batch of sampled results as the softmax results. We initialise two types of settings in the actor and critic networks: greedy search for decoding and using the optimal performance from a set of observed outputs as the softmax results.To evaluate the proposed A3C performance, the different numbers of customers with the same vehicle are introduced. To show the overall performance of DRL, an evaluation index called the gap, which is calculated between the DRL and the OPT by (18), where X means the DRL, T(X) denotes the average route time of X and OPT denotes the best solution.
+$$  GAP=\frac{T(X)-T(OPT)}{T(OPT)}  $$
+                    (18)
+                This sort of difficulty is rather common, and a typical benchmark can be from the website of the NEO (cf.href204https:// https://neo.lcc.uma.es/vrp/vrp-instances/neo.lcc.uma.es/vrp/vrp-instances/). We apply the two benchmark data sets (Set-A and Set-B) to verify the proposed DRL methodology. The proposed A3C algorithm is modified in the second set of experiments to fit the DU-VRP situation. Besides, we set the dynamic scenarios to verify the proposed algorithm. Furthermore, the benchmark’s best solution is utilised to illustrate the algorithm’s overall level. All instances are utilised to evaluate the performance of all algorithms during the experiment. The number of entities (vehicles) is limited for each instance to ensure that all algorithms use the same computer capacity and can meet demand changes. First, we apply the data of Set-A to verify the performance of DRL. Besides, the OPT is obtained from the website, the table column ’KX’ represents there are X vehicles, and the instance named ’A-nY’ means the data with Y customers. The table columns refer respectively to: the Entity (Vehicles), the number of instances in the entity (No.), the instances name(Instances), the GAP(%), the value of the total traveling distance (Distance) obtained with OPT and the DRL, and the computational time in seconds (Time). Table href218 shows the performance of the algorithms while solving the data of Set-A.
+Table 6 Performance of the algorithms while solving the benchmarking instanceshref276The partial observations are obtained and shown in Table 6. It is observed that DRL can achieve satisfactory results in a very short time. For the instances with number of customers 32, 34 in K5 the performance of DRL methodology is close to OPT. In particular, the proposed A3C RL approach, in particular, outperforms the benchmark, and improves or reaches the adopting a strategic in all cases. The gap between the A3C RL approach and the OPT from 1.58% to 9.75% while the average gap is 5.79% in these cases. To summarise, the proposed A3C RL approach can produce an satisfactory solution in a short amount of time and its usefulness has been demonstrated.Then, using the additional data from Set-B, we evaluate the A3C RL approach performance with different amounts of demands. The performance of the algorithms in solving the data of Set-B instances with the various scales (instance types and number of customers) are analyzed in Table href259, which indicates that the ’KX’ represents the X vehicles and the instance named ’B-nY’ means the instance with Y customers.
+Table 7 Performance of the algorithms while solving the benchmarking instanceshref309From Table 7, it is observed that the GAP for these VRP instances is controlled by the 13%. All instances are controlled by the 10% except the number of customer 39 in K5. For the instances with the number of customers 31, 34 and 35 in K5 the performance of A3C RL approach is close to OPT. Specifically, in the case of a certain the number of vehicles, the calculation time increases with the increase of customer demand, but the GAP between DRL and OPT is very small. Then, as the number of vehicles increases, so does the demand of customers, and the GAP between DRL and OPT is within 10%. After that, the GAP value is always within 10%, indicating that DRL can meet the solution quality under the change of demand. As a consequence, the proposed A3C RL approach can produce outstanding outcomes under different customers’ demands. Finally, the outcome is displayed in Table 7, and it appears to be satisfactory and supports the A3C RL approach’s efficacy. To summarise, the proposed A3C RL approach can produce an satisfactory solution in a short amount of time and its usefulness has been demonstrated.4.3 Performance in real-world scenariosThe third group of experiments is shown in a real-world transportation network using data collected from Cologne, Germany (cf. href18https://sumo.dlr.de/docs/Data/Scenarios/TAPAS https://sumo.dlr.de/docs/Data/Scenarios/TAPASCologne.htmlCologne.html). We adopt the same RNNs with 128 hidden units in the encoder network, which is consistent with the number of nodes in the graph embedding. The inputs by small-batch B = 128 are generated using the Cologne data set during the training. These small batches directly determine the weights of our model in optimization.4.3.1 Experimental settingsAll of the experiments in the third group use the data of Cologne, Germany. The real-world data are obtained from the OpenStreetMap file [href243]. The latitude and longitude of each node in this real-world map are applied to construct the actual roadmap. A Python package is used to download administrative boundary shapes and street networks from Osmnx [href23]. The sampling size is divided into five-minute parts from 8:00 am to 10:00 pm and all demands have been satisfied. Averaging all speeds that can be matched to the route in the relevant time segment using GPS records yields the real-time traffic speed of any arbitrary road. In the proposed DRL experiment, we adopt the RNNs with 128 hidden units in the encoder network, which is consistent with the number of nodes in the graph embedding. The inputs by small-batch B = 128 are generated using the small transport network during the training. These small batches directly determine the weights of our model in optimization. We run 3,000 training steps to train the DRL model on the Cologne dataset, and set the buffer size to 5,000 experiences. We apply the Adam optimizer [href231] with the learning rate of 1e-3 to train encoder and decoder network. Over the training stages, the 𝜖-greedy [href366] policy with a decay rate of 0.9995 is utilised. There are N × N vertex generating procedures in each episode. We suppose that the initial node is the depot. The test case obtained by Osmnx is used to construct a tour graph for parameters adjustment in graph-embedding-network by A3C Algorithm. The training process is repeated 10000 episodes for approximately 45 hours. At the start of each episode, the graph is randomly generated as input with corresponding demands.4.3.2 Solution qualityWe test the experiments in different tour sampling situations with various customers’ demands in the same transportation network to show the quality of the A3C RL approach. The customers’ locations are randomly selected from nodes in the Cologne map. We design three types of sampling strategies to generate test cases: (i) greedy, which chooses the node with the maximum probability as another location; (ii) beam search (BS), which takes account of the most likely paths and then chooses the node with the shortest distance length; and (iii) sample search (SS), which selects M candidate tours based on the possible outcomes established by the probability policy \(p\left (y\left (i\right ) \mid y\left (<i\right ),S\right )\). We test the experiments with candidates 100, 300, 500, 1280, or 12800, respectively, using the sample search strategy for the DU-VRP. The performance of the algorithms while solving Cologne data set with the various scales (e.g., strategy choices and instance sizes) are analyzed in Table href151, which the Stategy named ’DRL-X-Y’ means the DRL with X strategies and with Y candidates. In summary, the proposed DRL methodology is applicable to solve the DUVRP in real time.
+Table 8 Performance of the algorithms while solving real-world instanceshref455 ConclusionIn this paper, we introduce and define a more generalized problem called the dynamic and uncertain vehicle routing problem (DU-VRP), which covers the classical vehicle routing problem with dynamic environment and uncertain customers’ demands. We design a partially observed Markov decision process (POMDP) to reflect the partial observation states in the DU-VRP environment. The proposed DRL methodology combines the merits of a deep learning approach and a reinforcement learning approach to learn and optimize the routing decisions in a dynamic and uncertain environment. Computational results show that the proposed DRL methodology can tackle the curse of dimensionality because it can handle the partial observation of the state space with an improved attention mechanism method.Regarding future research directions, other machine learning approaches for training deep neural networks will be investigated in depth. The proposed DRL methodology would be extended to tackle more real-world applicable VRPs with incomplete traffic information [href75, href221]; to solve other routing-production-related combinatorial optimization problems such as job shop scheduling with the parallel use of resources and sequence-dependent setup times [href123, href152]; and to deal with industry-oriented mining optimisation problems [href275,href327,href295].
+
+ReferencesSteever Z, Karwan M, Murray C (2019) Dynamic courier routing for a food delivery service. Comput Oper Res 107:173–188. href108href219 
+    href26 
+    href363 
+    href167 
+                Drent C, Keizer MO, Houtum GJ van (2020) Dynamic dispatching and repositioning policies for fast-response service networks. Eur J Oper Res 285:583–598. href42href321 
+    href322 
+    href177 
+    href83 
+                Hong J, Lee M, Cheong T, Lee HC (2019) Routing for an on-demand logistics service. Transp Res Part C: Emerg Technol 103: 328–351. href224href338 
+    href306 
+                Zhang Z, Sun Y, Xie H, Teng Y, Wang J (2018) Gmma: Gpu-based multiobjective memetic algorithms for vehicle routing problem with route balancing. Applied Intelligence 49:63–78. href289href375 
+    href323 
+                Vidal T, Laporte G, Matl P (2020) A concise guide to existing and emerging vehicle routing problem variants. Eur J Oper Res 286:401–416. href70href81 
+    href360 
+    href50 
+    href73 
+                Nasri M, Metrane A, Hafidi I, Jamali A (2020) A robust approach for solving a vehicle routing problem with time windows with uncertain service and travel times. Int J Ind Eng Comput 11:1–16. href260href162 
+    href291 
+                Mazyavkina N, Sviridov S, Ivanov S, Burnaev E. (2021) Reinforcement learning for combinatorial optimization: A survey. Comput Oper Res 134:105400. href180href190 
+    href310 
+    href263 
+    href292 
+                Karimi-Mamaghan M, Mohammadi M, Meyer P, Karimi-Mamaghan AM, Talbi E-G (2022) Machine learning at the service of meta-heuristics for solving combinatorial optimization problems: a state-of-the-art. Eur J Oper Res 296:393–422. href38href317 
+    href117 
+    href114 
+    href170 
+                Wang Q, Tang C (2021) Deep reinforcement learning for transportation network combinatorial optimization: a survey. Knowl-Based Syst 233:107526. href286href90 
+    href318 
+                Parvez Farazi N, Zou B, Ahamed T, Barua L (2021) Deep reinforcement learning in transportation research: a review. Transp Res Interdiscip Perspect 11:100425. href144href264 
+    href168 
+                Ulmer MW, Thomas BW (2020) Meso-parametric value function approximation for dynamic customer acceptances in delivery routing. Eur J Oper Res 285:183–195. href102href156 
+    href33 
+    href115 
+    href47 
+                Ning C, You F (2019) Optimization under uncertainty in the era of big data and deep learning: when machine learning meets mathematical programming. Comput Chem Eng 125:434–448. href222href339 
+    href154 
+                Sutton RS, Barto AG (2018) Reinforcement learning part II an introduction, 2nd edition. MIT press, Cambridgehref133 
+    href157 
+                Schrittwieser J, Antonoglou I, Hubert T, Simonyan K, Sifre L, Schmitt S, Guez A, Lockhart E, Hassabis D, Graepel T, Lillicrap T, Silver D (2020) Mastering atari, go, chess and shogi by planning with a learned model. Nature 588:604–609. href266href174 
+    href345 
+                Hubmann C, Schulz J, Becker M, Althoff D, Stiller C (2018) Automated driving in uncertain environments: planning with interaction and uncertain maneuver prediction. IEEE Trans Intell Veh 3:5–17. href92href53 
+    href238 
+                Pouya P, Madni AM (2021) Expandable-partially observable Markov decision-process framework for modeling and analysis of autonomous vehicle behavior. IEEE Syst J 15:3714–3725. href252href49 
+    href163 
+                Bengio Y, Lodi A, Prouvost A (2021) Machine learning for combinatorial optimization: a methodological tour d’horizon. Eur J Oper Res 290:405–421. href373href288 
+    href98 
+    href179 
+    href308 
+                Bui Khac Hoai N, Cho J, Yi H (2021) Spatial-temporal graph neural network for traffic forecasting: an overview and open research issues. Applied Intelligence 52:2763–2774. href60href248 
+    href64 
+                Vesselinova N, Steinert R, Perez-Ramirez DF, Boman M (2020) Learning combinatorial optimization on graphs: a survey with applications to networking. IEEE Access 8:120388–120416. href347href229 
+    href329 
+                Sun P, Hu Y, Lan J, Tian L, Chen M (2019) Tide: time-relevant deep reinforcement learning for routing optimization. Futur Gener Comput Syst 99:401–409. href283href365 
+    href89 
+                Huynh TT, Lin CM, Lee K, The Vu M, Nguyen N, Chao F (2021) Intelligent wavelet fuzzy brain emotional controller using dual function-link network for uncertain nonlinear control systems. Applied Intelligence 52:2720–2744. href113href270 
+    href43 
+                Xu R, Li M, Yang Z, Yang L, Qiao K, Shang Z (2021) Dynamic feature selection algorithm based on q-learning mechanism. Appl Intell 51:1–12. href103href370 
+    href319 
+                Wang Q (2021) Varl: a variational autoencoder-based reinforcement learning framework for vehicle routing problems. Appl Intell. href227Chen L, Cui J, Tang X, Qian Y, Li Y, Zhang Y (2021) Rlpath: a knowledge graph link prediction method using reinforcement learning based attentive relation path searching and representation learning. Applied Intelligence 52:4715–4726. href1href253 
+    href134 
+                Zhang K, He F, Zhang Z, Lin X, Li M (2020) Multi-vehicle routing problems with soft time windows: a multi-agent reinforcement learning approach. Transportation Research Part C: Emerging Technologies 121:102861. href137href294 
+    href93 
+                Nazari M, Oroojlooy A, Snyder LV, Takáč M (2018) Reinforcement learning for solving the vehicle routing problem. In: Proceedings of the 32nd international conference on neural information processing systems (NeurIPS 2018). Montréal, pp 9861–9871. href341https://dl.acm.org/doi/10.5555/3327546.3327651Zhao J, Mao M, Zhao X, Zou J (2021) A hybrid of deep reinforcement learning and local search for the vehicle routing problems. IEEE Trans Intell Transp Syst 22:7208–7218. href214href228 
+    href97 
+                Dai H, Khalil EB, Zhang Y, Dilkina B, Song L (2017) Learning combinatorial optimization algorithms over graphs. Adv Neural Inf Process Syst. Red Hook, pp 6349–6359. href256https://dl.acm.org/doi/ https://dl.acm.org/doi/10.5555/3295222.329538210.5555/3295222.3295382Csy A, Ahfc B, Ksc A (2020) An actor-critic deep reinforcement learning approach for metro train scheduling with rolling stock circulation under stochastic demand. Transp Res B Methodol 140 :210–235. href262href324 
+    href56 
+                Kullman ND, Cousineau M, Goodson JC, Mendoza JE (2021) Dynamic ride-hailing with electric vehicles. Transp Sci 1–20. href149Ulmer MW, Goodson JC, Mattfeld DC, Thomas BW (2020) On modeling stochastic dynamic vehicle routing problems. EURO J Transp Logist 9:100008. href19110.1016/j.ejtl.2020.100008href343 
+    href169 
+                Mnih V, Badia AP, Mirza M, Graves A, Harley T, Lillicrap TP, Silver D, Kavukcuoglu K (2016) Asynchronous methods for deep reinforcement learning. In: Proceedings of the 33rd international conference on international conference on machine learning ICML 2016. New York, pp 1928–1937. href305Archetti C, Feillet D, Mor A, Speranza MG (2020) Dynamic traveling salesman problem with stochastic release dates. Eur J Oper Res 280:832–844. href110href172 
+    href14 
+    href348 
+    href77 
+                Qiu H, Wang S, Yin Y, Wang D, Wang Y (2022) A deep reinforcement learning-based approach for the home delivery and installation routing problem. Int J Prod Econ 244:108362. href369href371 
+    href299 
+                Yu JJQ, Yu W, Gu J (2019) Online vehicle routing with neural combinatorial optimization and deep reinforcement learning. IEEE Trans Intell Transp Syst 20:3806–3817. href105href147 
+    href334 
+                Ahamed T, Zou B, Farazi NP, Tulabandhula T (2021) Deep reinforcement learning for crowdsourced urban delivery. Transp Res B Methodol 152:227–257. href5910.1016/j.trb.2021.08.015href245 
+    href173 
+                Silva ML, Souza SD, Souza MF, Bazzan A (2019) A reinforcement learning-based multi-agent framework applied for solving routing and scheduling problems. Exp Syst Applic 131:148–171. href24010.1016/j.eswa.2019.04.056href282 
+    href293 
+                Kang Y, Lee S, Chung BD (2019) Learning-based logistics planning and scheduling for crowdsourced parcel delivery. Comput Industr Eng 132:271–279. href35810.1016/j.cie.2019.04.044href217 
+    href287 
+                Zou G, Tang J, Yilmaz L, Kong X (2021) Online food ordering delivery strategies based on deep reinforcement learning. Appl Intell. href36110.1007/s10489-021-02750-3Wang Z, Qin Z, Tang X, Ye J, Zhu H (2018) Deep reinforcement learning with knowledge transfer for online rides order dispatching. In: Proceedings IEEE international conference data mining. ICDM, pp 617–626, DOI href377, (to appear in print)Liang E, Wen K, Lam WHK, Sumalee A, Zhong R (2021) An integrated reinforcement learning and centralized programming approach for online taxi dispatching. IEEE Trans Neural Networks Learn Syst. href35Turan B, Pedarsani R, Alizadeh M (2020) Dynamic pricing and fleet management for electric autonomous mobility on demand systems. Transp Res Part C: Emerg Technol 121:102829. href153href99 
+    href374 
+                Chen X, Ulmer MW, Thomas BW (2022) Deep q-learning for same-day delivery with vehicles and drones. Eur J Oper Res 298 :939–952. href160href69 
+    href195 
+    href161 
+    href187 
+                Liu Z, Li J, Wu K (2020) Context-aware taxi dispatching at city-scale using deep reinforcement learning. IEEE Trans Intell Transp Syst 23:1–14. href72href181 
+    href320 
+                Liu X, Zhang D, Zhang T, Cui Y, Chen L, Liu S (2021) Novel best path selection approach based on hybrid improved a* algorithm and reinforcement learning. Applied Intelligence 51:9015–9029. href280href325 
+    href199 
+                Tang X, Li M, Lin X, He F (2020) Online operations of automated electric taxi fleets: an advisor-student reinforcement learning framework. Transp Res Part C Emerg Technol 121:102844. href182href304 
+    href87 
+                Koh S, Zhou B, Fang H, Yang P, Ji Z (2020) Real-time deep reinforcement learning based vehicle routing and navigation. Appl Soft Comput 96:106694. href278href300 
+    href285 
+                Mao C, Liu Y, Shen Z (2020) Dispatch of autonomous vehicles for taxi services: a deep reinforcement learning approach. Transportation Research Part C Emerging Technologies 115:102626. href15810.1016/j.trc.2020.102626href316 
+    href32 
+                Al-Abbasi AO, Ghosh A, Aggarwal V (2019) Deeppool: distributed model-free algorithm for ride-sharing using deep reinforcement learning. IEEE Trans Intell Transp Syst 20:4714–4727. href33210.1109/TITS.2019.2931830href255 
+    href196 
+                Basso R, Kulcsár B, Sanchez-Diaz I, Qu X (2022) Dynamic stochastic electric vehicle routing with safe reinforcement learning. Transp Res Part E: Logist Transp Rev 157:102496. href44href62 
+    href242 
+                Guo P, Xiao K, Ye Z, Zhu W (2021) Route optimization via environment-aware deep network and reinforcement learning. ACM Transactions on Intelligent System and Technology 12:1–21. href19710.1145/3461645href4 
+    href130 
+                Hoel C-J, Driggs-Campbell K, Wolff K, Laine L, Kochenderfer MJ (2020) Combining planning and deep reinforcement learning in tactical decision making for autonomous driving. IEEE Trans Intell Veh 5:294–305. href24110.1109/TIV.2019.2955905href96 
+    href225 
+                Nguyen Q, Vien N, Dang V. -H., Chung T (2020) Asynchronous framework with reptile+ algorithm to meta learn partially observable Markov decision process. Appl Intell 50:4050–4062. href71href5 
+    href106 
+                Wu X, Du Z, Guo Y, Fujita H (2019) Hierarchical attention based long short-term memory for chinese lyric generation. Appl Intell 49:44–52. href142href30 
+    href78 
+                Boeing G (2017) Osmnx: new methods for acquiring, constructing, analyzing, and visualizing complex street networks. Comput Environ Urban Syst 65:126–139. href356href215 
+    href210 
+                Melinte O, Vladareanu L (2020) Facial expressions recognition for human-robot interaction using deep convolutional neural networks with rectified adam optimizer. Sensors 20:2393. href165href100 
+    href79 
+                Lesch V, König M, Kounev S et al (2022) Tackling the rich vehicle routing problem with nature-inspired algorithms. Appl Intell. href307Zhang Q, Liu SQ, Masoud M (2020) A traffic congestion analysis by user equilibrium and system optimum with incomplete information. J Comb Optim. In press. href139Liu CL, Chang CC, Tseng CJ (2020) Actor-critic deep reinforcement learning for solving job shop scheduling problems. IEEE Access 8:71752–71762. href3href234 
+    href175 
+                Liu SQ, Kozan E (2016) Parallel-identical-machine job-shop scheduling with different stage-dependent buffering requirements. Comput Oper Res 74:31–41. href281href46 
+    href121 
+    href91 
+    href376 
+                Kozan E, Liu SQ (2017) An operational-level multi-stage mine production timetabling model for optimally synchronising drilling, blasting and excavating operations. Int J Mining, Reclam Environ 31:457–474. href268href86 
+    href84 
+                Liu SQ, Kozan E (2019) Integration of mathematical models for ore mining industry. Int J Syst Sci Oper Logist 6:55–68. href296href74 
+    href207 
+                Zeng L, Liu SQ, Kozan E et al (2021) A comprehensive interdisciplinary review of mine supply chain management. Resour Policy 74:102274. href271href290 
+    href368 
+                href246AcknowledgmentsThis work is supported by the National Natural Science Foundation of China under Grant No. 71871064.Author informationAuthors and AffiliationsSchool of Economics and Management, Fuzhou University, Fuzhou, 350108, Fujian, ChinaWeixu Pan & Shi Qiang LiuAuthorsWeixu Panhref82You can also search for this author in
+                        href297 href48Shi Qiang Liuhref230You can also search for this author in
+                        href36 href146Corresponding authorCorrespondence to
+                href202.Ethics declarations
+
+Conflict of Interests
+
+The authors declared that they have no conflicts of interest to this work.
+Additional informationPublisher’s noteSpringer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.Weixu Pan and Shi Qiang Liu contributed equally to this work.Rights and permissionshref29About this articlehref267Cite this articlePan, W., Liu, S. Deep reinforcement learning for the dynamic and uncertain vehicle routing problem.
+                    Appl Intell 53, 405–422 (2023). https://doi.org/10.1007/s10489-022-03456-whref206Accepted: 01 March 2022Published: 18 April 2022Issue Date: January 2023DOI: https://doi.org/10.1007/s10489-022-03456-wShare this articleAnyone you share the following link with will be able to read this content:Get shareable linkSorry, a shareable link is not currently available for this article.Copy to clipboard
+                            Provided by the Springer Nature SharedIt content-sharing initiative
+                        Keywordshref188href66href116href333
+
+
+
+
+
+
+
+Use our pre-submission checklist
+
+
+Avoid common mistakes on your manuscript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Advertisement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Discover content
+
+href302
+href135
+
+
+
+Publish with us
+
+href378
+href254
+href380
+
+
+
+Products and services
+
+href186
+href258
+href303
+href119
+
+
+
+Our imprints
+
+href39
+href10
+href131
+href17
+href203
+
+
+
+
+
+
+
+
+Your privacy choices/Manage cookies
+
+
+href226
+
+
+href94
+
+
+href12
+
+
+href101
+
+
+href335
+
+
+href25
+
+
+
+
+
+165.194.104.233
+
+South Korea Trial Consortium (3001948335)  - Chung Ang University (3000120396)  - 7029 SpringerLink South Korea KESLI Korean Journal Package (3000256740)  - South Korea Trial Consortium (3000522537)  - 5539 SpringerLink South Korea KESLI Full OJA Consortium - (3000171421)  - 9823  SpringerLink South Korea Shinwon (3000699960)  - South Korea Full eJournal Con - Academic 2015-2017 (3991460179)  - 8064 South Korea KESLI Korean Consortium (3000251005)  - 5539 SpringerLink South Korea KESLI Full eJournal Consortium - Academic (3000175460) 
+
+href236
+© 2024 Springer Nature
+
+
+
+
+
+

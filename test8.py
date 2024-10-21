@@ -99,13 +99,13 @@ def sentence_split(text, keywords = ["Fig.", "Table.", "Eq.", "fig.", "Tab.", "e
 	return result
 
 if __name__ == '__main__':
-	with open('test.html' , 'r') as f:
+	with open('output_test1.html' , 'r') as f:
 		soup = f.read()
 	soup = BeautifulSoup(soup , 'html.parser')
-	links = soup.find_all(class_= 'side-panel-reference')
+	links = soup.find_all(class_= 'reference')
 	for link in links:
-		print(link)
-	# replaced_text , all_tag_a = replace_tag_a(soup)
+		print(link.get_text() + "\n")
+	# replacesd_text , all_tag_a = replace_tag_a(soup)
 
 	# sents = sentence_split(replaced_text.get_text())
 	
