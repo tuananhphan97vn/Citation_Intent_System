@@ -53,7 +53,7 @@ def replace_tag_a(soup):
 		link.replace_with(replacement)
 	return soup , all_tag_a
 
-def get_paper_soure_html(paper_url):
+def get_paper_soure_html(paper_url, out_file):
 
 	options = webdriver.ChromeOptions()
 	# options.add_argument('--headless')  # Optional, run in headless mode if you don't need a UI
@@ -77,33 +77,32 @@ def get_paper_soure_html(paper_url):
 	soup2 = BeautifulSoup(html, 'html.parser')
 
 	soup2 = clean_new_line_inside_tag(soup2) 
-	soup2 , all_tag_a= replace_tag_a(soup2) 
-
+	soup2 , all_tag_a= replace_tag_a(soup2)
 	#all tag a indicate the list of tag a 
 	for tag_a in all_tag_a:
 		print(tag_a)
 
-	with open('output_test1.html', 'w', encoding='utf-8') as file:
-		file.write(str(soup1))
+	with open(out_file, 'w', encoding='utf-8') as file:
+		file.write(soup1.prettify())
 
-	with open('output_test2.html', 'w', encoding='utf-8') as file:
-		file.write(str(soup2))
+	with open('old_text.txt', 'w', encoding='utf-8') as file:
+		file.write(soup1.get_text())
+	# with open('html_text1.txt' , 'w') as f:
+	# 	f.write(soup1.get_text())
 
-	with open('html_text1.txt' , 'w') as f:
-		f.write(soup1.get_text())
+	# with open('html_text2.txt' , 'w') as f:
+	# 	f.write(soup2.get_text())
 
-	with open('html_text2.txt' , 'w') as f:
-		f.write(soup2.get_text())
-
-	with open('all_tag_a.html' ,'w') as f:
-		for tag_a in all_tag_a:
-			f.write(str(tag_a) + "<<<<<<<<<<<>>>>>>>>>>>>")
+	# with open('all_tag_a.html' ,'w') as f:
+	# 	for tag_a in all_tag_a:
+	# 		f.write(str(tag_a) + "<<<<<<<<<<<>>>>>>>>>>>>")
 
 if __name__ == '__main__':
 	# title = """Dynamic Traffic Light Control System Based on Process Synchronization Among Connected Vehicles"""
 	# cited_paper_url = search_paper_by_title_wos( title)
 	# citing_paper_url = get_paper_soure_html(cited_paper_url)
 	#access citting paper url and load the html content from this link 
-	# url = """https://www.sciencedirect.com/science/article/pii/S0952197623002257#b41"""
-	url = "https://link.springer.com/article/10.1007/s10489-022-03456-w"
-	get_paper_soure_html(url)
+	url = """https://ieeexplore.ieee.org/abstract/document/9078366"""
+	# url = "https://www.sciencedirect.com/science/article/pii/S0306457323001942#bib0043"
+	out_file = "9078366"+".html"
+	get_paper_soure_html(url, out_file)
