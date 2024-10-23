@@ -109,35 +109,29 @@ if __name__ == '__main__':
     
     # # string1, string2 = 'abcdef' , 'cdef'
 
-    # with open('old_text.txt' , 'r') as f:
-    #     old_text = f.read().strip()
 
-    # with open('new_element.txt' , 'r') as f:
-    #     new_text = f.read().strip()
-
-    # print(extract_difference(norm_text(new_text), norm_text(old_text)))
     options = webdriver.ChromeOptions()
     # options.add_argument('--headless')  # Optional, run in headless mode if you don't need a UI
     # options.add_argument('--disable-gpu')  # Disable GPU acceleration (optional)
     # options.add_argument('--no-sandbox')  # Added for certain environments
 
-    # Automatically download and set up ChromeDriver
-    # service = Service(ChromeDriverManager().install())
+    # # Automatically download and set up ChromeDriver
+    # # service = Service(ChromeDriverManager().install())
     service = Service('./chromedriver')
     driver = webdriver.Chrome(service=service, options=options)
 
     # Truy cập vào URL bài báo khoa học
-    driver.get('https://ieeexplore.ieee.org/abstract/document/9078366')
+    driver.get('https://www.sciencedirect.com/science/article/pii/S0952197623002282')
 
     try:
         # # Chờ cho thẻ <a> hiển thị và có thể click được
-        # citation_link = WebDriverWait(driver, 10).until(
-        #     EC.element_to_be_clickable((By.XPATH, '//a[@class="anchor anchor-primary" and @data-sd-ui-side-panel-opener="true" and @data-xocs-content-id="b24" and @data-xocs-content-type="reference" and @href="#b24" and @name="bb24"]'))
-        # )
-
         citation_link = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, 'context_ref_1_1'))  # Sử dụng ID để tìm thẻ <a>
+            EC.element_to_be_clickable((By.XPATH, '//a[@class="anchor anchor-primary" and @data-sd-ui-side-panel-opener="true" and @data-xocs-content-id="b35" and @data-xocs-content-type="reference" and @href="#b35" and @name="bb35"]'))
         )
+
+        # citation_link = WebDriverWait(driver, 10).until(
+        #     EC.element_to_be_clickable((By.ID, 'ref-link-section-d7069354e385'))  # Sử dụng ID để tìm thẻ <a>
+        # )
         # Click vào thẻ <a>
         citation_link.click()
         print("Đã click vào thẻ citation.")
@@ -155,3 +149,12 @@ if __name__ == '__main__':
     finally:
         # Đóng trình duyệt
         driver.quit()
+
+
+    with open('old_text.txt' , 'r') as f:
+        old_text = f.read().strip()
+
+    with open('new_element.txt' , 'r') as f:
+        new_text = f.read().strip()
+
+    print(extract_difference(norm_text(new_text), norm_text(old_text)))
